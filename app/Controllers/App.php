@@ -17,16 +17,16 @@ class App extends Controller
             if ($home = get_option('page_for_posts', true)) {
                 return get_the_title($home);
             }
-            return __('Latest Posts', 'sage');
+            return __('Latest Posts', 'learning-commons');
         }
-        if (is_archive()) {
-            return get_the_archive_title();
+        if (is_post_type_archive('lc_resource')) {
+            return __('Resources', 'learning-commons');
         }
         if (is_search()) {
-            return sprintf(__('Search Results for %s', 'sage'), get_search_query());
+            return sprintf(__('Search Results for %s', 'learning-commons'), get_search_query());
         }
         if (is_404()) {
-            return __('Not Found', 'sage');
+            return __('Not Found', 'learning-commons');
         }
         return get_the_title();
     }
