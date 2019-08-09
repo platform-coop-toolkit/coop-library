@@ -73,7 +73,7 @@
     "webpack-dev-middleware": "~2.0.4",
     "webpack-hot-middleware": "~2.25.0",
     "webpack-merge": "~4.1.4",
-    "yargs": "~11.0.0"
+    "yargs": "~13.3.0"
   },
   "dependencies": {
     "jquery": "^3.3.1"
