@@ -24,14 +24,20 @@ $sage_error = function ($message, $subtitle = '', $title = '') {
  * Ensure compatible version of PHP is used
  */
 if (version_compare('7.1', phpversion(), '>=')) {
-    $sage_error(__('You must be using PHP 7.1 or greater.', 'learning-commons'), __('Invalid PHP version', 'learning-commons'));
+    $sage_error(
+        __('You must be using PHP 7.1 or greater.', 'learning-commons'),
+        __('Invalid PHP version', 'learning-commons')
+    );
 }
 
 /**
  * Ensure compatible version of WordPress is used
  */
 if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
-    $sage_error(__('You must be using WordPress 4.7.0 or greater.', 'learning-commons'), __('Invalid WordPress version', 'learning-commons'));
+    $sage_error(
+        __('You must be using WordPress 4.7.0 or greater.', 'learning-commons'),
+        __('Invalid WordPress version', 'learning-commons')
+    );
 }
 
 /**
@@ -56,7 +62,10 @@ if (!class_exists('Roots\\Sage\\Container')) {
 array_map(function ($file) use ($sage_error) {
     $file = "../app/{$file}.php";
     if (!locate_template($file, true, true)) {
-        $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'learning-commons'), $file), 'File not found');
+        $sage_error(
+            sprintf(__('Error locating <code>%s</code> for inclusion.', 'learning-commons'), $file),
+            'File not found'
+        );
     }
 }, ['helpers', 'setup', 'filters', 'admin']);
 
