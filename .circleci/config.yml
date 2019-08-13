@@ -18,9 +18,9 @@ jobs:
       - run:
           name: "Run asset tests"
           command: |
-            yarn
-            yarn test
-            yarn build
+            npm ci
+            npm run test
+            npm run build
 
 workflows:
   version: 2
