@@ -1,7 +1,13 @@
 {
   "name": "@platform-coop-toolkit/learning-commons",
   "version": "1.0.0-dev",
+  "description": "WordPress theme for the Platform Cooperativism Learning Commons",
   "author": "OCAD University <platform-coop-development-kit@lists.inclusivedesign.ca>",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
   "homepage": "https://github.com/platform-coop-toolkit/learning-commons/",
   "private": true,
   "repository": {
@@ -11,32 +17,19 @@
   "bugs": {
     "url": "https://github.com/platform-coop-toolkit/learning-commons/issues"
   },
-  "licenses": [
-    {
-      "type": "BSD-3-Clause",
-      "url": "https://opensource.org/licenses/BSD-3-Clause"
-    }
-  ],
   "browserslist": [
     "last 2 versions",
     "android 4",
     "opera 12"
   ],
-  "scripts": {
-    "build": "webpack --progress --config resources/assets/build/webpack.config.js",
-    "build:production": "webpack --env.production --progress --config resources/assets/build/webpack.config.js",
-    "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
-    "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
-    "rmdist": "rimraf dist",
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
-    "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
-    "test": "npm run -s lint"
-  },
   "engines": {
     "node": ">= 8.0.0"
   },
+  "dependencies": {
+    "custom-event-polyfill": "^1.0.7"
+  },
   "devDependencies": {
+    "@wordpress/scripts": "^3.4.0",
     "autoprefixer": "~9.6.1",
     "browser-sync": "~2.24.7",
     "browsersync-webpack-plugin": "^0.6.0",
@@ -56,12 +49,15 @@
     "imagemin-mozjpeg": "~8.0.0",
     "imagemin-webpack-plugin": "~2.4.2",
     "import-glob": "~1.5",
-    "node-sass": "~4.12.0",
+    "postcss-calc": "~7.0.1",
+    "postcss-custom-media": "~7.0.8",
+    "postcss-custom-properties": "~9.0.2",
+    "postcss-import": "~12.0.1",
     "postcss-loader": "~3.0.0",
+    "postcss-partial-import": "~4.1.0",
     "postcss-safe-parser": "~3.0",
     "resolve-url-loader": "~3.1.0",
     "rimraf": "~2.6",
-    "sass-loader": "~7.2",
     "style-loader": "^0.23.1",
     "stylelint": "^8.4.0",
     "stylelint-config-standard": "~18.2.0",
@@ -75,7 +71,27 @@
     "webpack-merge": "~4.2.1",
     "yargs": "~13.3.0"
   },
-  "dependencies": {
-    "jquery": "^3.3.1"
+  "scripts": {
+    "build": "webpack --progress --config resources/assets/build/webpack.config.js",
+    "build:production": "webpack --env.production --progress --config resources/assets/build/webpack.config.js",
+    "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
+    "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
+    "rmdist": "rimraf dist",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:pkg-json",
+    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
+    "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
+    "lint:pkg-json": "wp-scripts lint-pkg-json .",
+    "test": "npm run -s lint"
+  },
+  "npmPackageJsonLintConfig": {
+    "extends": "@wordpress/npm-package-json-lint-config",
+    "rules": {
+      "valid-values-license": [
+        "error",
+        [
+          "BSD-3-Clause"
+        ]
+      ]
+    }
   }
 }
