@@ -14,8 +14,8 @@ use Roots\Sage\Container;
  * @param string $title
  */
 $sage_error = function ($message, $subtitle = '', $title = '') {
-    $title = $title ?: __('Sage &rsaquo; Error', 'learning-commons');
-    $footer = '<a href="https://roots.io/sage/docs/">roots.io/sage/docs/</a>';
+    $title = $title ?: pll__('Learning Commons &rsaquo; Error');
+    $footer = '<a href="https://github.com/platform-coop-toolkit/learning-commons/">Documentations</a>';
     $message = "<h1>{$title}<br><small>{$subtitle}</small></h1><p>{$message}</p><p>{$footer}</p>";
     wp_die($message, $title);
 };
@@ -25,8 +25,8 @@ $sage_error = function ($message, $subtitle = '', $title = '') {
  */
 if (version_compare('7.1', phpversion(), '>=')) {
     $sage_error(
-        __('You must be using PHP 7.1 or greater.', 'learning-commons'),
-        __('Invalid PHP version', 'learning-commons')
+        pll__('You must be using PHP 7.1 or greater.'),
+        pll__('Invalid PHP version')
     );
 }
 
@@ -35,8 +35,8 @@ if (version_compare('7.1', phpversion(), '>=')) {
  */
 if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
     $sage_error(
-        __('You must be using WordPress 4.7.0 or greater.', 'learning-commons'),
-        __('Invalid WordPress version', 'learning-commons')
+        pll__('You must be using WordPress 4.7.0 or greater.'),
+        pll__('Invalid WordPress version')
     );
 }
 
@@ -46,8 +46,8 @@ if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
 if (!class_exists('Roots\\Sage\\Container')) {
     if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
         $sage_error(
-            __('You must run <code>composer install</code> from the Sage directory.', 'learning-commons'),
-            __('Autoloader not found.', 'learning-commons')
+            pll__('You must run <code>composer install</code> from the Sage directory.'),
+            pll__('Autoloader not found.')
         );
     }
     require_once $composer;
@@ -63,11 +63,11 @@ array_map(function ($file) use ($sage_error) {
     $file = "../app/{$file}.php";
     if (!locate_template($file, true, true)) {
         $sage_error(
-            sprintf(__('Error locating <code>%s</code> for inclusion.', 'learning-commons'), $file),
+            sprintf(pll__('Error locating <code>%s</code> for inclusion.'), $file),
             'File not found'
         );
     }
-}, ['helpers', 'setup', 'filters', 'admin']);
+}, ['helpers', 'setup', 'filters', 'admin', 'translation']);
 
 /**
  * Here's what's happening with these hooks:
@@ -99,3 +99,9 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+/**
+ * Load theme translation interface.
+ * @see https://github.com/roots/sage/issues/1875#issuecomment-380076482
+ */
+new App\Translation();

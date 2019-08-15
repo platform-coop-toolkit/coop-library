@@ -44,7 +44,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'learning-commons')
+        'primary_navigation' => pll__('Primary Navigation')
     ]);
 
     /**
@@ -70,6 +70,12 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    /**
+     * Add localization support
+     * @see https://roots.io/sage/docs/theme-localization/
+     */
+    load_theme_textdomain('learning-commons', get_template_directory() . '/lang');
 }, 20);
 
 /**
@@ -83,11 +89,11 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'learning-commons'),
+        'name'          => pll__('Primary'),
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'learning-commons'),
+        'name'          => pll__('Footer'),
         'id'            => 'sidebar-footer'
     ] + $config);
 });

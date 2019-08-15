@@ -1,0 +1,14 @@
+.before-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.before-title .format::before {
+  display: inline-block;
+  content: "\00a0\00b7\00a0";
+}
+
+.before-title .published {
+  margin-left: auto;
+}
