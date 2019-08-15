@@ -12,3 +12,22 @@
 .before-title .published {
   margin-left: auto;
 }
+
+.goals,
+.topics {
+  list-style: none;
+  padding-left: 0;
+}
+
+.no-goals,
+.no-topics {
+  font-style: italic;
+}
+
+.engage ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+}

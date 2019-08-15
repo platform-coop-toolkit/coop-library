@@ -93,4 +93,46 @@ class Single extends Controller
 
         return false;
     }
+
+    public function resourceGoals()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $goals = get_the_terms($post, 'lc_goal');
+            if ($goals) {
+                $result = [];
+                foreach ($goals as $goal) {
+                    $result[] = [
+                        'name' => $goal->name,
+                        'url' => get_term_link($goal),
+                    ];
+                }
+                return $result;
+            }
+        }
+
+        return false;
+    }
+
+    public function resourceTopics()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $topics = get_the_terms($post, 'lc_topic');
+            if ($topics) {
+                $result = [];
+                foreach ($topics as $topic) {
+                    $result[] = [
+                        'name' => $topic->name,
+                        'url' => get_term_link($topic),
+                    ];
+                }
+                return $result;
+            }
+        }
+
+        return false;
+    }
 }
