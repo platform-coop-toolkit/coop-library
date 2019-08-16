@@ -35,7 +35,7 @@
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
     "buble-loader": "^0.4.1",
-    "cache-loader": "~1.2.5",
+    "cache-loader": "~4.1.0",
     "clean-webpack-plugin": "^1.0.1",
     "copy-globs-webpack-plugin": "^0.3.0",
     "css-loader": "^0.28.9",
