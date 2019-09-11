@@ -13,6 +13,9 @@ class App extends Controller
 
     public static function title()
     {
+        if (is_front_page()) {
+            return pll__('Platform Co-op Resource Library');
+        }
         if (is_home()) {
             if ($home = get_option('page_for_posts', true)) {
                 return get_the_title($home);

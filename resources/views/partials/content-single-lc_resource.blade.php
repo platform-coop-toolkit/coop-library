@@ -30,7 +30,27 @@
   <p class="no-topics">{{ pll__('This resource does not have any associated topics.') }}</p>
   @endif
   <footer>
-    <p class="permalink"><a href="{{ $resource_permanent_link }}">{{ pll__('Visit full resource') }}</a></p>
+    <ul class="permalinks">
+      <li><a href="{{ $resource_permanent_link }}">{{ pll__('Visit full resource') }}</a></li>
+      @if($resource_perma_cc_links)
+        @foreach($resource_perma_cc_links as $link)
+          @if($loop->count > 1)
+            <li><a href="{{ $link }}">{{ sprintf(pll__('Visit resource on Perma.cc (%1$d of %2$d)'), $loop->iteration, $loop->count) }}</a></li>
+          @else
+            <li><a href="{{ $link }}">{{ pll__('Visit resource on Perma.cc') }}</a></li>
+          @endif
+        @endforeach
+      @endif
+      @if($resource_wayback_machine_links)
+        @foreach($resource_wayback_machine_links as $link)
+          @if($loop->count > 1)
+            <li><a href="{{ $link }}">{{ sprintf(pll__('Visit resource on the Internet Archive (%1$d of %2$d)'), $loop->iteration, $loop->count) }}</a></li>
+          @else
+            <li><a href="{{ $link }}">{{ pll__('Visit resource on the Internet Archive') }}</a></li>
+          @endif
+        @endforeach
+      @endif
+    </ul>
     <nav class="engage">
       <ul>
         <li><a href="#">Favourite</a></li>

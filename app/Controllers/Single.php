@@ -17,6 +17,28 @@ class Single extends Controller
         return false;
     }
 
+    public function resourcePermaCcLinks()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            return get_post_meta($post->ID, 'lc_resource_perma_cc_links', true);
+        }
+
+        return false;
+    }
+
+    public function resourceWaybackMachineLinks()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            return get_post_meta($post->ID, 'lc_resource_wayback_machine_links', true);
+        }
+
+        return false;
+    }
+
     public function resourcePublicationDate()
     {
         global $post;
