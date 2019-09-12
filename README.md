@@ -1,8 +1,8 @@
-# Platform Co-op Learning Commons
+# Learning Commons
 
 [![License](https://badgen.net/badge/license/BSD-3-Clause/blue)](https://github.com/platform-coop-toolkit/learning-commons/blob/master/LICENSE.md) [![Status](https://badgen.net/github/status/platform-coop-toolkit/learning-commons)](https://circleci.com/gh/platform-coop-toolkit/learning-commons/tree/master) [![GitHub Release](https://badgen.net/github/release/platform-coop-toolkit/learning-commons)](https://github.com/platform-coop-toolkit/learning-commons/releases/latest)
 
-WordPress theme for the Platform Co-op Learning Commons, based on [Sage](https://roots.io/sage/).
+WordPress theme for the Platform Co-op Resource Library, based on [Sage](https://roots.io/sage/).
 
 ## Development
 
@@ -16,4 +16,4 @@ See [Sage 9 docs](https://roots.io/sage/docs/) for basic information. Commands f
 - `composer install`: Install PHP dependencies
 - `composer standards`: Check PHP coding standards
 
-The Platform Cooperativism Consortium theme uses [CSS with PostCSS](https://postcss.org/) instead of SCSS, and includes the [sage-directives](https://github.com/Log1x/sage-directives) and [blade-svg-sage](https://github.com/Log1x/blade-svg-sage) Composer packages.
+The Learning Commons theme uses [CSS with PostCSS](https://postcss.org/) instead of SCSS, and includes the [sage-directives](https://github.com/Log1x/sage-directives) and [blade-svg-sage](https://github.com/Log1x/blade-svg-sage) Composer packages.
