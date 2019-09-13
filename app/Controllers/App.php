@@ -14,22 +14,22 @@ class App extends Controller
     public static function title()
     {
         if (is_front_page()) {
-            return pll__('Platform Co-op Resource Library');
+            return __('Platform Co-op Resource Library', 'learning-commons');
         }
         if (is_home()) {
             if ($home = get_option('page_for_posts', true)) {
                 return get_the_title($home);
             }
-            return pll__('Latest Posts');
+            return __('Latest Posts', 'learning-commons');
         }
         if (is_post_type_archive('lc_resource')) {
-            return pll__('Resources');
+            return __('Resources', 'learning-commons');
         }
         if (is_search()) {
-            return sprintf(pll__('Search Results for %s'), get_search_query());
+            return sprintf(__('Search Results for %s', 'learning-commons'), get_search_query());
         }
         if (is_404()) {
-            return pll__('Not Found');
+            return __('Not Found', 'learning-commons');
         }
         return get_the_title();
     }

@@ -1,7 +1,7 @@
 <p class="publication-data">
 @if($resource_publisher)
 <span class="byline publisher vcard">
-  {{ pll__('By') }} {!! $resource_publisher !!}
+  {{ __('By', 'learning-commons') }} {!! $resource_publisher !!}
 </span>
 @endif
 @if($resource_regions)

@@ -44,7 +44,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => pll__('Primary Navigation')
+        'primary_navigation' => __('Primary Navigation', 'learning-commons')
     ]);
 
     /**
@@ -89,11 +89,11 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => pll__('Primary'),
+        'name'          => __('Primary', 'learning-commons'),
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => pll__('Footer'),
+        'name'          => __('Footer', 'learning-commons'),
         'id'            => 'sidebar-footer'
     ] + $config);
 });

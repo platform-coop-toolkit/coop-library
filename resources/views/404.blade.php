@@ -5,7 +5,7 @@
 
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{ pll__('Sorry, but the page you were trying to view does not exist.') }}
+      {{ __('Sorry, but the page you were trying to view does not exist.', 'learning-commons') }}
     </div>
     {!! get_search_form(false) !!}
   @endif

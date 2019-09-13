@@ -7,7 +7,7 @@
     @php the_content() @endphp
   </div>
   <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . pll__('Pages:'), 'after' => '</p></nav>']) !!}
+    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'learning-commons'), 'after' => '</p></nav>']) !!}
   </footer>
   @php comments_template('/partials/comments.blade.php') @endphp
 </article>

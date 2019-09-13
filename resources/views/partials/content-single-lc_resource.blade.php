@@ -1,7 +1,7 @@
 <article @php post_class() @endphp>
   <header>
     <p class="before-title">
-      <span class="type">{{ pll__('Resource') }}</span><span class="format">{{ $resource_format }}</span><time class="published" datetime="{{ strftime( $resource_publication_iso_date) }}">{{ $resource_publication_date }}</time>
+      <span class="type">{{ __('Resource', 'learning-commons') }}</span><span class="format">{{ $resource_format }}</span><time class="published" datetime="{{ strftime( $resource_publication_iso_date) }}">{{ $resource_publication_date }}</time>
     </p>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     @include('partials/resource-meta')
@@ -9,7 +9,7 @@
   <div class="entry-content">
     @php the_content() @endphp
   </div>
-  <h2>{{ pll__('Goals') }}</h2>
+  <h2>{{ __('Goals', 'learning-commons') }}</h2>
   @if($resource_goals)
   <ul class="goals">
     @foreach($resource_goals as $goal)
@@ -17,9 +17,9 @@
     @endforeach
   </ul>
   @else
-  <p class="no-goals">{{ pll__('This resource does not have any associated goals.') }}</p>
+  <p class="no-goals">{{ __('This resource does not have any associated goals.', 'learning-commons') }}</p>
   @endif
-  <h2>{{ pll__('Topics') }}</h2>
+  <h2>{{ __('Topics', 'learning-commons') }}</h2>
   @if($resource_topics)
   <ul class="topics">
     @foreach($resource_topics as $topic)
@@ -27,26 +27,26 @@
     @endforeach
   </ul>
   @else
-  <p class="no-topics">{{ pll__('This resource does not have any associated topics.') }}</p>
+  <p class="no-topics">{{ __('This resource does not have any associated topics.', 'learning-commons') }}</p>
   @endif
   <footer>
     <ul class="permalinks">
-      <li><a href="{{ $resource_permanent_link }}">{{ pll__('Visit full resource') }}</a></li>
+      <li><a href="{{ $resource_permanent_link }}">{{ __('Visit full resource', 'learning-commons') }}</a></li>
       @if($resource_perma_cc_links)
         @foreach($resource_perma_cc_links as $link)
           @if($loop->count > 1)
-            <li><a href="{{ $link }}">{{ sprintf(pll__('Visit resource on Perma.cc (%1$d of %2$d)'), $loop->iteration, $loop->count) }}</a></li>
+            <li><a href="{{ $link }}">{{ sprintf(__('Visit resource on Perma.cc (%1$d of %2$d)', 'learning-commons'), $loop->iteration, $loop->count) }}</a></li>
           @else
-            <li><a href="{{ $link }}">{{ pll__('Visit resource on Perma.cc') }}</a></li>
+            <li><a href="{{ $link }}">{{ __('Visit resource on Perma.cc', 'learning-commons') }}</a></li>
           @endif
         @endforeach
       @endif
       @if($resource_wayback_machine_links)
         @foreach($resource_wayback_machine_links as $link)
           @if($loop->count > 1)
-            <li><a href="{{ $link }}">{{ sprintf(pll__('Visit resource on the Internet Archive (%1$d of %2$d)'), $loop->iteration, $loop->count) }}</a></li>
+            <li><a href="{{ $link }}">{{ sprintf(__('Visit resource on the Internet Archive (%1$d of %2$d)', 'learning-commons'), $loop->iteration, $loop->count) }}</a></li>
           @else
-            <li><a href="{{ $link }}">{{ pll__('Visit resource on the Internet Archive') }}</a></li>
+            <li><a href="{{ $link }}">{{ __('Visit resource on the Internet Archive', 'learning-commons') }}</a></li>
           @endif
         @endforeach
       @endif
