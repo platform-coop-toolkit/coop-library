@@ -1,12 +1,12 @@
 {
   "name": "platform-coop-toolkit/learning-commons",
   "type": "wordpress-theme",
-  "description": "WordPress theme for the Platform Co-op Learning Commons.",
+  "description": "WordPress theme for the Platform Co-op Resource Library.",
   "keywords": [
     "wordpress"
   ],
   "homepage": "https://github.com/platform-coop-toolkit/learning-commons/",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "authors": [
     {
       "name": "OCAD University",
