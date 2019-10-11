@@ -89,3 +89,24 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+ * Show twenty resources per page.
+ */
+add_filter('pre_get_posts', function ($query) {
+    if (is_post_type_archive('lc_resource')) {
+        $query->set('posts_per_page', 20);
+        $query->set('meta_key', 'lc_resource_publication_year');
+        $query->set('orderby', 'meta_value');
+        $query->set('order', 'desc');
+    }
+});
+
+/**
+ * Show sidebar on archive and search pages.
+ */
+add_filter('sage/display_sidebar', function () {
+    if (is_archive()) {
+        return true;
+    }
+});
