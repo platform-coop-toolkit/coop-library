@@ -1,3 +1,4 @@
+@import "../../../node_modules/modern-css-reset/src/reset.css";
 @import "common/_properties.css";
 
 /** Import theme styles */
@@ -10,5 +11,5 @@
 @import "layouts/_sidebar.css";
 @import "layouts/_footer.css";
 @import "layouts/_pages.css";
-@import "layouts/_posts.css";
+@import "layouts/_resources.css";
 @import "layouts/_tinymce.css";
