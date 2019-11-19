@@ -153,7 +153,11 @@ let webpackConfig = {
       allChunks: true,
       disable: (config.enabled.watcher),
     }),
-    new webpack.ProvidePlugin({}),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    }),
     new webpack.LoaderOptionsPlugin({
       minimize: config.enabled.optimize,
       debug: config.enabled.watcher,
