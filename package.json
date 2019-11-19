@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.2",
-    "@platform-coop-toolkit/pinecone": "git+https://github.com/platform-coop-toolkit/pinecone.git#762808a",
+    "@platform-coop-toolkit/pinecone": "git+https://github.com/platform-coop-toolkit/pinecone.git",
     "@wordpress/babel-preset-default": "^4.7.0",
     "@wordpress/browserslist-config": "^2.6.0",
     "@wordpress/dependency-extraction-webpack-plugin": "^2.1.0",
