@@ -1,10 +1,21 @@
 <article @php post_class() @endphp>
   <header>
     <p class="before-title">
-      <span class="type">{{ __('Resource', 'learning-commons') }}</span><span class="format">{{ $resource_format }}</span><time class="published" datetime="{{ strftime( $resource_publication_iso_date) }}">{{ $resource_publication_date }}</time>
+      <span class="type">{{ __('Resource', 'learning-commons') }}</span><span class="format">{{ $resource_format }}</span><time class="published" datetime="{{ strftime(Single::getPublicationIsoDate()) }}">{{ Single::getPublicationDate() }}</time>
     </p>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    @include('partials/resource-meta')
+    <p class="publication-data">
+    @if(Single::getPublisher())
+    <span class="byline publisher vcard">
+      {{ __('By', 'learning-commons') }} {!! Single::getPublisher() !!}
+    </span>
+    @endif
+    @if($resource_regions)
+      @foreach($resource_regions as $region)
+        <a href="{{ $region['url'] }}">{{ $region['name'] }}</a>
+      @endforeach
+    @endif
+    </p>
   </header>
   <div class="entry-content">
     @php the_content() @endphp
@@ -31,9 +42,9 @@
   @endif
   <footer>
     <ul class="permalinks">
-      <li><a href="{{ $resource_permanent_link }}">{{ __('Visit full resource', 'learning-commons') }}</a></li>
-      @if($resource_perma_cc_links)
-        @foreach($resource_perma_cc_links as $link)
+      <li><a href="{{ Single::getPermanentLink() }}">{{ __('Visit full resource', 'learning-commons') }}</a></li>
+      @if(Single::getPermaCcLinks())
+        @foreach(Single::getPermaCcLinks() as $link)
           @if($loop->count > 1)
             <li><a href="{{ $link }}">{{ sprintf(__('Visit resource on Perma.cc (%1$d of %2$d)', 'learning-commons'), $loop->iteration, $loop->count) }}</a></li>
           @else
@@ -41,8 +52,8 @@
           @endif
         @endforeach
       @endif
-      @if($resource_wayback_machine_links)
-        @foreach($resource_wayback_machine_links as $link)
+      @if(Single::getWaybackMachineLinks())
+        @foreach(Single::getWaybackMachineLinks() as $link)
           @if($loop->count > 1)
             <li><a href="{{ $link }}">{{ sprintf(__('Visit resource on the Internet Archive (%1$d of %2$d)', 'learning-commons'), $loop->iteration, $loop->count) }}</a></li>
           @else
