@@ -39,15 +39,19 @@ jobs:
       with:
         path: node_modules
         key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+    - name: npm install and build
+      run: |
+        npm install
+        npm run build:production
+      env:
+        CI: true
     - name: Cache Composer packages
       uses: actions/cache@v1
       with:
         path: vendor
         key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
-    - name: Build release
-      run: |
-        npm run build:production
-        composer install --no-dev --optimize-autoloader
+    - name: Composer install
+      run: composer install --no-dev --optimize-autoloader
     - name: Deploy to staging
       id: deploy
       uses: platform-coop-toolkit/rsync-deploy@master
@@ -70,16 +74,20 @@ jobs:
   #     with:
   #       path: node_modules
   #       key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+  #   - name: npm install and build
+  #     run: |
+  #       npm install
+  #       npm run build:production
+  #     env:
+  #       CI: true
   #   - name: Cache Composer packages
   #     uses: actions/cache@v1
   #     with:
   #       path: vendor
   #       key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
-  #   - name: Build release
-  #     run: |
-  #       npm run build:production
-  #       composer install --no-dev --optimize-autoloader
-  #   - name: Deploy to staging
+  #   - name: Composer install
+  #     run: composer install --no-dev --optimize-autoloader
+  #   - name: Deploy to production
   #     id: deploy
   #     uses: platform-coop-toolkit/rsync-deploy@master
   #     env:
