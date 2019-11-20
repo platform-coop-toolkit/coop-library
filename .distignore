@@ -7,10 +7,6 @@
 .github
 .gitignore
 .stylelintrc.js
-composer.json
-composer.lock
 node_modules
-package-lock.json
-package.json
 phpcs.xml
 resources/assets
