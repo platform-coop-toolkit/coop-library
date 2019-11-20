@@ -84,7 +84,7 @@
     "lint:pkg-json": "wp-scripts lint-pkg-json .",
     "test": "npm run -s lint"
   },
-  "npmPackageJsonLintConfig": {
+  "npmpackagejsonlint": {
     "extends": "@wordpress/npm-package-json-lint-config",
     "rules": {
       "valid-values-license": [
