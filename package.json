@@ -23,7 +23,7 @@
     "opera 12"
   ],
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 10.0.0"
   },
   "dependencies": {
     "custom-event-polyfill": "^1.0.7",
