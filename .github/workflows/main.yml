@@ -28,13 +28,27 @@ jobs:
       run: |
         composer install
         composer test
+  deploy-staging:
+    needs: test
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+    - name: Cache Composer packages
+      uses: actions/cache@v1
+      with:
+        path: vendor
+        key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
     - name: Build release
-      if: success() && github.ref == 'refs/heads/dev'
       run: |
         npm run build:production
-        composer install --no-dev
+        composer install --no-dev --optimize-autoloader
     - name: Deploy to staging
-      if: success() && github.ref == 'refs/heads/dev'
       id: deploy
       uses: platform-coop-toolkit/rsync-deploy@master
       env:
@@ -45,3 +59,34 @@ jobs:
         dest: 'platformcoop@ctweb12.ct.coop:/home/platformcoop/domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons'
     - name: Display status from deploy
       run: echo "${{ steps.deploy.outputs.status }}"
+  # deploy-production:
+  #   needs: test
+  #   if: github.ref == 'refs/heads/master'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Cache node modules
+  #     uses: actions/cache@v1
+  #     with:
+  #       path: node_modules
+  #       key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+  #   - name: Cache Composer packages
+  #     uses: actions/cache@v1
+  #     with:
+  #       path: vendor
+  #       key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
+  #   - name: Build release
+  #     run: |
+  #       npm run build:production
+  #       composer install --no-dev --optimize-autoloader
+  #   - name: Deploy to staging
+  #     id: deploy
+  #     uses: platform-coop-toolkit/rsync-deploy@master
+  #     env:
+  #       DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+  #     with:
+  #       flags: "-azrh --delete --progress --exclude-from '.distignore'"
+  #       port: '22222'
+  #       dest: 'platformcoop@ctweb12.ct.coop:/home/platformcoop/domains/library.platform.coop/public_html/wp-content/themes/learning-commons'
+  #   - name: Display status from deploy
+  #     run: echo "${{ steps.deploy.outputs.status }}"
