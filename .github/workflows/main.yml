@@ -1,4 +1,4 @@
-name: Run lint (JavaScript, Sass, PHP)
+name: Run lint (JavaScript, Sass, PHP) and build
 
 on: [push]
 
@@ -38,14 +38,29 @@ jobs:
       run: |
         composer install
         composer test
-    - name: Deploy to staging
-      uses: samkirkland/ftp-deploy-action@2.0.0
+    - name: Build release
       if: success() && github.ref == 'refs/heads/dev'
+      run: |
+        npm run build:production
+        composer install --no-dev --optimize-autoloader
+    - name: Deploy to staging
+      if: success() && github.ref == 'refs/heads/dev'
+      id: deploy
+      uses: Pendect/action-rsyncer@master
       env:
-        FTP_SERVER: ${{ secrets.FTP_SERVER }}
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        METHOD: sftp
-        PORT: ${{ secrets.FTP_PORT }}
-        REMOTE_DIR: /domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons
-        ARGS: --dry-run --delete --exclude docs/ --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/
+        DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
+      with:
+        flags: '-avzr --delete -e "ssh -p 22222"'
+        options: ''
+        src: '/'
+        dst: 'platformcoop@platform.coop:/home/platformcoop/domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons/'
+      # env:
+      #   FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      #   FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      #   FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      #   METHOD: sftp
+      #   PORT: ${{ secrets.FTP_PORT }}
+      #   REMOTE_DIR: /domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons
+      #   ARGS: --dry-run --delete --exclude docs/ --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/
+    - name: Display status from deploy
+      run: echo "${{ steps.deploy.outputs.status }}"

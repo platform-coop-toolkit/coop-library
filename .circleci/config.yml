@@ -59,12 +59,12 @@ workflows:
   test_and_deploy:
     jobs:
       - test
-      - deploy_theme_staging:
-          requires:
-            - test
-          filters:
-            branches:
-              only: dev
+      # - deploy_theme_staging:
+      #     requires:
+      #       - test
+      #     filters:
+      #       branches:
+      #         only: dev
       # - deploy_theme_production:
       #     requires:
       #       - test
