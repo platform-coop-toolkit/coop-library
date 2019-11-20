@@ -1,6 +1,6 @@
 {
   "name": "@platform-coop-toolkit/learning-commons",
-  "version": "1.0.0-dev",
+  "version": "1.0.0-alpha.0",
   "description": "WordPress theme for the Platform Cooperativism Resource Library",
   "author": "OCAD University <platform-coop-development-kit@lists.inclusivedesign.ca>",
   "license": "BSD-3-Clause",
@@ -21,7 +21,7 @@
     "extends @wordpress/browserslist-config"
   ],
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 10.0.0"
   },
   "dependencies": {
     "custom-event-polyfill": "^1.0.7",
