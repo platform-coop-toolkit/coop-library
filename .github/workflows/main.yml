@@ -1,4 +1,4 @@
-name: Run lint (JavaScript, Sass, PHP) and build
+name: Test, build, and deploy
 
 on: [push]
 
@@ -46,11 +46,11 @@ jobs:
     - name: Deploy to staging
       if: success() && github.ref == 'refs/heads/dev'
       id: deploy
-      uses: Pendect/action-rsyncer@master
+      uses: pendect/action-rsyncer@master
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
       with:
-        flags: '-avzr --delete -e "ssh -p 22222"'
+        flags: '-avzr --delete --exclude ".distignore" -e "ssh -p 22222"'
         options: ''
         src: '/'
         dst: 'platformcoop@platform.coop:/home/platformcoop/domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons/'
