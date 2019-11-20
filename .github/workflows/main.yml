@@ -38,3 +38,14 @@ jobs:
       run: |
         composer install
         composer test
+    - name: Deploy to staging
+      uses: samkirkland/ftp-deploy-action@2.0.0
+      if: success() && github.ref == 'refs/heads/dev'
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        METHOD: sftp
+        PORT: ${{ secrets.PORT }}
+        REMOTE_DIR: /domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons
+        ARGS: '--dry-run --delete --exclude docs/ --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/'
