@@ -46,6 +46,6 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         METHOD: sftp
-        PORT: ${{ secrets.PORT }}
+        PORT: ${{ secrets.FTP_PORT }}
         REMOTE_DIR: /domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons
-        ARGS: '--dry-run --delete --exclude docs/ --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/'
+        ARGS: --dry-run --delete --exclude docs/ --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/
