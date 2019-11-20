@@ -42,7 +42,7 @@ jobs:
       if: success() && github.ref == 'refs/heads/dev'
       run: |
         npm run build:production
-        composer install --no-dev --optimize-autoloader
+        composer install --no-dev
     - name: Deploy to staging
       if: success() && github.ref == 'refs/heads/dev'
       id: deploy
