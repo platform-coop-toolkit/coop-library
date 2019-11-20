@@ -1,3 +1,4 @@
+.cache-loader
 .circleci
 .distignore
 .editorconfig

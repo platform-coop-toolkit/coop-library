@@ -50,7 +50,7 @@ jobs:
       env:
         DEPLOY_KEY: ${{secrets.DEPLOY_KEY}}
       with:
-        flags: '-avzr --delete --exclude ".distignore" -e "ssh -p 22222"'
+        flags: '-avzr --delete --exclude-from ".distignore" -e "ssh -p 22222"'
         options: ''
         src: '/'
         dst: 'platformcoop@platform.coop:/home/platformcoop/domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons/'
