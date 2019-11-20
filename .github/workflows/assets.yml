@@ -35,6 +35,6 @@ jobs:
           ${{ runner.OS }}-build-
           ${{ runner.OS }}-
     - name: Composer install and lint
-      run: /
+      run: |
         composer install
         composer test
