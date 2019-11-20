@@ -50,6 +50,6 @@ jobs:
       with:
         flags: "-azrh --delete --progress --exclude-from '.distignore'"
         port: '22222'
-        dst: 'platformcoop@ctweb12.ct.coop:/home/platformcoop/domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons'
+        dest: 'platformcoop@ctweb12.ct.coop:/home/platformcoop/domains/stage.commons.platform.coop/public_html/wp-content/themes/learning-commons'
     - name: Display status from deploy
       run: echo "${{ steps.deploy.outputs.status }}"
