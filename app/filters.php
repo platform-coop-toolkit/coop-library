@@ -95,7 +95,7 @@ add_filter('comments_template', function ($comments_template) {
  */
 add_filter('pre_get_posts', function ($query) {
     if (is_post_type_archive('lc_resource')) {
-        $query->set('posts_per_page', 20);
+        $query->set('posts_per_page', 12);
         $query->set('meta_key', 'lc_resource_publication_year');
         $query->set('orderby', 'meta_value');
         $query->set('order', 'desc');

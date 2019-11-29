@@ -1,7 +1,11 @@
 <?php namespace App\Controllers\Partials;
 
+use Illuminate\Support\Str;
+use function App\maybe_swap_term;
+
 trait Resource
 {
+
     public static function getShortTitle()
     {
         global $post;
@@ -18,7 +22,7 @@ trait Resource
         return false;
     }
 
-    public function getPermanentLink()
+    public static function getPermanentLink()
     {
         global $post;
 
@@ -29,7 +33,7 @@ trait Resource
         return false;
     }
 
-    public function getPermaCcLinks()
+    public static function getPermaCcLinks()
     {
         global $post;
 
@@ -40,7 +44,7 @@ trait Resource
         return false;
     }
 
-    public function getWaybackMachineLinks()
+    public static function getWaybackMachineLinks()
     {
         global $post;
 
@@ -51,7 +55,7 @@ trait Resource
         return false;
     }
 
-    public function getPublicationDate()
+    public static function getPublicationDate()
     {
         global $post;
 
@@ -68,7 +72,7 @@ trait Resource
         return false;
     }
 
-    public function getPublicationIsoDate()
+    public static function getPublicationIsoDate()
     {
         global $post;
 
@@ -82,7 +86,7 @@ trait Resource
         return false;
     }
 
-    public function getPublisher()
+    public static function getPublisher()
     {
         global $post;
 
@@ -93,6 +97,80 @@ trait Resource
                 return "<a rel='publisher' href='{$publisher_link}'>{$publisher_name}</a>";
             } elseif ($publisher_name) {
                 return $publisher_name;
+            }
+        }
+
+        return false;
+    }
+
+    public static function getFormat()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $formats = wp_get_object_terms($post->ID, 'lc_format', ['order' => 'DESC', 'orderby' => 'count']);
+            if ($formats) {
+                $format = maybe_swap_term($formats[0]);
+                return $format->name;
+            }
+        }
+
+        return false;
+    }
+
+    public static function getRegion()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $regions = wp_get_object_terms($post->ID, 'lc_region', ['order' => 'DESC', 'orderby' => 'count']);
+            if ($regions) {
+                $region = maybe_swap_term($regions[0]);
+                return $region->name;
+            }
+        }
+
+        return false;
+    }
+
+    public static function getGoals($limit = -1)
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $goals = wp_get_object_terms($post->ID, 'lc_goal', ['order' => 'DESC', 'orderby' => 'count']);
+            if ($goals) {
+                $result = [];
+                foreach ($goals as $goal) {
+                    $goal = maybe_swap_term($goal);
+                    $result[] = [
+                        'name' => Str::title($goal->name),
+                        'url' => get_term_link($goal),
+                    ];
+                }
+                return $result;
+            }
+        }
+
+        return false;
+    }
+
+    public static function getTopics($limit = -1)
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $topics = wp_get_object_terms($post->ID, 'lc_topic', ['order' => 'DESC', 'orderby' => 'count']);
+            if ($topics) {
+                $result = [];
+                foreach ($topics as $topic) {
+                    $topic = maybe_swap_term($topic);
+                    $result[] = [
+                        'name' => Str::title($topic->name),
+                        'url' => get_term_link($topic),
+                    ];
+                }
+                return $result;
             }
         }
 

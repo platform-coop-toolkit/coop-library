@@ -1,7 +1,7 @@
 <article @php post_class() @endphp>
   <header>
     <p class="before-title">
-      <span class="type">{{ __('Resource', 'learning-commons') }}</span><span class="format">{{ $resource_format }}</span><time class="published" datetime="{{ strftime(Single::getPublicationIsoDate()) }}">{{ Single::getPublicationDate() }}</time>
+      <span class="type">{{ __('Resource', 'learning-commons') }}</span><span class="format">{{ Single::getFormat() }}</span><time class="published" datetime="{{ strftime(Single::getPublicationIsoDate()) }}">{{ Single::getPublicationDate() }}</time>
     </p>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     <p class="publication-data">
