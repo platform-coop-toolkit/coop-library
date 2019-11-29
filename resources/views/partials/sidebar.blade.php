@@ -1,12 +1,12 @@
 @php dynamic_sidebar('sidebar-primary') @endphp
 
-{{--<form action="/">
-  <pre>
+<form action="/">
+  {{--<pre>
   @php
       global $wp_query;
       print_r($queried_resource_terms);
   @endphp
-  </pre>
+  </pre>--}}
   @foreach([
     'lc_region' => __('Location of relevance', 'learning-commons'),
     'lc_goal' => __('Goals', 'learning-commons'),
@@ -33,4 +33,4 @@
   </div>
   @endforeach
   <input type="submit" value="{{ __('Apply Filters', 'learning-commons') }}" />
-</form> --}}
+</form>
