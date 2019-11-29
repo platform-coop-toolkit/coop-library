@@ -103,6 +103,13 @@ trait Resource
         return false;
     }
 
+    public static function getLanguage($format = 'slug')
+    {
+        global $post;
+
+        return pll_get_post_language($post->ID, $format);
+    }
+
     public static function getFormat()
     {
         global $post;

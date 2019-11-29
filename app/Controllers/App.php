@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
+use function \LearningCommonsFramework\Internationalization\get_language_list;
+
 class App extends Controller
 {
     public function siteName()
@@ -29,6 +31,26 @@ class App extends Controller
             }
         }
         return $terms;
+    }
+
+    public function languages()
+    {
+        return get_language_list(pll_current_language('locale'));
+    }
+
+    public function currentLanguageName()
+    {
+        return pll_current_language('name');
+    }
+
+    public function currentLanguageLocale()
+    {
+        return pll_current_language('locale');
+    }
+
+    public function currentLanguage()
+    {
+        return pll_current_language();
     }
 
     public static function title()

@@ -142,7 +142,10 @@ function maybe_swap_term($term)
     $lang = pll_current_language();
     if (pll_get_term_language($term->term_id) !== $lang) {
         $localized_term_id = pll_get_term($term->term_id, $lang);
-        $localized_term = get_term($localized_term_id, $term->taxonomy);
+        if ($localized_term_id) {
+            $localized_term = get_term($localized_term_id, $term->taxonomy);
+            return $localized_term;
+        }
     }
-    return ($localized_term) ? $localized_term : $term;
+    return $term;
 }

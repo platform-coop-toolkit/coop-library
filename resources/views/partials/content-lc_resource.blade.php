@@ -1,6 +1,10 @@
 <li @php post_class('card card--resource') @endphp>
   <header>
     <span class="card__format">{{ Archive::getFormat() }}</span>
+    @if($current_language !== Archive::getLanguage())
+    <span class="sep"> &middot; </span>
+    <span class="card__language">{{ $languages[Archive::getLanguage()] }}</span>
+    @endif
     <h2 class="card__title"><a href="{{ get_permalink() }}">{!! Archive::getShortTitle() !!}</a></h2>
   </header>
   @if(Archive::getPublisher())
