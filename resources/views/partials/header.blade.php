@@ -5,10 +5,10 @@
       @if (has_nav_menu('primary_navigation'))
         <button class="menu-toggle" aria-expanded="false">
           <svg class="icon icon--open" aria-hidden="true">
-            <use xlink:href="/images/hamburger.svg"/>
+            <use xlink:href="@asset('images/hamburger.svg')"/>
           </svg>
           <svg class="icon icon--close" aria-hidden="true">
-            <use xlink:href="/images/close.svg"/>
+            <use xlink:href="@asset('images/close.svg')"/>
           </svg>
           <span id="menu-primary-label" class="menu-toggle__label">Menu</span>
         </button>

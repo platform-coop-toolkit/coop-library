@@ -20,8 +20,7 @@ mix.sass('resources/assets/styles/main.scss', 'styles')
    .purgeCss();
 
 mix.js('resources/assets/scripts/main.js', 'scripts')
-   .js('resources/assets/scripts/customizer.js', 'scripts')
-   .extract();
+   .js('resources/assets/scripts/customizer.js', 'scripts');
 
 mix.copyWatched('resources/assets/images', 'dist/images')
    .copyWatched('resources/assets/fonts', 'dist/fonts')
