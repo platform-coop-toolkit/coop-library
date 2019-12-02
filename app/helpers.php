@@ -136,3 +136,16 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+function maybe_swap_term($term)
+{
+    $lang = pll_current_language();
+    if (pll_get_term_language($term->term_id) !== $lang) {
+        $localized_term_id = pll_get_term($term->term_id, $lang);
+        if ($localized_term_id) {
+            $localized_term = get_term($localized_term_id, $term->taxonomy);
+            return $localized_term;
+        }
+    }
+    return $term;
+}

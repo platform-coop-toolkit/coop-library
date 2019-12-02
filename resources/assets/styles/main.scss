@@ -1,0 +1,15 @@
+@import "common/variables";
+@import "../../../node_modules/@platform-coop-toolkit/pinecone/src/assets/styles/pinecone.scss";
+
+/** Import theme styles */
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/resources";
+@import "layouts/tinymce";
