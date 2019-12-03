@@ -1,7 +1,7 @@
 export default {
   init() {
     // JavaScript to be fired on the home page
-    window.pinecone.card();
+    window.pinecone.cards();
     window.pinecone.accordions();
   },
   finalize() {
