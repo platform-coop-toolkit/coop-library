@@ -44,7 +44,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'learning-commons')
+        'primary_navigation' => __('Primary Navigation', 'coop-library')
     ]);
 
     /**
@@ -75,7 +75,7 @@ add_action('after_setup_theme', function () {
      * Add localization support
      * @see https://roots.io/sage/docs/theme-localization/
      */
-    load_theme_textdomain('learning-commons', get_template_directory() . '/lang');
+    load_theme_textdomain('coop-library', get_template_directory() . '/lang');
 }, 20);
 
 /**
@@ -89,11 +89,11 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'learning-commons'),
+        'name'          => __('Primary', 'coop-library'),
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'learning-commons'),
+        'name'          => __('Footer', 'coop-library'),
         'id'            => 'sidebar-footer'
     ] + $config);
 });

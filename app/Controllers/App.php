@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-use function \LearningCommonsFramework\Internationalization\get_language_list;
+use function \CoopLibraryFramework\Internationalization\get_language_list;
 
 class App extends Controller
 {
@@ -56,22 +56,22 @@ class App extends Controller
     public static function title()
     {
         if (is_front_page()) {
-            return __('Platform Co-op Resource Library', 'learning-commons');
+            return __('Platform Co-op Resource Library', 'coop-library');
         }
         if (is_home()) {
             if ($home = get_option('page_for_posts', true)) {
                 return get_the_title($home);
             }
-            return __('Latest Posts', 'learning-commons');
+            return __('Latest Posts', 'coop-library');
         }
         if (is_post_type_archive('lc_resource')) {
-            return __('Resources', 'learning-commons');
+            return __('Resources', 'coop-library');
         }
         if (is_search()) {
-            return sprintf(__('Search Results for %s', 'learning-commons'), get_search_query());
+            return sprintf(__('Search Results for %s', 'coop-library'), get_search_query());
         }
         if (is_404()) {
-            return __('Not Found', 'learning-commons');
+            return __('Not Found', 'coop-library');
         }
         return get_the_title();
     }

@@ -5,7 +5,7 @@
 
   @if (!have_posts())
     <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'learning-commons') }}
+      {{ __('Sorry, no results were found.', 'coop-library') }}
     </div>
     {!! get_search_form(false) !!}
   @endif

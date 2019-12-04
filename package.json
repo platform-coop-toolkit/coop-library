@@ -1,5 +1,5 @@
 {
-  "name": "@platform-coop-toolkit/learning-commons",
+  "name": "@platform-coop-toolkit/coop-library",
   "version": "1.0.0-alpha.0",
   "description": "WordPress theme for the Platform Cooperativism Resource Library",
   "author": "OCAD University <platform-coop-development-kit@lists.inclusivedesign.ca>",
@@ -8,14 +8,14 @@
     "wordpress",
     "theme"
   ],
-  "homepage": "https://github.com/platform-coop-toolkit/learning-commons/",
+  "homepage": "https://github.com/platform-coop-toolkit/coop-library/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/platform-coop-toolkit/learning-commons.git"
+    "url": "git://github.com/platform-coop-toolkit/coop-library.git"
   },
   "bugs": {
-    "url": "https://github.com/platform-coop-toolkit/learning-commons/issues"
+    "url": "https://github.com/platform-coop-toolkit/coop-library/issues"
   },
   "browserslist": [
     "extends @wordpress/browserslist-config"

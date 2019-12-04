@@ -1,11 +1,11 @@
 {
-  "name": "platform-coop-toolkit/learning-commons",
+  "name": "platform-coop-toolkit/coop-library",
   "type": "wordpress-theme",
   "description": "WordPress theme for the Platform Co-op Resource Library.",
   "keywords": [
     "wordpress"
   ],
-  "homepage": "https://github.com/platform-coop-toolkit/learning-commons/",
+  "homepage": "https://github.com/platform-coop-toolkit/coop-library/",
   "license": "BSD-3-Clause",
   "authors": [
     {
@@ -37,6 +37,6 @@
     ]
   },
   "support": {
-    "issues": "https://github.com/platform-coop-toolkit/learning-commons/issues"
+    "issues": "https://github.com/platform-coop-toolkit/coop-library/issues"
   }
 }

@@ -9,11 +9,11 @@
   </pre>--}}
   <div class="accordions">
     @foreach([
-      'lc_region' => __('Location of relevance', 'learning-commons'),
-      'lc_goal' => __('Goals', 'learning-commons'),
-      'lc_topic' => __('Topics', 'learning-commons'),
-      'lc_format' => __('Format', 'learning-commons'),
-      'lc_sector' => __('Sector', 'learning-commons'),
+      'lc_region' => __('Location of relevance', 'coop-library'),
+      'lc_goal' => __('Goals', 'coop-library'),
+      'lc_topic' => __('Topics', 'coop-library'),
+      'lc_format' => __('Format', 'coop-library'),
+      'lc_sector' => __('Sector', 'coop-library'),
     ] as $tax => $label)
     <div class="accordion">
       <p class="accordion__heading">{{ $label }}</p>
@@ -34,5 +34,5 @@
     </div>
     @endforeach
   </div>
-  {{-- <input type="submit" value="{{ __('Apply Filters', 'learning-commons') }}" /> --}}
+  {{-- <input type="submit" value="{{ __('Apply Filters', 'coop-library') }}" /> --}}
 {{-- </form> --}}

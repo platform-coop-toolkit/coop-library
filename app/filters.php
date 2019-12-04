@@ -30,7 +30,7 @@ add_filter('body_class', function (array $classes) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'learning-commons') . '</a>';
+    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'coop-library') . '</a>';
 });
 
 /**
