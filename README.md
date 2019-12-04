@@ -1,6 +1,6 @@
 # Co-op Library
 
-[![License](https://badgen.net/badge/license/BSD-3-Clause/blue)](https://github.com/platform-coop-toolkit/coop-library/blob/master/LICENSE.md) [![Status](https://badgen.net/github/status/platform-coop-toolkit/coop-library)](https://circleci.com/gh/platform-coop-toolkit/coop-library/tree/master) [![GitHub Release](https://badgen.net/github/release/platform-coop-toolkit/coop-library)](https://github.com/platform-coop-toolkit/coop-library/releases/latest)
+[![License](https://badgen.net/badge/license/BSD-3-Clause/blue)](https://github.com/platform-coop-toolkit/coop-library/blob/master/LICENSE.md) [![Status](https://github.com/platform-coop-toolkit/coop-library/workflows/main/badge.svg)](https://github.com/platform-coop-toolkit/coop-library/actions) [![GitHub Release](https://badgen.net/github/release/platform-coop-toolkit/coop-library)](https://github.com/platform-coop-toolkit/coop-library/releases/latest)
 
 WordPress theme for the Platform Co-op Resource Library, based on [Sage](https://roots.io/sage/).
 
