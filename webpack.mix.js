@@ -16,8 +16,7 @@ const mix = require('laravel-mix');
 mix.setPublicPath('./dist')
    .browserSync('commons.platform.coop.test');
 
-mix.sass('resources/assets/styles/main.scss', 'styles')
-   .purgeCss();
+mix.sass('resources/assets/styles/main.scss', 'styles');
 
 mix.js('resources/assets/scripts/main.js', 'scripts')
    .js('resources/assets/scripts/customizer.js', 'scripts');
