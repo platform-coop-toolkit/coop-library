@@ -8,7 +8,7 @@
     <h2 class="card__title"><a href="{{ get_permalink() }}">{!! Archive::getShortTitle() !!}</a></h2>
   </header>
   @if(Archive::getPublisher())
-      <p class="card__byline">{{ sprintf(__('By %s', 'learning-commons'), Archive::getPublisher()) }}</p>
+      <p class="card__byline">{{ sprintf(__('By %s', 'coop-library'), Archive::getPublisher()) }}</p>
   @endif
   @if(Archive::getRegion())
     <p class="card__locality"><svg aria-hidden="true" class="icon icon--location"><use xlink:href="/images/location.svg"/></svg>{{ Archive::getRegion() }}</p>
