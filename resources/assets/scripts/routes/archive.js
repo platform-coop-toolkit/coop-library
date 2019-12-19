@@ -30,12 +30,12 @@ export default {
       } );
     }
 
-    const accordions = document.querySelectorAll('.accordions');
+    const accordions = document.querySelectorAll('.accordion');
     Array.prototype.forEach.call( accordions, accordion => {
       new Pinecone.Accordion(
         accordion,
         {
-          paneSelector: '.accordion',
+          paneSelector: '.accordion__pane',
           controlSelector: '.accordion__control',
         }
       );
