@@ -1,11 +1,11 @@
-<div class="filter-sort__filters">
+<div class="filter-wrapper">
   {{--<pre>
   @php
       global $wp_query;
       print_r($queried_resource_terms);
   @endphp
   </pre>--}}
-  <form action="">
+  <form class="filters" action="">
     <div class="accordion">
       @foreach([
         'lc_region' => __('Location of relevance', 'coop-library'),

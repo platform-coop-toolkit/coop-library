@@ -2,7 +2,7 @@
   <header>
     <span class="card__format">{{ Archive::getFormat() }}</span>
     @if($current_language !== Archive::getLanguage())
-    <span class="sep"> &middot; </span>
+    <span class="card__sep"> &middot; </span>
     <span class="card__language">{{ $languages[Archive::getLanguage()] }}</span>
     @endif
     <h2 class="card__title"><a href="{{ get_permalink() }}">{!! Archive::getShortTitle() !!}</a></h2>
@@ -16,10 +16,13 @@
   @if(Archive::getTopics())
   <div class="card__tags">
     <ul class="badges">
-      @foreach(Archive::getTopics() as $topic)
+      @foreach(Archive::getTopics(2) as $topic)
       <li class="badge"><span class="screen-reader-text">Topic: </span>{{ $topic['name'] }}</li>
       @endforeach
     </ul>
+    @if(Archive::getOverflowTopics())
+    <p>{{ sprintf(__('+%d more', 'coop-library'), Archive::getOverflowTopics()), }}
+    @endif
   </div>
   @endif
 </li>

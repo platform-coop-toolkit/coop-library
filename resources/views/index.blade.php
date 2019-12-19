@@ -10,9 +10,9 @@
     {!! get_search_form(false) !!}
   @endif
 
-  <div class="filter-sort">
-    @include('partials.filters')
-  </div>
+  @include('partials.filters')
+  @include('partials.sort')
+  @include('partials.current-filters')
   <div class="resource-list">
     <ul class="cards">
     @while (have_posts()) @php the_post() @endphp
