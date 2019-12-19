@@ -110,3 +110,12 @@ add_filter('sage/display_sidebar', function () {
         return true;
     }
 });
+
+
+add_filter('bladesvg', function () {
+    return [
+        'svg_path' => 'dist/images',
+        'inline' => true,
+        'class' => 'icon'
+    ];
+});

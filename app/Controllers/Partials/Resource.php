@@ -125,6 +125,30 @@ trait Resource
         return false;
     }
 
+    public static function getFormatSlug()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $formats = wp_get_object_terms($post->ID, 'lc_format', ['order' => 'DESC', 'orderby' => 'count']);
+            if ($formats) {
+                $format = maybe_swap_term($formats[0], 'en');
+                switch ($format->slug) {
+                    case 'presentation-slides':
+                        return 'presentation';
+                        break;
+                    case 'podcast':
+                        return 'audio';
+                        break;
+                    default:
+                        return $format->slug;
+                }
+            }
+        }
+
+        return false;
+    }
+
     public static function getRegion()
     {
         global $post;
