@@ -24,8 +24,6 @@
     "node": ">= 10.0.0"
   },
   "dependencies": {
-    "custom-event-polyfill": "^1.0.7",
-    "jquery": "^3.4.1",
     "modern-css-reset": "^1.0.4"
   },
   "devDependencies": {

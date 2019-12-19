@@ -125,6 +125,30 @@ trait Resource
         return false;
     }
 
+    public static function getFormatSlug()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $formats = wp_get_object_terms($post->ID, 'lc_format', ['order' => 'DESC', 'orderby' => 'count']);
+            if ($formats) {
+                $format = maybe_swap_term($formats[0], 'en');
+                switch ($format->slug) {
+                    case 'presentation-slides':
+                        return 'presentation';
+                        break;
+                    case 'podcast':
+                        return 'audio';
+                        break;
+                    default:
+                        return $format->slug;
+                }
+            }
+        }
+
+        return false;
+    }
+
     public static function getRegion()
     {
         global $post;
@@ -140,12 +164,16 @@ trait Resource
         return false;
     }
 
-    public static function getGoals($limit = -1)
+    public static function getGoals($limit = 0)
     {
         global $post;
 
         if ($post->post_type == 'lc_resource') {
-            $goals = wp_get_object_terms($post->ID, 'lc_goal', ['order' => 'DESC', 'orderby' => 'count']);
+            $goals = wp_get_object_terms(
+                $post->ID,
+                'lc_goal',
+                ['order' => 'DESC', 'orderby' => 'count', 'number' => $limit]
+            );
             if ($goals) {
                 $result = [];
                 foreach ($goals as $goal) {
@@ -162,12 +190,16 @@ trait Resource
         return false;
     }
 
-    public static function getTopics($limit = -1)
+    public static function getTopics($limit = 0)
     {
         global $post;
 
         if ($post->post_type == 'lc_resource') {
-            $topics = wp_get_object_terms($post->ID, 'lc_topic', ['order' => 'DESC', 'orderby' => 'count']);
+            $topics = wp_get_object_terms(
+                $post->ID,
+                'lc_topic',
+                ['order' => 'DESC', 'orderby' => 'count', 'number' => $limit]
+            );
             if ($topics) {
                 $result = [];
                 foreach ($topics as $topic) {
@@ -178,6 +210,24 @@ trait Resource
                     ];
                 }
                 return $result;
+            }
+        }
+
+        return false;
+    }
+
+    public static function getOverflowTopics()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            $topics = wp_get_object_terms($post->ID, 'lc_topic', ['order' => 'DESC', 'orderby' => 'count']);
+            if ($topics) {
+                if (count($topics) < 3) {
+                    return false;
+                } else {
+                    return count($topics) - 2;
+                }
             }
         }
 

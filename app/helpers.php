@@ -137,9 +137,11 @@ function display_sidebar()
     return $display;
 }
 
-function maybe_swap_term($term)
+function maybe_swap_term($term, $lang = false)
 {
-    $lang = pll_current_language();
+    if (!$lang) {
+        $lang = pll_current_language();
+    }
     if (pll_get_term_language($term->term_id) !== $lang) {
         $localized_term_id = pll_get_term($term->term_id, $lang);
         if ($localized_term_id) {
