@@ -14,9 +14,15 @@ const mix = require('laravel-mix');
  */
 
 mix.setPublicPath('./dist')
-   .browserSync('commons.platform.coop.test');
+  .browserSync('commons.platform.coop.test');
 
-mix.sass('resources/assets/styles/main.scss', 'styles')
+
+
+mix.sass('resources/assets/styles/main.scss', 'styles', {
+    sassOptions: {
+      includePaths: ['node_modules'],
+    },
+  })
    .purgeCss({
       globs: [
         path.join(__dirname, 'node_modules/@platform-coop-toolkit/pinecone/src/assets/scripts/**/*.js'),
