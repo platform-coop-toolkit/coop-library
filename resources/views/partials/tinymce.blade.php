@@ -1,0 +1,1 @@
+<body id="tinymce"></body>
