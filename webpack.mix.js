@@ -20,7 +20,7 @@ mix.setPublicPath('./dist')
 
 mix.sass('resources/assets/styles/main.scss', 'styles', {
     sassOptions: {
-      includePaths: ['./node_modules'],
+      includePaths: [path.join(__dirname, 'node_modules')],
     },
   })
    .purgeCss({
