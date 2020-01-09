@@ -12,6 +12,15 @@ jobs:
       with:
         path: node_modules
         key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        always-auth: true
+        node-version: '12.x'
+        registry-url: https://npm.pkg.github.com
+        scope: '@platform-coop-toolkit'
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: npm install, build, and lint
       run: |
         npm install
@@ -19,7 +28,6 @@ jobs:
         npm test
       env:
         CI: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Cache Composer packages
       uses: actions/cache@v1
       with:
