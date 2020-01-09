@@ -17,6 +17,8 @@ jobs:
         npm install
         npm run build
         npm test
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
       env:
         CI: true
     - name: Cache Composer packages
