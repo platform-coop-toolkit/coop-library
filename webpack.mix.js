@@ -1,6 +1,5 @@
 const mix = require('laravel-mix');
             require('laravel-mix-purgecss');
-            require('laravel-mix-copy-watched');
 
 /*
  |--------------------------------------------------------------------------
@@ -33,10 +32,10 @@ mix.js('resources/assets/scripts/main.js', 'scripts')
    .js('resources/assets/scripts/customizer.js', 'scripts')
    .extract();
 
-mix.copyWatched('resources/assets/images', 'dist/images')
-   .copyWatched('resources/assets/fonts', 'dist/fonts')
-   .copyWatched('node_modules/@platform-coop-toolkit/pinecone/src/assets/images', 'dist/images')
-   .copyWatched('node_modules/@platform-coop-toolkit/pinecone/src/assets/fonts', 'dist/fonts');
+mix.copy('resources/assets/images', 'dist/images')
+   .copy('resources/assets/fonts', 'dist/fonts')
+   .copy('node_modules/@platform-coop-toolkit/pinecone/src/assets/images', 'dist/images')
+   .copy('node_modules/@platform-coop-toolkit/pinecone/src/assets/fonts', 'dist/fonts');
 
 mix.options({
   processCssUrls: false,
