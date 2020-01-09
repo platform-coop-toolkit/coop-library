@@ -19,6 +19,13 @@ export default {
       new Pinecone.FilterList( filterContainer, showFilters, hideFilters );
     }
 
+    const deselectButtons = document.querySelectorAll( 'button[id^="deselect-"]' );
+    if ( 0 < deselectButtons.length ) {
+      Array.prototype.forEach.call( deselectButtons, btn => {
+        new Pinecone.DeselectAll( btn );
+      } );
+    }
+
     const nestedCheckboxContainers = document.querySelectorAll( '.input-group__parent > li' );
     if ( nestedCheckboxContainers ) {
       Array.prototype.forEach.call( nestedCheckboxContainers, container => {
@@ -40,6 +47,11 @@ export default {
         }
       );
     } );
+
+    const sortMenuButtonContainer = document.querySelector( '.sort .menu-button' );
+    if ( sortMenuButtonContainer ) {
+      new Pinecone.MenuButton( sortMenuButtonContainer, { placement: 'bottom' } );
+    }
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS

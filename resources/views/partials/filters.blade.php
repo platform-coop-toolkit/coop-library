@@ -5,11 +5,11 @@
       print_r($queried_resource_terms);
   @endphp
   </pre>--}}
-  <button type="button" id="show-filters">{{ __('Filter', 'coop-library' ) }}</button>
+  <button type="button" class="button" id="show-filters">@svg('filter', 'icon--filter', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Filter', 'coop-library' ) }}</button>
     <form class="filters" action="{{ get_post_type_archive_link('lc_resource') }}">
-      <button type="button" id="hide-filters">{{ __('Close', 'coop-library' ) }}</button>
+      <button type="button" class="button" id="hide-filters">{{ __('Close', 'coop-library' ) }} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
       <h2 class="h1 screen-reader-text">{{ __('Filters', 'coop-library' ) }}</h2>
-      <div class="accordion">
+      <div class="accordion accordion--filter-list">
         @foreach([
           'lc_region' => __('Location of relevance', 'coop-library'),
           'lc_goal' => __('Goals', 'coop-library'),
@@ -21,6 +21,9 @@
         <div class="accordion__pane">
           <p class="accordion__heading">{{ $label }}</p>
           <div class="accordion__content">
+            <button id="deselect-{{ $tax }}" type="button" class="button">
+              <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ $label }}</span></span>
+            </button>
             <ul class="input-group input-group__parent {{ $tax }}">
               @foreach(get_terms($tax) as $term)
               <li>
@@ -38,6 +41,20 @@
         @endif
         @endforeach
       </div>
-      <input type="submit" value="{{ __('Apply Filters', 'coop-library') }}" />
+      <div class="input-group">
+        <input type="submit" name="submit" value="{{ __('Apply Filters', 'coop-library') }}" />
+      </div>
   </form>
+</div>
+<div class="sort-wrapper">
+  <div class="sort">
+      <div class="menu-button">
+          <h2 class="h3 menu-button__label">@svg('sort', 'icon--sort', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Sort by', 'coop-library') }}</h2>
+          <ul class="link-list">
+              <li class="link-list__item"><a href="#" aria-current=true>{{ __('Date added', 'coop-library') }}</a></li>
+              <li class="link-list__item"><a href="#">{{ __('Date published', 'coop-library') }}</a></li>
+              <li class="link-list__item"><a href="#">{{ __('Most favorited', 'coop-library') }}</a></li>
+          </ul>
+      </div>
+  </div>
 </div>
