@@ -94,7 +94,7 @@ trait Resource
             $publisher_name = get_post_meta($post->ID, 'lc_resource_publisher_name', true);
             $publisher_link = get_post_meta($post->ID, 'lc_resource_publisher_link', true);
             if ($publisher_name && $publisher_link) {
-                return "<a rel='publisher' href='{$publisher_link}'>{$publisher_name}</a>";
+                return "<a rel='external publisher' href='{$publisher_link}'>{$publisher_name}</a>";
             } elseif ($publisher_name) {
                 return $publisher_name;
             }
