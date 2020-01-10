@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.7",
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
     "@platform-coop-toolkit/pinecone": "platform-coop-toolkit/pinecone#1.0.0-alpha.3",
     "@wordpress/babel-preset-default": "^4.8.0",
     "@wordpress/browserslist-config": "^2.6.0",
@@ -39,8 +41,10 @@
     "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.19.1",
+    "husky": "^4.0.6",
     "laravel-mix": "^5.0.1",
     "laravel-mix-purgecss": "^4.2.0",
+    "lint-staged": "^9.5.0",
     "npm-run-all": "^4.1",
     "rimraf": "^3.0",
     "sass": "^1.24.3",
@@ -63,6 +67,20 @@
     "lint:styles": "stylelint \"resources/assets/**/*.{vue,css,sass,scss,less}\"",
     "lint:pkg-json": "wp-scripts lint-pkg-json .",
     "test": "run-s -c lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.css": [
+      "stylelint"
+    ],
+    "*.js": [
+      "eslint"
+    ]
   },
   "npmpackagejsonlint": {
     "extends": "@wordpress/npm-package-json-lint-config",
