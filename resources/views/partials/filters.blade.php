@@ -1,6 +1,6 @@
 <div class="filter-wrapper">
   <button type="button" class="button" id="show-filters">@svg('filter', 'icon--filter', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Filter', 'coop-library' ) }}</button>
-    <form class="filters" action="{{ get_post_type_archive_link('lc_resource') }}">
+    <form name="filters" class="filters" action="{{ get_post_type_archive_link('lc_resource') }}">
       <button type="button" class="button" id="hide-filters">{{ __('Close', 'coop-library' ) }} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
       <h2 class="h1 screen-reader-text">{{ __('Filters', 'coop-library' ) }}</h2>
       <div class="accordion accordion--filter-list">
@@ -36,7 +36,7 @@
         @endforeach
       </div>
       <div class="input-group">
-        <input type="submit" name="submit" value="{{ __('Apply Filters', 'coop-library') }}" />
+        <input type="submit" name="applyFilters" value="{{ __('Apply Filters', 'coop-library') }}" />
       </div>
   </form>
 </div>
