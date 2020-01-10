@@ -26,7 +26,7 @@ class App extends Controller
         if ($wp_query->tax_query) {
             foreach ($wp_query->tax_query->queries as $value) {
                 foreach ($value['terms'] as $t) {
-                    $terms[$value['taxonomy']][] = $t;
+                    $terms[$value['taxonomy']][$t] = get_term_by('slug', $t, $value['taxonomy']);
                 }
             }
         }
@@ -51,6 +51,21 @@ class App extends Controller
     public function currentLanguage()
     {
         return pll_current_language();
+    }
+
+    public function foundPosts()
+    {
+        global $wp_query;
+        return $wp_query->found_posts;
+    }
+
+    public static function totalPosts($post_type = null)
+    {
+        if ($post_type) {
+            return wp_count_posts($post_type)->publish;
+        }
+
+        return 0;
     }
 
     public static function title()
