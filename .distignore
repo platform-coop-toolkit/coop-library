@@ -7,6 +7,7 @@
 .github
 .gitignore
 .stylelintrc.js
+commitlint.config.js
 node_modules
 phpcs.xml
 resources/assets
