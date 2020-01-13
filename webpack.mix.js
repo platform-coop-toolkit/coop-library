@@ -18,15 +18,10 @@ mix.setPublicPath('./dist')
 
 
 mix.sass('resources/assets/styles/main.scss', 'styles', {
-    sassOptions: {
-      includePaths: [path.join(__dirname, 'node_modules')],
-    },
-  })
-   .purgeCss({
-      globs: [
-        path.join(__dirname, 'node_modules/@platform-coop-toolkit/pinecone/src/assets/scripts/**/*.js'),
-      ],
-   });
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'node_modules')],
+  },
+});
 
 mix.js('resources/assets/scripts/main.js', 'scripts')
    .js('resources/assets/scripts/customizer.js', 'scripts')
