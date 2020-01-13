@@ -52,6 +52,16 @@ export default {
     if ( sortMenuButtonContainer ) {
       new Pinecone.MenuButton( sortMenuButtonContainer, { placement: 'bottom' } );
     }
+
+    const clearFilterBtns = document.querySelectorAll('.current-filters button');
+    Array.prototype.forEach.call( clearFilterBtns, btn => {
+      btn.onclick = () => {
+        const id = btn.getAttribute('data-checkbox');
+        const checkbox = document.getElementById(id);
+        checkbox.checked = false;
+        document.forms.filters.submit();
+      };
+    });
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
