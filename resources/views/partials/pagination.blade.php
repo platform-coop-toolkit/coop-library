@@ -1,3 +1,4 @@
+{{-- Keep PurgeCSS from removing these styles. --}}
 <nav class="navigation pagination" role="navigation" aria-label="Posts">
   <h2 class="screen-reader-text">Posts navigation</h2>
   <a class="prev page-numbers" href="/en/resources/">‹ <span class="screen-reader-text">previous resources</span></a>
