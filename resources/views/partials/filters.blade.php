@@ -35,6 +35,7 @@
         @endif
         @endforeach
       </div>
+      <input type="hidden" name="order_by" value="{{ $_GET['order_by'] }}" />
       <div class="input-group">
         <input type="submit" name="applyFilters" value="{{ __('Apply Filters', 'coop-library') }}" />
       </div>

@@ -1,4 +1,5 @@
 // import external dependencies
+import 'wicg-inert';
 
 // import local dependencies
 import Router from './util/Router';
