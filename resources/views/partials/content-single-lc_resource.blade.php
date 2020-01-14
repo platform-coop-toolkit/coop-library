@@ -41,10 +41,10 @@
       <span class="button__label">{{ __('Favorite', 'coop-library') }}</span>
     </button>
     <div class="share menu-button">
-      <h2 class="h3 menu-button__label">
+      <p class="h3 menu-button__label">
         @svg('share', 'icon--share', ['focusable' => 'false', 'aria-hidden' => 'true'])
         {{ __('Share', 'coop-library') }}
-      </h2>
+      </p>
       <ul class="link-list">
         <li class="link-list__item">
           <a href="https://twitter.com/intent/tweet/?text={{ urlencode(get_the_title()) }}&url={{ urlencode(get_permalink()) }}">Twitter</a>
