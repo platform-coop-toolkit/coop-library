@@ -18,16 +18,36 @@
             <button id="deselect-{{ $tax }}" type="button" class="button">
               <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ $label }}</span></span>
             </button>
-            <ul class="input-group input-group__parent {{ $tax }}">
+            <ul id="{{ $tax }}" class="input-group input-group__parent {{ $tax }}">
               @foreach(get_terms($tax) as $term)
-              <li>
-                <input id="{{ $tax }}-{{ $term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $term->slug }}" {{
-                checked(
-                  (in_array($term->slug, array_keys($queried_resource_terms[$tax]), true)) ? $term->slug : false,
-                  $term->slug,
-                  false
-                ) }} />
-                <label for="{{ $tax }}-{{ $term->slug }}">{!! $term->name !!}</label></li>
+                @if(!$term->parent)
+                <li>
+                  <input id="{{ $tax }}-{{ $term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $term->slug }}" {{
+                  checked(
+                    (in_array($term->slug, array_keys($queried_resource_terms[$tax]), true)) ? $term->slug : false,
+                    $term->slug,
+                    false
+                  ) }} />
+                  <label for="{{ $tax }}-{{ $term->slug }}">{!! $term->name !!}</label>
+                  @if(get_term_children($term->term_id, $tax))
+                    <span id="{{ $term->slug }}-disclosure-label" hidden>{{ sprintf(__('show %d subtopics for "%s"', 'coop-library'), count(get_term_children($term->term_id, $tax)), $term->name) }}</span>
+                    <span hidden> ({{ sprintf(__('and %d subtopics', 'coop-library'), count(get_term_children($term->term_id, $tax))) }})</span>
+                    <ul class="input-group input-group__descendant">
+                      @foreach(get_terms(['taxonomy' => $tax, 'parent' => $term->term_id]) as $child_term)
+                      <li>
+                        <input id="{{ $tax }}-{{ $child_term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $child_term->slug }}" {{
+                        checked(
+                          (in_array($child_term->slug, array_keys($queried_resource_terms[$tax]), true)) ? $child_term->slug : false,
+                          $child_term->slug,
+                          false
+                        ) }} />
+                        <label for="{{ $tax }}-{{ $child_term->slug }}">{!! $child_term->name !!}</label>
+                      </li>
+                      @endforeach
+                    </ul>
+                  @endif
+                </li>
+                @endif
               @endforeach
             </ul>
           </div>
