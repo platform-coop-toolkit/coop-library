@@ -1,11 +1,29 @@
 @if(get_terms($taxonomy))
-<ul class="link-list">
+  <ul class="link-list">
   @foreach(get_terms($taxonomy) as $term)
-  <li class="link-list__item">
-    <a href="{{ get_term_link($term) }}">{!! $term->name !!}</a>
-  </li>
+    @if(get_term_children($term->term_id, $taxonomy))
+      <li>
+        <hr class="is-style-thick has-grey-200-background-color" />
+        <h2>{{ $term->name }}</h2>
+      </li>
+      <li>
+        <ul class="link-list">
+          <li class="link-list__item">
+            <a href="{{ get_term_link($term) }}">{!! $term->name !!}</a>
+          </li>
+          @foreach(get_term_children($term->term_id, $taxonomy) as $child)
+          <li class="link-list__item">
+            <a href="{{ get_term_link($child) }}">{!! get_term($child)->name !!}</a>
+          </li>
+        @endforeach
+        </ul>
+      </li>
+    @elseif(!$term->parent)
+      <li class="link-list__item">
+        <a href="{{ get_term_link($term) }}">{!! $term->name !!}</a>
+      </li>
+    @endif
   @endforeach
-</ul>
 @else
-<p>{{ sprintf(__('No %s found.'), strtolower(get_the_title())) }}</p>
+  <p>{{ sprintf(__('No %s found.'), strtolower(get_the_title())) }}</p>
 @endif
