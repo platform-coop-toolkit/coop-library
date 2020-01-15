@@ -18,6 +18,7 @@ jobs:
         npm run build
         npm test
       env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CI: true
     - name: Cache Composer packages
       uses: actions/cache@v1
@@ -44,6 +45,7 @@ jobs:
         npm install
         npm run build:production
       env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         CI: true
     - name: Cache Composer packages
       uses: actions/cache@v1
