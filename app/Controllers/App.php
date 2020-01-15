@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use League\Uri\Components\Query;
+use League\Uri\Uri;
+use League\Uri\UriModifier;
 use Sober\Controller\Controller;
 
 use function \CoopLibraryFramework\Internationalization\get_language_list;
@@ -66,6 +69,12 @@ class App extends Controller
         }
 
         return 0;
+    }
+
+    public static function sortUrl($order_by)
+    {
+        $uri = Uri::createFromString($_SERVER['REQUEST_URI']);
+        return UriModifier::mergeQuery($uri, "order_by=$order_by");
     }
 
     public static function title()
