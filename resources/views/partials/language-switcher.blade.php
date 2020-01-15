@@ -6,7 +6,7 @@
   <ul class="menu__submenu">
     @if(function_exists('pll_the_languages'))
       @foreach(pll_the_languages(['raw' => 1]) as $translation)
-        <li class="menu-item"><a href="{{ $translation['url'] }}" class="menu__item">{{ $translation['name'] }}</a></li>
+    <li class="menu-item"><a {!! $translation['current_lang'] ? 'aria-current="true"' : '' !!}href="{{ $translation['url'] }}" class="menu__item">{{ $translation['name'] }}</a></li>
       @endforeach
     @endif
   </ul>
