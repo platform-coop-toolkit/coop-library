@@ -88,9 +88,11 @@ class App extends Controller
             }
             return __('Latest Posts', 'coop-library');
         }
-        if (is_post_type_archive('lc_resource')) {
-            return __('Resources', 'coop-library');
+
+        if (is_post_type_archive('lc_resource') || is_tax()) {
+            return __('Browse all', 'coop-library');
         }
+
         if (is_search()) {
             return sprintf(__('Search Results for %s', 'coop-library'), get_search_query());
         }

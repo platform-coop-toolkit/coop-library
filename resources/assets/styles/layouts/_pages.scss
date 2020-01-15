@@ -1,0 +1,18 @@
+.term-list {
+  .link-list {
+    margin-top: 0;
+  }
+
+  .link-list hr {
+    margin: rem(60) 0 0 calc(-1 * (50vw - 50%));
+    width: 100vw;
+  }
+
+  .link-list hr + h2 {
+    margin-top: rem(48);
+  }
+
+  .link-list li:not([class]) + .link-list__item {
+    margin-top: rem(48);
+  }
+}

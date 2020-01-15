@@ -94,7 +94,7 @@ add_filter('comments_template', function ($comments_template) {
  * Show twenty resources per page.
  */
 add_filter('pre_get_posts', function ($query) {
-    if (is_post_type_archive('lc_resource') && $query->is_main_query()) {
+    if ((is_post_type_archive('lc_resource') || is_tax()) && $query->is_main_query()) {
         if (! empty($_GET['order_by'])) {
             switch ($_GET['order_by']) {
                 case 'published':
@@ -112,6 +112,8 @@ add_filter('pre_get_posts', function ($query) {
             }
         }
         $query->set('posts_per_page', 12);
+        $query->set('order', 'desc');
+        $query->set('lang', '');
     }
 });
 
