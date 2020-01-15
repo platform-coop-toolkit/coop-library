@@ -11,12 +11,13 @@
           <li class="link-list__item">
             <a href="{{ get_term_link($term) }}">{!! $term->name !!}</a>
           </li>
-          @foreach(get_term_children($term->term_id, $taxonomy) as $child)
+          @foreach(get_terms(['taxonomy' => $taxonomy, 'parent' => $term->term_id]) as $child_term)
           <li class="link-list__item">
-            <a href="{{ get_term_link($child) }}">{!! get_term($child)->name !!}</a>
+            <a href="{{ get_term_link($child_term) }}">{!! $child_term->name !!}</a>
           </li>
-        @endforeach
+          @endforeach
         </ul>
+        <hr class="is-style-thick has-grey-200-background-color" />
       </li>
     @elseif(!$term->parent)
       <li class="link-list__item">

@@ -11,4 +11,8 @@
   .link-list hr + h2 {
     margin-top: rem(48);
   }
+
+  .link-list li:not([class]) + .link-list__item {
+    margin-top: rem(48);
+  }
 }
