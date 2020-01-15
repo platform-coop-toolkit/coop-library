@@ -6,4 +6,6 @@
   </li>
   @endforeach
 </ul>
+@else
+<p>{{ sprintf(__('No %s found.'), strtolower(get_the_title())) }}</p>
 @endif
