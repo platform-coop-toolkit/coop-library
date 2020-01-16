@@ -48,6 +48,14 @@ export default {
       );
     } );
 
+    const filterDisclosureLabels = document.querySelectorAll( '.filter-disclosure-label' );
+
+    if ( filterDisclosureLabels ) {
+      Array.prototype.forEach.call( filterDisclosureLabels, label => {
+        new Pinecone.DisclosureButton( label, { buttonVariant: 'button--disc', visuallyHiddenLabel: true } );
+      } );
+    }
+
     const sortMenuButtonContainer = document.querySelector( '.sort .menu-button' );
     if ( sortMenuButtonContainer ) {
       new Pinecone.MenuButton( sortMenuButtonContainer, { placement: 'bottom' } );
