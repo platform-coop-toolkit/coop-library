@@ -1,6 +1,6 @@
 <header role="banner">
   <div class="container">
-    <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a>
+    <a class="brand"@if(is_front_page()) aria-current="page"@endif href="{{ home_url('/') }}">@svg('pcc', 'icon--pcc', ['focusable' => 'false', 'aria-hidden' => 'true'])<span class="brand__title screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
     <nav aria-labelledby="menu-primary-label">
       @if (has_nav_menu('primary_navigation'))
         <button class="menu-toggle" aria-expanded="false">
