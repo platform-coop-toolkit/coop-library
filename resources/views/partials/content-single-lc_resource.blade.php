@@ -26,20 +26,20 @@
       <li class="tag"><a class="tag__link" href="{{ $topic['url'] }}"><span class="screen-reader-text">{{ __('Topic', 'coop-library') }}: </span>{{ $topic['name'] }}</a></li>
       @endforeach
     </ul>
-    <button id="suggest-edits" type="button" class="button">
+    {{-- <button id="suggest-edits" type="button" class="button">
       @svg('edit', 'icon--edit', ['focusable' => 'false', 'aria-hidden' => 'true'])
       <span class="button__label">{{ __('Suggest edits', 'coop-library') }}</span>
-    </button>
+    </button> TODO: Implement edit suggestions. --}}
   </div>
   @endif
   <div class="resource__cta">
     <p class="wp-block-button"><a rel="external" class="wp-block-button__link" href="{{ Single::getPermanentLink() }}">{{ __('Visit full resource', 'coop-library') }} @svg('external', 'icon--external', ['focusable' => 'false', 'aria-hidden' => 'true'])</a></p>
   </div>
   <div class="resource__actions">
-    <button id="favorite" type="button" class="button">
+    {{-- <button id="favorite" type="button" class="button">
       @svg('favourite', 'icon--favorite', ['focusable' => 'false', 'aria-hidden' => 'true'])
       <span class="button__label">{{ __('Favorite', 'coop-library') }}</span>
-    </button>
+    </button> TODO: Implement favorites. --}}
     <div class="share menu-button">
       <p class="h3 menu-button__label">
         @svg('share', 'icon--share', ['focusable' => 'false', 'aria-hidden' => 'true'])
@@ -61,9 +61,9 @@
       </ul>
 
     </div>
-    <button id="report-broken-link" type="button" class="button">
+    {{-- <button id="report-broken-link" type="button" class="button">
       <span class="button__label">{{ __('Report broken link', 'coop-library') }}</span>
-    </button>
+    </button> TODO: Implement broken link reporting. --}}
     @if(Single::getPermaCcLinks() || Single::getWaybackMachineLinks())
     <div class="alternate-links menu-button">
       <h2 class="h3 menu-button__label">{{ __('View alternate links', 'coop-library') }}</h2>
