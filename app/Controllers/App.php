@@ -80,7 +80,7 @@ class App extends Controller
     public static function title()
     {
         if (is_front_page()) {
-            return __('Platform Co-op Resource Library', 'coop-library');
+            return __('<span class="ff-display fw-normal">Platform Co-op</span><br />Resource Library', 'coop-library');
         }
         if (is_home()) {
             if ($home = get_option('page_for_posts', true)) {
@@ -100,5 +100,20 @@ class App extends Controller
             return __('Not Found', 'coop-library');
         }
         return get_the_title();
+    }
+
+    public static function breadcrumb()
+    {
+        if (is_front_page()) {
+            return false;
+        }
+        return sprintf('<a href="%1$s">%2$s</a>', get_home_url(), __('Home', 'coop-library'));
+    }
+
+    public static function termListUrl($taxonomy)
+    {
+        $slug = str_replace('lc_', '', $taxonomy) . 's';
+        $page = get_page_by_path($slug);
+        return get_permalink($page->ID);
     }
 }
