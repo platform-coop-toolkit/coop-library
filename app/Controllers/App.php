@@ -43,17 +43,26 @@ class App extends Controller
 
     public function currentLanguageName()
     {
-        return pll_current_language('name');
+        if (function_exists('pll_current_language')) {
+            return pll_current_language('name');
+        }
+        return 'English';
     }
 
     public function currentLanguageLocale()
     {
-        return pll_current_language('locale');
+        if (function_exists('pll_current_language')) {
+            return pll_current_language('locale');
+        }
+        return 'en_US';
     }
 
     public function currentLanguage()
     {
-        return pll_current_language();
+        if (function_exists('pll_current_language')) {
+            return pll_current_language();
+        }
+        return 'en';
     }
 
     public function foundPosts()
