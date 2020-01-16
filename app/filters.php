@@ -134,3 +134,10 @@ add_filter('bladesvg', function () {
         'class' => 'icon'
     ];
 });
+
+add_filter('wp_nav_menu_items', function ($items, $args) {
+    if ($args->theme_location === 'primary_navigation') {
+        $items .= template('partials.language-switcher');
+    }
+    return $items;
+}, 10, 2);

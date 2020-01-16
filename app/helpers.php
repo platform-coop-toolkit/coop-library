@@ -139,14 +139,16 @@ function display_sidebar()
 
 function maybe_swap_term($term, $lang = false)
 {
-    if (!$lang) {
-        $lang = pll_current_language();
-    }
-    if (pll_get_term_language($term->term_id) !== $lang) {
-        $localized_term_id = pll_get_term($term->term_id, $lang);
-        if ($localized_term_id) {
-            $localized_term = get_term($localized_term_id, $term->taxonomy);
-            return $localized_term;
+    if (function_exists('pll_current_language') && function_exists('pll_get_term_language')) {
+        if (!$lang) {
+            $lang = pll_current_language();
+        }
+        if (pll_get_term_language($term->term_id) !== $lang) {
+            $localized_term_id = pll_get_term($term->term_id, $lang);
+            if ($localized_term_id) {
+                $localized_term = get_term($localized_term_id, $term->taxonomy);
+                return $localized_term;
+            }
         }
     }
     return $term;
