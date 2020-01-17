@@ -5,3 +5,11 @@
 .fw-normal {
   font-weight: $font-weight-normal;
 }
+
+.search-form label {
+  width: 100%;
+}
+
+.search-form [type="search"] {
+  max-width: 100%;
+}

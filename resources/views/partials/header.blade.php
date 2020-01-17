@@ -10,7 +10,7 @@
         </button>
         {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',
-          'menu_class' => (is_front_page()) ? 'menu menu--home' : 'menu',
+          'menu_class' => 'menu',
           'container' => false,
           'before' => '<li class="%s">',
           'after' => '</li>',
