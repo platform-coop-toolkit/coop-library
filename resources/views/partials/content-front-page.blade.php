@@ -1,10 +1,10 @@
-<div class="home__search-bar has-blue-400-background-color">
-  @include('partials.search-form')
+<div class="home__search">
+  @include('partials.search-form', ['modifier' => 'inverse', 'placeholder' => __('Search resource name, publisher, or topic…')])
+  {{-- TODO: Add saved searches --}}
 </div>
-{{-- TODO: Add saved searches --}}
-<div class="home__browse has-blue-400-background-color">
+<div class="home__browse">
   <h2>{{ __('Browse by…', 'coop-library') }}</h2>
-  <ul class="link-list">
+  <ul class="link-list link-list--inverse">
     @foreach([
     'lc_topic' => __('Topics', 'coop-library'),
     'lc_goal' => __('Goals', 'coop-library'),
@@ -14,5 +14,33 @@
     <li class="link-list__item"><a href="{{ App::termListUrl($slug) }}">@svg(str_replace('lc_', '', $slug), 'icon--' . str_replace('lc_', '', $slug), ['focusable' => 'false', 'aria-hidden' => 'true']) {{ $label }}</a></li>
   @endforeach
   </ul>
-  <div class="wp-block-button"><a href="/en/resources/" class="wp-block-button__link">{{ __('Browse all resources', 'coop-library') }}</a></div>
+  <div class="wp-block-button wp-block-button--inverse"><a href="{{ get_post_type_archive_link('lc_resource') }}" class="wp-block-button__link">{{ __('Browse all resources', 'coop-library') }}</a></div>
+</div>
+<div class="home__feed">
+  <h2>{{ __('My feed', 'coop-library') }}</h2>
+  <hr class="is-style-thick has-grey-200-background-color">
+  <h3><a href="{{ get_post_type_archive_link('lc_resource') }}?order_by=viewed">{{ __('Most viewed', 'coop-library') }}</a></h3>
+  <div class="meta-card-wrapper">
+		<div class="card-wrapper">
+      @if($most_viewed->have_posts())
+			<ul class="cards">
+        @while ($most_viewed->have_posts()) @php $most_viewed->the_post() @endphp
+          @include('partials.content-'.get_post_type())
+        @endwhile
+      </ul>
+      @endif
+    </div>
+    {{-- TODO: Add info cards --}}
+  </div>
+  <hr class="is-style-thick has-grey-200-background-color">
+  <h3><a href="{{ get_post_type_archive_link('lc_resource') }}?order_by=published">{{ __('Recently published', 'coop-library') }}</a></h3>
+  <div class="card-wrapper">
+    @if($recently_published->have_posts())
+    <ul class="cards">
+      @while ($recently_published->have_posts()) @php $recently_published->the_post() @endphp
+        @include('partials.content-'.get_post_type())
+      @endwhile
+    </ul>
+    @endif
+  </div>
 </div>
