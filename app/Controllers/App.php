@@ -89,7 +89,10 @@ class App extends Controller
     public static function title()
     {
         if (is_front_page()) {
-            return __('<span class="pc-ff--sans pc-fw--normal">Platform Co-op</span><br />Resource Library', 'coop-library');
+            return __(
+                '<span class="pc-ff--sans pc-fw--normal">Platform Co-op</span><br />Resource Library',
+                'coop-library'
+            );
         }
         if (is_home()) {
             if ($home = get_option('page_for_posts', true)) {
