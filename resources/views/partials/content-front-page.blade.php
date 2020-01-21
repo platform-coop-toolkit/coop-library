@@ -1,8 +1,9 @@
-<div class="home__search">
+<section class="home__search">
+  <h2 class="screen-reader-text">{{ __('Search', 'coop-library') }}</h2>
   @include('partials.search-form', ['modifier' => 'inverse', 'placeholder' => __('Search resource name, publisher, or topic…')])
   {{-- TODO: Add saved searches --}}
-</div>
-<div class="home__browse">
+</section>
+<section class="home__browse">
   <h2>{{ __('Browse by…', 'coop-library') }}</h2>
   <ul class="link-list link-list--inverse">
     @foreach([
@@ -15,10 +16,9 @@
   @endforeach
   </ul>
   <div class="wp-block-button wp-block-button--inverse"><a href="{{ get_post_type_archive_link('lc_resource') }}" class="wp-block-button__link">{{ __('Browse all resources', 'coop-library') }}</a></div>
-</div>
-<div class="home__feed">
+</section>
+<section class="home__feed">
   <h2>{{ __('My feed', 'coop-library') }}</h2>
-  <hr class="is-style-thick has-grey-200-background-color">
   <h3><a href="{{ get_post_type_archive_link('lc_resource') }}?order_by=viewed">{{ __('Most viewed', 'coop-library') }}</a></h3>
   <div class="meta-card-wrapper">
 		<div class="card-wrapper">
@@ -32,7 +32,6 @@
     </div>
     {{-- TODO: Add info cards --}}
   </div>
-  <hr class="is-style-thick has-grey-200-background-color">
   <h3><a href="{{ get_post_type_archive_link('lc_resource') }}?order_by=published">{{ __('Recently published', 'coop-library') }}</a></h3>
   <div class="card-wrapper">
     @if($recently_published->have_posts())
@@ -43,4 +42,4 @@
     </ul>
     @endif
   </div>
-</div>
+</section>
