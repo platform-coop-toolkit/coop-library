@@ -34,7 +34,6 @@
     "@wordpress/babel-preset-default": "^4.8.0",
     "@wordpress/browserslist-config": "^2.6.0",
     "@wordpress/dependency-extraction-webpack-plugin": "^2.1.0",
-    "@wordpress/scripts": "^6.1.1",
     "babel-eslint": "^10.0.3",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.0.1",
@@ -65,7 +64,6 @@
     "lint": "run-s -c lint:*",
     "lint:scripts": "eslint resources/assets/scripts",
     "lint:styles": "stylelint \"resources/assets/**/*.{vue,css,sass,scss,less}\"",
-    "lint:pkg-json": "wp-scripts lint-pkg-json .",
     "test": "run-s -c lint"
   },
   "husky": {
