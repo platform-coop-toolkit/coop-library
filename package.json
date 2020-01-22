@@ -31,7 +31,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@platform-coop-toolkit/pinecone": "^1.0.0-alpha.7",
-    "@wordpress/babel-preset-default": "^4.8.0",
+    "@wordpress/babel-preset-default": "^4.9.0",
     "@wordpress/browserslist-config": "^2.6.0",
     "@wordpress/dependency-extraction-webpack-plugin": "^2.1.0",
     "babel-eslint": "^10.0.3",
