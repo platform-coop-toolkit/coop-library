@@ -1,5 +1,4 @@
 <section class="home__search">
-  <h2 class="screen-reader-text">{{ __('Search', 'coop-library') }}</h2>
   @include('partials.search-form', ['modifier' => 'inverse', 'placeholder' => __('Search resource name, publisher, or topic…')])
   {{-- TODO: Add saved searches --}}
 </section>
