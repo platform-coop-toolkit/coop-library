@@ -98,11 +98,15 @@ add_filter('pre_get_posts', function ($query) {
         if (! empty($_GET['order_by'])) {
             switch ($_GET['order_by']) {
                 case 'published':
-                    $query->set('meta_key', 'lc_resource_publication_year');
-                    $query->set('orderby', ['meta_value_num', 'date']);
+                    $query->set('meta_key', 'lc_resource_publication_date');
+                    $query->set('orderby', ['meta_value', 'date']);
                     break;
                 case 'favorited':
                     $query->set('meta_key', 'lc_resource_favorites');
+                    $query->set('orderby', ['meta_value_num', 'date']);
+                    break;
+                case 'viewed':
+                    $query->set('meta_key', 'lc_resource_views');
                     $query->set('orderby', ['meta_value_num', 'date']);
                     break;
                 case 'added':
