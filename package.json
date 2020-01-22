@@ -43,7 +43,7 @@
     "husky": "^4.2.0",
     "laravel-mix": "^5.0.1",
     "laravel-mix-purgecss": "^4.2.0",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.0.2",
     "npm-run-all": "^4.1",
     "rimraf": "^3.0",
     "sass": "^1.25.0",
