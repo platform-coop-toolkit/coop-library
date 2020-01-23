@@ -7,6 +7,12 @@ export default {
     const menu = document.querySelector( '.menu' );
     new Pinecone.Menu(toggle, menu);
 
+    const searchToggle = document.querySelector( '.search-toggle' );
+    if ( searchToggle ) {
+      new Pinecone.SearchToggle( searchToggle, searchToggle.nextElementSibling );
+    }
+
+
     /* TODO: Resolve icon issues
     const icons = document.querySelectorAll( 'svg' );
 
