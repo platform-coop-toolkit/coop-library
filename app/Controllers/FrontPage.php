@@ -26,16 +26,16 @@ class FrontPage extends Controller
             'post_type' => 'lc_resource',
             'post__not_in' => $viewed_ids,
             'posts_per_page' => 4,
-            'fields' => 'ids'
+            'fields' => 'ids',
+            'lang' => '',
         ]);
         $ids = array_merge($viewed_ids + $unviewed_ids);
 
         return new \WP_Query([
             'post_type' => 'lc_resource',
             'post__in' => $ids,
-            'orderby' => 'post__ins',
+            'orderby' => 'post__in',
             'posts_per_page' => 4,
-            'order' => 'desc',
             'lang' => '',
         ]);
     }
