@@ -1,0 +1,11 @@
+[data-favorite="true"] {
+  .add {
+    display: none;
+  }
+}
+
+[data-favorite="false"] {
+  .remove {
+    display: none;
+  }
+}
