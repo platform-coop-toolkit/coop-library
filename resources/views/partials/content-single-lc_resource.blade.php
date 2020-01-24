@@ -37,7 +37,8 @@
   </div>
   <div class="resource__actions">
     <button id="favorite" type="button" class="button" data-id="{{ get_the_id() }}" data-favorite="false">
-      @svg('favourite', 'icon--favorite', ['focusable' => 'false', 'aria-hidden' => 'true'])
+      @svg('favorite', 'icon--favorite', ['focusable' => 'false', 'aria-hidden' => 'true'])
+      {{-- @svg('favorite-filled', 'icon--favorite-filled', ['focusable' => 'false', 'aria-hidden' => 'true']) --}}
       <span class="button__label add">{{ __('Add to Favorites', 'coop-library') }}</span>
       <span class="button__label remove">{{ __('Remove from Favorites', 'coop-library') }}</span>
     </button>

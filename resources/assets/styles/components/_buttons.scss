@@ -1,11 +1,13 @@
 [data-favorite="true"] {
-  .add {
+  .add,
+  .icon--favorite {
     display: none;
   }
 }
 
 [data-favorite="false"] {
-  .remove {
+  .remove,
+  .icon--favorite-filled {
     display: none;
   }
 }
