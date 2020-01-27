@@ -1,11 +1,12 @@
 import Pinecone from '@platform-coop-toolkit/pinecone';
+import Cookies from 'cookies.js';
 
 export default {
   init() {
     // JavaScript to be fired on a single resource page
     const favorite = document.getElementById('favorite');
     const id = favorite.dataset.id;
-    let favorites = localStorage.getItem('favorites');
+    let favorites = Cookies.get('favorites');
     favorites = favorites ? favorites.split(',') : [];
     if (favorites) {
       if (favorites.includes(id)) {
@@ -21,9 +22,10 @@ export default {
         } else {
           favorites = favorites.filter(item => item !== id);
         }
-        localStorage.setItem('favorites', favorites.toString());
+
+        Cookies.set('favorites', favorites.toString());
       } else {
-        localStorage.setItem('favorites', [id].toString());
+        Cookies.set('favorites', [id].toString());
       }
       // TODO: Process ID on backend.
       favorite.dataset.favorite = !state;
