@@ -86,14 +86,14 @@ trait Resource
         return false;
     }
 
-    public static function getPublisher()
+    public static function getPublisher($show_link = false)
     {
         global $post;
 
         if ($post->post_type == 'lc_resource') {
             $publisher_name = get_post_meta($post->ID, 'lc_resource_publisher_name', true);
             $publisher_link = get_post_meta($post->ID, 'lc_resource_publisher_link', true);
-            if ($publisher_name && $publisher_link) {
+            if ($publisher_name && $publisher_link && $show_link) {
                 return "<a rel='external publisher' href='{$publisher_link}'>{$publisher_name}</a>";
             } elseif ($publisher_name) {
                 return $publisher_name;

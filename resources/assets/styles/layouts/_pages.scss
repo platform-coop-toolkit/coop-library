@@ -16,3 +16,19 @@
     margin-top: rem(48);
   }
 }
+
+@include breakpoint-up(sm) {
+  .page.page-favorites main {
+    @include grid-column-span(8, 8);
+  }
+}
+
+@include breakpoint-up(lg) {
+  .page.home main {
+    @include grid-column-span(12, 12);
+
+    .card-list {
+
+    }
+  }
+}
