@@ -17,7 +17,7 @@
   <div class="card__tags">
     <ul class="badges">
       @foreach(Archive::getTopics(2) as $topic)
-      <li class="badge"><span class="screen-reader-text">Topic: </span>{{ $topic['name'] }}</li>
+      <li class="badge"><span class="screen-reader-text">Topic: </span>{!! $topic['name'] !!}</li>
       @endforeach
     </ul>
     @if(Archive::getOverflowTopics())

@@ -1,6 +1,5 @@
 <?php namespace App\Controllers\Partials;
 
-use Illuminate\Support\Str;
 use function App\maybe_swap_term;
 
 trait Resource
@@ -86,14 +85,14 @@ trait Resource
         return false;
     }
 
-    public static function getPublisher()
+    public static function getPublisher($show_link = false)
     {
         global $post;
 
         if ($post->post_type == 'lc_resource') {
             $publisher_name = get_post_meta($post->ID, 'lc_resource_publisher_name', true);
             $publisher_link = get_post_meta($post->ID, 'lc_resource_publisher_link', true);
-            if ($publisher_name && $publisher_link) {
+            if ($publisher_name && $publisher_link && $show_link) {
                 return "<a rel='external publisher' href='{$publisher_link}'>{$publisher_name}</a>";
             } elseif ($publisher_name) {
                 return $publisher_name;
@@ -183,7 +182,7 @@ trait Resource
                 foreach ($goals as $goal) {
                     $goal = maybe_swap_term($goal);
                     $result[] = [
-                        'name' => Str::title($goal->name),
+                        'name' => $goal->name,
                         'url' => get_term_link($goal),
                     ];
                 }
@@ -209,7 +208,7 @@ trait Resource
                 foreach ($topics as $topic) {
                     $topic = maybe_swap_term($topic);
                     $result[] = [
-                        'name' => Str::title($topic->name),
+                        'name' => $topic->name,
                         'url' => get_term_link($topic),
                     ];
                 }

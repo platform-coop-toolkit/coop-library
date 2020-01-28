@@ -6,7 +6,7 @@
         @if($taxonomy !== 'language')
         @foreach($terms as $term)
         <li class="tag-button">
-          <button class="tag-button__button" data-checkbox="{{ $term->taxonomy }}-{{ $term->slug }}"><span class="screen-reader-text">{{ __('Remove', 'coop-library') }} </span>{{ $term->name }}<span class="screen-reader-text"> {{ __('from current filters', 'coop-library') }}</span> @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
+          <button class="tag-button__button" data-checkbox="{{ $term->taxonomy }}-{{ $term->slug }}"><span class="screen-reader-text">{{ __('Remove', 'coop-library') }} </span>{!! $term->name !!}<span class="screen-reader-text"> {{ __('from current filters', 'coop-library') }}</span> @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
         </li>
         @endforeach
         @endif
