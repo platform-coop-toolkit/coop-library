@@ -67,7 +67,7 @@ array_map(function ($file) use ($sage_error) {
             'File not found'
         );
     }
-}, ['helpers', 'setup', 'filters', 'admin', 'translation']);
+}, ['helpers', 'setup', 'filters', 'admin', 'ajax', 'translation']);
 
 /**
  * Here's what's happening with these hooks:

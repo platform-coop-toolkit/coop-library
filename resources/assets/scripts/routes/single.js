@@ -1,3 +1,5 @@
+/* global CoopLibrary */
+
 import Pinecone from '@platform-coop-toolkit/pinecone';
 import Cookies from 'cookies.js';
 
@@ -7,27 +9,37 @@ export default {
     const favorite = document.getElementById('favorite');
     const id = favorite.dataset.id;
     let favorites = Cookies.get('favorites');
+    let operation;
     favorites = favorites ? favorites.split(',') : [];
-    if (favorites) {
-      if (favorites.includes(id)) {
-        favorite.dataset.favorite = true;
-      }
+    if (favorites.includes(id)) {
+      favorite.dataset.favorite = true;
     }
 
     favorite.onclick = () => {
       const state = 'true' === favorite.dataset.favorite || false;
-      if (favorites) {
-        if (!state) {
-          favorites.push(id);
-        } else {
-          favorites = favorites.filter(item => item !== id);
-        }
-
-        Cookies.set('favorites', favorites.toString());
+      if (!state) {
+        favorites.push(id);
+        operation = 'increment';
       } else {
-        Cookies.set('favorites', [id].toString());
+        favorites = favorites.filter(item => item !== id);
+        operation = 'decrement';
       }
-      // TODO: Process ID on backend.
+
+      Cookies.set('favorites', favorites.toString());
+
+      fetch( CoopLibrary.ajaxurl, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: new Headers( {'Content-Type': 'application/x-www-form-urlencoded'} ),
+        body: `action=update_favorites&coop_library_nonce=${encodeURIComponent( CoopLibrary.coop_library_nonce )}&post_id=${encodeURIComponent( id )}&operation=${encodeURIComponent( operation )}`,
+      } )
+        .then( () => {
+          // TODO: Add notification if the favorite was added successfully.
+        })
+        .catch( function() {
+          // TODO: Add notification if there's a problem.
+        });
+
       favorite.dataset.favorite = !state;
     }
 
