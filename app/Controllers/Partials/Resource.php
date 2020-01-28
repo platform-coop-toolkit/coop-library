@@ -1,6 +1,5 @@
 <?php namespace App\Controllers\Partials;
 
-use Illuminate\Support\Str;
 use function App\maybe_swap_term;
 
 trait Resource
@@ -183,7 +182,7 @@ trait Resource
                 foreach ($goals as $goal) {
                     $goal = maybe_swap_term($goal);
                     $result[] = [
-                        'name' => Str::title($goal->name),
+                        'name' => $goal->name,
                         'url' => get_term_link($goal),
                     ];
                 }
@@ -209,7 +208,7 @@ trait Resource
                 foreach ($topics as $topic) {
                     $topic = maybe_swap_term($topic);
                     $result[] = [
-                        'name' => Str::title($topic->name),
+                        'name' => $topic->name,
                         'url' => get_term_link($topic),
                     ];
                 }
