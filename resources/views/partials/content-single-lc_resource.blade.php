@@ -7,7 +7,7 @@
     @if(Single::getPublisher() || Single::getRegion())
     <p class="resource__meta">
     @if(Single::getPublisher())
-      <span class="resource__publisher byline vcard">{{ __('By', 'coop-library') }} {!! Single::getPublisher() !!}</span>
+      <span class="resource__publisher byline vcard">{{ __('By', 'coop-library') }} {!! Single::getPublisher(true) !!}</span>
     @endif
     @if(Single::getRegion())
       <span class="resource__locality">@svg('location', 'icon--location', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ Archive::getRegion() }}</span>
@@ -23,7 +23,7 @@
   <div class="resource__tags">
     <ul class="tags">
       @foreach(Single::getTopics() as $topic)
-      <li class="tag"><a class="tag__link" href="{{ $topic['url'] }}"><span class="screen-reader-text">{{ __('Topic', 'coop-library') }}: </span>{{ $topic['name'] }}</a></li>
+      <li class="tag"><a class="tag__link" href="{{ $topic['url'] }}"><span class="screen-reader-text">{{ __('Topic', 'coop-library') }}: </span>{!! $topic['name'] !!}</a></li>
       @endforeach
     </ul>
     {{-- <button id="suggest-edits" type="button" class="button">

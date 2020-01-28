@@ -4,7 +4,7 @@
     @if(get_term_children($term->term_id, $taxonomy))
       <li>
         <hr class="is-style-thick has-grey-200-background-color" />
-        <h2>{{ $term->name }}</h2>
+        <h2>{!! $term->name !!}</h2>
       </li>
       <li>
         <ul class="link-list">
