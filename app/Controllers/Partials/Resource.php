@@ -172,7 +172,7 @@ trait Resource
                     case 'online-training-webinar':
                         return 'online-training';
                         break;
-                    case 'presentation-slide':
+                    case 'presentation-slides':
                         return 'presentation';
                         break;
                     case 'report':
