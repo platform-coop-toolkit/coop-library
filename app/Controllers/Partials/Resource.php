@@ -137,14 +137,54 @@ trait Resource
             if ($formats) {
                 $format = maybe_swap_term($formats[0], 'en');
                 switch ($format->slug) {
+                    case 'academic-paper':
+                    case 'thesis':
+                        return 'academic-paper';
+                        break;
+                    case 'article':
+                    case 'document':
+                    case 'blog-post':
+                    case 'journal-article':
+                    case 'magazine-article':
+                    case 'newspaper-article':
+                    case 'web-article':
+                        return 'article';
+                        break;
+                    case 'audio':
+                    case 'podcast':
+                    case 'radio-broadcast':
+                        return 'audio';
+                        break;
+                    case 'book':
+                        return 'book';
+                        break;
+                    case 'case-study':
+                        return 'case-study';
+                        break;
+                    case 'curriculum':
+                        return 'educational-curriculum';
+                        break;
+                    case 'film':
+                    case 'interview':
+                    case 'video':
+                        return 'video';
+                        break;
+                    case 'online-training-webinar':
+                        return 'online-training';
+                        break;
                     case 'presentation-slides':
                         return 'presentation';
                         break;
-                    case 'podcast':
-                        return 'audio';
+                    case 'report':
+                        return 'report';
+                        break;
+                    case 'software':
+                    case 'toolkit':
+                    case 'template':
+                        return 'toolkit';
                         break;
                     default:
-                        return $format->slug;
+                        return 'article';
                 }
             }
         }
