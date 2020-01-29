@@ -5,11 +5,12 @@
       <h2 class="h1 screen-reader-text">{{ __('Filters', 'coop-library' ) }}</h2>
       <div class="accordion accordion--filter-list">
         @foreach([
-          'lc_region' => __('Location of relevance', 'coop-library'),
           'lc_goal' => __('Goals', 'coop-library'),
           'lc_topic' => __('Topics', 'coop-library'),
-          'lc_format' => __('Format', 'coop-library'),
-          'lc_sector' => __('Sector', 'coop-library'),
+          'lc_coop_type' => __('Co-op Types', 'coop-library'),
+          'lc_sector' => __('Sectors', 'coop-library'),
+          'lc_region' => __('Locations', 'coop-library'),
+          'lc_format' => __('Formats', 'coop-library'),
         ] as $tax => $label)
         @if(get_terms($tax))
         <div class="accordion__pane">
