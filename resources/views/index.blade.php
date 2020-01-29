@@ -16,7 +16,7 @@
   <div class="resource-list">
     <ul class="cards">
     @while (have_posts()) @php the_post() @endphp
-      @include('partials.content-'.get_post_type())
+      <li class="card__wrapper">@include('partials.content-'.get_post_type())</li>
     @endwhile
     </ul>
   </div>

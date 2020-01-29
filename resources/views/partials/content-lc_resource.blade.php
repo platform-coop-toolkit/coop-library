@@ -1,4 +1,4 @@
-<li @php post_class('card card--resource') @endphp>
+<article @php post_class('card card--resource') @endphp>
   <header>
     <span class="card__format">@svg(Archive::getFormatSlug(), 'icon--' . Archive::getFormatSlug(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Archive::getFormat() }}</span>
     @if($current_language !== Archive::getLanguage())
@@ -25,4 +25,4 @@
     @endif
   </div>
   @endif
-</li>
+</article>

@@ -24,7 +24,7 @@
       @if($most_viewed->have_posts())
 			<ul class="cards">
         @while ($most_viewed->have_posts()) @php $most_viewed->the_post() @endphp
-          @include('partials.content-'.get_post_type())
+          <li class="card__wrapper">@include('partials.content-'.get_post_type())</li>
         @endwhile
       </ul>
       @endif
