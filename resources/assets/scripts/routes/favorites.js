@@ -17,7 +17,7 @@ export default {
     const buttons = document.querySelectorAll('.remove-favorite');
     Array.prototype.forEach.call(buttons, btn => {
       btn.onclick = () => {
-        if (confirm('Remove this resource from your favorites?')) {
+        if (confirm('Remove this resource from your favorites?')) { // TODO: Use dialog component
           const id = btn.dataset.id;
           let favorites = Cookies.get('favorites');
           favorites = favorites ? favorites.split(',') : [];
