@@ -128,7 +128,7 @@ trait Resource
         return false;
     }
 
-    public static function getFormatSlug()
+    public static function getFormatIcon()
     {
         global $post;
 
@@ -139,11 +139,12 @@ trait Resource
                 switch ($format->slug) {
                     case 'academic-paper':
                     case 'thesis':
-                        return 'academic-paper';
+                        return 'academic';
+                        break;
+                    case 'blog-post':
+                        return 'blog';
                         break;
                     case 'article':
-                    case 'document':
-                    case 'blog-post':
                     case 'journal-article':
                     case 'magazine-article':
                     case 'newspaper-article':
@@ -162,10 +163,9 @@ trait Resource
                         return 'case-study';
                         break;
                     case 'curriculum':
-                        return 'educational-curriculum';
+                        return 'curriculum';
                         break;
                     case 'film':
-                    case 'interview':
                     case 'video':
                         return 'video';
                         break;
@@ -180,11 +180,14 @@ trait Resource
                         break;
                     case 'software':
                     case 'toolkit':
-                    case 'template':
                         return 'toolkit';
                         break;
+                    case 'template':
+                        return 'template';
+                        break;
+                    case 'document':
                     default:
-                        return 'article';
+                        return 'document';
                 }
             }
         }

@@ -1,6 +1,6 @@
 <li @php post_class('card card--resource') @endphp>
   <header>
-    <span class="card__format">@svg(Archive::getFormatSlug(), 'icon--' . Archive::getFormatSlug(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Archive::getFormat() }}</span>
+    <span class="card__format">@svg(Archive::getFormatIcon(), 'icon--' . Archive::getFormatIcon(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Archive::getFormat() }}</span>
     @if($current_language !== Archive::getLanguage())
     <span class="card__sep"> &middot; </span>
     <span class="card__language">{{ $languages[Archive::getLanguage()] }}</span>

@@ -1,7 +1,7 @@
 <article @php post_class() @endphp>
   <div class="page-header resource__header">
     <p class="resource__format">
-      @svg(Single::getFormatSlug(), 'icon--' . Single::getFormatSlug(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Single::getFormat() }}
+      @svg(Single::getFormatIcon(), 'icon--' . Single::getFormatIcon(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Single::getFormat() }}
     </p>
     <h1 class="resource__title">{!! get_the_title() !!}</h1>
     @if(Single::getPublisher() || Single::getRegion())
