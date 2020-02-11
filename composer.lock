@@ -717,36 +717,36 @@
         },
         {
             "name": "league/uri-components",
-            "version": "2.1.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri-components.git",
-                "reference": "cecbcb1af3a61e40a50b3582056cc5d7a1e9c650"
+                "reference": "14bab20b05bc20d16dec17401a9027c679412589"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri-components/zipball/cecbcb1af3a61e40a50b3582056cc5d7a1e9c650",
-                "reference": "cecbcb1af3a61e40a50b3582056cc5d7a1e9c650",
+                "url": "https://api.github.com/repos/thephpleague/uri-components/zipball/14bab20b05bc20d16dec17401a9027c679412589",
+                "reference": "14bab20b05bc20d16dec17401a9027c679412589",
                 "shasum": ""
             },
             "require": {
-                "ext-fileinfo": "*",
                 "ext-json": "*",
-                "league/uri-interfaces": "^2.0",
+                "league/uri-interfaces": "^2.1",
                 "php": "^7.2",
                 "psr/http-message": "^1.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.3",
                 "guzzlehttp/psr7": "^1.4",
+                "laminas/laminas-diactoros": "^2.0",
                 "league/uri": "^6.0",
                 "phpstan/phpstan": "^0.12",
                 "phpstan/phpstan-phpunit": "^0.12",
                 "phpstan/phpstan-strict-rules": "^0.12",
-                "phpunit/phpunit": "^7.0 | ^8.0",
-                "zendframework/zend-diactoros": "^2.0"
+                "phpunit/phpunit": "^7.0 | ^8.0"
             },
             "suggest": {
+                "ext-fileinfo": "Needed to create Data URI from a filepath",
                 "ext-gmp": "to improve handle IPV4 parsing",
                 "ext-intl": "to handle IDN host",
                 "jeremykendall/php-domain-parser": "Public Suffix and Top Level Domain parsing implemented in PHP",
@@ -792,7 +792,7 @@
                 "url",
                 "userinfo"
             ],
-            "time": "2019-12-19T20:22:58+00:00"
+            "time": "2020-02-09T19:44:04+00:00"
         },
         {
             "name": "league/uri-interfaces",
