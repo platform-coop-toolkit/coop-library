@@ -12,16 +12,20 @@ function update_favorites()
         wp_die();
     }
 
-    $post_id   = absint($_POST['post_id']);
-    $favorites = get_post_meta($post_id, 'lc_resource_favorites', true);
-    switch ($_POST['operation']) {
-        case 'increment':
-            $favorites++;
-            break;
-        case 'decrement':
-            $favorites--;
-            break;
+    $ids = explode(',', $_POST['post_id']);
+
+    foreach ($ids as $id) {
+        $post_id   = absint($id);
+        $favorites = get_post_meta($post_id, 'lc_resource_favorites', true);
+        switch ($_POST['operation']) {
+            case 'increment':
+                $favorites++;
+                break;
+            case 'decrement':
+                $favorites--;
+                break;
+        }
+        update_post_meta($post_id, 'lc_resource_favorites', $favorites);
     }
-    update_post_meta($post_id, 'lc_resource_favorites', $favorites);
     die(0);
 }

@@ -1,6 +1,6 @@
 <div id="favorites" class="resource-list">
   @if($favorites->have_posts())
-  <button class="button button--borderless remove-all-favorites">@svg('delete', 'icon--delete', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Remove all favorites', 'coop-library') }}</button>
+  <button id="remove-all" class="button button--borderless remove-all-favorites">@svg('delete', 'icon--delete', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Remove all favorites', 'coop-library') }}</button>
   <ul class="cards">
     @while ($favorites->have_posts()) @php $favorites->the_post() @endphp
       <li class="card__wrapper">
