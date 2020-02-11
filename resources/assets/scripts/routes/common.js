@@ -20,6 +20,8 @@ export default {
       } );
     }
 
+    new Pinecone.Notification();
+
     /* TODO: Resolve icon issues
     const icons = document.querySelectorAll( 'svg' );
 

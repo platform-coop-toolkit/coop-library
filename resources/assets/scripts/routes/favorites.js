@@ -1,5 +1,6 @@
 /* global CoopLibrary */
 
+import addNotification from '../util/addNotification';
 import Pinecone from '@platform-coop-toolkit/pinecone';
 import Cookies from 'cookies.js';
 import { __ } from '@wordpress/i18n';
@@ -8,8 +9,7 @@ export default {
   init() {
     // JavaScript to be fired on the favorites page
     if (!navigator.cookieEnabled) {
-      // TODO: Notify user if cookies are disabled.
-      console.error('Cookies disabled.');
+      addNotification(__('Favorites not supported', 'coop-library'), __('Your favorites are stored in your browser\'s cookies. To add favorites, please enable cookies for this website.', 'coop-library'), 'error');
     } else {
       const removeAllButton = document.getElementById('remove-all');
       const removeButtons = document.querySelectorAll('.remove-favorite');
@@ -29,14 +29,13 @@ export default {
               body: `action=update_favorites&coop_library_nonce=${encodeURIComponent( CoopLibrary.coop_library_nonce )}&post_id=${encodeURIComponent( favorites )}&operation=decrement`,
             } )
             .then( () => {
-              // TODO: Add notification if the favorites were removed successfully.
-              Array.prototype.forEach.call(removeButtons, btn => {
-                btn.parentNode.parentNode.removeChild(btn.parentNode);
-              });
+              const resourceList = document.getElementById('favorites');
               removeAllButton.parentNode.removeChild(removeAllButton);
+              resourceList.parentNode.removeChild(resourceList);
+              addNotification(__('Favorites removed', 'coop-library'), __('The resources have been removed from your favorites.', 'coop-library'), 'success');
             })
             .catch( function() {
-              // TODO: Add notification if there was a problem.
+              addNotification(__('Favorites not removed', 'coop-library'), __('The resources could not be removed from your favorites.', 'coop-library'), 'error');
             });
           },
         });
@@ -56,7 +55,6 @@ export default {
               favorites = favorites ? favorites.split(',') : [];
               favorites = favorites.filter(item => item !== id);
               Cookies.set('favorites', favorites.toString());
-
               fetch( CoopLibrary.ajaxurl, {
                 method: 'POST',
                 credentials: 'same-origin',
@@ -64,14 +62,14 @@ export default {
                 body: `action=update_favorites&coop_library_nonce=${encodeURIComponent( CoopLibrary.coop_library_nonce )}&post_id=${encodeURIComponent( id )}&operation=decrement`,
               } )
               .then( () => {
-                // TODO: Add notification if the favorite was removed successfully.
                 btn.parentNode.parentNode.removeChild(btn.parentNode);
                 if (length === 1) {
                   removeAllButton.parentNode.removeChild(removeAllButton);
                 }
+                addNotification(__('Favorite removed', 'coop-library'), __('The resource has been removed from your favorites.', 'coop-library'), 'success');
               })
               .catch( function() {
-                // TODO: Add notification if there's a problem.
+                addNotification(__('Favorite not removed', 'coop-library'), __('The resource could not be removed from your favorites.', 'coop-library'), 'error');
               });
             },
           } );
