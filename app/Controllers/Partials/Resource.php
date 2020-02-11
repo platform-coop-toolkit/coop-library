@@ -102,6 +102,18 @@ trait Resource
         return false;
     }
 
+    public static function getAuthors()
+    {
+        global $post;
+        if ($post->post_type == 'lc_resource') {
+            $authors = get_post_meta($post->ID, 'lc_resource_authors', true);
+            if ($authors) {
+                return $authors;
+            }
+        }
+        return false;
+    }
+
     public static function getLanguage($format = 'slug')
     {
         global $post;
@@ -274,6 +286,16 @@ trait Resource
             }
         }
 
+        return false;
+    }
+
+    public static function isFavorited()
+    {
+        global $post;
+        $favorites = explode(',', $_COOKIE['favorites']);
+        if (in_array($post->ID, $favorites)) {
+            return true;
+        }
         return false;
     }
 }

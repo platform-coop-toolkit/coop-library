@@ -33,10 +33,10 @@
   </div>
   @endif
   <div class="resource__cta">
-    <p class="wp-block-button"><a rel="external" class="wp-block-button__link" href="{{ Single::getPermanentLink() }}">{{ __('Visit full resource', 'coop-library') }} @svg('external', 'icon--external', ['focusable' => 'false', 'aria-hidden' => 'true'])</a></p>
+    <p><a rel="external" class="cta" href="{{ Single::getPermanentLink() }}">{{ __('Visit full resource', 'coop-library') }} @svg('external', 'icon--external', ['focusable' => 'false', 'aria-hidden' => 'true'])</a></p>
   </div>
   <div class="resource__actions">
-    <button id="favorite" type="button" class="button" data-id="{{ get_the_id() }}" data-favorite="false">
+    <button id="favorite" type="button" class="button button--borderless" data-id="{{ get_the_id() }}" data-favorite="false">
       @svg('favorite', 'icon--favorite', ['focusable' => 'false', 'aria-hidden' => 'true'])
       <span class="button__label add">{{ __('Add to Favorites', 'coop-library') }}</span>
       @svg('favorite-filled', 'icon--favorite-filled', ['focusable' => 'false', 'aria-hidden' => 'true'])

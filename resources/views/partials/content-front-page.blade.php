@@ -14,7 +14,7 @@
     <li class="link-list__item"><a href="{{ App::termListUrl($slug) }}">@svg(str_replace('lc_', '', $slug), 'icon--' . str_replace('lc_', '', $slug), ['focusable' => 'false', 'aria-hidden' => 'true']) {{ $label }}</a></li>
   @endforeach
   </ul>
-  <div class="wp-block-button wp-block-button--inverse"><a href="{{ get_post_type_archive_link('lc_resource') }}" class="wp-block-button__link">{{ __('Browse all resources', 'coop-library') }}</a></div>
+  <p><a href="{{ get_post_type_archive_link('lc_resource') }}" class="link--inverse">{{ __('Browse all resources', 'coop-library') }}</a></p>
 </section>
 <section class="home__feed">
   <h2>{{ __('My feed', 'coop-library') }}</h2>
