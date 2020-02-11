@@ -12,6 +12,13 @@ export default {
       new Pinecone.SearchToggle( searchToggle, searchToggle.nextElementSibling );
     }
 
+    const cards = document.querySelectorAll( '.card' );
+
+    if ( cards ) {
+      Array.prototype.forEach.call( cards, card => {
+        new Pinecone.Card( card, { cardLinkSelector: '.card__link' } ); // TODO: Remove the cardLinkSelector confuration.
+      } );
+    }
 
     /* TODO: Resolve icon issues
     const icons = document.querySelectorAll( 'svg' );

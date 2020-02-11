@@ -3,14 +3,6 @@ import Pinecone from '@platform-coop-toolkit/pinecone';
 export default {
   init() {
     // JavaScript to be fired on the Archive page
-    const cards = document.querySelectorAll( '.card' );
-
-    if ( cards ) {
-      Array.prototype.forEach.call( cards, card => {
-        new Pinecone.Card( card );
-      } );
-    }
-
     const filterContainer = document.querySelector( '.filters' );
     const showFilters = document.querySelector( '#show-filters' );
     const hideFilters = document.querySelector( '#hide-filters' );

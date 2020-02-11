@@ -11,13 +11,6 @@ export default {
       // TODO: Notify user if cookies are disabled.
       console.error('Cookies disabled.');
     } else {
-      const cards = document.querySelectorAll( '.card' );
-      if ( cards ) {
-        Array.prototype.forEach.call( cards, card => {
-          new Pinecone.Card( card );
-        } );
-      }
-
       const removeAllButton = document.getElementById('remove-all');
       const removeButtons = document.querySelectorAll('.remove-favorite');
       if (removeAllButton && removeButtons) {
