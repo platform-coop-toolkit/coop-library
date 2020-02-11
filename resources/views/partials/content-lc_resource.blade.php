@@ -10,7 +10,7 @@
   </header>
   <aside class="card__aside">
     <div class="card__meta">
-      <span class="card__format">@svg(Archive::getFormatSlug(), 'icon--' . Archive::getFormatSlug(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Archive::getFormat() }}</span>@if(Archive::getPublisher())<span class="separator">.</span>
+      <span class="card__format">@svg(Archive::getFormatIcon(), 'icon--' . Archive::getFormatIcon(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Archive::getFormat() }}</span>@if(Archive::getPublisher())<span class="separator">.</span>
       <span class="card__publisher"><span class="screen-reader-text">{{ __('publisher', 'coop-library' ) }}: </span>{!! Archive::getPublisher() !!}</span>
       @endif
     </div>
