@@ -15,6 +15,7 @@
     </p>
     @endif
   </div>
+  <div id="notices" aria-live="polite" aria-atomic="true"></div>
   <div class="resource__abstract">
     <h2>{{ __('Summary', 'coop-library') }}</h2>
     @php the_content() @endphp
