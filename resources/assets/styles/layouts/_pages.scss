@@ -16,3 +16,38 @@
     margin-top: rem(48);
   }
 }
+
+main {
+  position: relative;
+}
+
+.notification {
+  margin-bottom: $gutter;
+  position: sticky;
+  top: $gutter;
+  z-index: 1;
+}
+
+.remove-all-favorites,
+.remove-favorite {
+  --color: var(--red-500);
+  --hover-color: var(--red-400);
+  --active-color: var(--black);
+
+  transition: color 0.3s;
+}
+
+.remove-all {
+  text-align: right;
+}
+
+.remove-all-favorites {
+  display: inline-block;
+  margin-right: rem(-8);
+  margin-left: 0;
+}
+
+.remove-favorite {
+  float: right;
+  margin: rem(16) rem(-8) 0 0;
+}

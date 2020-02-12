@@ -8,8 +8,7 @@ import { __ } from '@wordpress/i18n';
  * @param {String} type
  */
 export default (title, content, type) => {
-  const notices = document.getElementById('notices');
-  const alert = document.createElement('div');
+  const pageHeader = document.querySelector('.page-header');
   let icon;
   switch(type) {
     case 'success':
@@ -26,13 +25,14 @@ export default (title, content, type) => {
       icon = '<svg class="icon icon--info" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g id="info" fill="currentColor"><path d="m10 19.05a9.05 9.05 0 1 0 -9-9 9.06 9.06 0 0 0 9 9zm0-16.05a7.05 7.05 0 1 1 -7 7 7.05 7.05 0 0 1 7-7z"/><path d="m9.91 14.41a1 1 0 0 0 1-1v-4a1 1 0 0 0 -2 0v4a1 1 0 0 0 1 1z"/><path d="m9.89 7.4a1 1 0 1 0 -1-1 1 1 0 0 0 1 1z"/></g></svg>';
   }
 
-  alert.setAttribute('role', 'alert');
-  alert.setAttribute('class', `notification notification--${type}`);
-  alert.innerHTML = `
-    <button class="button button--borderless"><svg class="icon icon--close" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path id="close" d="m11.41 10 4.3-4.29a1 1 0 1 0 -1.42-1.42l-4.29 4.3-4.29-4.3a1 1 0 0 0 -1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" fill="currentColor"/></svg>
-    <span class="screen-reader-text">${__('Close notification', 'coop-library')}</span></button>
-    <p class="notification__title">${icon} ${title}</p>
-    <div class="notification__content">${content}</div>
+  const alert = `
+    <div class="notification notification--${type}">
+      <button class="button button--borderless"><svg class="icon icon--close" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path id="close" d="m11.41 10 4.3-4.29a1 1 0 1 0 -1.42-1.42l-4.29 4.3-4.29-4.3a1 1 0 0 0 -1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" fill="currentColor"/></svg>
+      <span class="screen-reader-text">${__('Close notification', 'coop-library')}</span></button>
+      <p class="notification__title">${icon} ${title}</p>
+      <div class="notification__content">${content}</div>
+    </div>
   `;
-  notices.appendChild(alert);
+
+  pageHeader.insertAdjacentHTML('afterend', alert);
 };

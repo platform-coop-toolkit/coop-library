@@ -21,7 +21,6 @@ export default {
           dismiss: __('No, don&rsquo;t remove', 'coop-library'),
           callback: function callback() {
             let favorites = Cookies.get('favorites');
-            Cookies.set('favorites', '');
             fetch( CoopLibrary.ajaxurl, {
               method: 'POST',
               credentials: 'same-origin',
@@ -29,6 +28,7 @@ export default {
               body: `action=update_favorites&coop_library_nonce=${encodeURIComponent( CoopLibrary.coop_library_nonce )}&post_id=${encodeURIComponent( favorites )}&operation=decrement`,
             } )
             .then( () => {
+              Cookies.set('favorites', '');
               const resourceList = document.getElementById('favorites');
               removeAllButton.parentNode.removeChild(removeAllButton);
               resourceList.parentNode.removeChild(resourceList);
@@ -54,7 +54,6 @@ export default {
               let favorites = Cookies.get('favorites');
               favorites = favorites ? favorites.split(',') : [];
               favorites = favorites.filter(item => item !== id);
-              Cookies.set('favorites', favorites.toString());
               fetch( CoopLibrary.ajaxurl, {
                 method: 'POST',
                 credentials: 'same-origin',
@@ -62,6 +61,7 @@ export default {
                 body: `action=update_favorites&coop_library_nonce=${encodeURIComponent( CoopLibrary.coop_library_nonce )}&post_id=${encodeURIComponent( id )}&operation=decrement`,
               } )
               .then( () => {
+                Cookies.set('favorites', favorites.toString());
                 btn.parentNode.parentNode.removeChild(btn.parentNode);
                 if (length === 1) {
                   removeAllButton.parentNode.removeChild(removeAllButton);

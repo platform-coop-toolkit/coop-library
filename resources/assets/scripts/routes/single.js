@@ -27,8 +27,6 @@ export default {
         operation = 'decrement';
       }
 
-      Cookies.set('favorites', favorites.toString());
-
       fetch( CoopLibrary.ajaxurl, {
         method: 'POST',
         credentials: 'same-origin',
@@ -36,6 +34,8 @@ export default {
         body: `action=update_favorites&coop_library_nonce=${encodeURIComponent( CoopLibrary.coop_library_nonce )}&post_id=${encodeURIComponent( id )}&operation=${encodeURIComponent( operation )}`,
       } )
         .then( () => {
+          Cookies.set('favorites', favorites.toString());
+          favorite.dataset.favorite = !state;
           if (operation === 'decrement') {
             addNotification(__('Favorite removed', 'coop-library'), __('The resource has been removed from your favorites.', 'coop-library'), 'success');
           } else {
@@ -49,8 +49,6 @@ export default {
             addNotification(__('Favorite not added', 'coop-library'), __('The resource could not be added to your favorites.', 'coop-library'), 'error');
           }
         });
-
-      favorite.dataset.favorite = !state;
     }
 
     const share = document.querySelector( '.share' );

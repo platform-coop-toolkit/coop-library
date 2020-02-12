@@ -7,4 +7,3 @@
   <p class="subhead">{{ get_bloginfo('description') }}</p>
   @endif
 </div>
-<div id="notices"></div>
