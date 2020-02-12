@@ -21,5 +21,8 @@
     </ul>
   </div>
 
-  {!! get_the_posts_pagination(['prev_text' => sprintf('&lsaquo; <span class="screen-reader-text">%s</span>', __('previous resources', 'coop-library')), 'next_text' => sprintf(' <span class="screen-reader-text">%s</span> &rsaquo;', __('next resources', 'coop-library'))]) !!}
+  {!! str_replace(['page-numbers current', 'page-numbers'], ['page current', 'link link--pagination'], get_the_posts_pagination([
+    'prev_text' => sprintf('&lsaquo; <span class="screen-reader-text">%s</span>', __('previous resources', 'coop-library')),
+    'next_text' => sprintf(' <span class="screen-reader-text">%s</span> &rsaquo;', __('next resources', 'coop-library'))
+  ])) !!}
 @endsection
