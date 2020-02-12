@@ -64,16 +64,16 @@
         },
         {
             "name": "composer/installers",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0"
+                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
-                "reference": "141b272484481432cda342727a427dc1e206bfa0",
+                "url": "https://api.github.com/repos/composer/installers/zipball/7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
+                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
                 "shasum": ""
             },
             "require": {
@@ -121,6 +121,7 @@
                 "Kanboard",
                 "Lan Management System",
                 "MODX Evo",
+                "MantisBT",
                 "Mautic",
                 "Maya",
                 "OXID",
@@ -175,6 +176,7 @@
                 "shopware",
                 "silverstripe",
                 "sydes",
+                "sylius",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -182,7 +184,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2019-08-12T15:00:31+00:00"
+            "time": "2020-02-07T10:39:20+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -633,23 +635,21 @@
         },
         {
             "name": "league/uri",
-            "version": "6.0.1",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri.git",
-                "reference": "cf488ec34faa3b5c600659c8fc18d67c4752a5cb"
+                "reference": "7b29ca33b287b4277d5ce7c26bc1be5d4118b484"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri/zipball/cf488ec34faa3b5c600659c8fc18d67c4752a5cb",
-                "reference": "cf488ec34faa3b5c600659c8fc18d67c4752a5cb",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/7b29ca33b287b4277d5ce7c26bc1be5d4118b484",
+                "reference": "7b29ca33b287b4277d5ce7c26bc1be5d4118b484",
                 "shasum": ""
             },
             "require": {
-                "ext-fileinfo": "*",
                 "ext-json": "*",
-                "ext-mbstring": "*",
-                "league/uri-interfaces": "^2.0",
+                "league/uri-interfaces": "^2.1",
                 "php": "^7.2",
                 "psr/http-message": "^1.0"
             },
@@ -657,20 +657,21 @@
                 "league/uri-schemes": "^1.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.0",
-                "phpstan/phpstan": "^0.11",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpstan/phpstan-strict-rules": "^0.11",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpstan/phpstan-strict-rules": "^0.12",
                 "phpunit/phpunit": "^7.0 | ^8.0"
             },
             "suggest": {
+                "ext-fileinfo": "Needed to create Data URI from a filepath",
                 "ext-intl": "Needed to improve host validation",
                 "league/uri-components": "Needed to easily manipulate URI objects"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.x-dev"
+                    "dev-master": "6.x-dev"
                 }
             },
             "autoload": {
@@ -706,44 +707,46 @@
                 "querystring",
                 "rfc3986",
                 "rfc3987",
+                "rfc6570",
                 "uri",
+                "uri-template",
                 "url",
                 "ws"
             ],
-            "time": "2019-11-23T20:59:00+00:00"
+            "time": "2020-02-08T16:31:57+00:00"
         },
         {
             "name": "league/uri-components",
-            "version": "2.1.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri-components.git",
-                "reference": "cecbcb1af3a61e40a50b3582056cc5d7a1e9c650"
+                "reference": "14bab20b05bc20d16dec17401a9027c679412589"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri-components/zipball/cecbcb1af3a61e40a50b3582056cc5d7a1e9c650",
-                "reference": "cecbcb1af3a61e40a50b3582056cc5d7a1e9c650",
+                "url": "https://api.github.com/repos/thephpleague/uri-components/zipball/14bab20b05bc20d16dec17401a9027c679412589",
+                "reference": "14bab20b05bc20d16dec17401a9027c679412589",
                 "shasum": ""
             },
             "require": {
-                "ext-fileinfo": "*",
                 "ext-json": "*",
-                "league/uri-interfaces": "^2.0",
+                "league/uri-interfaces": "^2.1",
                 "php": "^7.2",
                 "psr/http-message": "^1.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.3",
                 "guzzlehttp/psr7": "^1.4",
+                "laminas/laminas-diactoros": "^2.0",
                 "league/uri": "^6.0",
                 "phpstan/phpstan": "^0.12",
                 "phpstan/phpstan-phpunit": "^0.12",
                 "phpstan/phpstan-strict-rules": "^0.12",
-                "phpunit/phpunit": "^7.0 | ^8.0",
-                "zendframework/zend-diactoros": "^2.0"
+                "phpunit/phpunit": "^7.0 | ^8.0"
             },
             "suggest": {
+                "ext-fileinfo": "Needed to create Data URI from a filepath",
                 "ext-gmp": "to improve handle IPV4 parsing",
                 "ext-intl": "to handle IDN host",
                 "jeremykendall/php-domain-parser": "Public Suffix and Top Level Domain parsing implemented in PHP",
@@ -789,20 +792,20 @@
                 "url",
                 "userinfo"
             ],
-            "time": "2019-12-19T20:22:58+00:00"
+            "time": "2020-02-09T19:44:04+00:00"
         },
         {
             "name": "league/uri-interfaces",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri-interfaces.git",
-                "reference": "ae2601a183ad14b73628a305c0f906c030757b39"
+                "reference": "0068a469958895ceaf3afcb489c0258adfa1e406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/ae2601a183ad14b73628a305c0f906c030757b39",
-                "reference": "ae2601a183ad14b73628a305c0f906c030757b39",
+                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/0068a469958895ceaf3afcb489c0258adfa1e406",
+                "reference": "0068a469958895ceaf3afcb489c0258adfa1e406",
                 "shasum": ""
             },
             "require": {
@@ -811,9 +814,9 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.0",
-                "phpstan/phpstan": "^0.11",
-                "phpstan/phpstan-phpunit": "^0.11",
-                "phpstan/phpstan-strict-rules": "^0.11",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpstan/phpstan-strict-rules": "^0.12",
                 "phpunit/phpunit": "^7.0|^8.0"
             },
             "type": "library",
@@ -846,7 +849,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2019-12-17T13:59:29+00:00"
+            "time": "2020-02-08T12:10:37+00:00"
         },
         {
             "name": "log1x/blade-svg-sage",
@@ -1697,16 +1700,16 @@
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.3",
+            "version": "3.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "557a1fc7ac702c66b0bbfe16ab3d55839ef724cb"
+                "reference": "dceec07328401de6211037abbb18bda423677e26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/557a1fc7ac702c66b0bbfe16ab3d55839ef724cb",
-                "reference": "557a1fc7ac702c66b0bbfe16ab3d55839ef724cb",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dceec07328401de6211037abbb18bda423677e26",
+                "reference": "dceec07328401de6211037abbb18bda423677e26",
                 "shasum": ""
             },
             "require": {
@@ -1744,7 +1747,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-12-04T04:46:47+00:00"
+            "time": "2020-01-30T22:20:29+00:00"
         }
     ],
     "aliases": [],
