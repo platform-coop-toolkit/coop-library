@@ -3,9 +3,9 @@ import Pinecone from '@platform-coop-toolkit/pinecone';
 export default {
   init() {
     // JavaScript to be fired on all pages
-    const toggle = document.querySelector( '.menu-toggle' );
     const menu = document.querySelector( '.menu' );
-    new Pinecone.Menu(toggle, menu);
+    const toggle = document.querySelector( '.menu-toggle' );
+    new Pinecone.Menu(menu, toggle);
 
     const searchToggle = document.querySelector( '.search-toggle' );
     if ( searchToggle ) {
