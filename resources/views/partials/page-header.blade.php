@@ -7,4 +7,4 @@
   <p class="subhead">{{ get_bloginfo('description') }}</p>
   @endif
 </div>
-<div id="notices" aria-live="polite" aria-atomic="true"></div>
+<div id="notices"></div>
