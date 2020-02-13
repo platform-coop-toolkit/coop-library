@@ -49,5 +49,83 @@ main {
 
 .remove-favorite {
   float: right;
-  margin: rem(16) rem(-8) 0 0;
+  margin: 0 rem(-8) 0 0;
+}
+
+.page.page-template-page-favorites .card__wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 3rem;
+  gap: rem(20);
+}
+
+@include breakpoint-up(sm) {
+  .page.page-template-page-favorites {
+    .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      @supports (display: $grid) {
+        display: grid;
+        gap: rem(30);
+        grid-template-columns: 100%;
+      }
+    }
+
+    .cards .card__wrapper {
+      margin-bottom: rem(30);
+      width: 100%;
+
+      @supports (display: $grid) {
+        margin-bottom: 0;
+      }
+    }
+
+    .card:nth-child(even) {
+      margin-left: 0;
+    }
+  }
+}
+
+@include breakpoint-up(md) {
+  .page.page-template-page-favorites {
+    .cards {
+      @supports (display: $grid) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .cards .card__wrapper {
+      width: calc(50% - #{rem(30)} / 2);
+
+      @supports (display: $grid) {
+        width: 100%;
+      }
+    }
+
+    .card:nth-child(even) {
+      margin-left: rem(30);
+
+      @supports (display: $grid) {
+        margin-left: 0;
+      }
+    }
+
+    .cards .card__wrapper + .card__wrapper {
+      margin-top: 0;
+    }
+  }
+}
+
+@include breakpoint-up(lg) {
+  .page.page-template-page-favorites main {
+    @include grid-column-span(8, 12, 3);
+  }
+}
+
+@include breakpoint-up(xl) {
+  .page.page-template-page-favorites main {
+    @include grid-column-span(8, 16, 4);
+  }
 }

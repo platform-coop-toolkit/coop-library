@@ -34,5 +34,8 @@ export default (title, content, type) => {
     </div>
   `;
 
+  if (pageHeader.nextElementSibling.classList.contains('notification')) {
+    pageHeader.nextElementSibling.parentNode.removeChild(pageHeader.nextElementSibling);
+  }
   pageHeader.insertAdjacentHTML('afterend', alert);
 };
