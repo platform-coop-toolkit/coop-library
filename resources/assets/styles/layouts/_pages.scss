@@ -17,6 +17,8 @@
   }
 }
 
+// TODO: Remove after Pinecone 1.0.0-alpha.11 is merged.
+
 main {
   position: relative;
 }
@@ -28,31 +30,25 @@ main {
   z-index: 1;
 }
 
-.remove-all-favorites,
-.remove-favorite {
+.button--borderless.button--destructive {
   --color: var(--red-500);
-  --hover-color: var(--red-400);
-  --active-color: var(--black);
-
-  transition: color 0.3s;
+  --outline-color: var(--red-500);
+  --hover-color: var(--dark-mint-500);
+  --focus-color: var(--red-500);
+  --active-color: var(--white);
+  --active-background-color: var(--red-500);
 }
 
-.remove-all {
+.align-right {
   text-align: right;
 }
 
-.remove-all-favorites {
+.align-right .button--borderless {
   display: inline-block;
-  margin-right: rem(-8);
-  margin-left: 0;
+  margin: rem(6) rem(-8) rem(6) rem(24);
 }
 
-.remove-favorite {
-  float: right;
-  margin: 0 rem(-8) 0 0;
-}
-
-.page.page-template-page-favorites .card__wrapper {
+.page.page-template-page-favorites .cards .card__wrapper {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr 3rem;
