@@ -1,0 +1,17 @@
+.no-js #favorite {
+  display: none;
+}
+
+[data-favorite="true"] {
+  .add,
+  .icon--favorite {
+    display: none;
+  }
+}
+
+[data-favorite="false"] {
+  .remove,
+  .icon--favorite-filled {
+    display: none;
+  }
+}

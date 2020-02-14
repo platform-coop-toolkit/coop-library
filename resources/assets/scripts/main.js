@@ -5,6 +5,7 @@ import 'wicg-inert';
 import Router from './util/Router';
 import {ready} from './util/Ready';
 import common from './routes/common';
+import pageFavorites from './routes/favorites';
 import home from './routes/home';
 import archive from './routes/archive';
 import single from './routes/single';
@@ -19,6 +20,8 @@ const routes = new Router({
   archive,
   // Single resource
   single,
+  // Favorites page
+  pageFavorites,
 });
 
 // Load Events
