@@ -44,7 +44,7 @@
   </div>
   @endif
   <div class="card__meta">
-    <span class="date__date-added">{{ sprintf(__('Added %s', 'coop-library'), get_the_date()) }}</span>
+    <span class="card__added">{{ sprintf(__('Added %s', 'coop-library'), get_the_date()) }}</span>
     @if(Archive::isFavorited())
     <span class="card__favorite">
       @svg('favorite-filled', 'icon--favorite-filled', ['focusable' => 'false', 'aria-hidden' => 'true'])
