@@ -108,7 +108,7 @@
     @endif
   </div>
   <div class="resource__meta">
-    <em>{{ sprintf(__('Added %s', 'coop-library'), get_the_date()) }}</em>
+    <span class="date__added">{{ sprintf(__('Added %s', 'coop-library'), get_the_date()) }}</span>
   </div>
   @php comments_template('/partials/comments.blade.php') @endphp
 </article>
