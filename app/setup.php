@@ -11,19 +11,23 @@ use Roots\Sage\Template\BladeProvider;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('sage/vendor.js', asset_path('scripts/vendor.js'), false, null, true);
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['sage/vendor.js'], null, true);
+    wp_enqueue_script('coop-library/vendor.js', asset_path('scripts/vendor.js'), false, null, true);
+    wp_enqueue_script('coop-library/main.js', asset_path('scripts/main.js'), ['coop-library/vendor.js'], null, true);
     wp_add_inline_script(
-        'sage/vendor.js',
+        'coop-library/vendor.js',
         file_get_contents(dirname(__FILE__) . '/../dist/scripts/manifest.js'),
         'before'
     );
+    wp_localize_script('coop-library/main.js', 'CoopLibrary', [
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'coop_library_nonce' => wp_create_nonce('coop-library-framework-nonce')
+    ]);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_style('coop-library/main.css', asset_path('styles/main.css'), false, null);
 }, 100);
 
 /**
@@ -84,6 +88,12 @@ add_action('after_setup_theme', function () {
      */
     load_theme_textdomain('coop-library', get_template_directory() . '/lang');
 }, 20);
+
+/**
+ * Ajax hooks
+ */
+add_action('wp_ajax_update_favorites', 'App\\update_favorites');
+add_action('wp_ajax_nopriv_update_favorites', 'App\\update_favorites');
 
 /**
  * Register sidebars

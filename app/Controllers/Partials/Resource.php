@@ -102,6 +102,18 @@ trait Resource
         return false;
     }
 
+    public static function getAuthors()
+    {
+        global $post;
+        if ($post->post_type == 'lc_resource') {
+            $authors = get_post_meta($post->ID, 'lc_resource_authors', true);
+            if ($authors) {
+                return $authors;
+            }
+        }
+        return false;
+    }
+
     public static function getLanguage($format = 'slug')
     {
         global $post;
@@ -128,7 +140,7 @@ trait Resource
         return false;
     }
 
-    public static function getFormatSlug()
+    public static function getFormatIcon()
     {
         global $post;
 
@@ -139,11 +151,12 @@ trait Resource
                 switch ($format->slug) {
                     case 'academic-paper':
                     case 'thesis':
-                        return 'academic-paper';
+                        return 'academic';
+                        break;
+                    case 'blog-post':
+                        return 'blog';
                         break;
                     case 'article':
-                    case 'document':
-                    case 'blog-post':
                     case 'journal-article':
                     case 'magazine-article':
                     case 'newspaper-article':
@@ -162,10 +175,9 @@ trait Resource
                         return 'case-study';
                         break;
                     case 'curriculum':
-                        return 'educational-curriculum';
+                        return 'curriculum';
                         break;
                     case 'film':
-                    case 'interview':
                     case 'video':
                         return 'video';
                         break;
@@ -180,11 +192,14 @@ trait Resource
                         break;
                     case 'software':
                     case 'toolkit':
-                    case 'template':
                         return 'toolkit';
                         break;
+                    case 'template':
+                        return 'template';
+                        break;
+                    case 'document':
                     default:
-                        return 'article';
+                        return 'document';
                 }
             }
         }
@@ -274,6 +289,16 @@ trait Resource
             }
         }
 
+        return false;
+    }
+
+    public static function isFavorited()
+    {
+        global $post;
+        $favorites = explode(',', $_COOKIE['favorites']);
+        if (in_array($post->ID, $favorites)) {
+            return true;
+        }
         return false;
     }
 }

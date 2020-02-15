@@ -1,7 +1,8 @@
 <div class="filter-wrapper">
-  <button type="button" class="button" id="show-filters">@svg('filter', 'icon--filter', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Filter', 'coop-library' ) }}</button>
+  <button type="button" class="button button--borderless" id="show-filters">@svg('filter', 'icon--filter', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Filter', 'coop-library' ) }}</button>
     <form name="filters" class="filters" action="{{ get_post_type_archive_link('lc_resource') }}">
-      <button type="button" class="button" id="hide-filters">{{ __('Close', 'coop-library' ) }} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
+      <input type="hidden" name="order_by" value="{{ $_GET['order_by'] }}" />
+      <button type="button" class="button button--borderless button--inverse" id="hide-filters">{{ __('Close', 'coop-library' ) }} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
       <h2 class="h1 screen-reader-text">{{ __('Filters', 'coop-library' ) }}</h2>
       <div class="accordion accordion--filter-list">
         @foreach([
@@ -16,7 +17,7 @@
         <div class="accordion__pane">
           <p class="accordion__heading">{{ $label }}</p>
           <div class="accordion__content">
-            <button id="deselect-{{ $tax }}" type="button" class="button">
+            <button id="deselect-{{ $tax }}" type="button" class="button button--borderless">
               <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ $label }}</span></span>
             </button>
             <ul id="{{ $tax }}" class="input-group input-group__parent {{ $tax }}">
@@ -56,9 +57,8 @@
         @endif
         @endforeach
       </div>
-      <input type="hidden" name="order_by" value="{{ $_GET['order_by'] }}" />
       <div class="input-group">
-        <input type="submit" name="applyFilters" value="{{ __('Apply Filters', 'coop-library') }}" />
+        <button id="apply-filters" class="button" type="submit">{{ __('Apply Filters', 'coop-library') }}</button>
       </div>
   </form>
 </div>

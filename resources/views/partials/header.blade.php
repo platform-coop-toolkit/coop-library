@@ -1,14 +1,14 @@
 <header role="banner">
   <div class="container">
-    <a class="brand"@if(is_front_page()) aria-current="page"@endif href="{{ home_url('/') }}">@svg('pcc', 'icon--pcc', ['focusable' => 'false', 'aria-hidden' => 'true'])<span class="brand__title screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
+    <a class="link link--brand"@if(is_front_page()) aria-current="page"@endif href="{{ home_url('/') }}">@svg('pcc', 'icon--pcc', ['focusable' => 'false', 'aria-hidden' => 'true'])<span class="brand__title screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
     <div class="inner">
       @if(!is_front_page())
-        <button class="button search-toggle" aria-expanded="false"><span class="screen-reader-text">{{ __('Search', 'coop-library') }} </span>@svg('search', 'icon--search', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
+        <button class="button button--borderless search-toggle" aria-expanded="false"><span class="screen-reader-text">{{ __('Search', 'coop-library') }} </span>@svg('search', 'icon--search', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
         @include('partials.search-form')
       @endif
       <nav aria-labelledby="menu-primary-label">
         @if (has_nav_menu('primary_navigation'))
-          <button class="button menu-toggle" aria-expanded="false">
+          <button class="button button--borderless menu-toggle" aria-expanded="false">
             @svg('menu', 'icon--open', ['focusable' => 'false', 'aria-hidden' => 'true'])
             @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])
             <span id="menu-primary-label" class="menu-toggle__label">Menu</span>

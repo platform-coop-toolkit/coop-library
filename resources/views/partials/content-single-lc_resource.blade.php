@@ -1,7 +1,7 @@
 <article @php post_class() @endphp>
   <div class="page-header resource__header">
     <p class="resource__format">
-      @svg(Single::getFormatSlug(), 'icon--' . Single::getFormatSlug(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Single::getFormat() }}
+      @svg(Single::getFormatIcon(), 'icon--' . Single::getFormatIcon(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Single::getFormat() }}
     </p>
     <h1 class="resource__title">{!! get_the_title() !!}</h1>
     @if(Single::getPublisher() || Single::getRegion())
@@ -33,13 +33,15 @@
   </div>
   @endif
   <div class="resource__cta">
-    <p class="wp-block-button"><a rel="external" class="wp-block-button__link" href="{{ Single::getPermanentLink() }}">{{ __('Visit full resource', 'coop-library') }} @svg('external', 'icon--external', ['focusable' => 'false', 'aria-hidden' => 'true'])</a></p>
+    <p><a rel="external" class="cta" href="{{ Single::getPermanentLink() }}">{{ __('Visit full resource', 'coop-library') }} @svg('external', 'icon--external', ['focusable' => 'false', 'aria-hidden' => 'true'])</a></p>
   </div>
   <div class="resource__actions">
-    {{-- <button id="favorite" type="button" class="button">
-      @svg('favourite', 'icon--favorite', ['focusable' => 'false', 'aria-hidden' => 'true'])
-      <span class="button__label">{{ __('Favorite', 'coop-library') }}</span>
-    </button> TODO: Implement favorites. --}}
+    <button id="favorite" type="button" class="button button--borderless" data-id="{{ get_the_id() }}" data-favorite="false">
+      @svg('favorite', 'icon--favorite', ['focusable' => 'false', 'aria-hidden' => 'true'])
+      <span class="button__label add">{{ __('Add to Favorites', 'coop-library') }}</span>
+      @svg('favorite-filled', 'icon--favorite-filled', ['focusable' => 'false', 'aria-hidden' => 'true'])
+      <span class="button__label remove">{{ __('Remove from Favorites', 'coop-library') }}</span>
+    </button>
     <div class="share menu-button">
       <p class="h3 menu-button__label">
         @svg('share', 'icon--share', ['focusable' => 'false', 'aria-hidden' => 'true'])
