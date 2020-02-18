@@ -7,7 +7,7 @@
     <div class="alert alert-warning">
       {{ __('Sorry, no results were found.', 'coop-library') }}
     </div>
-    {!! get_search_form(false) !!}
+    @include('partials.search-form', ['placeholder' => __('Search resource name, publisher, or topic…')])
   @endif
 
   @include('partials.filters')
