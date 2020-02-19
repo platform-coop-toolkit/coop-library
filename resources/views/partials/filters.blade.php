@@ -1,8 +1,9 @@
 <div class="filter-wrapper">
   <button type="button" class="button button--borderless" id="show-filters">@svg('filter', 'icon--filter', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Filter', 'coop-library' ) }}</button>
-    <form name="filters" class="filters" action="{{ get_post_type_archive_link('lc_resource') }}">
+    <form name="filters" class="filters" action="{{ (isset($_GET['s'])) ? home_url('/') : get_post_type_archive_link('lc_resource') }}">
       @if(isset($_GET['s']))
       <input type="hidden" name="s" value="{{ $_GET['s'] }}" />
+      <input type="hidden" name="post_type" value="lc_resource" />
       @endif
       <input type="hidden" name="order_by" value="{{ (isset($_GET['order_by'])) ? $_GET['order_by'] : 'added' }}" />
       <button type="button" class="button button--borderless button--inverse" id="hide-filters">{{ __('Close', 'coop-library' ) }} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
