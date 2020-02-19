@@ -12,6 +12,7 @@
 
   @include('partials.filters')
   @include('partials.sort')
+  @include('partials.save-search')
   @include('partials.current-filters')
   <div class="resource-list">
     <ul class="cards">
