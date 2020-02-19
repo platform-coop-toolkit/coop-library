@@ -1,7 +1,10 @@
 <div class="filter-wrapper">
   <button type="button" class="button button--borderless" id="show-filters">@svg('filter', 'icon--filter', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Filter', 'coop-library' ) }}</button>
     <form name="filters" class="filters" action="{{ get_post_type_archive_link('lc_resource') }}">
-      <input type="hidden" name="order_by" value="{{ $_GET['order_by'] }}" />
+      @if(isset($_GET['s']))
+      <input type="hidden" name="s" value="{{ $_GET['s'] }}" />
+      @endif
+      <input type="hidden" name="order_by" value="{{ (isset($_GET['order_by'])) ? $_GET['order_by'] : 'added' }}" />
       <button type="button" class="button button--borderless button--inverse" id="hide-filters">{{ __('Close', 'coop-library' ) }} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
       <h2 class="h1 screen-reader-text">{{ __('Filters', 'coop-library' ) }}</h2>
       <div class="accordion accordion--filter-list">
