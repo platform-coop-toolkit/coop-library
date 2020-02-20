@@ -28,7 +28,7 @@
       <span class="separator">.</span>
       @endif
       @if(Archive::getPublicationDate())
-      <span class="card__date"><span class="screen-reader-text">{{ __('date published', 'coop-library') }}: </span>2016</span>
+      <span class="card__date"><span class="screen-reader-text">{{ __('date published', 'coop-library') }}: </span>{{ Archive::getPublicationDate('Y') }}</span>
       @endif
     </div>
     @endif
@@ -43,10 +43,13 @@
     @endif
   </div>
   @endif
-  @if(Archive::isFavorited())
-  <div class="card__favorite">
-    @svg('favorite-filled', 'icon--favorite-filled', ['focusable' => 'false', 'aria-hidden' => 'true'])
-    {{ __('Favorited', 'coop-library') }}
+  <div class="card__meta">
+    <span class="card__added">{{ sprintf(__('Added %s', 'coop-library'), get_the_date()) }}</span>
+    @if(Archive::isFavorited())
+    <span class="card__favorite">
+      @svg('favorite-filled', 'icon--favorite-filled', ['focusable' => 'false', 'aria-hidden' => 'true'])
+      {{ __('Favorited', 'coop-library') }}
+    </span>
+    @endif
   </div>
-  @endif
 </article>

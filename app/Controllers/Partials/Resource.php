@@ -1,6 +1,7 @@
 <?php namespace App\Controllers\Partials;
 
 use function App\maybe_swap_term;
+use function App\natural_language_join;
 
 trait Resource
 {
@@ -54,16 +55,19 @@ trait Resource
         return false;
     }
 
-    public static function getPublicationDate()
+    public static function getPublicationDate($format = false)
     {
         global $post;
 
         if ($post->post_type == 'lc_resource') {
+            if (!$format) {
+                $format = get_option('date_format');
+            }
             $y = get_post_meta($post->ID, 'lc_resource_publication_year', true);
             $m = get_post_meta($post->ID, 'lc_resource_publication_month', true);
             $d = get_post_meta($post->ID, 'lc_resource_publication_day', true);
             return date_i18n(
-                get_option('date_format'),
+                $format,
                 strtotime(implode('-', [$y, $m, $d]))
             );
         }
@@ -106,9 +110,9 @@ trait Resource
     {
         global $post;
         if ($post->post_type == 'lc_resource') {
-            $authors = get_post_meta($post->ID, 'lc_resource_authors', true);
+            $authors = get_post_meta($post->ID, 'lc_resource_author', true);
             if ($authors) {
-                return $authors;
+                return natural_language_join($authors);
             }
         }
         return false;

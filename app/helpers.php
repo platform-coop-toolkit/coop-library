@@ -153,3 +153,30 @@ function maybe_swap_term($term, $lang = false)
     }
     return $term;
 }
+
+
+/**
+ * Join a string with a natural language conjunction at the end.
+ * Based on https://gist.github.com/angry-dan/e01b8712d6538510dd9c
+ *
+ * @param array $list
+ * @param string $conjunction
+ * @param bool $oxford
+ *
+ * @return string
+ */
+function natural_language_join(array $list, $conjunction = 'and', $oxford = true)
+{
+    if (count($list) > 2) {
+        $last_item = array_pop($list);
+        if ($oxford) {
+            $final_separator = ", $conjunction ";
+        } else {
+            $final_separator = " $conjunction ";
+        }
+        return implode(', ', $list) . $final_separator . $last_item;
+    } elseif (count($list) === 2) {
+        return implode(" $conjunction ", $list);
+    }
+    return array_pop($list);
+}

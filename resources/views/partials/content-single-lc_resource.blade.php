@@ -1,19 +1,33 @@
 <article @php post_class() @endphp>
   <div class="page-header resource__header">
-    <p class="resource__format">
-      @svg(Single::getFormatIcon(), 'icon--' . Single::getFormatIcon(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Single::getFormat() }}
-    </p>
     <h1 class="resource__title">{!! get_the_title() !!}</h1>
-    @if(Single::getPublisher() || Single::getRegion())
-    <p class="resource__meta">
-    @if(Single::getPublisher())
-      <span class="resource__publisher byline vcard">{{ __('By', 'coop-library') }} {!! Single::getPublisher(true) !!}</span>
+    @if(Single::getAuthors())
+    <div class="resource__meta resource__byline">@svg('author', 'icon--author', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ sprintf(__('By %s', 'coop-library'), Single::getAuthors()) }}</div>
     @endif
-    @if(Single::getRegion())
-      <span class="resource__locality">@svg('location', 'icon--location', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ Archive::getRegion() }}</span>
-    @endif
-    </p>
-    @endif
+    <div class="resource__meta">
+      <div class="resource__meta-group">
+          <span class="resource__format">@svg(Single::getFormatIcon(), 'icon--' . Single::getFormatIcon(), ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('resource format', 'coop-library') }}: </span>{{ Single::getFormat() }}</span>@if(Single::getPublisher())<span class="separator">.</span>
+          <span class="resource__publisher">{!! sprintf(__('Published by %s', 'coop-library'), Single::getPublisher()) !!}</span>
+          @endif
+      </div>
+      @if(Single::getRegion())
+      <div class="resource__meta-group">
+        <span class="resource__locality">@svg('location', 'icon--location', ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="screen-reader-text">{{ __('location of relevance', 'coop-library') }}: </span>{{ Single::getRegion() }}</span>
+      </div>
+      @endif
+      @if($current_language !== Single::getLanguage() || Single::getPublicationDate())
+      <div class="resource__meta-group">
+        @svg('info', 'icon--info', ['focusable' => 'false', 'aria-hidden' => 'true'])
+        @if($current_language !== Single::getLanguage())
+        <span class="resource__language"><span class="screen-reader-text">{{ __('language', 'coop-library') }}: </span>{{ $languages[Single::getLanguage()] }}</span>
+        <span class="separator">.</span>
+        @endif
+        @if(Single::getPublicationDate())
+        <span class="resource__date"><span class="screen-reader-text">{{ __('date published', 'coop-library') }}: </span>{{ Single::getPublicationDate() }}</span>
+        @endif
+      </div>
+      @endif
+    </div>
   </div>
   <div class="resource__abstract">
     <h2>{{ __('Summary', 'coop-library') }}</h2>
@@ -91,6 +105,9 @@
       </ul>
     </div>
     @endif
+  </div>
+  <div class="resource__meta">
+    <span class="date__added">{{ sprintf(__('Added %s', 'coop-library'), get_the_date()) }}</span>
   </div>
   @php comments_template('/partials/comments.blade.php') @endphp
 </article>
