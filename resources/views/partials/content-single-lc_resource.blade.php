@@ -1,7 +1,6 @@
 <article @php post_class() @endphp>
   <div class="page-header resource__header">
     <h1 class="resource__title">{!! get_the_title() !!}</h1>
-    <div class="resource__meta resource__byline">
     @if(Single::getAuthors())
     <div class="resource__meta resource__byline">@svg('author', 'icon--author', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ sprintf(__('By %s', 'coop-library'), Single::getAuthors()) }}</div>
     @endif
