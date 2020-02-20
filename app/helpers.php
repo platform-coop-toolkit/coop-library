@@ -175,7 +175,7 @@ function natural_language_join(array $list, $conjunction = 'and', $oxford = true
             $final_separator = " $conjunction ";
         }
         return implode(', ', $list) . $final_separator . $last_item;
-    } elseif (count($list === 2)) {
+    } elseif (count($list) === 2) {
         return implode(" $conjunction ", $list);
     }
     return array_pop($list);
