@@ -36,6 +36,7 @@ export default {
         {
           paneSelector: '.accordion__pane',
           controlSelector: '.accordion__control',
+          headingSelector: '.accordion__heading',
         }
       );
     } );
@@ -61,6 +62,12 @@ export default {
         checkbox.checked = false;
         document.forms.filters.submit();
       };
+    });
+
+    // Save search
+    document.addEventListener('click', (event) => {
+      if(event.target.id !== 'save-search') return;
+      console.log('Save search!');
     });
   },
   finalize() {
