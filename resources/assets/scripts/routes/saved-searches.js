@@ -10,10 +10,10 @@ export default {
     savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
     savedSearches = Object.entries(savedSearches);
 
-    if (savedSearches.length === 25) {
+    if (savedSearches.length === 50) {
       addNotification(
         __('Maximum number of saved searches reached', 'coop-library'),
-        __('You have reached the maximum amount of saved searches (25). To save more, you must delete some saved searches.', 'coop-library'),
+        __('You have reached the maximum amount of saved searches (50). To save more, you must delete some saved searches.', 'coop-library'),
         'warning'
       );
     }

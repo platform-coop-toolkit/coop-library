@@ -75,11 +75,11 @@ export default {
       let savedSearches = localStorage.getItem('saved-searches');
       savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
 
-      if (Object.entries(savedSearches).length === 25) {
+      if (Object.entries(savedSearches).length === 50) {
         saveSearchButton.onclick = () => {
           addNotification(
             __('Maximum number of saved searches reached', 'coop-library'),
-            sprintf(__('You have reached the maximum amount of saved searches (25). To save more, you must <a href="%s">delete some saved searches</a>.', 'coop-library'), CoopLibrary.savedSearchesLink),
+            sprintf(__('You have reached the maximum amount of saved searches (50). To save more, you must <a href="%s">delete some saved searches</a>.', 'coop-library'), CoopLibrary.savedSearchesLink),
             'error'
           );
         };
@@ -107,7 +107,7 @@ export default {
               });
               savedSearches[now] = {name, term, url, filters};
               localStorage.setItem('saved-searches', JSON.stringify(savedSearches));
-              const remaining = 25 - Object.keys(savedSearches).length;
+              const remaining = 50 - Object.keys(savedSearches).length;
               addNotification(
                 __('Search saved', 'coop-library'),
                 sprintf(
