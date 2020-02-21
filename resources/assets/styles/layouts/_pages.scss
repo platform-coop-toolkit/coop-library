@@ -17,7 +17,7 @@
   }
 }
 
-#saved-searches:not(:empty) + .notification {
+#saved-searches:not(:empty) + * {
   display: none;
 }
 

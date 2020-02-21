@@ -10,6 +10,14 @@ export default {
     savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
     savedSearches = Object.entries(savedSearches);
 
+    if (savedSearches.length === 25) {
+      addNotification(
+        __('Maximum number of saved searches reached', 'coop-library'),
+        __('You have reached the maximum amount of saved searches (25). To save more, you must delete some saved searches.', 'coop-library'),
+        'warning'
+      );
+    }
+
     if (savedSearches.length > 0) {
       savedSearchContainer.previousElementSibling.removeAttribute('hidden');
       Array.prototype.forEach.call(savedSearches, i => {
@@ -77,23 +85,31 @@ export default {
         },
       });
     }
-    document.addEventListener('click', (event) => {
-      if (!event.target.classList.contains('remove-saved-search')) return;
-      try {
-        const length = document.querySelectorAll('.saved-search').length;
-        const key = event.target.dataset.key;
-        let savedSearches = localStorage.getItem('saved-searches');
-        savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
-        delete savedSearches[key];
-        localStorage.setItem('saved-searches', JSON.stringify(savedSearches));
-        event.target.parentNode.parentNode.parentNode.removeChild(event.target.parentNode.parentNode);
-        if (length === 1) {
-          removeAllButton.parentNode.removeChild(removeAllButton);
-        }
-        addNotification(__('Saved search removed', 'coop-library'), __('Your saved search has been removed.', 'coop-library'), 'success');
-      } catch(error) {
-        addNotification(__('Saved search not removed', 'coop-library'), __('Your saved search could not be removed.', 'coop-library'), 'error');
-      }
+    const removeButtons = document.querySelectorAll('.remove-saved-search');
+    Array.prototype.forEach.call(removeButtons, removeButton => {
+      new Pinecone.Dialog( removeButton, {
+        title: __('Remove saved search?', 'coop-library'),
+        question: __('Are you sure you want to remove this saved search?', 'coop-library'),
+        confirm: __('Yes, remove', 'coop-library'),
+        dismiss: __('No, don&rsquo;t remove', 'coop-library'),
+        callback: function callback() {
+          try {
+            const length = document.querySelectorAll('.saved-search').length;
+            const key = event.target.dataset.key;
+            let savedSearches = localStorage.getItem('saved-searches');
+            savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
+            delete savedSearches[key];
+            localStorage.setItem('saved-searches', JSON.stringify(savedSearches));
+            removeButton.parentNode.parentNode.parentNode.removeChild(removeButton.parentNode.parentNode);
+            if (length === 1) {
+              removeAllButton.parentNode.removeChild(removeAllButton);
+            }
+            addNotification(__('Saved search removed', 'coop-library'), __('Your saved search has been removed.', 'coop-library'), 'success');
+          } catch(error) {
+            addNotification(__('Saved search not removed', 'coop-library'), __('Your saved search could not be removed', 'coop-library'), 'error');
+          }
+        },
+      });
     });
   },
   finalize() {

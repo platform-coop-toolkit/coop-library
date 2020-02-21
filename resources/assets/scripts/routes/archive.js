@@ -1,3 +1,5 @@
+/* global CoopLibrary */
+
 import addNotification from '../util/addNotification';
 import Pinecone from '@platform-coop-toolkit/pinecone';
 import { __, sprintf } from '@wordpress/i18n';
@@ -70,35 +72,57 @@ export default {
     const saveSearchButton = document.getElementById('save-search');
 
     if (saveSearchButton) {
-      new Pinecone.Dialog( saveSearchButton, {
-        title: __('Save search', 'coop-library'),
-        question: __('To save your search, please give it a name so you can identify it later.', 'coop-library'),
-        input: 'name',
-        inputLabel: __('Name of saved search:', 'coop-library'),
-        confirm: __('Save', 'coop-library'),
-        dismiss: __('Don&rsquo;t save', 'coop-library'),
-        callback: function callback(input) {
-          try {
-            const tags = document.querySelectorAll('.filters input:checked');
-            let savedSearches = localStorage.getItem('saved-searches');
-            savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
-            const now = Date.now();
-            const term = document.querySelector('.filters input[name="s"]').value;
-            const name = input ? input : sprintf(__('Saved search for “%s”', 'coop-library'), term);
-            const url = window.location.href;
-            const filters = [];
-            Array.prototype.forEach.call(tags, tag => {
-              const label = document.querySelector(`[for="${tag.id}"]`);
-              filters.push(label.innerText);
-            });
-            savedSearches[now] = {name, term, url, filters};
-            localStorage.setItem('saved-searches', JSON.stringify(savedSearches));
-            addNotification(__('Search saved', 'coop-library'), sprintf( __('Your search “%s” has been saved.', 'coop-library'), name), 'success');
-          } catch(error) {
-            addNotification(__('Search not saved', 'coop-library'), __('Your search could not be saved.', 'coop-library'), 'error');
-          }
-        },
-      });
+      let savedSearches = localStorage.getItem('saved-searches');
+      savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
+
+      if (Object.entries(savedSearches).length === 25) {
+        saveSearchButton.onclick = () => {
+          addNotification(
+            __('Maximum number of saved searches reached', 'coop-library'),
+            sprintf(__('You have reached the maximum amount of saved searches (25). To save more, you must <a href="%s">delete some saved searches</a>.', 'coop-library'), CoopLibrary.savedSearchesLink),
+            'error'
+          );
+        };
+      } else {
+        new Pinecone.Dialog( saveSearchButton, {
+          title: __('Save search', 'coop-library'),
+          question: __('To save your search, please give it a name so you can identify it later.', 'coop-library'),
+          input: 'name',
+          inputLabel: __('Name of saved search:', 'coop-library'),
+          confirm: __('Save', 'coop-library'),
+          dismiss: __('Don&rsquo;t save', 'coop-library'),
+          callback: function callback(input) {
+            try {
+              const tags = document.querySelectorAll('.filters input:checked');
+              let savedSearches = localStorage.getItem('saved-searches');
+              savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
+              const now = Date.now();
+              const term = document.querySelector('.filters input[name="s"]').value;
+              const name = input ? input : sprintf(__('Saved search for “%s”', 'coop-library'), term);
+              const url = window.location.href;
+              const filters = [];
+              Array.prototype.forEach.call(tags, tag => {
+                const label = document.querySelector(`[for="${tag.id}"]`);
+                filters.push(label.innerText);
+              });
+              savedSearches[now] = {name, term, url, filters};
+              localStorage.setItem('saved-searches', JSON.stringify(savedSearches));
+              const remaining = 25 - Object.keys(savedSearches).length;
+              addNotification(
+                __('Search saved', 'coop-library'),
+                sprintf(
+                  __('You have successfully saved this search. You can save %d more. You can see this search in your <a href="%s">saved searches page</a>.', 'coop-library'),
+                  remaining,
+                  CoopLibrary.savedSearchesLink
+                ),
+                'success'
+              );
+            } catch(error) {
+              addNotification(__('Search not saved', 'coop-library'), __('Your search could not be saved.', 'coop-library'), 'error');
+            }
+          },
+        });
+      }
     }
   },
   finalize() {
