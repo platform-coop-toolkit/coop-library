@@ -40,3 +40,42 @@
     right: 0;
   }
 }
+
+.search-results .notification {
+  margin-top: rem(30);
+}
+
+@include breakpoint-up(sm) {
+  .search-results .notification {
+    @include grid-column-span(8, 8);
+  }
+}
+
+@include breakpoint-up(md) {
+  .search-results .notification {
+    @include grid-column-span(6, 8);
+  }
+}
+
+@include breakpoint-up(lg) {
+  .search-results .notification {
+    @include grid-column-span(8, 12, 5);
+
+    margin-top: rem(30);
+  }
+
+  .notification + .filter-wrapper {
+    grid-row: 3 / 6;
+  }
+
+  .notification ~ .sort-wrapper,
+  .notification ~ .save-wrapper {
+    grid-row-start: 3;
+  }
+}
+
+@include breakpoint-up(xl) {
+  .search-results .notification {
+    @include grid-column-span(8, 16, 5);
+  }
+}
