@@ -35,7 +35,7 @@
                     <span class="supplementary-label" hidden> ({{ sprintf(__('and %d subtopics', 'coop-library'), count(get_term_children($term->term_id, $tax))) }})</span>
                     <span class="filter-disclosure-label" hidden>{{ sprintf(__('show %d subtopics for "%s"', 'coop-library'), count(get_term_children($term->term_id, $tax)), $term->name) }}</span>
                     <ul class="input-group input-group__descendant">
-                      @foreach(get_terms(['taxonomy' => $tax, 'parent' => $term->term_id, 'orderby' => 'name']) as $child_term)
+                      @foreach(get_terms(['taxonomy' => $tax, 'parent' => $term->term_id, 'orderby' => 'order']) as $child_term)
                       <li>
                         <input id="{{ $tax }}-{{ $child_term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $child_term->slug }}" {{
                         checked(
