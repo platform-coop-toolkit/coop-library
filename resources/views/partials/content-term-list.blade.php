@@ -1,6 +1,6 @@
-@if(get_terms($taxonomy))
+@if(get_terms(['taxonomy' => $taxonomy]))
   <ul class="link-list">
-  @foreach(get_terms($taxonomy) as $term)
+  @foreach(get_terms(['taxonomy' => $taxonomy, 'orderby' => 'order']) as $term)
     @if(get_term_children($term->term_id, $taxonomy))
       <li>
         <hr class="is-style-thick has-grey-200-background-color" />
@@ -11,7 +11,7 @@
           <li class="link-list__item">
             <a href="{{ get_term_link($term) }}">{!! $term->name !!}</a>
           </li>
-          @foreach(get_terms(['taxonomy' => $taxonomy, 'parent' => $term->term_id]) as $child_term)
+          @foreach(get_terms(['taxonomy' => $taxonomy, 'parent' => $term->term_id, 'orderby' => 'name']) as $child_term)
           <li class="link-list__item">
             <a href="{{ get_term_link($child_term) }}">{!! $child_term->name !!}</a>
           </li>
