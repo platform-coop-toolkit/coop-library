@@ -71,6 +71,19 @@ class App extends Controller
         return $wp_query->found_posts;
     }
 
+    public function maxPages()
+    {
+        global $wp_query;
+        return $wp_query->max_num_pages;
+    }
+
+    public function currentPage()
+    {
+        global $wp_query;
+        $current_page = $wp_query->query_vars['paged'] > 1 ? $wp_query->query_vars['paged'] : 1;
+        return $current_page;
+    }
+
     public static function totalPosts($post_type = null)
     {
         if ($post_type) {
