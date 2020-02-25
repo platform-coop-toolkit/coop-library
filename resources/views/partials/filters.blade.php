@@ -21,7 +21,7 @@
               <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ $label }}</span></span>
             </button>
             <ul id="{{ $tax }}" class="input-group input-group__parent {{ $tax }}">
-              @foreach(get_terms(['taxonomy' => $tax]) as $term)
+              @foreach(get_terms(['taxonomy' => $tax, 'orderby' => 'order']) as $term)
                 @if(!$term->parent)
                 <li>
                   <input id="{{ $tax }}-{{ $term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $term->slug }}" {{

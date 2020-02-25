@@ -1,6 +1,6 @@
 @if(get_terms(['taxonomy' => $taxonomy]))
   <ul class="link-list">
-  @foreach(get_terms(['taxonomy' => $taxonomy]) as $term)
+  @foreach(get_terms(['taxonomy' => $taxonomy, 'orderby' => 'order']) as $term)
     @if(get_term_children($term->term_id, $taxonomy))
       <li>
         <hr class="is-style-thick has-grey-200-background-color" />
