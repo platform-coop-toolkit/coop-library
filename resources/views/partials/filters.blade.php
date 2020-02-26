@@ -6,13 +6,14 @@
       <h2 class="h1 screen-reader-text">{{ __('Filters', 'coop-library' ) }}</h2>
       <div class="accordion accordion--filter-list">
         @foreach([
-          'lc_region' => __('Location of relevance', 'coop-library'),
           'lc_goal' => __('Goals', 'coop-library'),
           'lc_topic' => __('Topics', 'coop-library'),
-          'lc_format' => __('Format', 'coop-library'),
-          'lc_sector' => __('Sector', 'coop-library'),
+          'lc_coop_type' => __('Co-op Types', 'coop-library'),
+          'lc_sector' => __('Sectors', 'coop-library'),
+          'lc_region' => __('Locations', 'coop-library'),
+          'lc_format' => __('Formats', 'coop-library'),
         ] as $tax => $label)
-        @if(get_terms($tax))
+        @if(get_terms(['taxonomy' => $tax]))
         <div class="accordion__pane">
           <p class="accordion__heading">{{ $label }}</p>
           <div class="accordion__content">
@@ -20,7 +21,7 @@
               <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ $label }}</span></span>
             </button>
             <ul id="{{ $tax }}" class="input-group input-group__parent {{ $tax }}">
-              @foreach(get_terms($tax) as $term)
+              @foreach(get_terms(['taxonomy' => $tax, 'orderby' => 'order']) as $term)
                 @if(!$term->parent)
                 <li>
                   <input id="{{ $tax }}-{{ $term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $term->slug }}" {{
