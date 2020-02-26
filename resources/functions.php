@@ -67,7 +67,7 @@ array_map(function ($file) use ($sage_error) {
             'File not found'
         );
     }
-}, ['helpers', 'setup', 'filters', 'admin', 'ajax', 'translation']);
+}, ['helpers', 'setup', 'filters', 'admin', 'ajax']);
 
 /**
  * Here's what's happening with these hooks:
@@ -99,9 +99,3 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
-
-/**
- * Load theme translation interface.
- * @see https://github.com/roots/sage/issues/1875#issuecomment-380076482
- */
-new App\Translation();
