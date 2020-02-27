@@ -7,12 +7,12 @@
         @include('partials.search-form')
       @endif
       <nav aria-labelledby="menu-primary-label">
+        <button class="button button--borderless menu-toggle" aria-expanded="false">
+          @svg('menu', 'icon--open', ['focusable' => 'false', 'aria-hidden' => 'true'])
+          @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])
+          <span id="menu-primary-label" class="menu-toggle__label">Menu</span>
+        </button>
         @if (has_nav_menu('primary_navigation'))
-          <button class="button button--borderless menu-toggle" aria-expanded="false">
-            @svg('menu', 'icon--open', ['focusable' => 'false', 'aria-hidden' => 'true'])
-            @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])
-            <span id="menu-primary-label" class="menu-toggle__label">Menu</span>
-          </button>
           {!! wp_nav_menu([
             'theme_location' => 'primary_navigation',
             'menu_class' => (is_front_page()) ? 'menu menu--home' : 'menu',
@@ -23,6 +23,11 @@
             'after_submenu' => '</ul>',
             'walker' => new App\Walker()
           ]) !!}
+        @else
+          <ul class="{{ (is_front_page()) ? 'menu menu--home' : 'menu' }}">
+            <li class="menu-item"><a class="menu__item" @if(is_post_type_archive('lc_resource')) aria-current="page" @endif href="{{ get_post_type_archive_link('lc_resource') }}">{{ __('Explore', 'coop-library') }}</a></li>
+            @include('partials.language-switcher')
+          </ul>
         @endif
       </nav>
     </div>
