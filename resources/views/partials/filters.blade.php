@@ -21,7 +21,6 @@
               <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ $label }}</span></span>
             </button>
             <ul id="{{ $tax }}" class="input-group input-group__parent {{ $tax }}">
-              <pre>@php(print_r(array_keys($queried_resource_terms[$tax], true)))</pre>
               @foreach(get_terms(['taxonomy' => $tax, 'lang' => '', 'orderby' => 'order']) as $term)
                 @if(!$term->parent)
                 <li>
