@@ -63,13 +63,21 @@ trait Resource
             if (!$format) {
                 $format = get_option('date_format');
             }
-            $y = get_post_meta($post->ID, 'lc_resource_publication_year', true);
-            $m = get_post_meta($post->ID, 'lc_resource_publication_month', true);
-            $d = get_post_meta($post->ID, 'lc_resource_publication_day', true);
-            return date_i18n(
-                $format,
-                strtotime(implode('-', [$y, $m, $d]))
-            );
+            $y      = get_post_meta($post->ID, 'lc_resource_publication_year', true);
+            $m      = get_post_meta($post->ID, 'lc_resource_publication_month', true);
+            $d      = get_post_meta($post->ID, 'lc_resource_publication_day', true);
+            $pieces = [];
+            foreach ([$y, $m, $d] as $piece) {
+                if ($piece) {
+                    $pieces[] = $piece;
+                }
+            }
+            $date = implode('-', $pieces);
+
+
+            if (!empty($pieces)) {
+                return date_i18n($format, strtotime($date));
+            }
         }
 
         return false;
