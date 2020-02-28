@@ -80,6 +80,9 @@
     ],
     "*.js": [
       "eslint"
+    ],
+    "*.{blade.php,.php}": [
+      "phpcs"
     ]
   }
 }

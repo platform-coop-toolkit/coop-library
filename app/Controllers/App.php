@@ -71,7 +71,7 @@ class App extends Controller
         return $wp_query->found_posts;
     }
 
-    public static function getPaginationLinks()
+    public static function getPaginationLinks($current, $total)
     {
         $links = get_the_posts_pagination([
         'prev_text' => sprintf(
