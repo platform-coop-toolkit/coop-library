@@ -94,6 +94,9 @@ add_filter('comments_template', function ($comments_template) {
  * Show twenty resources per page.
  */
 add_filter('pre_get_posts', function ($query) {
+    if ($query->is_search && !is_admin()) {
+        $query->set('post_type', ['lc_resource']);
+    }
     if ((is_post_type_archive('lc_resource') || is_tax()) && $query->is_main_query()) {
         if (! empty($_GET['order_by'])) {
             switch ($_GET['order_by']) {
