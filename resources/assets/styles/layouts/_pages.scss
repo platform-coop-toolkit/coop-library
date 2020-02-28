@@ -17,111 +17,65 @@
   }
 }
 
-// TODO: Remove after Pinecone 1.0.0-alpha.11 is merged.
+#saved-searches:not(:empty) + * {
+  display: none;
+}
 
-main {
+#saved-searches {
+  margin-top: rem(20);
+}
+
+.saved-search {
   position: relative;
+  border-top: solid 1px var(--dark-mint-500);
+  padding-top: rem(24);
+
+  [aria-expanded="false"] {
+    margin-bottom: 0;
+  }
+
+  .align-right {
+    position: absolute;
+    bottom: rem(20);
+    right: 0;
+  }
 }
 
-.notification {
-  margin-bottom: $gutter;
-  position: sticky;
-  top: $gutter;
-  z-index: 1;
-}
-
-.button--borderless.button--destructive {
-  --color: var(--red-500);
-  --outline-color: var(--red-500);
-  --hover-color: var(--dark-mint-500);
-  --focus-color: var(--red-500);
-  --active-color: var(--white);
-  --active-background-color: var(--red-500);
-}
-
-.align-right {
-  text-align: right;
-}
-
-.align-right .button--borderless {
-  display: inline-block;
-  margin: rem(6) rem(-8) rem(6) rem(24);
-}
-
-.page.page-template-page-favorites .cards .card__wrapper {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 1fr 3rem;
-  gap: rem(20);
+.search-results .notification {
+  margin-top: rem(30);
 }
 
 @include breakpoint-up(sm) {
-  .page.page-template-page-favorites {
-    .cards {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-
-      @supports (display: $grid) {
-        display: grid;
-        gap: rem(30);
-        grid-template-columns: 100%;
-      }
-    }
-
-    .cards .card__wrapper {
-      margin-bottom: rem(30);
-      width: 100%;
-
-      @supports (display: $grid) {
-        margin-bottom: 0;
-      }
-    }
-
-    .card:nth-child(even) {
-      margin-left: 0;
-    }
+  .search-results .notification {
+    @include grid-column-span(8, 8);
   }
 }
 
 @include breakpoint-up(md) {
-  .page.page-template-page-favorites {
-    .cards {
-      @supports (display: $grid) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    .cards .card__wrapper {
-      width: calc(50% - #{rem(30)} / 2);
-
-      @supports (display: $grid) {
-        width: 100%;
-      }
-    }
-
-    .card:nth-child(even) {
-      margin-left: rem(30);
-
-      @supports (display: $grid) {
-        margin-left: 0;
-      }
-    }
-
-    .cards .card__wrapper + .card__wrapper {
-      margin-top: 0;
-    }
+  .search-results .notification {
+    @include grid-column-span(6, 8);
   }
 }
 
 @include breakpoint-up(lg) {
-  .page.page-template-page-favorites main {
-    @include grid-column-span(8, 12, 3);
+  .search-results .notification {
+    @include grid-column-span(8, 12, 5);
+
+    margin-top: rem(30);
+  }
+
+  .notification + .filter-wrapper {
+    grid-row: 3 / 6;
+  }
+
+  .notification ~ .sort-wrapper,
+  .notification ~ .save-wrapper {
+    grid-row-start: 3;
   }
 }
 
 @include breakpoint-up(xl) {
-  .page.page-template-page-favorites main {
-    @include grid-column-span(8, 16, 4);
+  .search-results .notification {
+    @include grid-column-span(8, 16, 5);
   }
 }
