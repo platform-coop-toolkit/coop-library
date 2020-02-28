@@ -71,6 +71,38 @@ class App extends Controller
         return $wp_query->found_posts;
     }
 
+    public static function getPaginationLinks()
+    {
+        $links = get_the_posts_pagination([
+        'prev_text' => sprintf(
+            '&lsaquo; <span class="screen-reader-text">%s</span>',
+            __('previous', 'coop-library')
+        ),
+        'next_text' => sprintf(
+            ' <span class="screen-reader-text">%s</span> &rsaquo;',
+            __('next', 'coop-library')
+        )
+        ]);
+
+        $links = str_replace(
+            [
+            'class="page-numbers current"',
+            'class="page-numbers"',
+            'class="prev page-numbers"',
+            'class="next page-numbers"'
+            ],
+            [
+            'class="page current"',
+            'class="link link--pagination"',
+            'class="link link--pagination prev"',
+            'class="link link--pagination next"'
+            ],
+            $links
+        );
+
+        return $links;
+    }
+
     public static function totalPosts($post_type = null)
     {
         if ($post_type) {
