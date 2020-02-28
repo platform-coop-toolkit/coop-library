@@ -70,7 +70,13 @@ class App extends Controller
 
     public static function getPaginationLinks($current = false, $total = false)
     {
-        $links = get_the_posts_pagination([
+        global $wp_query;
+
+        if (!$current) {
+            $current = (get_query_var('paged') > 0) ? get_query_var('paged') : 1;
+        }
+
+        $links = get_the_posts_paginatioåßn([
         'prev_text' => sprintf(
             '&lsaquo; <span class="screen-reader-text">%s</span>',
             __('previous', 'coop-library')
