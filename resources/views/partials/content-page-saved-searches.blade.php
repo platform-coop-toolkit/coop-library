@@ -1,4 +1,4 @@
-<div class="align-right" hidden><button id="remove-all" class="button button--borderless button--destructive">@svg('delete', 'icon--delete', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Remove all', 'coop-library') }}​​&#8203;<span class="screen-reader-text">{{ __('saved searches', 'coop-library') }}</span></button></div>
+<div class="align-right" hidden><button id="remove-all" class="button button--borderless button--destructive">@svg('delete', 'icon--delete', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Remove all', 'coop-library') }}​​&nbsp<span class="screen-reader-text">{{ __('saved searches', 'coop-library') }}</span></button></div>
 <div id="saved-searches"></div>
 <div class="nothing-saved">
   <p class="h2">{{__('You have no saved searches.', 'coop-library') }}</p>
