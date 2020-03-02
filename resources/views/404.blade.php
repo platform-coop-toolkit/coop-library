@@ -7,6 +7,6 @@
     <div class="alert alert-warning">
       {{ __('Sorry, but the page you were trying to view does not exist.', 'coop-library') }}
     </div>
-    {!! get_search_form(false) !!}
+    @include('partials.search-form', ['placeholder' => __('Search resource name, publisher, or topic…')])
   @endif
 @endsection

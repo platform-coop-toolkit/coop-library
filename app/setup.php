@@ -20,7 +20,8 @@ add_action('wp_enqueue_scripts', function () {
     );
     wp_localize_script('coop-library/main.js', 'CoopLibrary', [
         'ajaxurl' => admin_url('admin-ajax.php'),
-        'coop_library_nonce' => wp_create_nonce('coop-library-framework-nonce')
+        'coop_library_nonce' => wp_create_nonce('coop-library-framework-nonce'),
+        'savedSearchesLink' => get_permalink(pll_get_post(get_page_by_path('my-resources/saved-searches')->ID))
     ]);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
