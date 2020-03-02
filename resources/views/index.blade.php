@@ -21,13 +21,5 @@
     </ul>
   </div>
 
-
-  <nav class="navigation pagination" role="navigation" aria-label="{{ __('resources', 'coop-library') }}">
-		<h2 class="screen-reader-text">{{ __('resources navigation', 'coop-library') }}</h2>
-		<div class="nav-links">
-      {!! App::getPaginationLinks() !!}
-    </div>
-	</nav>
-
-  {{-- {!! get_the_posts_pagination() !!} --}}
+  {!! App::getPagination(['total' => $max_pages]) !!}
 @endsection

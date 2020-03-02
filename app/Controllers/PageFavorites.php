@@ -12,7 +12,8 @@ class PageFavorites extends Controller
             'post_type' => 'lc_resource',
             'post__in' => explode(',', $_COOKIE['favorites']),
             'orderby' => 'title',
-            'posts_per_page' => -1,
+            'posts_per_page' => 12,
+            'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
             'order' => 'asc',
             'lang' => '',
         ]);
