@@ -107,7 +107,9 @@ class App extends Controller
 
         // URL base depends on permalink settings.
         $format  = $wp_rewrite->using_index_permalinks() && ! strpos($pagenum_link, 'index.php') ? 'index.php/' : '';
-        $format .= $wp_rewrite->using_permalinks() ? user_trailingslashit($wp_rewrite->pagination_base . '/%#%', 'paged') : '?paged=%#%';
+        $format .= $wp_rewrite->using_permalinks() ?
+            user_trailingslashit($wp_rewrite->pagination_base . '/%#%', 'paged') :
+            '?paged=%#%';
 
         $defaults = array(
             'base' => $pagenum_link, // http://example.com/all_posts.php%_% : %_% is replaced by format (below)
@@ -204,7 +206,11 @@ class App extends Controller
 
                 $dots = true;
             else :
-                if ($args['show_all'] || ( $n <= $end_size || ( $current && $n >= $current - $mid_size && $n <= $current + $mid_size ) || $n > $total - $end_size )) :
+                if ($args['show_all'] ||
+                    ( $n <= $end_size ||
+                    ( $current && $n >= $current - $mid_size && $n <= $current + $mid_size ) ||
+                    $n > $total - $end_size
+                )) :
                     $link = str_replace('%_%', 1 == $n ? '' : $args['format'], $args['base']);
                     $link = str_replace('%#%', $n, $link);
                     if ($add_args) {
@@ -302,7 +308,12 @@ class App extends Controller
             // Set up paginated links.
             $links = App::paginateLinks($current, $total, $args);
             if ($links) {
-                $navigation = _navigation_markup($links, 'pagination', $args['screen_reader_text'], $args['aria_label']);
+                $navigation = _navigation_markup(
+                    $links,
+                    'pagination',
+                    $args['screen_reader_text'],
+                    $args['aria_label']
+                );
             }
         }
 
