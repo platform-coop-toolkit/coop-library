@@ -27,7 +27,7 @@
     'base' => @add_query_arg('paged','%#%'),
     'format' => '?paged=%#%',
     'current' => $current_page,
-    'total' => $total_pages,
+    'total' => $max_pages,
     'prev_text' => sprintf('&lsaquo; <span class="screen-reader-text">%s</span>', __('previous resources', 'coop-library')),
     'next_text' => sprintf(' <span class="screen-reader-text">%s</span> &rsaquo;', __('next resources', 'coop-library'))
   ])) !!}

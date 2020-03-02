@@ -69,7 +69,7 @@ export default {
     const removeAllButton = document.getElementById('remove-all');
     if(removeAllButton) {
       new Pinecone.Dialog( removeAllButton, {
-        title: __('Remove saved searches?', 'coop-library'),
+        title: __('Confirm remove saved searches', 'coop-library'),
         question: __('Are you sure you want to remove all of your saved searches?', 'coop-library'),
         confirm: __('Yes, remove', 'coop-library'),
         dismiss: __('No, don&rsquo;t remove', 'coop-library'),
@@ -88,7 +88,7 @@ export default {
     const removeButtons = document.querySelectorAll('.remove-saved-search');
     Array.prototype.forEach.call(removeButtons, removeButton => {
       new Pinecone.Dialog( removeButton, {
-        title: __('Remove saved search?', 'coop-library'),
+        title: __('Confirm remove saved search', 'coop-library'),
         question: __('Are you sure you want to remove this saved search?', 'coop-library'),
         confirm: __('Yes, remove', 'coop-library'),
         dismiss: __('No, don&rsquo;t remove', 'coop-library'),

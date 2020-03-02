@@ -74,6 +74,12 @@ class App extends Controller
         return isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
     }
 
+    public function maxPages()
+    {
+        global $wp_query;
+        return $wp_query->max_num_pages;
+    }
+
     public function currentPage()
     {
         global $wp_query;
