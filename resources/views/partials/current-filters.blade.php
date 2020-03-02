@@ -1,17 +1,24 @@
+@if(isset($_GET['s']) || $found_posts < App::totalPosts('lc_resource'))
+<div class="current-filters">
+  <p class="h3">{{ sprintf(__('Showing %1$s of %2$s resources for:', 'coop-library'), $found_posts, App::totalPosts('lc_resource')) }}</p>
+  @if(isset($_GET['s']))
+  <h2 class="h4">{{ __('Search term', 'coop-library') }}</h2>
+  <p>&ldquo;{{ $_GET['s'] }}&rdquo;</p>
+  @endif
   @if(!empty(array_filter($queried_resource_terms)))
-  <div class="current-filters">
-    <p class="h3">Showing {{ $found_posts }} of {{ App::totalPosts('lc_resource') }} resources</p>
-    <ul class="tag-buttons">
+    <h2 class="h4">{{ __('Applied filters', 'coop-library') }}</h2>
+    <ul class="tags">
       @foreach($queried_resource_terms as $taxonomy => $terms)
         @if($taxonomy !== 'language')
-        @foreach($terms as $term)
-        <li class="tag-button">
-          <button class="tag-button__button" data-checkbox="{{ $term->taxonomy }}-{{ $term->slug }}"><span class="screen-reader-text">{{ __('Remove', 'coop-library') }} </span>{!! $term->name !!}<span class="screen-reader-text"> {{ __('from current filters', 'coop-library') }}</span> @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
-        </li>
-        @endforeach
+          @foreach($terms as $term)
+          <li class="tag">
+            <button class="button button--tag-button" data-checkbox="{{ $term->taxonomy }}-{{ $term->slug }}"><span class="screen-reader-text">{{ __('Remove', 'coop-library') }} </span>{!! $term->name !!}<span class="screen-reader-text"> {{ __('from current filters', 'coop-library') }}</span> @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
+          </li>
+          @endforeach
         @endif
       @endforeach
     </ul>
   <p><a href="{{ get_post_type_archive_link('lc_resource') }}">{{ __('Clear all', 'coop-library') }}</a></p>
-  </div>
+  @endif
+</div>
 @endif
