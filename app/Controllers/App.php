@@ -68,55 +68,124 @@ class App extends Controller
         return $wp_query->found_posts;
     }
 
-    public function maxPages()
+    public function totalPages()
     {
         global $wp_query;
-        return $wp_query->max_num_pages;
+        return isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
     }
 
     public function currentPage()
     {
         global $wp_query;
-        $current_page = $wp_query->query_vars['paged'] > 1 ? $wp_query->query_vars['paged'] : 1;
-        return $current_page;
+        return $wp_query->query_vars['paged'] > 1 ? intval($wp_query->query_vars['paged']) : 1;
     }
 
-    public static function getPaginationLinks($current = false, $total = false)
+    public static function getPaginationLinks($current = false, $total = false, $args = [])
     {
-        global $wp_query;
-
-        if (!$current) {
-            $current = (get_query_var('paged') > 0) ? get_query_var('paged') : 1;
-        }
-
-        $links = get_the_posts_paginatioåßn([
-        'prev_text' => sprintf(
-            '&lsaquo; <span class="screen-reader-text">%s</span>',
-            __('previous', 'coop-library')
-        ),
-        'next_text' => sprintf(
-            ' <span class="screen-reader-text">%s</span> &rsaquo;',
-            __('next', 'coop-library')
-        )
+        $args = wp_parse_args($args, [
+            'end_size' => 1,
+            'mid_size' => 1,
+            'show_all' => false,
+            'prev_next' => true,
+            'prev_text' => sprintf(
+                '&lsaquo; <span class="screen-reader-text">%s</span>',
+                __('previous', 'coop-library')
+            ),
+            'next_text' => sprintf(
+                ' <span class="screen-reader-text">%s</span> &rsaquo;',
+                __('next', 'coop-library')
+            ),
+            'before_page_number' => sprintf('<span class="screen-reader-text>%s </span>', __('page', 'coop-library')),
         ]);
 
-        $links = str_replace(
-            [
-            'class="page-numbers current"',
-            'class="page-numbers"',
-            'class="prev page-numbers"',
-            'class="next page-numbers"'
-            ],
-            [
-            'class="page current"',
-            'class="link link--pagination"',
-            'class="link link--pagination prev"',
-            'class="link link--pagination next"'
-            ],
-            $links
-        );
+        $links = [];
 
-        return $links;
+        $prev = $first = $next = $last = false;
+
+        if (!$current) {
+            $current = App::currentPage();
+        }
+
+        if (!$total) {
+            $total = App::totalPages();
+        }
+
+        if ($current > 1) {
+            // Previous link, if needed.
+            if ($args['prev_next']) {
+                $prev = $current - 1;
+            }
+            // First link, if needed.
+            $first = 1;
+        }
+
+        if ($current < $total) {
+            // Next link, if needed.
+            if ($args['prev_next']) {
+                $next = $current + 1;
+            }
+            // Last link, if needed.
+            $last = $total;
+        }
+
+        if ($prev) {
+            $links[] = "<a class='link link--pagination prev' rel='prev' href='$previous'>{$args['prev_text']}</a>";
+        }
+
+        if ($first) {
+            $links[] = "<a class='link link--pagination' href='$first'>$first</a>";
+        }
+
+        if ($previous) {
+            $links[] = "<a class='link link--pagination prev' rel='prev' href='$previous'>$previous</a>";
+        }
+
+        $links[] = "<span class='page-numbers current'>$current</span>";
+
+        if ($next) {
+            $links[] = "<a class='link link--pagination prev' rel='prev' href='$next'>$next</a>";
+        }
+
+        if (($last - $next) > 1) {
+            $links[] = '<span class="dots">&hellip;</span>';
+        }
+
+        if ($last) {
+            $links[] = "<a class='link link--pagination' href='$last'>$last</a>";
+        }
+
+        if ($next) {
+            $links[] = "<a class='link link--pagination prev' rel='prev' href='$next'>{$args['next_text']}</a>";
+        }
+
+        // $links = get_the_posts_paginatioåßn([
+        // 'prev_text' => sprintf(
+        //     '&lsaquo; <span class="screen-reader-text">%s</span>',
+        //     __('previous', 'coop-library')
+        // ),
+        // 'next_text' => sprintf(
+        //     ' <span class="screen-reader-text">%s</span> &rsaquo;',
+        //     __('next', 'coop-library')
+        // )
+        // ]);
+
+        // $links = str_replace(
+        //     [
+        //     'class="page-numbers current"',
+        //     'class="page-numbers"',
+        //     'class="prev page-numbers"',
+        //     'class="next page-numbers"'
+        //     ],
+        //     [
+        //     'class="page current"',
+        //     'class="link link--pagination"',
+        //     'class="link link--pagination prev"',
+        //     'class="link link--pagination next"'
+        //     ],
+        //     $links
+        // );
+
+        return implode("\n", $links);
     }
 
     public static function totalPosts($post_type = null)
