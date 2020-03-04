@@ -34,8 +34,10 @@
     }
   },
   "scripts": {
+    "lint": "phpcs",
+    "lint-fix": "phpcbf",
     "test": [
-      "phpcs"
+      "@lint"
     ]
   },
   "support": {
