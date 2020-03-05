@@ -36,9 +36,28 @@ class App extends Controller
         return $terms;
     }
 
+    public function availableLanguages()
+    {
+        if (function_exists('pll_the_languages') && function_exists('pll_current_language')) {
+            $polylang_languages = pll_the_languages(['raw' => 1, 'hide_if_empty' => 0]);
+            $available_languages = [];
+
+            foreach ($polylang_languages as $lang) {
+                $available_languages[$lang['slug']] = $lang['name'];
+            }
+
+            return $available_languages;
+        }
+
+        return ['en' => 'English'];
+    }
+
     public function languages()
     {
-        return get_language_list(pll_current_language('locale'));
+        if (function_exists('pll_current_language')) {
+            return get_language_list(pll_current_language('locale'));
+        }
+        return get_language_list('en_US');
     }
 
     public function currentLanguageName()
