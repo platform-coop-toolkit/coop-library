@@ -96,6 +96,14 @@ export default {
               const tags = document.querySelectorAll('.filters input:checked');
               let savedSearches = localStorage.getItem('saved-searches');
               savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
+              if (Object.keys(savedSearches).length === 50) {
+                addNotification(
+                  __('Maximum number of saved searches reached', 'coop-library'),
+                  __('You have reached the maximum amount of saved searches (50). To save more, you must delete some saved searches.', 'coop-library'),
+                  'error'
+                );
+                return false;
+              }
               const now = Date.now();
               const term = document.querySelector('.filters input[name="s"]').value;
               const name = input ? input : sprintf(__('Saved search for “%s”', 'coop-library'), term);
