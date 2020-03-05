@@ -1,3 +1,4 @@
+{{-- TODO: Show notification when value has been updated. --}}
 <form method="post">
   <h2>{{ __('Website language', 'coop-library') }} @svg('language', 'icon--language', ['focusable' => 'false', 'aria-hidden' => 'true'])</h2>
   <p>{{ __('To change the language of this website, use the language menu in the navigation bar at the top of the page.', 'coop-library') }}</p>
