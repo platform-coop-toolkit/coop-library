@@ -8,3 +8,9 @@ TODO: .search-form .search-submit {}
 p + .input-group {
   margin-top: rem(24);
 }
+
+h2 > .icon {
+  height: 1em;
+  margin-bottom: -0.2em;
+  width: 1em;
+}
