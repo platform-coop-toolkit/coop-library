@@ -8,7 +8,11 @@
       @foreach($available_languages as $key => $lang)
       <option
         value="{{ $key }}"
-        @if(isset($_COOKIE['resource_language']))
+        @if(isset($_POST['resource_language']))
+          @if($_POST['resource_language'] === $key)
+            selected
+          @endif
+        @elseif(isset($_COOKIE['resource_language']))
           @if($_COOKIE['resource_language'] === $key)
             selected
           @endif
