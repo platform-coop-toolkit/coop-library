@@ -38,7 +38,14 @@ trait Resource
         global $post;
 
         if ($post->post_type == 'lc_resource') {
-            return get_post_meta($post->ID, 'lc_resource_perma_cc_links', true);
+            $links = [];
+            if (have_rows('lc_resource_perma_cc_links')) :
+                while (have_rows('lc_resource_perma_cc_links')) :
+                    the_row();
+                    $links[] = get_sub_field('perma_cc_link');
+                endwhile;
+            endif;
+            return $links;
         }
 
         return false;
@@ -49,7 +56,14 @@ trait Resource
         global $post;
 
         if ($post->post_type == 'lc_resource') {
-            return get_post_meta($post->ID, 'lc_resource_wayback_machine_links', true);
+            $links = [];
+            if (have_rows('lc_resource_wayback_machine_links')) :
+                while (have_rows('lc_resource_wayback_machine_links')) :
+                    the_row();
+                    $links[] = get_sub_field('wayback_machine_link');
+                endwhile;
+            endif;
+            return $links;
         }
 
         return false;
@@ -73,7 +87,6 @@ trait Resource
                 }
             }
             $date = implode('-', $pieces);
-
 
             if (!empty($pieces)) {
                 return date_i18n($format, strtotime($date));
@@ -118,10 +131,14 @@ trait Resource
     {
         global $post;
         if ($post->post_type == 'lc_resource') {
-            $authors = get_post_meta($post->ID, 'lc_resource_author', true);
-            if ($authors) {
-                return natural_language_join($authors);
-            }
+            $authors = [];
+            if (have_rows('lc_resource_author')) :
+                while (have_rows('lc_resource_author')) :
+                    the_row();
+                    $authors[] = get_sub_field('author');
+                endwhile;
+            endif;
+            return natural_language_join($authors);
         }
         return false;
     }
