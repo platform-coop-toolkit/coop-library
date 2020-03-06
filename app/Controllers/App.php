@@ -16,6 +16,17 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function trackViewedResources()
+    {
+        if (isset($_POST['track_viewed_resources']) && $_POST['track_viewed_resources'] === 'on') {
+            return 'on';
+        }
+        if (isset($_COOKIE['track_viewed_resources']) && $_COOKIE['track_viewed_resources'] === 'on') {
+            return 'on';
+        }
+        return false;
+    }
+
     public function queriedResourceTerms()
     {
         $terms = [

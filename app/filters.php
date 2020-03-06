@@ -165,3 +165,10 @@ add_filter('wp_nav_menu_items', function ($items, $args) {
     }
     return $items;
 }, 10, 2);
+
+add_filter('koko_analytics_load_tracking_script', function () {
+    if (isset($_COOKIE['track_viewed_resources']) && $_COOKIE['track_viewed_resources'] === 'on') {
+        return true;
+    }
+    return false;
+});
