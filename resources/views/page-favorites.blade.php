@@ -8,4 +8,9 @@
     @include('partials.page-header')
     @include('partials.content-page-favorites')
   @endwhile
+  {!! App::getPagination([
+    'base' => add_query_arg('paged','%#%'),
+    'format' => '?paged=%#%',
+    'total' => $favorites->max_num_pages
+  ]) !!}
 @endsection
