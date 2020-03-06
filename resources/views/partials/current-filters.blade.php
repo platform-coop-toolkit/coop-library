@@ -5,7 +5,7 @@
   <h2 class="h4">{{ __('Search term', 'coop-library') }}</h2>
   <p>&ldquo;{{ $_GET['s'] }}&rdquo;</p>
   @endif
-  @if(!empty(array_filter($queried_resource_terms)))
+  @if(!empty(array_filter(array_map('array_filter', $queried_resource_terms))))
     <h2 class="h4">{{ __('Applied filters', 'coop-library') }}</h2>
     <ul class="tags">
       @foreach($queried_resource_terms as $taxonomy => $terms)
