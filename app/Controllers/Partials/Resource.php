@@ -324,9 +324,11 @@ trait Resource
     public static function isFavorited()
     {
         global $post;
-        $favorites = explode(',', $_COOKIE['favorites']);
-        if (in_array($post->ID, $favorites)) {
-            return true;
+        if (isset($_COOKIE['favorites'])) {
+            $favorites = explode(',', $_COOKIE['favorites']);
+            if (in_array($post->ID, $favorites)) {
+                return true;
+            }
         }
         return false;
     }
