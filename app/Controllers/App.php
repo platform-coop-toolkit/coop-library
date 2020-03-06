@@ -21,6 +21,8 @@ class App extends Controller
             'lc_goal' => [],
             'lc_region' => [],
             'lc_topic' => [],
+            'lc_coop_type' => [],
+            'lc_sector' => [],
         ];
         global $wp_query;
         if ($wp_query->tax_query) {
