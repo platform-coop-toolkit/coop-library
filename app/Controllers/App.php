@@ -13,8 +13,14 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function languages()
+    {
+        return get_language_list(pll_current_language('locale'));
+    }
+
     public function queriedResourceTerms()
     {
+        $langs = get_language_list(pll_current_language('locale'));
         $terms = [
             'language' => [],
             'lc_format' => [],
@@ -34,15 +40,10 @@ class App extends Controller
         }
         if (isset($_GET['language'])) {
             foreach ($_GET['language'] as $lang) {
-                $terms['language'][ $lang ] = $lang;
+                $terms['language'][ $lang ] = $langs[$lang];
             }
         }
         return $terms;
-    }
-
-    public function languages()
-    {
-        return get_language_list(pll_current_language('locale'));
     }
 
     public function currentLanguageName()
