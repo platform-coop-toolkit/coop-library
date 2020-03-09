@@ -111,7 +111,7 @@ export default {
               addNotification(
                 __('Search saved', 'coop-library'),
                 sprintf(
-                  __('You have successfully saved this search. You can save %d more. You can see this search in your <a href="%s">saved searches page</a>.', 'coop-library'),
+                  __('You have successfully saved this search. You can save %1$d more. You can see this search in your <a href="%2$s">saved searches page</a>.', 'coop-library'),
                   remaining,
                   CoopLibrary.savedSearchesLink
                 ),
