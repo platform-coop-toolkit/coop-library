@@ -60,6 +60,22 @@
         </div>
         @endif
         @endforeach
+        <div class="accordion__pane">
+          <p class="accordion__heading">{{ __('Language', 'coop-library') }}</p>
+          <div class="accordion__content">
+            <button id="deselect-language" type="button" class="button button--borderless">
+              <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ __('languages', 'coop-library') }}</span></span>
+            </button>
+            <ul id="language" class="input-group input-group__parent language">
+              @foreach(App::getMetaValues('language', 'lc_resource') as $language)
+              <li>
+                <input id="language-{{ $language }}" name="language[]" type="checkbox" value="{{ $language }}" />
+                <label for="language-{{ $language }}">{!! $language !!}</label>
+              </li>
+              @endforeach
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="input-group">
         <button id="apply-filters" class="button" type="submit">{{ __('Apply Filters', 'coop-library') }}</button>
