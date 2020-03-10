@@ -18,7 +18,7 @@
           'lc_format' => __('Formats', 'coop-library'),
         ] as $tax => $label)
         @if(get_terms(['taxonomy' => $tax, 'lang' => '']))
-        <div class="accordion__pane">
+        <div class="accordion__pane @if(isset($_COOKIE['filters-expanded']) && $_COOKIE['filters-expanded'] === "accordion-$tax"){{ ' accordion__pane--expanded' }}@endif" id="accordion-{{ $tax }}">
           <p class="accordion__heading">{{ $label }}</p>
           <div class="accordion__content">
             <button id="deselect-{{ $tax }}" type="button" class="button button--borderless">
@@ -60,7 +60,7 @@
         </div>
         @endif
         @endforeach
-        <div class="accordion__pane">
+        <div class="accordion__pane @if(isset($_COOKIE['filters-expanded']) && $_COOKIE['filters-expanded'] === "accordion-language"){{ ' accordion__pane--expanded' }}@endif" id="accordion-language">
           <p class="accordion__heading">{{ __('Languages', 'coop-library') }}</p>
           <div class="accordion__content">
             <button id="deselect-language" type="button" class="button button--borderless">
@@ -69,7 +69,7 @@
             <ul id="language" class="input-group input-group__parent language">
               @foreach(App::getMetaValues('language', 'lc_resource') as $language)
               <li>
-                <input id="language-{{ $language }}" name="language[]" type="checkbox" value="{{ $language }}" />
+                <input id="language-{{ $language }}" name="language[]" type="checkbox" value="{{ $language }}" {{ checked(in_array($language, array_keys($queried_resource_terms['language']))) }} />
                 <label for="language-{{ $language }}">{!! $languages[$language] !!}</label>
               </li>
               @endforeach

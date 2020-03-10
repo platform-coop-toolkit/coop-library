@@ -1,6 +1,7 @@
 /* global CoopLibrary */
 
 import addNotification from '../util/addNotification';
+import Cookies from 'cookies.js';
 import Pinecone from '@platform-coop-toolkit/pinecone';
 import { __, sprintf } from '@wordpress/i18n';
 
@@ -43,7 +44,22 @@ export default {
           headingSelector: '.accordion__heading',
         }
       );
+      const expandedAlready = document.querySelectorAll('.accordion__pane--expanded');
+      Array.prototype.forEach.call( expandedAlready, pane => {
+        pane.querySelector('.accordion__control').setAttribute('aria-expanded', true);
+      });
     } );
+
+    document.addEventListener('click', (event) => {
+      if (!event.target.matches('.accordion__control')) return;
+      const id = event.target.parentNode.id;
+      const expanded = 'true' == event.target.getAttribute('aria-expanded') || false;
+      if (expanded) {
+        Cookies.set('filters-expanded', id);
+      } else {
+        Cookies.remove('filters-expanded');
+      }
+    });
 
     const filterDisclosureLabels = document.querySelectorAll( '.filter-disclosure-label' );
 
