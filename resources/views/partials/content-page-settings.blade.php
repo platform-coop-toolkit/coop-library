@@ -1,8 +1,15 @@
 <form method="post">
   <p><strong>{{ __('Allow the Resource Library to track what resources you’ve viewed.', 'coop-library') }}</strong></p>
-  <span class="disclosure-label" hidden>{{ __('How this changes what I see', 'coop-library') }}</span>
+  <span class="disclosure-label" hidden>{{ __('How resource tracking changes what I see', 'coop-library') }}</span>
   <div class="details">
-      <p>{{ __('If you allow the resource library to know this, you would be able to see resources that are recently viewed by you, related to your recently viewed, and contribute your information to create the most viewed resource section seen by the larger community.', 'coop-library') }}</p>
+      <p>{!! __('By choosing ‘Allow’, the Resource Library will be able to track the resources you view, letting you:', 'coop-library') !!}</p>
+      <ul>
+        <li>{!! __('see a list of your recently viewed resources on the home page,', 'coop-library') !!}</li>
+        <li>{!! __('see related resources, and', 'coop-library') !!}</li>
+        <li>{!! __('contribute to the most viewed articles seen on the home page.', 'coop-library') !!}</li>
+      </ul>
+      <p>{!! __('The Resource Library will only use this information for these features, and does not collect any personally identifiable information.', 'coop-library') !!}</p>
+      <p>{!! __('By choosing ‘Don’t allow’, you will be able to continue to use the Resource Library fully, with the exception of the features mentioned previously.', 'coop-library') !!}</p>
   </div>
   <ul class="input-group">
     <li>
