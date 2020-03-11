@@ -20,6 +20,14 @@ export default {
       } );
     }
 
+    const disclosureLabels = document.querySelectorAll( '.disclosure-label' );
+
+    if (disclosureLabels) {
+      Array.prototype.forEach.call( disclosureLabels, label => {
+        new Pinecone.DisclosureButton( label );
+      } );
+    }
+
     new Pinecone.Notification();
 
     /* TODO: Resolve icon issues
