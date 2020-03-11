@@ -13,8 +13,14 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function languages()
+    {
+        return get_language_list(pll_current_language('locale'));
+    }
+
     public function queriedResourceTerms()
     {
+        $langs = get_language_list(pll_current_language('locale'));
         $terms = [
             'language' => [],
             'lc_format' => [],
@@ -28,16 +34,16 @@ class App extends Controller
         if ($wp_query->tax_query) {
             foreach ($wp_query->tax_query->queries as $value) {
                 foreach ($value['terms'] as $t) {
-                    $terms[$value['taxonomy']][$t] = get_term_by('slug', $t, $value['taxonomy']);
+                    $terms[$value['taxonomy']][$t] = get_term_by('slug', $t, $value['taxonomy'])->name;
                 }
             }
         }
+        if (isset($_GET['language'])) {
+            foreach ($_GET['language'] as $lang) {
+                $terms['language'][ $lang ] = $langs[$lang];
+            }
+        }
         return $terms;
-    }
-
-    public function languages()
-    {
-        return get_language_list(pll_current_language('locale'));
     }
 
     public function currentLanguageName()
@@ -334,6 +340,32 @@ class App extends Controller
     public static function sortUrl($order_by)
     {
         return add_query_arg('order_by', $order_by);
+    }
+
+    public static function getMetaValues($key = '', $type = 'post', $status = 'publish')
+    {
+        global $wpdb;
+
+        if (empty($key)) {
+            return;
+        }
+
+        $results = $wpdb->get_col(
+            $wpdb->prepare(
+                "
+            SELECT pm.meta_value FROM {$wpdb->postmeta} pm
+            LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+            WHERE pm.meta_key = %s
+            AND p.post_status = %s
+            AND p.post_type = %s
+        ",
+                $key,
+                $status,
+                $type
+            )
+        );
+
+        return array_unique($results);
     }
 
     public static function title()

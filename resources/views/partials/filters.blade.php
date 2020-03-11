@@ -18,7 +18,7 @@
           'lc_format' => __('Formats', 'coop-library'),
         ] as $tax => $label)
         @if(get_terms(['taxonomy' => $tax, 'lang' => '']))
-        <div class="accordion__pane">
+        <div class="accordion__pane @if(isset($_COOKIE['filters-expanded']) && $_COOKIE['filters-expanded'] === "accordion-$tax"){{ ' accordion__pane--expanded' }}@endif" id="accordion-{{ $tax }}">
           <p class="accordion__heading">{{ $label }}</p>
           <div class="accordion__content">
             <button id="deselect-{{ $tax }}" type="button" class="button button--borderless">
@@ -37,7 +37,7 @@
                   <label for="{{ $tax }}-{{ $term->slug }}">{!! $term->name !!}</label>
                   @if(get_term_children($term->term_id, $tax))
                     <span class="supplementary-label" hidden> ({{ sprintf(__('and %d subtopics', 'coop-library'), count(get_term_children($term->term_id, $tax))) }})</span>
-                    <span class="filter-disclosure-label" hidden>{{ sprintf(__('show %d subtopics for "%s"', 'coop-library'), count(get_term_children($term->term_id, $tax)), $term->name) }}</span>
+                    <span class="filter-disclosure-label" hidden>{{ sprintf(__('show %1$d subtopics for "%2$s"', 'coop-library'), count(get_term_children($term->term_id, $tax)), $term->name) }}</span>
                     <ul class="input-group input-group__descendant">
                       @foreach(get_terms(['taxonomy' => $tax, 'lang' => '', 'parent' => $term->term_id]) as $child_term)
                       <li>
@@ -60,6 +60,22 @@
         </div>
         @endif
         @endforeach
+        <div class="accordion__pane @if(isset($_COOKIE['filters-expanded']) && $_COOKIE['filters-expanded'] === "accordion-language"){{ ' accordion__pane--expanded' }}@endif" id="accordion-language">
+          <p class="accordion__heading">{{ __('Languages', 'coop-library') }}</p>
+          <div class="accordion__content">
+            <button id="deselect-language" type="button" class="button button--borderless">
+              <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ __('languages', 'coop-library') }}</span></span>
+            </button>
+            <ul id="language" class="input-group input-group__parent language">
+              @foreach(App::getMetaValues('language', 'lc_resource') as $language)
+              <li>
+                <input id="language-{{ $language }}" name="language[]" type="checkbox" value="{{ $language }}" {{ checked(in_array($language, array_keys($queried_resource_terms['language']))) }} />
+                <label for="language-{{ $language }}">{!! $languages[$language] !!}</label>
+              </li>
+              @endforeach
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="input-group">
         <button id="apply-filters" class="button" type="submit">{{ __('Apply Filters', 'coop-library') }}</button>

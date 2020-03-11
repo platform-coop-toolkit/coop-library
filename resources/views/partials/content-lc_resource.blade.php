@@ -25,6 +25,8 @@
       @svg('info', 'icon--info', ['focusable' => 'false', 'aria-hidden' => 'true'])
       @if($current_language !== Archive::getLanguage())
       <span class="card__language"><span class="screen-reader-text">{{ __('language', 'coop-library') }}: </span>{{ $languages[Archive::getLanguage()] }}</span>
+      @endif
+      @if($current_language !== Archive::getLanguage() && Archive::getPublicationDate())
       <span class="separator">.</span>
       @endif
       @if(Archive::getPublicationDate())

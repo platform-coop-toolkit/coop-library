@@ -9,13 +9,11 @@
     <h2 class="h4">{{ __('Applied filters', 'coop-library') }}</h2>
     <ul class="tags">
       @foreach($queried_resource_terms as $taxonomy => $terms)
-        @if($taxonomy !== 'language')
-          @foreach($terms as $term)
-          <li class="tag">
-            <button class="button button--tag-button" data-checkbox="{{ $term->taxonomy }}-{{ $term->slug }}"><span class="screen-reader-text">{{ __('Remove', 'coop-library') }} </span>{!! $term->name !!}<span class="screen-reader-text"> {{ __('from current filters', 'coop-library') }}</span> @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
-          </li>
-          @endforeach
-        @endif
+        @foreach($terms as $term => $name)
+        <li class="tag">
+          <button class="button button--tag-button" data-checkbox="{{ $taxonomy }}-{{ $term }}"><span class="screen-reader-text">{{ __('Remove', 'coop-library') }} </span>{!! $name !!}<span class="screen-reader-text"> {{ __('from current filters', 'coop-library') }}</span> @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
+        </li>
+        @endforeach
       @endforeach
     </ul>
   <p><a href="{{ get_post_type_archive_link('lc_resource') }}">{{ __('Clear all', 'coop-library') }}</a></p>
