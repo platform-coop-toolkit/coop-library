@@ -1,4 +1,5 @@
-.page:not(.home):not(.term-list) .page-header {
+.page:not(.home):not(.term-list) .page-header,
+.archive .page-header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -31,13 +32,11 @@
   &::before {
     display: block;
     content: "";
-    background-image: url("../images/page.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     height: 100%;
     position: absolute;
-    left: 50%;
     top: 0;
     transform: translateX(-50%);
     width: 100vw;
@@ -47,6 +46,15 @@
   @include breakpoint-up(md) {
     margin-bottom: rem(130);
   }
+}
+
+.page:not(.home):not(.term-list) .page-header::before {
+  background-image: url("../images/page.svg");
+  left: 50%;
+}
+
+.archive .page-header::before {
+  background-image: url("../images/archive.svg");
 }
 
 .page.term-list [role="document"] {
