@@ -1,5 +1,8 @@
 .page:not(.home):not(.term-list) .page-header,
 .archive .page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: rem(100);
 
   &::before {
@@ -22,10 +25,6 @@
 }
 
 .page:not(.home):not(.term-list) .page-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
   .breadcrumb,
   h1 {
     background-color: var(--blue-500);
