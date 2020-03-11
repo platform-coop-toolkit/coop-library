@@ -12,21 +12,22 @@
 }
 
 .page.home .page-header {
-  padding-top: 0;
-  margin-top: rem(165);
+  padding-top: rem(25);
+  margin-top: rem(140);
 
   &::before {
-    background: transparentize($blue-500, 0.95);
+    background: transparentize($blue-500, 0.1);
   }
 }
 
 @include breakpoint-up(sm) {
   .home .banner-pattern {
-    height: rem(550);
+    height: rem(608);
   }
 
-  .home .page-header {
-    margin-top: rem(335);
+  .page.home .page-header {
+    padding-top: rem(60);
+    margin-top: rem(275);
   }
 }
 
