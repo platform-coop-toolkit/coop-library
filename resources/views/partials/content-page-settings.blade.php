@@ -1,6 +1,6 @@
 <form method="post">
   <p><strong>{{ __('Allow the Resource Library to track what resources you’ve viewed.', 'coop-library') }}</strong></p>
-  <span class="disclosure-label" hidden>{{ __('How resource tracking changes what I see', 'coop-library') }}</span>
+  <span class="disclosure-label" hidden>{{ __('How resource tracking changes what you see', 'coop-library') }}</span>
   <div class="details">
       <p>{!! __('By choosing ‘Allow’, the Resource Library will be able to track the resources you view, letting you:', 'coop-library') !!}</p>
       <ul>
