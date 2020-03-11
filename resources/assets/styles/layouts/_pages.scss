@@ -115,6 +115,12 @@
   }
 }
 
+@include breakpoint-up(xl) {
+  .page.page-template-page-favorites main {
+    grid-column: 4/14;
+  }
+}
+
 @include breakpoint-up(sm) {
   .page.home .banner-pattern {
     height: rem(608);
