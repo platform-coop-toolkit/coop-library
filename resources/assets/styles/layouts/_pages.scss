@@ -1,3 +1,29 @@
+.home .banner-pattern {
+  background-image: url("../images/home.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: rem(140);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
+.home .page-header {
+  padding-top: rem(165);
+}
+
+@include breakpoint-up(sm) {
+  .home .banner-pattern {
+    height: rem(550);
+  }
+
+  .home .page-header {
+    padding-top: rem(335);
+  }
+}
+
 .term-list {
   .link-list {
     margin-top: 0;
