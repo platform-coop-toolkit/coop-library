@@ -1,9 +1,30 @@
 .page:not(.home):not(.term-list) .page-header,
 .archive .page-header {
+  margin-bottom: rem(100);
+
+  &::before {
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: -1;
+  }
+
+  @include breakpoint-up(md) {
+    margin-bottom: rem(130);
+  }
+}
+
+.page:not(.home):not(.term-list) .page-header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: rem(100);
 
   .breadcrumb,
   h1 {
@@ -30,35 +51,25 @@
   }
 
   &::before {
-    display: block;
-    content: "";
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-    width: 100vw;
-    z-index: -1;
-  }
-
-  @include breakpoint-up(md) {
-    margin-bottom: rem(130);
+    background-image: url("../images/page.svg");
+    left: 50%;
   }
 }
 
-.page:not(.home):not(.term-list) .page-header::before {
-  background-image: url("../images/page.svg");
-  left: 50%;
-}
+.archive .page-header {
+  .breadcrumb,
+  h1 {
+    background-color: var(--off-white);
+    box-shadow: 0 0 0 rem(30) var(--off-white);
+  }
 
-.archive .page-header::before {
-  background-image: url("../images/archive.svg");
+  &::before {
+    background-image: url("../images/archive.svg");
+  }
 }
 
 .page.term-list [role="document"] {
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: repeat-y;
 }
 
