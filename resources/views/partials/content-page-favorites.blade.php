@@ -11,3 +11,7 @@
   </ul>
 </div>
 @endif
+<div class="no-favorites">
+  <p class="h2">{{__('You have no favorites.', 'coop-library') }}</p>
+  <p>{!! sprintf(__('Search or <a href="%s">browse</a> for resources to favorite them.', 'coop-library'), get_post_type_archive_link('lc_resource')) !!}</p>
+</div>

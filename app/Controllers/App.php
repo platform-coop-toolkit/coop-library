@@ -13,8 +13,36 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function notifications()
+    {
+        // TODO: This could be more elegant.
+        if (isset($_POST['track_viewed_resources'])) {
+            return [
+                [
+                    'title' => __('Settings saved'),
+                    'type' => 'success',
+                    'content' => sprintf('<p>%s</p>', __('Your settings have been saved.', 'coop-library'))
+                ]
+            ];
+        }
+    }
+
+    public function trackViewedResources()
+    {
+        if (isset($_POST['track_viewed_resources']) && $_POST['track_viewed_resources'] === 'on') {
+            return 'on';
+        } elseif (isset($_POST['track_viewed_resources']) && $_POST['track_viewed_resources'] === '') {
+            return false;
+        }
+        if (isset($_COOKIE['track_viewed_resources']) && $_COOKIE['track_viewed_resources'] === 'on') {
+            return 'on';
+        }
+        return false;
+    }
+
     public function queriedResourceTerms()
     {
+        $langs = get_language_list(pll_current_language('locale'));
         $terms = [
             'language' => [],
             'lc_format' => [],
@@ -28,16 +56,40 @@ class App extends Controller
         if ($wp_query->tax_query) {
             foreach ($wp_query->tax_query->queries as $value) {
                 foreach ($value['terms'] as $t) {
-                    $terms[$value['taxonomy']][$t] = get_term_by('slug', $t, $value['taxonomy']);
+                    $terms[$value['taxonomy']][$t] = get_term_by('slug', $t, $value['taxonomy'])->name;
                 }
+            }
+        }
+        if (isset($_GET['language'])) {
+            foreach ($_GET['language'] as $lang) {
+                $terms['language'][ $lang ] = $langs[$lang];
             }
         }
         return $terms;
     }
 
+    public function availableLanguages()
+    {
+        if (function_exists('pll_the_languages') && function_exists('pll_current_language')) {
+            $polylang_languages = pll_the_languages(['raw' => 1, 'hide_if_empty' => 0]);
+            $available_languages = [];
+
+            foreach ($polylang_languages as $lang) {
+                $available_languages[$lang['slug']] = $lang['name'];
+            }
+
+            return $available_languages;
+        }
+
+        return ['en' => 'English'];
+    }
+
     public function languages()
     {
-        return get_language_list(pll_current_language('locale'));
+        if (function_exists('pll_current_language')) {
+            return get_language_list(pll_current_language('locale'));
+        }
+        return get_language_list('en_US');
     }
 
     public function currentLanguageName()
@@ -334,6 +386,32 @@ class App extends Controller
     public static function sortUrl($order_by)
     {
         return add_query_arg('order_by', $order_by);
+    }
+
+    public static function getMetaValues($key = '', $type = 'post', $status = 'publish')
+    {
+        global $wpdb;
+
+        if (empty($key)) {
+            return;
+        }
+
+        $results = $wpdb->get_col(
+            $wpdb->prepare(
+                "
+            SELECT pm.meta_value FROM {$wpdb->postmeta} pm
+            LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+            WHERE pm.meta_key = %s
+            AND p.post_status = %s
+            AND p.post_type = %s
+        ",
+                $key,
+                $status,
+                $type
+            )
+        );
+
+        return array_unique($results);
     }
 
     public static function title()

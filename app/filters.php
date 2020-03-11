@@ -96,7 +96,7 @@ add_filter('comments_template', function ($comments_template) {
 add_filter('pre_get_posts', function ($query) {
     if (!is_admin()) {
         if ((is_post_type_archive('lc_resource') || is_tax()) && $query->is_main_query()) {
-            if (! empty($_GET['order_by'])) {
+            if (isset($_GET['order_by'])) {
                 switch ($_GET['order_by']) {
                     case 'published':
                         $query->set('meta_key', 'lc_resource_publication_date');
@@ -136,6 +136,18 @@ add_filter('pre_get_posts', function ($query) {
                         break;
                 }
             }
+            if (isset($_GET['language'])) {
+                $meta_query = [
+                    'relation' => 'OR'
+                ];
+                foreach ($_GET['language'] as $lang) {
+                    $meta_query[] = [
+                        'key' => 'language',
+                        'value' => $lang,
+                    ];
+                }
+                $query->set('meta_query', $meta_query);
+            }
             $query->set('posts_per_page', 12);
             $query->set('order', 'desc');
             $query->set('lang', '');
@@ -167,3 +179,10 @@ add_filter('wp_nav_menu_items', function ($items, $args) {
     }
     return $items;
 }, 10, 2);
+
+add_filter('koko_analytics_load_tracking_script', function () {
+    if (isset($_COOKIE['track_viewed_resources']) && $_COOKIE['track_viewed_resources'] === 'on') {
+        return true;
+    }
+    return false;
+});

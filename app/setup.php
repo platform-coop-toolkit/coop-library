@@ -97,6 +97,21 @@ add_action('wp_ajax_update_favorites', 'App\\update_favorites');
 add_action('wp_ajax_nopriv_update_favorites', 'App\\update_favorites');
 
 /**
+ * Set language cookies when settings form is submitted.
+ */
+add_action('init', function () {
+    if (isset($_POST['track_viewed_resources'])) {
+        setcookie(
+            'track_viewed_resources',
+            sanitize_text_field($_POST['track_viewed_resources']),
+            time() + YEAR_IN_SECONDS,
+            COOKIEPATH,
+            COOKIE_DOMAIN
+        );
+    }
+});
+
+/**
  * Register sidebars
  */
 add_action('widgets_init', function () {

@@ -49,6 +49,10 @@
   }
 }
 
+#favorites + .no-favorites {
+  display: none;
+}
+
 #saved-searches:not(:empty) + * {
   display: none;
 }
