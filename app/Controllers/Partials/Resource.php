@@ -147,11 +147,9 @@ trait Resource
     {
         global $post;
 
-        if (function_exists('pll_get_post_language')) {
-            return pll_get_post_language($post->ID, $format);
+        if ($format === 'slug') {
+            return get_post_meta($post->ID, 'language', true);
         }
-
-        return 'en';
     }
 
     public static function getFormat()
