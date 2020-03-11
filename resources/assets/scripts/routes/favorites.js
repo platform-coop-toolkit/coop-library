@@ -62,7 +62,7 @@ export default {
               } )
               .then( () => {
                 Cookies.set('favorites', favorites.toString());
-                btn.parentNode.parentNode.removeChild(btn.parentNode);
+                btn.parentNode.parentNode.parentNode.removeChild(btn.parentNode.parentNode);
                 if (length === 1) {
                   removeAllButton.parentNode.removeChild(removeAllButton);
                 }
