@@ -1,6 +1,9 @@
 <article @php post_class() @endphp>
   <div class="page-header resource__header">
     <h1 class="resource__title">{!! get_the_title() !!}</h1>
+    @if(Single::requiresSubscription())
+    <p class="resource__meta resource__subscription">@svg('lock', 'icon--lock', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Subscription required', 'coop-library') }}</p>
+    @endif
     @if(Single::getAuthors())
     <div class="resource__meta resource__byline">@svg('author', 'icon--author', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ sprintf(__('By %s', 'coop-library'), Single::getAuthors()) }}</div>
     @endif
@@ -47,7 +50,7 @@
   </div>
   @endif
   <div class="resource__cta">
-    <p><a rel="external" class="cta" href="{{ Single::getPermanentLink() }}">{{ __('Visit full resource', 'coop-library') }} @svg('external', 'icon--external', ['focusable' => 'false', 'aria-hidden' => 'true'])</a></p>
+    <p><a rel="external" class="cta" href="{{ Single::getPermanentLink() }}">@if(Single::requiresSubscription()){{ __('Visit full resource (subscription required)', 'coop-library') }}@else{{ __('Visit full resource', 'coop-library') }}@endif @svg('external', 'icon--external', ['focusable' => 'false', 'aria-hidden' => 'true'])</a></p>
   </div>
   <div class="resource__actions">
     <button id="favorite" type="button" class="button button--borderless" data-id="{{ get_the_id() }}" data-favorite="false">

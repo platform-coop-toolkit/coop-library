@@ -32,3 +32,12 @@
   list-style: none;
   padding-left: 0;
 }
+
+.card__meta.card__subscription,
+.resource__meta.resource__subscription {
+  color: var(--red-500);
+
+  svg {
+    color: inherit;
+  }
+}

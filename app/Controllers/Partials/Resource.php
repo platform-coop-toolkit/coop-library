@@ -330,4 +330,15 @@ trait Resource
         }
         return false;
     }
+
+    public static function requiresSubscription()
+    {
+        global $post;
+
+        if ($post->post_type == 'lc_resource') {
+            return (get_post_meta($post->ID, 'lc_resource_has_paywall', true) === 'on');
+        }
+
+        return false;
+    }
 }
