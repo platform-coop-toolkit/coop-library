@@ -1,4 +1,55 @@
-.home .banner-pattern {
+.page:not(.home):not(.term-list) .page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: rem(100);
+
+  .breadcrumb,
+  h1 {
+    background-color: var(--blue-500);
+    box-shadow: 0 0 0 rem(30) var(--blue-500);
+    color: var(--white);
+  }
+
+  .breadcrumb a {
+    --background-color: transparent;
+    --border-color: transparent;
+    --color: var(--off-white);
+    --outline-color: var(--dark-mint-500);
+    --hover-background-color: var(--background-color);
+    --hover-border-color: var(--border-color);
+    --hover-color: var(--white);
+    --visited-color: var(--blue-50);
+    --active-background-color: var(--background-color);
+    --active-border-color: var(--border-color);
+    --active-color: var(--blue-200);
+    --focus-background-color: var(--blue-200);
+    --focus-border-color: var(--border-color);
+    --focus-color: var(--dark-mint-500);
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    background-image: url("../images/page.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: -1;
+  }
+
+  @include breakpoint-up(md) {
+    margin-bottom: rem(130);
+  }
+}
+
+.page.home .banner-pattern {
   background: var(--blue-500);
   background-image: url("../images/home.svg");
   background-repeat: no-repeat;
@@ -22,7 +73,7 @@
 }
 
 @include breakpoint-up(sm) {
-  .home .banner-pattern {
+  .page.home .banner-pattern {
     height: rem(608);
   }
 

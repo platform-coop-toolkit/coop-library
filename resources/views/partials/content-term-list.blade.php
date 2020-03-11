@@ -3,7 +3,6 @@
   @foreach(get_terms(['taxonomy' => $taxonomy, 'orderby' => 'order']) as $term)
     @if(get_term_children($term->term_id, $taxonomy))
       <li>
-        <hr class="is-style-thick has-grey-200-background-color" />
         <h2>{!! $term->name !!}</h2>
       </li>
       <li>
@@ -17,7 +16,6 @@
           </li>
           @endforeach
         </ul>
-        <hr class="is-style-thick has-grey-200-background-color" />
       </li>
     @elseif(!$term->parent)
       <li class="link-list__item">
