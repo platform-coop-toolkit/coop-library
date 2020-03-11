@@ -49,6 +49,31 @@
   }
 }
 
+.page.term-list [role="document"] {
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
+.page.term-list.topics [role="document"] {
+  background-image: url("../images/topics.svg");
+}
+
+.page.term-list.goals [role="document"] {
+  background-image: url("../images/goals.svg");
+}
+
+.page.term-list.sectors [role="document"] {
+  background-image: url("../images/sectors.svg");
+}
+
+.page.term-list.coop-types [role="document"] {
+  background-image: url("../images/coop-types.svg");
+}
+
+.page.term-list.formats [role="document"] {
+  background-image: url("../images/formats.svg");
+}
+
 .page.home .banner-pattern {
   background: var(--blue-500);
   background-image: url("../images/home.svg");
