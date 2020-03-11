@@ -3,15 +3,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: rem(140);
+  height: rem(500);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
+  z-index: -2;
 }
 
-.home .page-header {
-  padding-top: rem(165);
+.page.home .page-header {
+  padding-top: 0;
+  margin-top: rem(165);
+
+  &::before {
+    background: transparentize($blue-500, 0.95);
+  }
 }
 
 @include breakpoint-up(sm) {
@@ -20,7 +26,7 @@
   }
 
   .home .page-header {
-    padding-top: rem(335);
+    margin-top: rem(335);
   }
 }
 
