@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-09 15:58-0600\n"
+"POT-Creation-Date: 2020-03-12 09:43-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,65 +58,73 @@ msgstr ""
 msgid "Primary Navigation"
 msgstr ""
 
-#: app/setup.php:110
+#: app/setup.php:125
 msgid "Primary"
 msgstr ""
 
-#: app/setup.php:114
+#: app/setup.php:129
 msgid "Footer"
 msgstr ""
 
-#: app/Controllers/App.php:130
+#: app/Controllers/App.php:22
+msgid "Settings saved"
+msgstr ""
+
+#: app/Controllers/App.php:24
+msgid "Your settings have been saved."
+msgstr ""
+
+#: app/Controllers/App.php:176
 msgid "&laquo; Previous"
 msgstr ""
 
-#: app/Controllers/App.php:131
+#: app/Controllers/App.php:177
 msgid "Next &raquo;"
 msgstr ""
 
-#: app/Controllers/App.php:238
+#: app/Controllers/App.php:284
 msgid "&hellip;"
 msgstr ""
 
-#: app/Controllers/App.php:300
+#: app/Controllers/App.php:346
 msgid "previous"
 msgstr ""
 
-#: app/Controllers/App.php:304
+#: app/Controllers/App.php:350
 msgid "next"
 msgstr ""
 
-#: app/Controllers/App.php:306
+#: app/Controllers/App.php:352
 msgid "Resources navigation"
 msgstr ""
 
-#: app/Controllers/App.php:307
+#: app/Controllers/App.php:353
 msgid "resources"
 msgstr ""
 
-#: app/Controllers/App.php:375
+#: app/Controllers/App.php:421
 msgid ""
 "<span class=\"pc-ff--sans pc-fw--normal\">Platform Co-op</span><br /"
 ">Resource Library"
 msgstr ""
 
-#: app/Controllers/App.php:383
+#: app/Controllers/App.php:429
 msgid "Latest Posts"
 msgstr ""
 
-#: app/Controllers/App.php:387
+#: app/Controllers/App.php:433
 msgid "Search results"
 msgstr ""
 
-#: app/Controllers/App.php:391
+#: app/Controllers/App.php:437
 msgid "Browse all"
 msgstr ""
 
-#: app/Controllers/App.php:395
+#: app/Controllers/App.php:441
 msgid "Not Found"
 msgstr ""
 
-#: app/Controllers/App.php:406
+#: app/Controllers/App.php:452
 msgid "Home"
 msgstr ""
 
@@ -132,6 +140,11 @@ msgstr ""
 
 #: resources/views/404.blade.php:8
 msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: resources/views/components/notification.blade.php:4
+#: resources/assets/scripts/util/addNotification.js:31
+msgid "Close notification"
 msgstr ""
 
 #: resources/views/partials/header.blade.php:6
@@ -428,6 +441,57 @@ msgstr ""
 msgid "View on the Internet Archive"
 msgstr ""
 
+#: resources/views/partials/content-page-settings.blade.php:2
+msgid "Allow the Resource Library to track what resources you’ve viewed."
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:3
+msgid "How resource tracking changes what you see"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:5
+msgid ""
+"By choosing ‘Allow’, the Resource Library will be able to track the "
+"resources you view, letting you:"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:7
+msgid "see a list of your recently viewed resources on the home page,"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:8
+msgid "see related resources, and"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:9
+msgid "contribute to the most viewed articles seen on the home page."
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:11
+msgid ""
+"The Resource Library will only use this information for these features, and "
+"does not collect any personally identifiable information."
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:12
+msgid ""
+"By choosing ‘Don’t allow’, you will be able to continue to use the Resource "
+"Library fully, with the exception of the features mentioned previously."
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:17
+msgid "Allow"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:21
+msgid "Don&rsquo;t allow"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:25
+#: resources/assets/scripts/routes/archive.js:108
+msgid "Save"
+msgstr ""
+
 #: resources/views/partials/content-page-favorites.blade.php:2
 msgid "favorites"
 msgstr ""
@@ -435,6 +499,15 @@ msgstr ""
 #: resources/views/partials/content-page-favorites.blade.php:8
 #, python-format
 msgid "\"%s\" from my favorites"
+msgstr ""
+
+#: resources/views/partials/content-page-favorites.blade.php:15
+msgid "You have no favorites."
+msgstr ""
+
+#: resources/views/partials/content-page-favorites.blade.php:16
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
 msgstr ""
 
 #: resources/views/partials/search-form.blade.php:3
@@ -455,10 +528,6 @@ msgstr ""
 
 #: resources/views/partials/entry-meta.blade.php:3
 msgid "By"
-msgstr ""
-
-#: resources/assets/scripts/util/addNotification.js:31
-msgid "Close notification"
 msgstr ""
 
 #: resources/assets/scripts/routes/single.js:40
@@ -498,11 +567,12 @@ msgid "The resource could not be added to your favorites."
 msgstr ""
 
 #: resources/assets/scripts/routes/saved-searches.js:15
-#: resources/assets/scripts/routes/archive.js:81
+#: resources/assets/scripts/routes/archive.js:97
 msgid "Maximum number of saved searches reached"
 msgstr ""
 
 #: resources/assets/scripts/routes/saved-searches.js:16
+#: resources/assets/scripts/routes/archive.js:118
 msgid ""
 "You have reached the maximum amount of saved searches (50). To save more, "
 "you must delete some saved searches."
@@ -578,54 +648,51 @@ msgstr ""
 msgid "Your saved search could not be removed"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:82
+#: resources/assets/scripts/routes/archive.js:98
 #, python-format
 msgid ""
 "You have reached the maximum amount of saved searches (50). To save more, "
 "you must <a href=\"%s\">delete some saved searches</a>."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:88
+#: resources/assets/scripts/routes/archive.js:104
 msgid "Save search"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:89
+#: resources/assets/scripts/routes/archive.js:105
 msgid ""
 "To save your search, please give it a name so you can identify it later."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:91
+#: resources/assets/scripts/routes/archive.js:107
 msgid "Name of saved search:"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:92
-msgid "Save"
-msgstr ""
-
-#: resources/assets/scripts/routes/archive.js:93
+#: resources/assets/scripts/routes/archive.js:109
 msgid "Don&rsquo;t save"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:101
+#: resources/assets/scripts/routes/archive.js:117
+#: resources/assets/scripts/routes/archive.js:145
+msgid "Search not saved"
+msgstr ""
+
+#: resources/assets/scripts/routes/archive.js:125
 #, python-format
 msgid "Saved search for “%s”"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:112
+#: resources/assets/scripts/routes/archive.js:136
 msgid "Search saved"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:114
+#: resources/assets/scripts/routes/archive.js:138
 msgid ""
 "You have successfully saved this search. You can save %1$d more. You can see "
 "this search in your <a href=\"%2$s\">saved searches page</a>."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:121
-msgid "Search not saved"
-msgstr ""
-
-#: resources/assets/scripts/routes/archive.js:121
+#: resources/assets/scripts/routes/archive.js:145
 msgid "Your search could not be saved."
 msgstr ""
 
