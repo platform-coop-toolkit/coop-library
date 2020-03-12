@@ -2,7 +2,7 @@
   <header>
     <h3 class="card__title"><a class="card__link" href="{{ get_permalink() }}">{!! Archive::getShortTitle() !!}</a></h3>
     @if(Archive::requiresSubscription())
-    <p class="card__meta card__subscription">@svg('lock', 'icon--lock', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Subscription required', 'coop-library') }}</p>
+    <p class="card__meta card__subscription">@svg('lock', 'icon--lock', ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="aria-hidden">{{ __('Subscription required', 'coop-library') }}</span><span class="screen-reader-text">{{ __('Subscription required to access this resource', 'coop-library') }}</span></p>
     @endif
     @if(Archive::getAuthors())
     <p class="card__byline">
