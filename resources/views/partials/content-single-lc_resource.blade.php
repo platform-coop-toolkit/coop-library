@@ -2,7 +2,7 @@
   <div class="page-header resource__header">
     <h1 class="resource__title">{!! get_the_title() !!}</h1>
     @if(Single::requiresSubscription())
-    <p class="resource__meta resource__subscription">@svg('lock', 'icon--lock', ['focusable' => 'false', 'aria-hidden' => 'true']) <span class="aria-hidden">{{ __('Subscription required', 'coop-library') }}</span><span class="screen-reader-text">{{ __('Subscription required to access this resource', 'coop-library') }}</span></p>
+    <p class="resource__meta resource__subscription">@svg('lock', 'icon--lock', ['focusable' => 'false', 'aria-hidden' => 'true']) <span aria-hidden="true">{{ __('Subscription required', 'coop-library') }}</span><span class="screen-reader-text">{{ __('Subscription required to access this resource', 'coop-library') }}</span></p>
     @endif
     @if(Single::getAuthors())
     <div class="resource__meta resource__byline">@svg('author', 'icon--author', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ sprintf(__('By %s', 'coop-library'), Single::getAuthors()) }}</div>
