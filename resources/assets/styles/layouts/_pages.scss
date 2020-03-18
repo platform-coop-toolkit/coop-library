@@ -106,12 +106,23 @@
   z-index: -2;
 }
 
+.page.home .home__search,
+.page.home .home__browse {
+  color: var(--white);
+  background-color: var(--blue-500);
+}
+
+.page.home .home__search::before,
+.page.home .home__browse::before {
+  background: var(--blue-500);
+}
+
 .page.home .page-header {
   padding-top: rem(25);
   margin-top: rem(140);
 
   &::before {
-    background: transparentize($blue-500, 0.1);
+    background: transparentize($blue-700, 0.1);
   }
 }
 
