@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: rem(100);
+  margin-bottom: rem(50);
 
   &::before {
     display: block;
@@ -20,7 +20,7 @@
   }
 
   @include breakpoint-up(md) {
-    margin-bottom: rem(130);
+    margin-bottom: rem(65);
   }
 }
 
