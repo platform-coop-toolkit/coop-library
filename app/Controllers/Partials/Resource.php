@@ -77,34 +77,11 @@ trait Resource
             if (!$format) {
                 $format = get_option('date_format');
             }
-            $y      = get_post_meta($post->ID, 'lc_resource_publication_year', true);
-            $m      = get_post_meta($post->ID, 'lc_resource_publication_month', true);
-            $d      = get_post_meta($post->ID, 'lc_resource_publication_day', true);
-            $pieces = [];
-            foreach ([$y, $m, $d] as $piece) {
-                if ($piece) {
-                    $pieces[] = $piece;
-                }
-            }
-            $date = implode('-', $pieces);
+            $date = get_post_meta($post->ID, 'lc_resource_publication_date', true);
 
-            if (!empty($pieces)) {
+            if ($date !== 'ongoing') {
                 return date_i18n($format, strtotime($date));
             }
-        }
-
-        return false;
-    }
-
-    public static function getPublicationIsoDate()
-    {
-        global $post;
-
-        if ($post->post_type == 'lc_resource') {
-            $y = get_post_meta($post->ID, 'lc_resource_publication_year', true);
-            $m = get_post_meta($post->ID, 'lc_resource_publication_month', true);
-            $d = get_post_meta($post->ID, 'lc_resource_publication_day', true);
-            return implode('-', [$y, $m, $d]);
         }
 
         return false;

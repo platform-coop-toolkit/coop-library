@@ -100,7 +100,7 @@ add_filter('pre_get_posts', function ($query) {
                 switch ($_GET['order_by']) {
                     case 'published':
                         $query->set('meta_key', 'lc_resource_publication_date');
-                        $query->set('orderby', ['meta_value', 'date']);
+                        $query->set('orderby', 'meta_value');
                         break;
                     case 'favorited':
                         $query->set('meta_key', 'lc_resource_favorites');
