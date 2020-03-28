@@ -449,7 +449,7 @@ class App extends Controller
         if (is_front_page()) {
             return false;
         }
-        return sprintf('<a href="%1$s">%2$s</a>', get_home_url(), __('Home', 'coop-library'));
+        return sprintf('<a class="link--breadcrumb" href="%1$s">%2$s</a>', get_home_url(), __('Home', 'coop-library'));
     }
 
     public static function termListUrl($taxonomy)
