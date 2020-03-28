@@ -1,4 +1,5 @@
 import { __ } from '@wordpress/i18n';
+import { speak } from '@wordpress/a11y';
 
 /**
  * Add a notification.
@@ -26,7 +27,7 @@ export default (title, content, type) => {
   }
 
   const alert = `
-    <div class="notification notification--${type}" role="alert">
+    <div class="notification notification--${type}">
       <button class="button button--borderless"><svg class="icon icon--close" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path id="close" d="m11.41 10 4.3-4.29a1 1 0 1 0 -1.42-1.42l-4.29 4.3-4.29-4.3a1 1 0 0 0 -1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.29-4.3 4.29 4.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z" fill="currentColor"/></svg>
       <span class="screen-reader-text">${__('Close notification', 'coop-library')}</span></button>
       <p class="notification__title">${icon} ${title}</p>
@@ -34,8 +35,12 @@ export default (title, content, type) => {
     </div>
   `;
 
+  speak(content, 'assertive');
+
   if (pageHeader.nextElementSibling.classList.contains('notification')) {
     pageHeader.nextElementSibling.parentNode.removeChild(pageHeader.nextElementSibling);
   }
   pageHeader.insertAdjacentHTML('afterend', alert);
+
+
 };
