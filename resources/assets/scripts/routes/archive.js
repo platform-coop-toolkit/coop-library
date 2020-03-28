@@ -4,6 +4,7 @@ import addNotification from '../util/addNotification';
 import Cookies from 'cookies.js';
 import Pinecone from '@platform-coop-toolkit/pinecone';
 import { __, sprintf } from '@wordpress/i18n';
+import { speak } from '@wordpress/a11y';
 
 export default {
   init() {
@@ -20,6 +21,11 @@ export default {
     if ( 0 < deselectButtons.length ) {
       Array.prototype.forEach.call( deselectButtons, btn => {
         new Pinecone.DeselectAll( btn );
+        const filterGroup = btn.parentNode.parentNode;
+        const filterGroupLabel = filterGroup.firstElementChild.textContent;
+        btn.onclick = () => {
+          speak(sprintf(__('All %s have been deselected', 'coop-library'), filterGroupLabel));
+        }
       } );
     }
 
