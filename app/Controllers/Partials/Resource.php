@@ -112,7 +112,10 @@ trait Resource
             if (have_rows('lc_resource_author')) :
                 while (have_rows('lc_resource_author')) :
                     the_row();
-                    $authors[] = get_sub_field('author');
+                    $author = get_sub_field('author');
+                    if ($author) {
+                        $authors[] = $author;
+                    }
                 endwhile;
             endif;
             return natural_language_join($authors);
