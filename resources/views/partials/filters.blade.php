@@ -22,7 +22,7 @@
           <p class="accordion__heading">{{ $label }}</p>
           <div class="accordion__content">
             <button id="deselect-{{ $tax }}" type="button" class="button button--borderless">
-              <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ $label }}</span></span>
+              <span class="button__label"><span aria-hidden="true">{{ __('Deselect all', 'coop-library') }}</span><span class="screen-reader-text">{{ sprintf(__('Deselect all %s', 'coop-library'), $label) }}</span></span>
             </button>
             <ul id="{{ $tax }}" class="input-group input-group__parent {{ $tax }}">
               @foreach(get_terms(['taxonomy' => $tax, 'lang' => '', 'orderby' => 'order']) as $term)

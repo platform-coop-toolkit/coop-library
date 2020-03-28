@@ -1,5 +1,5 @@
 @if($favorites->have_posts())
-<div class="align-right"><button id="remove-all" class="button button--borderless button--destructive">@svg('delete', 'icon--delete', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Remove all', 'coop-library') }}<span class="screen-reader-text"> {{ __('favorites', 'coop-library') }}</span></button></div>
+<div class="align-right"><button id="remove-all" class="button button--borderless button--destructive">@svg('delete', 'icon--delete', ['focusable' => 'false', 'aria-hidden' => 'true']) <span aria-hidden="true">{{ __('Remove all', 'coop-library') }}</span><span class="screen-reader-text">{{ __('Remove all favorites', 'coop-library') }}</span></button></div>
 <div id="favorites" class="resource-list">
   <ul class="cards">
     @while ($favorites->have_posts()) @php $favorites->the_post() @endphp
