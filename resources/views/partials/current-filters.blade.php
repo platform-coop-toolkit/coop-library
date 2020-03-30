@@ -1,12 +1,12 @@
 @if(isset($_GET['s']) || $found_posts < App::totalPosts('lc_resource'))
 <div class="current-filters">
-  <p class="h3">{{ sprintf(__('Showing %1$s of %2$s resources for:', 'coop-library'), $found_posts, App::totalPosts('lc_resource')) }}</p>
+  <p class="h3">{{ sprintf(__('%1$s of %2$s resources matched', 'coop-library'), $found_posts, App::totalPosts('lc_resource')) }}</p>
   @if(isset($_GET['s']))
-  <h2 class="h4">{{ __('Search term', 'coop-library') }}</h2>
+  <h2 class="h4">{{ __('Your search term:', 'coop-library') }}</h2>
   <p>&ldquo;{{ $_GET['s'] }}&rdquo;</p>
   @endif
   @if(!empty(array_filter(array_map('array_filter', $queried_resource_terms))))
-    <h2 class="h4">{{ __('Applied filters', 'coop-library') }}</h2>
+    <h2 class="h4">{{ __('Your filters:', 'coop-library') }}</h2>
     <ul class="tags">
       @foreach($queried_resource_terms as $taxonomy => $terms)
         @foreach($terms as $term => $name)
@@ -16,7 +16,8 @@
         @endforeach
       @endforeach
     </ul>
-  <p><a href="{{ get_post_type_archive_link('lc_resource') }}">{{ __('Clear all', 'coop-library') }}</a></p>
+    <p><em>{{ __('The resources shown match at least one of these filters.', 'coop-library') }}</em></p>
+    <p><a href="{{ get_post_type_archive_link('lc_resource') }}">{{ __('Clear all', 'coop-library') }}</a></p>
   @endif
 </div>
 @endif
