@@ -138,15 +138,37 @@ export default {
               savedSearches[now] = {name, term, url, filters};
               localStorage.setItem('saved-searches', JSON.stringify(savedSearches));
               const remaining = 50 - Object.keys(savedSearches).length;
-              addNotification(
-                __('Search saved', 'coop-library'),
-                sprintf(
-                  __('You have successfully saved this search. You can save %1$d more. You can see this search in your <a href="%2$s">saved searches page</a>.', 'coop-library'),
-                  remaining,
-                  CoopLibrary.savedSearchesLink
-                ),
-                'success'
-              );
+              if (remaining > 10) {
+                addNotification(
+                  __('Search saved', 'coop-library'),
+                  sprintf(
+                    __('You have successfully saved this search. You can save <strong>%1$d</strong> more. You can see this search on your <a href="%2$s">saved searches page</a>.', 'coop-library'),
+                    remaining,
+                    CoopLibrary.savedSearchesLink
+                  ),
+                  'success'
+                );
+              } else if (remaining > 1) {
+                addNotification(
+                  __('Search saved', 'coop-library'),
+                  sprintf(
+                    __('You have successfully saved this search. <strong>You can only save %1$d more.</strong> You can see this search and manage saved searches on your <a href="%2$s">saved searches page</a>.', 'coop-library'),
+                    remaining,
+                    CoopLibrary.savedSearchesLink
+                  ),
+                  'warning'
+                );
+              } else {
+                addNotification(
+                  __('Search saved', 'coop-library'),
+                  sprintf(
+                    __('You have successfully saved this search. <strong>You have reached the maximum number of saved searches (50).</strong> You can see this search and manage saved searches on your <a href="%2$s">saved searches page</a>.', 'coop-library'),
+                    remaining,
+                    CoopLibrary.savedSearchesLink
+                  ),
+                  'warning'
+                );
+              }
             } catch(error) {
               addNotification(__('Search not saved', 'coop-library'), __('Your search could not be saved.', 'coop-library'), 'error');
             }

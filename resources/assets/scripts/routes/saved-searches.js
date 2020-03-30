@@ -13,7 +13,7 @@ export default {
     if (savedSearches.length === 50) {
       addNotification(
         __('Maximum number of saved searches reached', 'coop-library'),
-        __('You have reached the maximum amount of saved searches (50). To save more, you must delete some saved searches.', 'coop-library'),
+        __('You have reached the maximum number of saved searches (50). To save more, you must delete some saved searches.', 'coop-library'),
         'warning'
       );
     }
@@ -95,7 +95,7 @@ export default {
         callback: function callback() {
           try {
             const length = document.querySelectorAll('.saved-search').length;
-            const key = event.target.dataset.key;
+            const key = removeButton.dataset.key;
             let savedSearches = localStorage.getItem('saved-searches');
             savedSearches = savedSearches ? JSON.parse(savedSearches) : {};
             delete savedSearches[key];
