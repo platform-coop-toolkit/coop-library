@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-12 09:43-0600\n"
+"POT-Creation-Date: 2020-03-30 11:13-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,7 +143,7 @@ msgid "Sorry, but the page you were trying to view does not exist."
 msgstr ""
 
 #: resources/views/components/notification.blade.php:4
-#: resources/assets/scripts/util/addNotification.js:31
+#: resources/assets/scripts/util/addNotification.js:32
 msgid "Close notification"
 msgstr ""
 
@@ -274,6 +274,11 @@ msgstr ""
 msgid "Deselect all"
 msgstr ""
 
+#: resources/views/partials/filters.blade.php:25
+#, python-format
+msgid "Deselect all %s"
+msgstr ""
+
 #: resources/views/partials/filters.blade.php:39
 #, python-format
 msgid "and %d subtopics"
@@ -301,7 +306,7 @@ msgid "Remove all"
 msgstr ""
 
 #: resources/views/partials/content-page-saved-searches.blade.php:3
-msgid "saved searches"
+msgid "Remove all saved searches"
 msgstr ""
 
 #: resources/views/partials/content-page-saved-searches.blade.php:8
@@ -313,7 +318,7 @@ msgstr ""
 msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
 msgstr ""
 
-#: resources/views/partials/content-term-list.blade.php:29
+#: resources/views/partials/content-term-list.blade.php:27
 #, python-format
 msgid "No %s found."
 msgstr ""
@@ -334,110 +339,124 @@ msgstr ""
 msgid "Recently published"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:7
+#: resources/views/partials/content-lc_resource.blade.php:5
 #: resources/views/partials/content-single-lc_resource.blade.php:5
+msgid "Subscription required"
+msgstr ""
+
+#: resources/views/partials/content-lc_resource.blade.php:5
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+msgid "Subscription required to access this resource"
+msgstr ""
+
+#: resources/views/partials/content-lc_resource.blade.php:10
+#: resources/views/partials/content-single-lc_resource.blade.php:8
 #, python-format
 msgid "By %s"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:13
-#: resources/views/partials/content-single-lc_resource.blade.php:9
+#: resources/views/partials/content-lc_resource.blade.php:16
+#: resources/views/partials/content-single-lc_resource.blade.php:12
 msgid "resource format"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:14
+#: resources/views/partials/content-lc_resource.blade.php:17
 msgid "publisher"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:20
-#: resources/views/partials/content-single-lc_resource.blade.php:15
+#: resources/views/partials/content-lc_resource.blade.php:23
+#: resources/views/partials/content-single-lc_resource.blade.php:18
 msgid "location of relevance"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:27
-#: resources/views/partials/content-single-lc_resource.blade.php:22
+#: resources/views/partials/content-lc_resource.blade.php:30
+#: resources/views/partials/content-single-lc_resource.blade.php:25
 msgid "language"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:33
-#: resources/views/partials/content-single-lc_resource.blade.php:26
+#: resources/views/partials/content-lc_resource.blade.php:36
+#: resources/views/partials/content-single-lc_resource.blade.php:31
 msgid "date published"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:44
+#: resources/views/partials/content-lc_resource.blade.php:47
 #, python-format
 msgid "+%d more"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:49
-#: resources/views/partials/content-single-lc_resource.blade.php:110
+#: resources/views/partials/content-lc_resource.blade.php:52
+#: resources/views/partials/content-single-lc_resource.blade.php:115
 #, python-format
 msgid "Added %s"
 msgstr ""
 
-#: resources/views/partials/content-lc_resource.blade.php:53
+#: resources/views/partials/content-lc_resource.blade.php:56
 msgid "Favorited"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:10
+#: resources/views/partials/content-single-lc_resource.blade.php:13
 #, python-format
 msgid "Published by %s"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:33
+#: resources/views/partials/content-single-lc_resource.blade.php:38
 msgid "Summary"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:40
+#: resources/views/partials/content-single-lc_resource.blade.php:45
 msgid "Topic"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:45
+#: resources/views/partials/content-single-lc_resource.blade.php:50
 msgid "Suggest edits"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:50
-msgid "Visit full resource"
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource (subscription required)"
 msgstr ""
 
 #: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource"
+msgstr ""
+
+#: resources/views/partials/content-single-lc_resource.blade.php:60
 msgid "Add to Favorites"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:57
+#: resources/views/partials/content-single-lc_resource.blade.php:62
 msgid "Remove from Favorites"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:62
+#: resources/views/partials/content-single-lc_resource.blade.php:67
 msgid "Share"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:75
+#: resources/views/partials/content-single-lc_resource.blade.php:80
 #: resources/views/partials/footer.blade.php:17
 msgid "Email"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:81
+#: resources/views/partials/content-single-lc_resource.blade.php:86
 msgid "Report broken link"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:85
+#: resources/views/partials/content-single-lc_resource.blade.php:90
 msgid "View alternate links"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:90
+#: resources/views/partials/content-single-lc_resource.blade.php:95
 msgid "View on Perma.cc (%1$d of %2$d)"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:92
+#: resources/views/partials/content-single-lc_resource.blade.php:97
 msgid "View on Perma.cc"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:99
+#: resources/views/partials/content-single-lc_resource.blade.php:104
 msgid "View on the Internet Archive (%1$d of %2$d)"
 msgstr ""
 
-#: resources/views/partials/content-single-lc_resource.blade.php:101
+#: resources/views/partials/content-single-lc_resource.blade.php:106
 msgid "View on the Internet Archive"
 msgstr ""
 
@@ -488,12 +507,12 @@ msgid "Don&rsquo;t allow"
 msgstr ""
 
 #: resources/views/partials/content-page-settings.blade.php:25
-#: resources/assets/scripts/routes/archive.js:108
+#: resources/assets/scripts/routes/archive.js:114
 msgid "Save"
 msgstr ""
 
 #: resources/views/partials/content-page-favorites.blade.php:2
-msgid "favorites"
+msgid "Remove all favorites"
 msgstr ""
 
 #: resources/views/partials/content-page-favorites.blade.php:8
@@ -567,12 +586,12 @@ msgid "The resource could not be added to your favorites."
 msgstr ""
 
 #: resources/assets/scripts/routes/saved-searches.js:15
-#: resources/assets/scripts/routes/archive.js:97
+#: resources/assets/scripts/routes/archive.js:103
 msgid "Maximum number of saved searches reached"
 msgstr ""
 
 #: resources/assets/scripts/routes/saved-searches.js:16
-#: resources/assets/scripts/routes/archive.js:118
+#: resources/assets/scripts/routes/archive.js:124
 msgid ""
 "You have reached the maximum amount of saved searches (50). To save more, "
 "you must delete some saved searches."
@@ -648,51 +667,56 @@ msgstr ""
 msgid "Your saved search could not be removed"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:98
+#: resources/assets/scripts/routes/archive.js:27
+#, python-format
+msgid "All %s have been deselected"
+msgstr ""
+
+#: resources/assets/scripts/routes/archive.js:104
 #, python-format
 msgid ""
 "You have reached the maximum amount of saved searches (50). To save more, "
 "you must <a href=\"%s\">delete some saved searches</a>."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:104
+#: resources/assets/scripts/routes/archive.js:110
 msgid "Save search"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:105
+#: resources/assets/scripts/routes/archive.js:111
 msgid ""
 "To save your search, please give it a name so you can identify it later."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:107
+#: resources/assets/scripts/routes/archive.js:113
 msgid "Name of saved search:"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:109
+#: resources/assets/scripts/routes/archive.js:115
 msgid "Don&rsquo;t save"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:117
-#: resources/assets/scripts/routes/archive.js:145
+#: resources/assets/scripts/routes/archive.js:123
+#: resources/assets/scripts/routes/archive.js:151
 msgid "Search not saved"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:125
+#: resources/assets/scripts/routes/archive.js:131
 #, python-format
 msgid "Saved search for “%s”"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:136
+#: resources/assets/scripts/routes/archive.js:142
 msgid "Search saved"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:138
+#: resources/assets/scripts/routes/archive.js:144
 msgid ""
 "You have successfully saved this search. You can save %1$d more. You can see "
 "this search in your <a href=\"%2$s\">saved searches page</a>."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:145
+#: resources/assets/scripts/routes/archive.js:151
 msgid "Your search could not be saved."
 msgstr ""
 
