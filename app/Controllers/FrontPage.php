@@ -35,7 +35,6 @@ class FrontPage extends Controller
             'post__in' => $ids,
             'orderby' => 'post__in',
             'posts_per_page' => 4,
-            'lang' => '',
         ]);
     }
 
