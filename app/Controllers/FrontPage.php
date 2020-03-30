@@ -27,7 +27,6 @@ class FrontPage extends Controller
             'post__not_in' => $viewed_ids,
             'posts_per_page' => 4,
             'fields' => 'ids',
-            'lang' => '',
         ]);
         $ids = array_merge($viewed_ids + $unviewed_ids);
 
@@ -48,7 +47,6 @@ class FrontPage extends Controller
             'orderby' => ['meta_value', 'date'],
             'posts_per_page' => 4,
             'order' => 'desc',
-            'lang' => '',
         ]);
     }
 }
