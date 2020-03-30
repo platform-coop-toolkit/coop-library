@@ -69,7 +69,7 @@
             <ul id="language" class="input-group input-group__parent language">
               @foreach(App::getMetaValues('language', 'lc_resource') as $language)
               <li>
-                <input id="language-{{ $language }}" name="language[]" type="checkbox" value="{{ $language }}" {{ checked(in_array($language, array_keys($queried_resource_terms['language']))) }} />
+                <input id="language-{{ $language }}" name="resource_language[]" type="checkbox" value="{{ $language }}" {{ checked(in_array($language, array_keys($queried_resource_terms['resource_language']))) }} />
                 <label for="language-{{ $language }}">{!! $languages[$language] !!}</label>
               </li>
               @endforeach
