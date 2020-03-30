@@ -3,7 +3,7 @@
 import addNotification from '../util/addNotification';
 import Cookies from 'cookies.js';
 import Pinecone from '@platform-coop-toolkit/pinecone';
-import { __, sprintf } from '@wordpress/i18n';
+import { __, _n, sprintf } from '@wordpress/i18n';
 import { speak } from '@wordpress/a11y';
 
 export default {
@@ -12,6 +12,15 @@ export default {
     const filterContainer = document.querySelector( '.filters' );
     const showFilters = document.querySelector( '#show-filters' );
     const hideFilters = document.querySelector( '#hide-filters' );
+
+    if (document.body.classList.contains('filtered')) {
+      const currentFilterCount = document.body.dataset.filters;
+      if ( currentFilterCount ) {
+        setTimeout(function() {
+          speak(sprintf(_n('%s filter applied. Resource list updated.', '%s filters applied. Resource list updated.', parseInt(currentFilterCount), 'coop-library'), currentFilterCount), 'assertive');
+        }, 1000);
+      }
+    }
 
     if ( showFilters && hideFilters && filterContainer ) {
       new Pinecone.FilterList( filterContainer, showFilters, hideFilters );

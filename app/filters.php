@@ -13,9 +13,8 @@ add_filter('body_class', function (array $classes) {
         }
     }
 
-    /** Add class if sidebar is active */
-    if (display_sidebar()) {
-        $classes[] = 'sidebar-primary';
+    if (isset($_GET['filtered']) && $_GET['filtered'] === '1') {
+        $classes[] = 'filtered';
     }
 
     /** Clean up class names for custom templates */
