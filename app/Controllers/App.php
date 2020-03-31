@@ -137,7 +137,7 @@ class App extends Controller
         return 'en';
     }
 
-    public function foundPosts()
+    public function foundPosts($lang = 'en')
     {
         global $wp_query;
         return $wp_query->found_posts;
