@@ -70,6 +70,25 @@ class App extends Controller
         return $terms;
     }
 
+    public function filterCount()
+    {
+        $count = 0;
+        global $wp_query;
+        if ($wp_query->tax_query) {
+            foreach ($wp_query->tax_query->queries as $value) {
+                foreach ($value['terms'] as $t) {
+                    $count++;
+                }
+            }
+        }
+        if (isset($_GET['language'])) {
+            foreach ($_GET['language'] as $lang) {
+                $count++;
+            }
+        }
+        return $count;
+    }
+
     public function availableLanguages()
     {
         if (function_exists('pll_the_languages') && function_exists('pll_current_language')) {
