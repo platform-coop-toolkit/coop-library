@@ -33,7 +33,7 @@
       <span class="separator">.</span>
       @endif
       @if(Archive::getPublicationDate())
-      <span class="card__date"><span class="screen-reader-text">{{ __('date published', 'coop-library') }}: </span>{{ Archive::getPublicationDate('Y') }}</span>
+      <span class="card__date"><span class="screen-reader-text">{{ __('date published', 'coop-library') }}: </span>{{ Archive::getPublicationDate('F Y') }}</span>
       @endif
     </div>
     @endif
