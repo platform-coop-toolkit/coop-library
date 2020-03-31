@@ -5,3 +5,8 @@
 .search-form [type="search"] {
   max-width: 100%;
 }
+
+.menu__item[aria-current="page"] {
+  --color: var(--white);
+  --hover-color: var(--dark-mint-500);
+}
