@@ -44,7 +44,7 @@ class App extends Controller
     {
         $langs = get_language_list(pll_current_language('locale'));
         $terms = [
-            'language' => [],
+            'resource_language' => [],
             'lc_format' => [],
             'lc_goal' => [],
             'lc_region' => [],
@@ -55,14 +55,16 @@ class App extends Controller
         global $wp_query;
         if ($wp_query->tax_query) {
             foreach ($wp_query->tax_query->queries as $value) {
-                foreach ($value['terms'] as $t) {
-                    $terms[$value['taxonomy']][$t] = get_term_by('slug', $t, $value['taxonomy'])->name;
+                if ($value['taxonomy'] !== 'language') {
+                    foreach ($value['terms'] as $t) {
+                        $terms[$value['taxonomy']][$t] = get_term_by('slug', $t, $value['taxonomy'])->name;
+                    }
                 }
             }
         }
-        if (isset($_GET['language'])) {
-            foreach ($_GET['language'] as $lang) {
-                $terms['language'][ $lang ] = $langs[$lang];
+        if (isset($_GET['resource_language'])) {
+            foreach ($_GET['resource_language'] as $lang) {
+                $terms['resource_language'][ $lang ] = $langs[$lang];
             }
         }
         return $terms;
@@ -135,7 +137,7 @@ class App extends Controller
         return 'en';
     }
 
-    public function foundPosts()
+    public function foundPosts($lang = 'en')
     {
         global $wp_query;
         return $wp_query->found_posts;
@@ -393,10 +395,16 @@ class App extends Controller
         return $navigation;
     }
 
-    public static function totalPosts($post_type = null)
+    public static function totalPosts($post_type = null, $lang = 'en')
     {
         if ($post_type) {
-            return wp_count_posts($post_type)->publish;
+            $q = new \WP_Query([
+                'post_type' => $post_type,
+                'post_status' => 'publish',
+                'lang' => $lang,
+                'fields' => 'ids'
+            ]);
+            return $q->found_posts;
         }
 
         return 0;
