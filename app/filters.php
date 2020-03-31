@@ -126,7 +126,7 @@ add_filter('pre_get_posts', function ($query) {
                             'posts_per_page' => -1,
                             'fields' => 'ids'
                         ]);
-                        $ids = array_merge($viewed_ids + $unviewed_ids);
+                        $ids = array_merge($viewed_ids, $unviewed_ids);
                         $query->set('post__in', $ids);
                         $query->set('orderby', 'post__in');
                         break;
