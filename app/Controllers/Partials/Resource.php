@@ -79,8 +79,17 @@ trait Resource
             }
             $date = get_post_meta($post->ID, 'lc_resource_publication_date', true);
 
-            if ($date !== 'ongoing') {
-                return date_i18n($format, strtotime($date));
+            if ($date !== '–') {
+                $parts = explode('-', $date);
+                if (count($parts) === 3) {
+                    return date_i18n($format, strtotime($date)); // TODO: Fix this
+                }
+                if (count($parts) === 2) {
+                    return date_i18n('F Y', strtotime($date));
+                }
+                if (count($parts) === 1) {
+                    return $date;
+                }
             }
         }
 
