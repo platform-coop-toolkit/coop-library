@@ -1,6 +1,6 @@
-@if(isset($_GET['s']) || $found_posts < App::totalPosts('lc_resource'))
+@if(isset($_GET['s']) || $found_posts < App::totalPosts('lc_resource', $current_language))
 <div class="current-filters">
-  <p class="h3">{{ sprintf(__('%1$s of %2$s resources matched', 'coop-library'), $found_posts, App::totalPosts('lc_resource')) }}</p>
+  <p class="h3">{{ sprintf(__('%1$s of %2$s resources matched', 'coop-library'), $found_posts, App::totalPosts('lc_resource', $current_language)) }}</p>
   @if(isset($_GET['s']))
   <h2 class="h4">{{ __('Your search term:', 'coop-library') }}</h2>
   <p>&ldquo;{{ $_GET['s'] }}&rdquo;</p>
