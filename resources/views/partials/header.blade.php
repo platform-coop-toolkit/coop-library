@@ -1,6 +1,6 @@
 <header role="banner">
   <div class="container">
-    <a class="link link--brand"@if(is_front_page()) aria-current="page"@endif href="{{ home_url('/') }}">@svg('pcc', 'icon--pcc', ['focusable' => 'false', 'aria-hidden' => 'true'])<span class="brand__title screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
+    <a class="link link--brand"@if(is_front_page()) aria-current="page"@endif href="{{ ($current_language !== 'en') ? home_url("/$current_language/") : home_url('/') }}">@svg('pcc', 'icon--pcc', ['focusable' => 'false', 'aria-hidden' => 'true'])<span class="brand__title screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
     <div class="inner">
       @if(!is_front_page())
         <button class="button button--borderless search-toggle" aria-expanded="false"><span class="screen-reader-text">{{ __('Search', 'coop-library') }} </span>@svg('search', 'icon--search', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
