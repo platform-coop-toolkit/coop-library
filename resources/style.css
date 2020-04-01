@@ -2,10 +2,12 @@
 Theme Name:         Co-op Library
 Theme URI:          https://resources.platform.coop
 Description:        WordPress theme for the Platform Co-op Resource Library.
-Version:            1.0.0-alpha.2
+Version:            1.0.0-rc.1
 Author:             OCAD University
 Author URI:         https://github.com/platform-coop-toolkit
 Text Domain:        coop-library
+Requires PHP:       7.3
+Requires at least:  5.4
 
 License:            BSD 3-Clause "New" License
 License URI:        https://opensource.org/licenses/BSD-3-Clause
