@@ -36,14 +36,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install xgettext
+      run: sudo apt-get install -y gettext
     - name: Update POT
-      uses: platform-coop-toolkit/action-wp-pot-generator@master
-      with:
-        save_path: './resources/lang'
-        item_slug: 'coop-library'
-        domain: 'coop-library-framework'
-        package_name: 'Co-op Library'
-        headers: '{\"Report-Msgid-Bugs-To\":\"https://github.com/platform-coop-toolkit/coop-library-framework/issues\"}'
+      run: npm run pot
     - name: Commit updated POT
       uses: stefanzweifel/git-auto-commit-action@v4.1.1
       with:
