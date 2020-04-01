@@ -15,9 +15,13 @@ export default {
 
     if (document.body.classList.contains('filtered')) {
       const currentFilterCount = document.body.dataset.filters;
+      let msg = sprintf(_n('%s filter applied. Resource list updated.', '%s filters applied. Resource list updated.', parseInt(currentFilterCount), 'coop-library'), currentFilterCount);
+      if (document.body.classList.contains('search-no-results')) {
+        msg = sprintf(_n('%s filter applied. No resources found.', '%s filters applied. No resources found.', parseInt(currentFilterCount), 'coop-library'), currentFilterCount);
+      }
       if ( currentFilterCount ) {
         setTimeout(function() {
-          speak(sprintf(_n('%s filter applied. Resource list updated.', '%s filters applied. Resource list updated.', parseInt(currentFilterCount), 'coop-library'), currentFilterCount), 'assertive');
+          speak(msg, 'assertive');
         }, 1000);
       }
     }
