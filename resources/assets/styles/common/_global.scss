@@ -6,7 +6,7 @@
   max-width: 100%;
 }
 
-.menu__item[aria-current="page"] {
+.menu > .menu-item > .menu__item[aria-current="page"] {
   --color: var(--white);
   --hover-color: var(--dark-mint-500);
 }
