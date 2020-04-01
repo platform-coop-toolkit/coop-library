@@ -43,7 +43,7 @@ class FrontPage extends Controller
         return new \WP_Query([
             'post_type' => 'lc_resource',
             'meta_key' => 'lc_resource_publication_date',
-            'orderby' => ['meta_value'],
+            'orderby' => 'meta_value',
             'posts_per_page' => 4,
             'order' => 'desc',
         ]);
