@@ -7,7 +7,7 @@
   <ul class="menu__submenu">
     @if(function_exists('pll_the_languages'))
       @foreach(pll_the_languages(['raw' => 1]) as $translation)
-        @if(in_array($translation['slug'], get_field('enabled_languages', 'option')))
+        @if($translation['slug'] === 'en' || in_array($translation['slug'], get_field('enabled_languages', 'option')))
     <li class="menu-item"><a {!! $translation['current_lang'] ? 'aria-current="true"' : '' !!}href="{{ $translation['url'] }}" class="menu__item">{{ $translation['name'] }}</a></li>
         @endif
       @endforeach
