@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-01 15:32+0000\n"
+"POT-Creation-Date: 2020-04-01 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -174,7 +174,6 @@ msgstr ""
 
 #: resources/views/partials/content-front-page.blade.php:2
 #: resources/views/index.blade.php:10 resources/views/404.blade.php:10
-#: resources/views/search.blade.php:10
 msgid "Search resource name, publisher, or topic…"
 msgstr ""
 
@@ -249,11 +248,11 @@ msgstr ""
 msgid "from current filters"
 msgstr ""
 
-#: resources/views/partials/current-filters.blade.php:19
+#: resources/views/partials/current-filters.blade.php:20
 msgid "The resources shown match at least one of these filters."
 msgstr ""
 
-#: resources/views/partials/current-filters.blade.php:20
+#: resources/views/partials/current-filters.blade.php:22
 msgid "Clear all"
 msgstr ""
 
@@ -304,7 +303,7 @@ msgid "Don&rsquo;t allow"
 msgstr ""
 
 #: resources/views/partials/content-page-settings.blade.php:25
-#: resources/assets/scripts/routes/archive.js:123
+#: resources/assets/scripts/routes/archive.js:127
 msgid "Save"
 msgstr ""
 
@@ -540,7 +539,7 @@ msgstr ""
 msgid "Favorited"
 msgstr ""
 
-#: resources/views/index.blade.php:8 resources/views/search.blade.php:8
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:10
 msgid "Sorry, no results were found."
 msgstr ""
 
@@ -549,8 +548,13 @@ msgid "Sorry, but the page you were trying to view does not exist."
 msgstr ""
 
 #: resources/views/components/notification.blade.php:4
+#: resources/views/search.blade.php:8
 #: resources/assets/scripts/util/addNotification.js:32
 msgid "Close notification"
+msgstr ""
+
+#: resources/views/search.blade.php:9
+msgid "No results for search"
 msgstr ""
 
 #: resources/assets/scripts/routes/single.js:40
@@ -646,7 +650,7 @@ msgid "Are you sure you want to remove this resource from your favorites?"
 msgstr ""
 
 #: resources/assets/scripts/routes/saved-searches.js:15
-#: resources/assets/scripts/routes/archive.js:112
+#: resources/assets/scripts/routes/archive.js:116
 msgid "Maximum number of saved searches reached"
 msgstr ""
 
@@ -716,85 +720,92 @@ msgstr ""
 msgid "Your saved search could not be removed"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:20
+#: resources/assets/scripts/routes/archive.js:18
 #, python-format
 msgid "%s filter applied. Resource list updated."
 msgid_plural "%s filters applied. Resource list updated."
 msgstr[0] ""
 msgstr[1] ""
 
-#: resources/assets/scripts/routes/archive.js:36
+#: resources/assets/scripts/routes/archive.js:20
+#, python-format
+msgid "%s filter applied. No resources found."
+msgid_plural "%s filters applied. No resources found."
+msgstr[0] ""
+msgstr[1] ""
+
+#: resources/assets/scripts/routes/archive.js:40
 #, python-format
 msgid "All %s have been deselected"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:113
+#: resources/assets/scripts/routes/archive.js:117
 #, python-format
 msgid ""
 "You have reached the maximum amount of saved searches (50). To save more, "
 "you must <a href=\"%s\">delete some saved searches</a>."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:119
+#: resources/assets/scripts/routes/archive.js:123
 msgid "Save search"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:120
+#: resources/assets/scripts/routes/archive.js:124
 msgid ""
 "To save your search, please give it a name so you can identify it later."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:122
+#: resources/assets/scripts/routes/archive.js:126
 msgid "Name of saved search:"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:124
+#: resources/assets/scripts/routes/archive.js:128
 msgid "Don&rsquo;t save"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:132
-#: resources/assets/scripts/routes/archive.js:182
+#: resources/assets/scripts/routes/archive.js:136
+#: resources/assets/scripts/routes/archive.js:186
 msgid "Search not saved"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:133
+#: resources/assets/scripts/routes/archive.js:137
 msgid ""
 "You have reached the maximum amount of saved searches (50). To save more, "
 "you must delete some saved searches."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:140
+#: resources/assets/scripts/routes/archive.js:144
 #, python-format
 msgid "Saved search for “%s”"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:152
-#: resources/assets/scripts/routes/archive.js:162
-#: resources/assets/scripts/routes/archive.js:172
+#: resources/assets/scripts/routes/archive.js:156
+#: resources/assets/scripts/routes/archive.js:166
+#: resources/assets/scripts/routes/archive.js:176
 msgid "Search saved"
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:154
+#: resources/assets/scripts/routes/archive.js:158
 msgid ""
 "You have successfully saved this search. You can save <strong>%1$d</strong> "
 "more. You can see this search on your <a href=\"%2$s\">saved searches page</"
 "a>."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:164
+#: resources/assets/scripts/routes/archive.js:168
 msgid ""
 "You have successfully saved this search. <strong>You can only save %1$d more."
 "</strong> You can see this search and manage saved searches on your <a href="
 "\"%2$s\">saved searches page</a>."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:174
+#: resources/assets/scripts/routes/archive.js:178
 msgid ""
 "You have successfully saved this search. <strong>You have reached the "
 "maximum number of saved searches (50).</strong> You can see this search and "
 "manage saved searches on your <a href=\"%2$s\">saved searches page</a>."
 msgstr ""
 
-#: resources/assets/scripts/routes/archive.js:182
+#: resources/assets/scripts/routes/archive.js:186
 msgid "Your search could not be saved."
 msgstr ""
