@@ -16,7 +16,9 @@
         @endforeach
       @endforeach
     </ul>
+    @if($found_posts > 0)
     <p><em>{{ __('The resources shown match at least one of these filters.', 'coop-library') }}</em></p>
+    @endif
     <p><a href="{{ get_post_type_archive_link('lc_resource') }}">{{ __('Clear all', 'coop-library') }}</a></p>
   @endif
 </div>

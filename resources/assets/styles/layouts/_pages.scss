@@ -32,7 +32,8 @@
   }
 }
 
-.search-results .notification {
+.search-results .notification,
+.search-no-results .notification {
   margin-top: rem(30);
 }
 
@@ -43,13 +44,15 @@
 }
 
 @include breakpoint-up(md) {
-  .search-results .notification {
+  .search-results .notification,
+  .search-no-results .notification {
     @include grid-column-span(6, 8);
   }
 }
 
 @include breakpoint-up(lg) {
-  .search-results .notification {
+  .search-results .notification,
+  .search-no-results .notification {
     @include grid-column-span(8, 12, 5);
 
     margin-top: rem(30);
@@ -66,7 +69,8 @@
 }
 
 @include breakpoint-up(xl) {
-  .search-results .notification {
+  .search-results .notification,
+  .search-no-results .notification {
     @include grid-column-span(8, 16, 5);
   }
 }
