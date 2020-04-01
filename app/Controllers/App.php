@@ -483,6 +483,12 @@ class App extends Controller
     {
         $slug = str_replace('lc_', '', $taxonomy) . 's';
         $page = get_page_by_path($slug);
+        if (function_exists('pll_current_language') && pll_current_language('slug') !== 'en') {
+            $translations = pll_get_post_translations($page->ID);
+            if (isset($translations[pll_current_language('slug')])) {
+                return get_permalink($translations[pll_current_language('slug')]);
+            }
+        }
         return get_permalink($page->ID);
     }
 }
