@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@platform-coop-toolkit/pinecone": "^1.0.0-alpha.13",
-    "@wordpress/a11y": "^2.7.0",
+    "@wordpress/a11y": "^2.8.0",
     "cookies.js": "^2.1.15"
   },
   "devDependencies": {
