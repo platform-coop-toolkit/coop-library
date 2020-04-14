@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-04-06 16:42+0000\n"
+"POT-Creation-Date: 2020-04-14 14:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,10 @@ msgstr ""
 #: resources/functions.php:66
 #, php-format
 msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: app/filters.php:32
+msgid "Continued"
 msgstr ""
 
 #: app/setup.php:59
@@ -125,29 +129,40 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: app/filters.php:32
-msgid "Continued"
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
 msgstr ""
 
-#: resources/views/partials/sort.blade.php:4
-msgid "Sort by"
+#: resources/views/404.blade.php:10 resources/views/index.blade.php:10
+#: resources/views/partials/content-front-page.blade.php:2
+msgid "Search resource name, publisher, or topic…"
 msgstr ""
 
-#: resources/views/partials/sort.blade.php:6
-msgid "Date added"
+#: resources/views/components/notification.blade.php:4
+#: resources/views/search.blade.php:8
+#: resources/assets/scripts/util/addNotification.js:32
+msgid "Close notification"
 msgstr ""
 
-#: resources/views/partials/sort.blade.php:7
-msgid "Date published"
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:10
+msgid "Sorry, no results were found."
 msgstr ""
 
-#: resources/views/partials/sort.blade.php:8
-#: resources/views/partials/content-front-page.blade.php:21
-msgid "Most viewed"
+#: resources/views/partials/footer.blade.php:7
+msgid "Platform Cooperativism Consortium"
 msgstr ""
 
-#: resources/views/partials/sort.blade.php:9
-msgid "Most favorited"
+#: resources/views/partials/footer.blade.php:10
+msgid "Our open access and privacy policy"
+msgstr ""
+
+#: resources/views/partials/footer.blade.php:11
+msgid "Our commitment to diversity and inclusion"
+msgstr ""
+
+#: resources/views/partials/footer.blade.php:17
+#: resources/views/partials/content-single-lc_resource.blade.php:80
+msgid "Email"
 msgstr ""
 
 #: resources/views/partials/content-page-saved-searches.blade.php:3
@@ -168,13 +183,57 @@ msgstr ""
 msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
 msgstr ""
 
-#: resources/views/partials/save-search.blade.php:3
-msgid "Save my search"
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all favorites"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:2
-#: resources/views/index.blade.php:10 resources/views/404.blade.php:10
-msgid "Search resource name, publisher, or topic…"
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/views/partials/current-filters.blade.php:14
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr ""
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#, python-format
+msgid "\"%s\" from my favorites"
+msgstr ""
+
+#: resources/views/partials/content-page-favorites.blade.php:15
+msgid "You have no favorites."
+msgstr ""
+
+#: resources/views/partials/content-page-favorites.blade.php:16
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
+msgstr ""
+
+#: resources/views/partials/content-term-list.blade.php:27
+#, python-format
+msgid "No %s found."
+msgstr ""
+
+#: resources/views/partials/current-filters.blade.php:3
+msgid "%1$s of %2$s resources matched"
+msgstr ""
+
+#: resources/views/partials/current-filters.blade.php:5
+msgid "Your search term:"
+msgstr ""
+
+#: resources/views/partials/current-filters.blade.php:9
+msgid "Your filters:"
+msgstr ""
+
+#: resources/views/partials/current-filters.blade.php:14
+msgid "from current filters"
+msgstr ""
+
+#: resources/views/partials/current-filters.blade.php:20
+msgid "The resources shown match at least one of these filters."
+msgstr ""
+
+#: resources/views/partials/current-filters.blade.php:22
+msgid "Clear all"
 msgstr ""
 
 #: resources/views/partials/content-front-page.blade.php:6
@@ -209,136 +268,13 @@ msgstr ""
 msgid "My feed"
 msgstr ""
 
+#: resources/views/partials/content-front-page.blade.php:21
+#: resources/views/partials/sort.blade.php:8
+msgid "Most viewed"
+msgstr ""
+
 #: resources/views/partials/content-front-page.blade.php:34
 msgid "Recently published"
-msgstr ""
-
-#: resources/views/partials/entry-meta.blade.php:3
-msgid "By"
-msgstr ""
-
-#: resources/views/partials/search-form.blade.php:3
-msgid "Search for:"
-msgstr ""
-
-#: resources/views/partials/search-form.blade.php:8
-#: resources/views/partials/header.blade.php:6
-msgid "Search"
-msgstr ""
-
-#: resources/views/partials/current-filters.blade.php:3
-msgid "%1$s of %2$s resources matched"
-msgstr ""
-
-#: resources/views/partials/current-filters.blade.php:5
-msgid "Your search term:"
-msgstr ""
-
-#: resources/views/partials/current-filters.blade.php:9
-msgid "Your filters:"
-msgstr ""
-
-#: resources/views/partials/current-filters.blade.php:14
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr ""
-
-#: resources/views/partials/current-filters.blade.php:14
-msgid "from current filters"
-msgstr ""
-
-#: resources/views/partials/current-filters.blade.php:20
-msgid "The resources shown match at least one of these filters."
-msgstr ""
-
-#: resources/views/partials/current-filters.blade.php:22
-msgid "Clear all"
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:2
-msgid "Allow the Resource Library to track what resources you’ve viewed."
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:3
-msgid "How resource tracking changes what you see"
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:5
-msgid ""
-"By choosing ‘Allow’, the Resource Library will be able to track the "
-"resources you view, letting you:"
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:7
-msgid "see a list of your recently viewed resources on the home page,"
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:8
-msgid "see related resources, and"
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:9
-msgid "contribute to the most viewed articles seen on the home page."
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:11
-msgid ""
-"The Resource Library will only use this information for these features, and "
-"does not collect any personally identifiable information."
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:12
-msgid ""
-"By choosing ‘Don’t allow’, you will be able to continue to use the Resource "
-"Library fully, with the exception of the features mentioned previously."
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:17
-msgid "Allow"
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:21
-msgid "Don&rsquo;t allow"
-msgstr ""
-
-#: resources/views/partials/content-page-settings.blade.php:25
-#: resources/assets/scripts/routes/archive.js:127
-msgid "Save"
-msgstr ""
-
-#: resources/views/partials/language-switcher.blade.php:4
-msgid "Language"
-msgstr ""
-
-#: resources/views/partials/comments.blade.php:21
-msgid "&larr; Older comments"
-msgstr ""
-
-#: resources/views/partials/comments.blade.php:24
-msgid "Newer comments &rarr;"
-msgstr ""
-
-#: resources/views/partials/comments.blade.php:33
-msgid "Comments are closed."
-msgstr ""
-
-#: resources/views/partials/content-page-favorites.blade.php:2
-msgid "Remove all favorites"
-msgstr ""
-
-#: resources/views/partials/content-page-favorites.blade.php:8
-#, python-format
-msgid "\"%s\" from my favorites"
-msgstr ""
-
-#: resources/views/partials/content-page-favorites.blade.php:15
-msgid "You have no favorites."
-msgstr ""
-
-#: resources/views/partials/content-page-favorites.blade.php:16
-#, python-format
-msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
 msgstr ""
 
 #: resources/views/partials/filters.blade.php:2
@@ -392,30 +328,88 @@ msgstr ""
 msgid "Apply Filters"
 msgstr ""
 
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:2
+msgid "Allow the Resource Library to track what resources you’ve viewed."
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:3
+msgid "How resource tracking changes what you see"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:5
+msgid ""
+"By choosing ‘Allow’, the Resource Library will be able to track the "
+"resources you view, letting you:"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:7
+msgid "see a list of your recently viewed resources on the home page,"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:8
+msgid "see related resources, and"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:9
+msgid "contribute to the most viewed articles seen on the home page."
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:11
+msgid ""
+"The Resource Library will only use this information for these features, and "
+"does not collect any personally identifiable information."
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:12
+msgid ""
+"By choosing ‘Don’t allow’, you will be able to continue to use the Resource "
+"Library fully, with the exception of the features mentioned previously."
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:17
+msgid "Allow"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:21
+msgid "Don&rsquo;t allow"
+msgstr ""
+
+#: resources/views/partials/content-page-settings.blade.php:25
+#: resources/assets/scripts/routes/archive.js:127
+msgid "Save"
+msgstr ""
+
+#: resources/views/partials/sort.blade.php:4
+msgid "Sort by"
+msgstr ""
+
+#: resources/views/partials/sort.blade.php:6
+msgid "Date added"
+msgstr ""
+
+#: resources/views/partials/sort.blade.php:7
+msgid "Date published"
+msgstr ""
+
+#: resources/views/partials/sort.blade.php:9
+msgid "Most favorited"
+msgstr ""
+
+#: resources/views/partials/save-search.blade.php:3
+msgid "Save my search"
+msgstr ""
+
+#: resources/views/partials/header.blade.php:6
+#: resources/views/partials/search-form.blade.php:8
+msgid "Search"
+msgstr ""
+
 #: resources/views/partials/header.blade.php:28
 msgid "Explore"
-msgstr ""
-
-#: resources/views/partials/content-single.blade.php:10
-#: resources/views/partials/content-page.blade.php:2
-msgid "Pages:"
-msgstr ""
-
-#: resources/views/partials/footer.blade.php:7
-msgid "Platform Cooperativism Consortium"
-msgstr ""
-
-#: resources/views/partials/footer.blade.php:10
-msgid "Our open access and privacy policy"
-msgstr ""
-
-#: resources/views/partials/footer.blade.php:11
-msgid "Our commitment to diversity and inclusion"
-msgstr ""
-
-#: resources/views/partials/footer.blade.php:17
-#: resources/views/partials/content-single-lc_resource.blade.php:80
-msgid "Email"
 msgstr ""
 
 #: resources/views/partials/content-single-lc_resource.blade.php:5
@@ -521,9 +515,16 @@ msgstr ""
 msgid "Added %s"
 msgstr ""
 
-#: resources/views/partials/content-term-list.blade.php:27
-#, python-format
-msgid "No %s found."
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
 msgstr ""
 
 #: resources/views/partials/content-lc_resource.blade.php:17
@@ -539,18 +540,17 @@ msgstr ""
 msgid "Favorited"
 msgstr ""
 
-#: resources/views/index.blade.php:8 resources/views/search.blade.php:10
-msgid "Sorry, no results were found."
+#: resources/views/partials/language-switcher.blade.php:4
+msgid "Language"
 msgstr ""
 
-#: resources/views/404.blade.php:8
-msgid "Sorry, but the page you were trying to view does not exist."
+#: resources/views/partials/content-page.blade.php:2
+#: resources/views/partials/content-single.blade.php:10
+msgid "Pages:"
 msgstr ""
 
-#: resources/views/components/notification.blade.php:4
-#: resources/views/search.blade.php:8
-#: resources/assets/scripts/util/addNotification.js:32
-msgid "Close notification"
+#: resources/views/partials/search-form.blade.php:3
+msgid "Search for:"
 msgstr ""
 
 #: resources/views/search.blade.php:9
@@ -593,133 +593,6 @@ msgstr ""
 msgid "The resource could not be added to your favorites."
 msgstr ""
 
-#: resources/assets/scripts/routes/favorites.js:12
-msgid "Favorites not supported"
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:12
-msgid ""
-"Your favorites are stored in your browser's cookies. To add favorites, "
-"please enable cookies for this website."
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:18
-msgid "Remove favorites?"
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:19
-msgid "Are you sure you want to remove all resources from your favorites?"
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:20
-#: resources/assets/scripts/routes/favorites.js:50
-#: resources/assets/scripts/routes/saved-searches.js:74
-#: resources/assets/scripts/routes/saved-searches.js:93
-msgid "Yes, remove"
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:21
-#: resources/assets/scripts/routes/favorites.js:51
-#: resources/assets/scripts/routes/saved-searches.js:75
-#: resources/assets/scripts/routes/saved-searches.js:94
-msgid "No, don&rsquo;t remove"
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:35
-msgid "Favorites removed"
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:35
-msgid "The resources have been removed from your favorites."
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:38
-msgid "Favorites not removed"
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:38
-msgid "The resources could not be removed from your favorites."
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:48
-msgid "Remove resource?"
-msgstr ""
-
-#: resources/assets/scripts/routes/favorites.js:49
-msgid "Are you sure you want to remove this resource from your favorites?"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:15
-#: resources/assets/scripts/routes/archive.js:116
-msgid "Maximum number of saved searches reached"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:16
-msgid ""
-"You have reached the maximum number of saved searches (50). To save more, "
-"you must delete some saved searches."
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:35
-msgid "Tags"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:46
-msgid "Show details"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:50
-msgid "Search term"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:72
-msgid "Confirm remove saved searches"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:73
-msgid "Are you sure you want to remove all of your saved searches?"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:81
-msgid "Saved searches removed"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:81
-msgid "Your saved searches have been removed."
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:83
-msgid "Saved searches not removed"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:83
-msgid "Your saved searches could not be removed."
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:91
-msgid "Confirm remove saved search"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:92
-msgid "Are you sure you want to remove this saved search?"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:107
-msgid "Saved search removed"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:107
-msgid "Your saved search has been removed."
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:109
-msgid "Saved search not removed"
-msgstr ""
-
-#: resources/assets/scripts/routes/saved-searches.js:109
-msgid "Your saved search could not be removed"
-msgstr ""
-
 #: resources/assets/scripts/routes/archive.js:18
 #, python-format
 msgid "%s filter applied. Resource list updated."
@@ -737,6 +610,11 @@ msgstr[1] ""
 #: resources/assets/scripts/routes/archive.js:40
 #, python-format
 msgid "All %s have been deselected"
+msgstr ""
+
+#: resources/assets/scripts/routes/archive.js:116
+#: resources/assets/scripts/routes/saved-searches.js:15
+msgid "Maximum number of saved searches reached"
 msgstr ""
 
 #: resources/assets/scripts/routes/archive.js:117
@@ -808,4 +686,126 @@ msgstr ""
 
 #: resources/assets/scripts/routes/archive.js:186
 msgid "Your search could not be saved."
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:16
+msgid ""
+"You have reached the maximum number of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:35
+msgid "Tags"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:46
+msgid "Show details"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:50
+msgid "Search term"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:72
+msgid "Confirm remove saved searches"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:73
+msgid "Are you sure you want to remove all of your saved searches?"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:74
+#: resources/assets/scripts/routes/saved-searches.js:93
+#: resources/assets/scripts/routes/favorites.js:20
+#: resources/assets/scripts/routes/favorites.js:50
+msgid "Yes, remove"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:75
+#: resources/assets/scripts/routes/saved-searches.js:94
+#: resources/assets/scripts/routes/favorites.js:21
+#: resources/assets/scripts/routes/favorites.js:51
+msgid "No, don&rsquo;t remove"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Saved searches removed"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Your saved searches have been removed."
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Saved searches not removed"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Your saved searches could not be removed."
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:91
+msgid "Confirm remove saved search"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:92
+msgid "Are you sure you want to remove this saved search?"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Saved search removed"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Your saved search has been removed."
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Saved search not removed"
+msgstr ""
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Your saved search could not be removed"
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid "Favorites not supported"
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid ""
+"Your favorites are stored in your browser's cookies. To add favorites, "
+"please enable cookies for this website."
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:18
+msgid "Remove favorites?"
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:19
+msgid "Are you sure you want to remove all resources from your favorites?"
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "Favorites removed"
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "The resources have been removed from your favorites."
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "Favorites not removed"
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "The resources could not be removed from your favorites."
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:48
+msgid "Remove resource?"
+msgstr ""
+
+#: resources/assets/scripts/routes/favorites.js:49
+msgid "Are you sure you want to remove this resource from your favorites?"
 msgstr ""
