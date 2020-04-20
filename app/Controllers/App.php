@@ -491,4 +491,41 @@ class App extends Controller
         }
         return get_permalink($page->ID);
     }
+
+    public static function isSameDomain($string1, $string2)
+    {
+      $url1 = parse_url($string1);
+      $url2 = parse_url($string2);
+      if (isset($url1['host']) && isset($url2['host'])) {
+        if ($url1['host'] == $url2['host']) {
+           return true;
+        }
+      }
+      return false;
+    }
+
+    /**
+     * Create an array of information used for generating the Global Navigation.
+     *
+     * @return array list of navigation items, where each item has an URL,
+     * anchor properties, and anchor label.
+     */
+    public static function getGlobalNavigationLinks()
+    {
+      $links = array();
+      if (has_nav_menu('global_navigation')) {
+        $locations = get_nav_menu_locations();
+        $menu = wp_get_nav_menu_object( $locations[ 'global_navigation' ] );
+        $menuitems = wp_get_nav_menu_items( $menu->term_id );
+        foreach ($menuitems as $menuitem) {
+          if (App::isSameDomain ($menuitem->url, get_home_url())) {
+            $props = 'rel="home" aria-current="true"';
+          } else {
+            $props = '';
+          }
+          $links[] = array ('url' => $menuitem->url, 'properties' => $props, 'label' => $menuitem->title);
+        }
+      }
+      return $links;
+    }
 }
