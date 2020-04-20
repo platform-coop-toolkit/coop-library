@@ -1,12 +1,13 @@
 <header role="banner">
   <div class="container">
-    <a class="link link--brand"@if(is_front_page()) aria-current="page"@endif href="{{ ($current_language !== 'en') ? home_url("/$current_language/") : home_url('/') }}">@svg('pcc', 'icon--pcc', ['focusable' => 'false', 'aria-hidden' => 'true'])<span class="brand__title screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
+    @include('partials.global-navigation')
+    <a class="link link--brand"@if(is_front_page()) aria-current="page"@endif href="{{ ($current_language !== 'en') ? home_url("/$current_language/") : home_url('/') }}">@svg('resources', 'icon--resources', ['focusable' => 'false', 'aria-hidden' => 'true'])<span class="brand__title screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
     <div class="inner">
       @if(!is_front_page())
         <button class="button button--borderless search-toggle" aria-expanded="false"><span class="screen-reader-text">{{ __('Search', 'coop-library') }} </span>@svg('search', 'icon--search', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
         @include('partials.search-form')
       @endif
-      <nav aria-labelledby="menu-primary-label">
+      <nav class="nav" aria-labelledby="menu-primary-label">
         <button class="button button--borderless menu-toggle" aria-expanded="false">
           @svg('menu', 'icon--open', ['focusable' => 'false', 'aria-hidden' => 'true'])
           @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])

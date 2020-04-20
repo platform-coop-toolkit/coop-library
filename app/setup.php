@@ -56,6 +56,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
+        'global_navigation' => __('Global Navigation', 'coop-library'),
         'primary_navigation' => __('Primary Navigation', 'coop-library')
     ]);
 
