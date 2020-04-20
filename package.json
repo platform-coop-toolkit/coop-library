@@ -35,7 +35,7 @@
     "@wordpress/babel-preset-default": "^4.12.1",
     "@wordpress/browserslist-config": "^2.6.0",
     "@wordpress/dependency-extraction-webpack-plugin": "^2.4.0",
-    "@wordpress/i18n": "^3.10.0",
+    "@wordpress/i18n": "^3.11.0",
     "babel-eslint": "^10.1.0",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.0.1",
