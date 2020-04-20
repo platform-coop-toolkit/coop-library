@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-04-20 17:04+0000\n"
+"POT-Creation-Date: 2020-04-20 21:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,14 +56,18 @@ msgid "Continued"
 msgstr ""
 
 #: app/setup.php:59
+msgid "Global Navigation"
+msgstr ""
+
+#: app/setup.php:60
 msgid "Primary Navigation"
 msgstr ""
 
-#: app/setup.php:125
+#: app/setup.php:126
 msgid "Primary"
 msgstr ""
 
-#: app/setup.php:129
+#: app/setup.php:130
 msgid "Footer"
 msgstr ""
 
@@ -403,12 +407,12 @@ msgstr ""
 msgid "Save my search"
 msgstr ""
 
-#: resources/views/partials/header.blade.php:6
+#: resources/views/partials/header.blade.php:7
 #: resources/views/partials/search-form.blade.php:8
 msgid "Search"
 msgstr ""
 
-#: resources/views/partials/header.blade.php:28
+#: resources/views/partials/header.blade.php:29
 msgid "Explore"
 msgstr ""
 
