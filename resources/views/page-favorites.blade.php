@@ -4,7 +4,7 @@
 @extends('layouts.app')
 
 @section('content')
-  @php(define('DONOTCACHEPAGE', true))
+  @php define('DONOTCACHEPAGE', true) @endphp
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
     @include('partials.content-page-favorites')
