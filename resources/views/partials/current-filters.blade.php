@@ -11,7 +11,7 @@
       @foreach($queried_resource_terms as $taxonomy => $terms)
         @foreach($terms as $term => $name)
         <li class="tag">
-          <button class="button button--tag-button" data-checkbox="{{ $taxonomy }}-{{ $term }}"><span class="screen-reader-text">{{ __('Remove', 'coop-library') }} </span>{!! $name !!}<span class="screen-reader-text"> {{ __('from current filters', 'coop-library') }}</span> @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
+          <button class="button button--tag-button" data-checkbox="{{ $taxonomy }}-{{ $term }}">{!! sprintf(__('<span class="screen-reader-text">Remove </span>%s<span class="screen-reader-text"> from current filters</span>', 'coop-library'), $name) !!} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
         </li>
         @endforeach
       @endforeach
