@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-05-19 14:54+0000\n"
+"POT-Creation-Date: 2020-06-05 20:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -493,13 +493,10 @@ msgid "Your filters:"
 msgstr ""
 
 #: resources/views/partials/current-filters.blade.php:14
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr ""
-
-#: resources/views/partials/current-filters.blade.php:14
-msgid "from current filters"
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
 msgstr ""
 
 #: resources/views/partials/current-filters.blade.php:20
@@ -512,6 +509,11 @@ msgstr ""
 
 #: resources/views/partials/content-page-favorites.blade.php:2
 msgid "Remove all favorites"
+msgstr ""
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
 msgstr ""
 
 #: resources/views/partials/content-page-favorites.blade.php:8
