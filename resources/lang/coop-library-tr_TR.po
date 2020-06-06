@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-05-19 14:54+0000\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
 "PO-Revision-Date: 2020-04-01 04:11+0000\n"
 "Last-Translator: Arel Lodos International Concultancy Services <arel.lodos.34@gmail.com>, 2020\n"
 "Language-Team: Turkish (Turkey) (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/tr_TR/)\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: resources/functions.php:17
 msgid "Resource Library &rsaquo; Error"
-msgstr "Resource Library &rsaquo; Hata"
+msgstr "Kaynak Kitaplığı &rsaquo; Hata"
 
 #: resources/functions.php:28
 msgid "You must be using PHP 7.1 or greater."
@@ -53,7 +53,7 @@ msgstr "Autoloder bulunamadı."
 #: resources/functions.php:66
 #, php-format
 msgid "Error locating <code>%s</code> for inclusion."
-msgstr "Bu inclusion için konumlandırma <code>%s</code> hatası "
+msgstr "Bu kapsam için bulma <code>%s</code> hatası "
 
 #: app/Controllers/App.php:22
 msgid "Settings saved"
@@ -85,7 +85,7 @@ msgstr "Sonraki"
 
 #: app/Controllers/App.php:373
 msgid "Resources navigation"
-msgstr "Kaynaklarda navigasyon"
+msgstr "Kaynaklar navigasyonu"
 
 #: app/Controllers/App.php:374
 msgid "resources"
@@ -105,7 +105,7 @@ msgstr "Son Gönderiler"
 
 #: app/Controllers/App.php:460
 msgid "Search results"
-msgstr "Araştırma Sonuçları"
+msgstr "Arama Sonuçları"
 
 #: app/Controllers/App.php:464
 msgid "Browse all"
@@ -147,7 +147,7 @@ msgstr "Bildirimleri kapat"
 
 #: resources/views/search.blade.php:9
 msgid "No results for search"
-msgstr "Bu araştırma için bir sonuç yok"
+msgstr "Bu arama için bir sonuç yok"
 
 #: resources/views/search.blade.php:10 resources/views/index.blade.php:8
 msgid "Sorry, no results were found."
@@ -155,21 +155,21 @@ msgstr "Üzgünüz, sonuç bulunamadı."
 
 #: resources/views/404.blade.php:8
 msgid "Sorry, but the page you were trying to view does not exist."
-msgstr "Üzgünüz, görmeye çalıştığınız sayfa mevcut değil. "
+msgstr "Üzgünüz, görüntülemeye çalıştığınız sayfa mevcut değil. "
 
 #: resources/views/404.blade.php:10 resources/views/index.blade.php:10
 #: resources/views/partials/content-front-page.blade.php:2
 msgid "Search resource name, publisher, or topic…"
-msgstr "Kaynak, yayıncı veya konu ismi araştır"
+msgstr "Kaynak, yayıncı veya konu ismi ara"
 
 #: resources/views/partials/search-form.blade.php:3
 msgid "Search for:"
-msgstr ": için araştır"
+msgstr ": ara"
 
 #: resources/views/partials/search-form.blade.php:8
 #: resources/views/partials/header.blade.php:7
 msgid "Search"
-msgstr "Araştır"
+msgstr "Ara"
 
 #: resources/views/partials/entry-meta.blade.php:3
 msgid "By"
@@ -272,7 +272,7 @@ msgstr "Diller"
 
 #: resources/views/partials/filters.blade.php:68
 msgid "languages"
-msgstr "Diller"
+msgstr "diller"
 
 #: resources/views/partials/filters.blade.php:82
 msgid "Apply Filters"
@@ -281,19 +281,20 @@ msgstr "Filtre uygula"
 #: resources/views/partials/content-page-settings.blade.php:2
 msgid "Allow the Resource Library to track what resources you’ve viewed."
 msgstr ""
-"Kaynak Kütüphanesinin hangi kaynakları görüntülediği izlemesine izin ver. "
+"Kaynak Kütüphanesinin hangi kaynakları görüntülediğizi izlemesine izin "
+"verin. "
 
 #: resources/views/partials/content-page-settings.blade.php:3
 msgid "How resource tracking changes what you see"
-msgstr "Kaynak izleme gördüğünü nasıl değiştirir"
+msgstr "Kaynak izlemesi gördüğünüzü nasıl değiştirir"
 
 #: resources/views/partials/content-page-settings.blade.php:5
 msgid ""
 "By choosing ‘Allow’, the Resource Library will be able to track the "
 "resources you view, letting you:"
 msgstr ""
-"\"İzin Ver\" i seçtiğinde, Kaynak Kütüphanesi, görüntülediğin kaynakları "
-"izleyerek şunları yapmana olanak tanır:"
+"\"İzin Ver\" i seçtiğinizde, Kaynak Kütüphanesi, görüntülediğiniz kaynakları"
+" izleyerek şunları yapmanıza olanak tanır:"
 
 #: resources/views/partials/content-page-settings.blade.php:7
 msgid "see a list of your recently viewed resources on the home page,"
@@ -320,8 +321,8 @@ msgid ""
 "By choosing ‘Don’t allow’, you will be able to continue to use the Resource "
 "Library fully, with the exception of the features mentioned previously."
 msgstr ""
-"\"İzin verme\"yi seçtiğinde, daha önce belirtilen özellikler hariç olmak "
-"üzere, Kaynak Kütüphanesini tam olarak kullanmaya devam edebilirsin."
+"\"İzin verme\"yi seçtiğinizde, daha önce belirtilen özellikler hariç olmak "
+"üzere, Kaynak Kütüphanesini tam olarak kullanmaya devam edebilirsiniz."
 
 #: resources/views/partials/content-page-settings.blade.php:17
 msgid "Allow"
@@ -329,7 +330,7 @@ msgstr "İzin ver"
 
 #: resources/views/partials/content-page-settings.blade.php:21
 msgid "Don&rsquo;t allow"
-msgstr "İzin verme"
+msgstr "İzin verme &rsquo;"
 
 #: resources/views/partials/content-page-settings.blade.php:25
 #: resources/assets/scripts/routes/archive.js:127
@@ -432,17 +433,17 @@ msgstr "Perma.cc üzerinden görüntüle "
 
 #: resources/views/partials/content-single-lc_resource.blade.php:104
 msgid "View on the Internet Archive (%1$d of %2$d)"
-msgstr "(%2$d'nin %1$d'inden) İnternet Arşivinden görüntüle"
+msgstr "(%2$d'nin %1$d'inden) İnternet Arşivini görüntüle"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:106
 msgid "View on the Internet Archive"
-msgstr " İnternet Arşivinden görüntüle"
+msgstr " İnternet Arşivini görüntüle"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:115
 #: resources/views/partials/content-lc_resource.blade.php:52
 #, python-format
 msgid "Added %s"
-msgstr "%seklendi"
+msgstr "%sEklendi"
 
 #: resources/views/partials/save-search.blade.php:3
 msgid "Save my search"
@@ -450,7 +451,7 @@ msgstr "Aramamı kaydet"
 
 #: resources/views/partials/content-lc_resource.blade.php:17
 msgid "publisher"
-msgstr "Yayımcı"
+msgstr "yayıncı"
 
 #: resources/views/partials/content-lc_resource.blade.php:47
 #, python-format
@@ -463,11 +464,11 @@ msgstr "Favori yapıldı"
 
 #: resources/views/partials/content-front-page.blade.php:6
 msgid "Browse by…"
-msgstr "... tarafından göz atıldı"
+msgstr "... tarafından gözden geçirildi"
 
 #: resources/views/partials/content-front-page.blade.php:17
 msgid "Browse all resources"
-msgstr "Tüm kaynaklara göz at"
+msgstr "Tüm kaynakları gözden geçir"
 
 #: resources/views/partials/content-front-page.blade.php:20
 msgid "My feed"
@@ -500,21 +501,20 @@ msgstr "%2$s'nin %1$skaynak eşleşti"
 
 #: resources/views/partials/current-filters.blade.php:5
 msgid "Your search term:"
-msgstr "Arama terimin: "
+msgstr "Arama teriminiz: "
 
 #: resources/views/partials/current-filters.blade.php:9
 msgid "Your filters:"
-msgstr "Filtrelerin:"
+msgstr "Filtreleriniz:"
 
 #: resources/views/partials/current-filters.blade.php:14
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr "Kaldır"
-
-#: resources/views/partials/current-filters.blade.php:14
-msgid "from current filters"
-msgstr "mevcut filtrelerden"
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"Mevcut filtrelerden <span class=\"screen-reader-"
+"text\"></span>%s</span>kaldır"
 
 #: resources/views/partials/current-filters.blade.php:20
 msgid "The resources shown match at least one of these filters."
@@ -530,6 +530,11 @@ msgid "Remove all favorites"
 msgstr "Tüm favorileri kaldır"
 
 #: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "Kaldır"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
 #, python-format
 msgid "\"%s\" from my favorites"
 msgstr "Favorilerimden \"%s\""
@@ -542,7 +547,8 @@ msgstr "Hiç favoriniz yok"
 #, python-format
 msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
 msgstr ""
-"Kaynakları favori yapmak için araştırın <a href=\"%s\"> veya göz atın </a>"
+"Kaynakları favori yapmak için araştırın <a href=\"%s\"> veya gözden geçirin "
+"</a>"
 
 #: resources/views/partials/content-term-list.blade.php:27
 #, python-format
@@ -586,8 +592,8 @@ msgid ""
 "Your favorites are stored in your browser's cookies. To add favorites, "
 "please enable cookies for this website."
 msgstr ""
-"Favorileriniz tarayıcınızın çerezlerinde saklanır.  Favori eklemek için, "
-"lütfen bu web sitesi için çerezleri etkinleştirin."
+"Favorileriniz, internet tarayıcınızın çerezlerinde saklanır.  Favori eklemek"
+" için, lütfen bu web sitesi için çerezleri etkinleştirin."
 
 #: resources/assets/scripts/routes/favorites.js:18
 msgid "Remove favorites?"
@@ -610,7 +616,7 @@ msgstr "Evet, kaldır"
 #: resources/assets/scripts/routes/saved-searches.js:75
 #: resources/assets/scripts/routes/saved-searches.js:94
 msgid "No, don&rsquo;t remove"
-msgstr "Hayır, kaldırma"
+msgstr "Hayır, kaldırma &rsquo;"
 
 #: resources/assets/scripts/routes/favorites.js:35
 msgid "Favorites removed"
@@ -678,7 +684,7 @@ msgstr "Tüm %s seçimleri kaldırıldı."
 #: resources/assets/scripts/routes/archive.js:116
 #: resources/assets/scripts/routes/saved-searches.js:15
 msgid "Maximum number of saved searches reached"
-msgstr "Kaydedilmiş maksimum arama sayısına ulaşıldı. "
+msgstr "Kaydedilmiş aramaların maksimum sayısına ulaşıldı. "
 
 #: resources/assets/scripts/routes/archive.js:117
 #, python-format
@@ -686,8 +692,9 @@ msgid ""
 "You have reached the maximum amount of saved searches (50). To save more, "
 "you must <a href=\"%s\">delete some saved searches</a>."
 msgstr ""
-"Kaydedilmiş maksimum arama sayısına ulaştınız (50).  Daha fazla kayıt etmek "
-"için, kaydedilmiş bazı aramaları<a href=\"%s\"> silmeniz gerekmektedir</a>."
+"Kaydedilmiş aramaların maksimum sayısına ulaştınız (50).  Daha fazla kayıt "
+"etmek için, kaydedilmiş bazı aramaları<a href=\"%s\"> silmeniz "
+"gerekmektedir</a>."
 
 #: resources/assets/scripts/routes/archive.js:123
 msgid "Save search"
@@ -706,7 +713,7 @@ msgstr "Kaydedilmiş aramanın ismi: "
 
 #: resources/assets/scripts/routes/archive.js:128
 msgid "Don&rsquo;t save"
-msgstr "Kaydetme"
+msgstr "Kaydetme &rsquo;"
 
 #: resources/assets/scripts/routes/archive.js:136
 #: resources/assets/scripts/routes/archive.js:186
@@ -740,7 +747,7 @@ msgid ""
 msgstr ""
 "Bu aramayı başarılı bir şekilde kaydettiniz. Daha fazla "
 "<strong>%1$d</strong> kaydedebilirsiniz. Bu aramayı, <a href=\"%2$s\"> "
-"kaydedilmiş aramalar sayfanızdan </a> görebilirsiniz.  "
+"kayıtlı aramalar sayfanızdan </a> görebilirsiniz.  "
 
 #: resources/assets/scripts/routes/archive.js:168
 msgid ""
@@ -749,7 +756,7 @@ msgid ""
 "href=\"%2$s\">saved searches page</a>."
 msgstr ""
 "Bu aramayı başarılı bir şekilde kaydettiniz. Sadece %1$d daha fazla "
-"kaydedebilirsiniz. Bu aramayı, kaydedilmiş aramalar sayfanızdan <a "
+"kaydedebilirsiniz. Bu aramayı, kayıtlı aramalar sayfanızdan <a "
 "href=\"%2$s\">görebilir ve yönetebilirsiniz</a>. "
 
 #: resources/assets/scripts/routes/archive.js:178
@@ -758,9 +765,10 @@ msgid ""
 "maximum number of saved searches (50).</strong> You can see this search and "
 "manage saved searches on your <a href=\"%2$s\">saved searches page</a>."
 msgstr ""
-"Bu aramayı başarılı bir şekilde kaydettiniz. <strong>Kaydedilmiş maksimum "
-"arama sayısına ulaştınız (50). Bu aramayı, kaydedilmiş aramalar sayfanızdan "
-"<a href=\"%2$s\"> görebilir ve kaydedilmiş aramaları yönetebilirsiniz</a> ."
+"Bu aramayı başarılı bir şekilde kaydettiniz. <strong>kayıtlı aramaların "
+"maksimum sayısına ulaştınız (50). Bu aramayı, kaydedilmiş aramalar "
+"sayfanızdan <a href=\"%2$s\"> görebilir ve kaydedilmiş aramaları "
+"yönetebilirsiniz</a>."
 
 #: resources/assets/scripts/routes/archive.js:186
 msgid "Your search could not be saved."
@@ -771,8 +779,8 @@ msgid ""
 "You have reached the maximum number of saved searches (50). To save more, "
 "you must delete some saved searches."
 msgstr ""
-"Kaydedilmiş maksimum arama sayısına ulaştınız (50). Daha fazla kayıt etmek "
-"için, kaydedilmiş bazı aramaları silmeniz gerekmektedir."
+"Kayıtlı aramaların maksimum sayısına ulaştınız (50).  Daha fazla kayıt etmek"
+" için, kaydedilmiş bazı aramaları silmeniz gerekmektedir."
 
 #: resources/assets/scripts/routes/saved-searches.js:35
 msgid "Tags"
@@ -816,7 +824,7 @@ msgstr "Kayıtlı aramayı kaldırmayı onayla"
 
 #: resources/assets/scripts/routes/saved-searches.js:92
 msgid "Are you sure you want to remove this saved search?"
-msgstr "Bu kaydedilmiş aramayı kaldırmak istediğinizden emin misiniz?"
+msgstr "Bu kayıtlı aramayı kaldırmak istediğinizden emin misiniz?"
 
 #: resources/assets/scripts/routes/saved-searches.js:107
 msgid "Saved search removed"
