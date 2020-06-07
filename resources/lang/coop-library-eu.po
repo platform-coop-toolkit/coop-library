@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-05-19 14:54+0000\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
 "PO-Revision-Date: 2020-04-01 04:11+0000\n"
 "Last-Translator: Miren Soraluze <mirsorr@gmail.com>, 2020\n"
 "Language-Team: Basque (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/eu/)\n"
@@ -460,7 +460,7 @@ msgstr "Gogokoa"
 
 #: resources/views/partials/content-front-page.blade.php:6
 msgid "Browse by…"
-msgstr "....-rek bilatuta"
+msgstr ".....-k nabigatuta"
 
 #: resources/views/partials/content-front-page.blade.php:17
 msgid "Browse all resources"
@@ -504,14 +504,13 @@ msgid "Your filters:"
 msgstr "Iragazkiak"
 
 #: resources/views/partials/current-filters.blade.php:14
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr "Kendu"
-
-#: resources/views/partials/current-filters.blade.php:14
-msgid "from current filters"
-msgstr "Egungo iragazkiak"
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"<span class=\"screen-reader-text\">Kendu</span>%s<span class=\"screen-"
+"reader-text\"> egungo iragazkietatik</span>"
 
 #: resources/views/partials/current-filters.blade.php:20
 msgid "The resources shown match at least one of these filters."
@@ -525,6 +524,11 @@ msgstr "Garbitu dena"
 #: resources/views/partials/content-page-favorites.blade.php:2
 msgid "Remove all favorites"
 msgstr "Ezabatu \"gogoko\" guztiak"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "Kendu"
 
 #: resources/views/partials/content-page-favorites.blade.php:8
 #, python-format
@@ -639,7 +643,7 @@ msgstr "Gogokoa ezabatuta"
 #: resources/assets/scripts/routes/favorites.js:69
 #: resources/assets/scripts/routes/single.js:40
 msgid "The resource has been removed from your favorites."
-msgstr "Baliabieak gogokoetatik kenduta"
+msgstr "Baliabideak gogokoetatik ezabatuta"
 
 #: resources/assets/scripts/routes/favorites.js:72
 #: resources/assets/scripts/routes/single.js:47
@@ -744,8 +748,8 @@ msgid ""
 "href=\"%2$s\">saved searches page</a>."
 msgstr ""
 "Arrakastaz salbatu duzu bilaketa hau. <strong>%1$d gehiago gorde "
-"dezakezu.</strong> Bilaketa hori ikus dezakezu eta zure bilaketa-orrian <a "
-"href=\"%2$s\">gordetako bilaketak administratu.</a>"
+"dezakezu.</strong> Bilaketa hori ikus dezakezu eta zure <a href=\"%2$s"
+"\">bilaketa-orrian gordetako bilaketak </a>administratu."
 
 #: resources/assets/scripts/routes/archive.js:178
 msgid ""
