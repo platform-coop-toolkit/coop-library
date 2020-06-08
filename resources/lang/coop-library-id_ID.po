@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-05-19 14:54+0000\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
 "PO-Revision-Date: 2020-04-01 04:11+0000\n"
 "Last-Translator: Trias Noverdi <triasnoverdi@beyondbahasa.com>, 2020\n"
 "Language-Team: Indonesian (Indonesia) (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/id_ID/)\n"
@@ -513,14 +513,13 @@ msgid "Your filters:"
 msgstr "Filter Anda:"
 
 #: resources/views/partials/current-filters.blade.php:14
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr "Hapus"
-
-#: resources/views/partials/current-filters.blade.php:14
-msgid "from current filters"
-msgstr "dari filter saat ini"
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"<span class=\"screen-reader-text\">Hapus </span>%s<span class=\"screen-"
+"reader-text\"> dari filter saat ini</span>"
 
 #: resources/views/partials/current-filters.blade.php:20
 msgid "The resources shown match at least one of these filters."
@@ -535,6 +534,11 @@ msgstr "Hapus semua"
 #: resources/views/partials/content-page-favorites.blade.php:2
 msgid "Remove all favorites"
 msgstr "Hapus semua favorit"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "Hapus"
 
 #: resources/views/partials/content-page-favorites.blade.php:8
 #, python-format
