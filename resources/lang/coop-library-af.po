@@ -1,0 +1,854 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Co-op Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Samuel Murray <leuce.com@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Co-op Library\n"
+"Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
+"PO-Revision-Date: 2020-04-01 04:11+0000\n"
+"Last-Translator: Samuel Murray <leuce.com@gmail.com>, 2020\n"
+"Language-Team: Afrikaans (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/af/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: af\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: resources/functions.php:17
+msgid "Resource Library &rsaquo; Error"
+msgstr "Hulpbronbiblioteek › Fout"
+
+#: resources/functions.php:28
+msgid "You must be using PHP 7.1 or greater."
+msgstr "Jy moet PHP 7.1 of jonger gebruik."
+
+#: resources/functions.php:29
+msgid "Invalid PHP version"
+msgstr "Ongeldige PHP-weergawe"
+
+#: resources/functions.php:38
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "Jy moet WordPress 4.7.0 of jonger gebruik."
+
+#: resources/functions.php:39
+msgid "Invalid WordPress version"
+msgstr "Ongeldige WordPress-weergawe"
+
+#: resources/functions.php:49
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr "Jy moet <code>composer install</code> laat loop in die Sage-subgids."
+
+#: resources/functions.php:50
+msgid "Autoloader not found."
+msgstr "Outolaaier nie gevind nie."
+
+#: resources/functions.php:66
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "Kon nie <code>%s</code> vir insluiting vind nie."
+
+#: app/Controllers/App.php:22
+msgid "Settings saved"
+msgstr "Instellings gestoor"
+
+#: app/Controllers/App.php:24
+msgid "Your settings have been saved."
+msgstr "Jou instellings is gestoor."
+
+#: app/Controllers/App.php:197
+msgid "&laquo; Previous"
+msgstr "« Vorige"
+
+#: app/Controllers/App.php:198
+msgid "Next &raquo;"
+msgstr "Volgende »"
+
+#: app/Controllers/App.php:305
+msgid "&hellip;"
+msgstr "…"
+
+#: app/Controllers/App.php:367
+msgid "previous"
+msgstr "vorige"
+
+#: app/Controllers/App.php:371
+msgid "next"
+msgstr "volgende"
+
+#: app/Controllers/App.php:373
+msgid "Resources navigation"
+msgstr "Hulpbronne-navigasie"
+
+#: app/Controllers/App.php:374
+msgid "resources"
+msgstr "hulpbronne"
+
+#: app/Controllers/App.php:448
+msgid ""
+"<span class=\"pc-ff--sans pc-fw--normal\">Platform Co-op</span><br "
+"/>Resource Library"
+msgstr ""
+"<span class=\"pc-ff--sans pc-fw--normal\">Platformkoöp-</span><br "
+"/>hulpbronbiblioteek"
+
+#: app/Controllers/App.php:456
+msgid "Latest Posts"
+msgstr "Jongste plasings"
+
+#: app/Controllers/App.php:460
+msgid "Search results"
+msgstr "Soekresultate"
+
+#: app/Controllers/App.php:464
+msgid "Browse all"
+msgstr "Blaai alle"
+
+#: app/Controllers/App.php:468
+msgid "Not Found"
+msgstr "Nie gevind nie"
+
+#: app/Controllers/App.php:479
+msgid "Home"
+msgstr "Tuis"
+
+#: app/setup.php:59
+msgid "Global Navigation"
+msgstr "Globale navigasie"
+
+#: app/setup.php:60
+msgid "Primary Navigation"
+msgstr "Primêre navigasie"
+
+#: app/setup.php:126
+msgid "Primary"
+msgstr "Primêr"
+
+#: app/setup.php:130
+msgid "Footer"
+msgstr "Voetstuk"
+
+#: app/filters.php:32
+msgid "Continued"
+msgstr "Vervolg"
+
+#: resources/views/components/notification.blade.php:4
+#: resources/views/search.blade.php:8
+#: resources/assets/scripts/util/addNotification.js:32
+msgid "Close notification"
+msgstr "Maak kennisgewing toe"
+
+#: resources/views/search.blade.php:9
+msgid "No results for search"
+msgstr "Geen resultate vir soektog nie"
+
+#: resources/views/search.blade.php:10 resources/views/index.blade.php:8
+msgid "Sorry, no results were found."
+msgstr "Jammer, geen resultate gevind nie."
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Jammer, die bladsy wat jy probeer bekyk, bestaan nie."
+
+#: resources/views/404.blade.php:10 resources/views/index.blade.php:10
+#: resources/views/partials/content-front-page.blade.php:2
+msgid "Search resource name, publisher, or topic…"
+msgstr "Soek volgens hulpbron-naam, uitgewer of onderwerp..."
+
+#: resources/views/partials/search-form.blade.php:3
+msgid "Search for:"
+msgstr "Soek vir:"
+
+#: resources/views/partials/search-form.blade.php:8
+#: resources/views/partials/header.blade.php:7
+msgid "Search"
+msgstr "Soek"
+
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr "Deur"
+
+#: resources/views/partials/language-switcher.blade.php:4
+msgid "Language"
+msgstr "Taal"
+
+#: resources/views/partials/content-single.blade.php:10
+#: resources/views/partials/content-page.blade.php:2
+msgid "Pages:"
+msgstr "Bladsye:"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all"
+msgstr "Verwyder alle"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+msgid "Remove all saved searches"
+msgstr "Verwyder alle gestoorde soektogte"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:8
+msgid "You have no saved searches."
+msgstr "Jy het geen gestoorde soektogte nie."
+
+#: resources/views/partials/content-page-saved-searches.blade.php:9
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
+msgstr ""
+"Deursoek hulpbronne of <a href=\"%s\">blaai</a> daardeur om jou soektog te "
+"stoor."
+
+#: resources/views/partials/header.blade.php:29
+msgid "Explore"
+msgstr "Verken"
+
+#: resources/views/partials/filters.blade.php:2
+msgid "Filter"
+msgstr "Filter"
+
+#: resources/views/partials/filters.blade.php:10
+msgid "Close"
+msgstr "Maak toe"
+
+#: resources/views/partials/filters.blade.php:11
+msgid "Filters"
+msgstr "Filters"
+
+#: resources/views/partials/filters.blade.php:14
+#: resources/views/partials/content-front-page.blade.php:10
+msgid "Goals"
+msgstr "Doelwitte"
+
+#: resources/views/partials/filters.blade.php:15
+#: resources/views/partials/content-front-page.blade.php:9
+msgid "Topics"
+msgstr "Onderwerpe"
+
+#: resources/views/partials/filters.blade.php:16
+msgid "Co-op Types"
+msgstr "Koöp-tipes"
+
+#: resources/views/partials/filters.blade.php:17
+#: resources/views/partials/content-front-page.blade.php:11
+msgid "Sectors"
+msgstr "Sektore"
+
+#: resources/views/partials/filters.blade.php:18
+msgid "Locations"
+msgstr "Liggings"
+
+#: resources/views/partials/filters.blade.php:19
+#: resources/views/partials/content-front-page.blade.php:12
+msgid "Formats"
+msgstr "Formate"
+
+#: resources/views/partials/filters.blade.php:26
+#: resources/views/partials/filters.blade.php:68
+msgid "Deselect all"
+msgstr "Ontkies alles"
+
+#: resources/views/partials/filters.blade.php:26
+#, python-format
+msgid "Deselect all %s"
+msgstr "Ontkies alle %s"
+
+#: resources/views/partials/filters.blade.php:40
+#, python-format
+msgid "and %d subtopics"
+msgstr "en %d subonderwerpe"
+
+#: resources/views/partials/filters.blade.php:41
+msgid "show %1$d subtopics for \"%2$s\""
+msgstr "wys %1$d subonderwerpe vir “%2$s”"
+
+#: resources/views/partials/filters.blade.php:65
+msgid "Languages"
+msgstr "Tale"
+
+#: resources/views/partials/filters.blade.php:68
+msgid "languages"
+msgstr "tale"
+
+#: resources/views/partials/filters.blade.php:82
+msgid "Apply Filters"
+msgstr "Pas filters toe"
+
+#: resources/views/partials/content-page-settings.blade.php:2
+msgid "Allow the Resource Library to track what resources you’ve viewed."
+msgstr "Laat toe dat hulpbronbiblioteek volg watter hulpbronne jy bekyk het."
+
+#: resources/views/partials/content-page-settings.blade.php:3
+msgid "How resource tracking changes what you see"
+msgstr "Hoe hulpbronvolging verander wat jy sien"
+
+#: resources/views/partials/content-page-settings.blade.php:5
+msgid ""
+"By choosing ‘Allow’, the Resource Library will be able to track the "
+"resources you view, letting you:"
+msgstr ""
+"As jy “Laat toe” kies, sal die hulpbronbiblioteek kan volg watter hulpbronne"
+" jy bekyk, sodat:"
+
+#: resources/views/partials/content-page-settings.blade.php:7
+msgid "see a list of your recently viewed resources on the home page,"
+msgstr ""
+"jy ’n lys van jou onlangs bekykte hulpbronne op die tuisblad kan sien,"
+
+#: resources/views/partials/content-page-settings.blade.php:8
+msgid "see related resources, and"
+msgstr "jy verwante hulpbronne kan sien, en"
+
+#: resources/views/partials/content-page-settings.blade.php:9
+msgid "contribute to the most viewed articles seen on the home page."
+msgstr "jy kan bydra tot die lys mees bekykte artikels op die tuisblad."
+
+#: resources/views/partials/content-page-settings.blade.php:11
+msgid ""
+"The Resource Library will only use this information for these features, and "
+"does not collect any personally identifiable information."
+msgstr ""
+"Die hulpbronbiblioteek gebruik hierdie inligting slegs vir hierdie kenmerke,"
+" en versamel nie enige persoonlik identifiserende inligting nie."
+
+#: resources/views/partials/content-page-settings.blade.php:12
+msgid ""
+"By choosing ‘Don’t allow’, you will be able to continue to use the Resource "
+"Library fully, with the exception of the features mentioned previously."
+msgstr ""
+"As jy “Weier” kies, sal jy steeds die hulpbronbiblioteek ten volle kan "
+"gebruik, met uitsondering van die kenmerke wat voorheen genoem is."
+
+#: resources/views/partials/content-page-settings.blade.php:17
+msgid "Allow"
+msgstr "Laat toe"
+
+#: resources/views/partials/content-page-settings.blade.php:21
+msgid "Don&rsquo;t allow"
+msgstr "Weier"
+
+#: resources/views/partials/content-page-settings.blade.php:25
+#: resources/assets/scripts/routes/archive.js:127
+msgid "Save"
+msgstr "Stoor"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/content-lc_resource.blade.php:5
+msgid "Subscription required"
+msgstr "Intekening vereis"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/content-lc_resource.blade.php:5
+msgid "Subscription required to access this resource"
+msgstr "Intekening vereis vir toegang tot hierdie hulpbron"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:8
+#: resources/views/partials/content-lc_resource.blade.php:10
+#, python-format
+msgid "By %s"
+msgstr "Deur %s"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:12
+#: resources/views/partials/content-lc_resource.blade.php:16
+msgid "resource format"
+msgstr "hulpbronformaat"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:13
+#, python-format
+msgid "Published by %s"
+msgstr "Gepubliseer deur %s"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:18
+#: resources/views/partials/content-lc_resource.blade.php:23
+msgid "location of relevance"
+msgstr "ligging van relevansie"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:25
+#: resources/views/partials/content-lc_resource.blade.php:30
+msgid "language"
+msgstr "taal"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:31
+#: resources/views/partials/content-lc_resource.blade.php:36
+msgid "date published"
+msgstr "datum gepubliseer"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:38
+msgid "Summary"
+msgstr "Opsomming"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:45
+msgid "Topic"
+msgstr "Onderwerp"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:50
+msgid "Suggest edits"
+msgstr "Stel wysigings voor"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource (subscription required)"
+msgstr "Besoek volledige hulpbron (intekening vereis)"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource"
+msgstr "Besoek volledige hulpbron"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:60
+msgid "Add to Favorites"
+msgstr "Voeg by gunstelinge"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:62
+msgid "Remove from Favorites"
+msgstr "Verwyder uit gunstelinge"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:67
+msgid "Share"
+msgstr "Deel"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:80
+#: resources/views/partials/footer.blade.php:17
+msgid "Email"
+msgstr "E-pos"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:86
+msgid "Report broken link"
+msgstr "Rapporteer gebroke skakel"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:90
+msgid "View alternate links"
+msgstr "Bekyk alternatiewe skakels"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:95
+msgid "View on Perma.cc (%1$d of %2$d)"
+msgstr "Bekyk op Perma.cc (%1$d van %2$d)"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:97
+msgid "View on Perma.cc"
+msgstr "Bekyk op Perma.cc"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:104
+msgid "View on the Internet Archive (%1$d of %2$d)"
+msgstr "Bekyk op Internet Archive (%1$d van %2$d)"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:106
+msgid "View on the Internet Archive"
+msgstr "Bekyk op Internet Archive"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:115
+#: resources/views/partials/content-lc_resource.blade.php:52
+#, python-format
+msgid "Added %s"
+msgstr "Het %s bygevoeg "
+
+#: resources/views/partials/save-search.blade.php:3
+msgid "Save my search"
+msgstr "Stoor my soektog"
+
+#: resources/views/partials/content-lc_resource.blade.php:17
+msgid "publisher"
+msgstr "uitgewer"
+
+#: resources/views/partials/content-lc_resource.blade.php:47
+#, python-format
+msgid "+%d more"
+msgstr "+%d meer"
+
+#: resources/views/partials/content-lc_resource.blade.php:56
+msgid "Favorited"
+msgstr "As gunsteling gemerk"
+
+#: resources/views/partials/content-front-page.blade.php:6
+msgid "Browse by…"
+msgstr "Blaai volgens..."
+
+#: resources/views/partials/content-front-page.blade.php:17
+msgid "Browse all resources"
+msgstr "Blaai alle hulpbronne"
+
+#: resources/views/partials/content-front-page.blade.php:20
+msgid "My feed"
+msgstr "My voer"
+
+#: resources/views/partials/content-front-page.blade.php:21
+#: resources/views/partials/sort.blade.php:8
+msgid "Most viewed"
+msgstr "Mees bekyk"
+
+#: resources/views/partials/content-front-page.blade.php:34
+msgid "Recently published"
+msgstr "Onlangs gepubliseer"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "← Ouer opmerkings"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "Nuwer opmerkings →"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "Opmerkings is gesluit."
+
+#: resources/views/partials/current-filters.blade.php:3
+msgid "%1$s of %2$s resources matched"
+msgstr "%1$s van %2$s hulpbronne passend"
+
+#: resources/views/partials/current-filters.blade.php:5
+msgid "Your search term:"
+msgstr "Jou soekterm:"
+
+#: resources/views/partials/current-filters.blade.php:9
+msgid "Your filters:"
+msgstr "Jou filters:"
+
+#: resources/views/partials/current-filters.blade.php:14
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"<span class=\"screen-reader-text\">Verwyder </span>%s<span class=\"screen-"
+"reader-text\"> uit huidige filters"
+
+#: resources/views/partials/current-filters.blade.php:20
+msgid "The resources shown match at least one of these filters."
+msgstr "Die vertoonde hulpbronne pas ten minste een van hierdie filters."
+
+#: resources/views/partials/current-filters.blade.php:22
+msgid "Clear all"
+msgstr "Vee alles skoon"
+
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all favorites"
+msgstr "Verwyder alle gunstelinge"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "Verwyder"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#, python-format
+msgid "\"%s\" from my favorites"
+msgstr "“%s” uit my gunstelinge"
+
+#: resources/views/partials/content-page-favorites.blade.php:15
+msgid "You have no favorites."
+msgstr "Jy het geen gunstelinge nie."
+
+#: resources/views/partials/content-page-favorites.blade.php:16
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
+msgstr ""
+"Deursoek hulpbronne of <a href=\"%s\">blaai</a> daardeur om as gunsteling te"
+" merk."
+
+#: resources/views/partials/content-term-list.blade.php:27
+#, python-format
+msgid "No %s found."
+msgstr "Geen %s gevind nie."
+
+#: resources/views/partials/footer.blade.php:7
+msgid "Platform Cooperativism Consortium"
+msgstr "Platform Cooperativism Consortium"
+
+#: resources/views/partials/footer.blade.php:10
+msgid "Our open access and privacy policy"
+msgstr "Ons ooptoegang- en privaatheid-beleid"
+
+#: resources/views/partials/footer.blade.php:11
+msgid "Our commitment to diversity and inclusion"
+msgstr "Ons toewyding tot diversiteit en insluiting"
+
+#: resources/views/partials/sort.blade.php:4
+msgid "Sort by"
+msgstr "Rangskik volgens"
+
+#: resources/views/partials/sort.blade.php:6
+msgid "Date added"
+msgstr "Datum bygevoeg"
+
+#: resources/views/partials/sort.blade.php:7
+msgid "Date published"
+msgstr "Datum gepubliseer"
+
+#: resources/views/partials/sort.blade.php:9
+msgid "Most favorited"
+msgstr "Meeste as gunsteling gemerk"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid "Favorites not supported"
+msgstr "Gunstelinge nie ondersteun nie"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid ""
+"Your favorites are stored in your browser's cookies. To add favorites, "
+"please enable cookies for this website."
+msgstr ""
+"Jou gunstelinge word gestoor as koekies in jou blaaier. Om gunstelinge by te"
+" voeg, aktiveer koekies vir hierdie webwerf."
+
+#: resources/assets/scripts/routes/favorites.js:18
+msgid "Remove favorites?"
+msgstr "Verwyder gunstelinge?"
+
+#: resources/assets/scripts/routes/favorites.js:19
+msgid "Are you sure you want to remove all resources from your favorites?"
+msgstr "Is jy seker jy wil alle hulpbronne uit jou gunstelinge verwyder?"
+
+#: resources/assets/scripts/routes/favorites.js:20
+#: resources/assets/scripts/routes/favorites.js:50
+#: resources/assets/scripts/routes/saved-searches.js:74
+#: resources/assets/scripts/routes/saved-searches.js:93
+msgid "Yes, remove"
+msgstr "Ja, verwyder"
+
+#: resources/assets/scripts/routes/favorites.js:21
+#: resources/assets/scripts/routes/favorites.js:51
+#: resources/assets/scripts/routes/saved-searches.js:75
+#: resources/assets/scripts/routes/saved-searches.js:94
+msgid "No, don&rsquo;t remove"
+msgstr "Nee, moenie verwyder nie"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "Favorites removed"
+msgstr "Gunstelinge verwyder"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "The resources have been removed from your favorites."
+msgstr "Die hulpbronne is uit jou gunstelinge verwyder."
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "Favorites not removed"
+msgstr "Gunstelinge nie verwyder nie"
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "The resources could not be removed from your favorites."
+msgstr "Kon nie die hulpbronne uit jou gunstelinge verwyder nie."
+
+#: resources/assets/scripts/routes/favorites.js:48
+msgid "Remove resource?"
+msgstr "Verwyder hulpbron?"
+
+#: resources/assets/scripts/routes/favorites.js:49
+msgid "Are you sure you want to remove this resource from your favorites?"
+msgstr "Is jy seker jy wil hierdie hulpbron uit jou gunstelinge verwyder?"
+
+#: resources/assets/scripts/routes/favorites.js:69
+#: resources/assets/scripts/routes/single.js:40
+msgid "Favorite removed"
+msgstr "Gunsteling verwyder"
+
+#: resources/assets/scripts/routes/favorites.js:69
+#: resources/assets/scripts/routes/single.js:40
+msgid "The resource has been removed from your favorites."
+msgstr "Die hulpbron is uit jou gunstelinge verwyder."
+
+#: resources/assets/scripts/routes/favorites.js:72
+#: resources/assets/scripts/routes/single.js:47
+msgid "Favorite not removed"
+msgstr "Gunsteling nie verwyder nie"
+
+#: resources/assets/scripts/routes/favorites.js:72
+#: resources/assets/scripts/routes/single.js:47
+msgid "The resource could not be removed from your favorites."
+msgstr "Kon nie die hulpbron uit jou gunstelinge verwyder nie."
+
+#: resources/assets/scripts/routes/archive.js:18
+#, python-format
+msgid "%s filter applied. Resource list updated."
+msgid_plural "%s filters applied. Resource list updated."
+msgstr[0] "%s-filter toegepas. Hulpbronlys bygewerk."
+msgstr[1] "%s-filters toegepas. Hulpbronlys bygewerk."
+
+#: resources/assets/scripts/routes/archive.js:20
+#, python-format
+msgid "%s filter applied. No resources found."
+msgid_plural "%s filters applied. No resources found."
+msgstr[0] "%s-filter toegepas. Geen hulpbronne gevind nie."
+msgstr[1] "%s-filters toegepas. Geen hulpbronne gevind nie."
+
+#: resources/assets/scripts/routes/archive.js:40
+#, python-format
+msgid "All %s have been deselected"
+msgstr "Alle %s is gekies"
+
+#: resources/assets/scripts/routes/archive.js:116
+#: resources/assets/scripts/routes/saved-searches.js:15
+msgid "Maximum number of saved searches reached"
+msgstr "Maksimum getal gestoorde soektogte bereik"
+
+#: resources/assets/scripts/routes/archive.js:117
+#, python-format
+msgid ""
+"You have reached the maximum amount of saved searches (50). To save more, "
+"you must <a href=\"%s\">delete some saved searches</a>."
+msgstr ""
+"Jy het die maksimum getal gestoorde soektogte bereik (50). Om nóg te stoor, "
+"moet jy <a href=\"%s\">sekere gestoorde soektogte skrap</a>."
+
+#: resources/assets/scripts/routes/archive.js:123
+msgid "Save search"
+msgstr "Stoor soektog"
+
+#: resources/assets/scripts/routes/archive.js:124
+msgid ""
+"To save your search, please give it a name so you can identify it later."
+msgstr ""
+"Om jou soektog te stoor, gee dit ’n naam sodat jy dit later kan "
+"identifiseer."
+
+#: resources/assets/scripts/routes/archive.js:126
+msgid "Name of saved search:"
+msgstr "Naam van gestoorde soektog:"
+
+#: resources/assets/scripts/routes/archive.js:128
+msgid "Don&rsquo;t save"
+msgstr "Moenie stoor nie"
+
+#: resources/assets/scripts/routes/archive.js:136
+#: resources/assets/scripts/routes/archive.js:186
+msgid "Search not saved"
+msgstr "Soektog nie gestoor nie"
+
+#: resources/assets/scripts/routes/archive.js:137
+msgid ""
+"You have reached the maximum amount of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+"Jy het die maksimum getal gestoorde soektogte bereik (50). Om nóg te stoor, "
+"moet jy sekere gestoorde soektogte skrap."
+
+#: resources/assets/scripts/routes/archive.js:144
+#, python-format
+msgid "Saved search for “%s”"
+msgstr "Gestoorde soektog vir “%s”"
+
+#: resources/assets/scripts/routes/archive.js:156
+#: resources/assets/scripts/routes/archive.js:166
+#: resources/assets/scripts/routes/archive.js:176
+msgid "Search saved"
+msgstr "Soektog gestoor"
+
+#: resources/assets/scripts/routes/archive.js:158
+msgid ""
+"You have successfully saved this search. You can save <strong>%1$d</strong> "
+"more. You can see this search on your <a href=\"%2$s\">saved searches "
+"page</a>."
+msgstr ""
+"Jy het hierdie soektog suksesvol gestoor. Jy kan nóg <strong>%1$d</strong> "
+"stoor. Jy kan hierdie soektog op jou <a href=\"%2$s\">bladsy gestoorde "
+"soektogte</a> stoor."
+
+#: resources/assets/scripts/routes/archive.js:168
+msgid ""
+"You have successfully saved this search. <strong>You can only save %1$d "
+"more.</strong> You can see this search and manage saved searches on your <a "
+"href=\"%2$s\">saved searches page</a>."
+msgstr ""
+"Jy het hierdie soektog suksesvol gestoor. <strong>Jy kan slegs nóg %1$d "
+"stoor.</strong> Jy kan hierdie soektog op jou <a href=\"%2$s\">bladsy "
+"gestoorde soektogte</a> stoor en bestuur."
+
+#: resources/assets/scripts/routes/archive.js:178
+msgid ""
+"You have successfully saved this search. <strong>You have reached the "
+"maximum number of saved searches (50).</strong> You can see this search and "
+"manage saved searches on your <a href=\"%2$s\">saved searches page</a>."
+msgstr ""
+"Jy het hierdie soektog suksesvol gestoor. <strong>Jy het die maksimum getal "
+"gestoorde soektogte bereik (50).</strong> Jy kan hierdie soektog op jou <a "
+"href=\"%2$s\">bladsy gestoorde soektogte</a> stoor en bestuur."
+
+#: resources/assets/scripts/routes/archive.js:186
+msgid "Your search could not be saved."
+msgstr "Kon nie jou soektog stoor nie."
+
+#: resources/assets/scripts/routes/saved-searches.js:16
+msgid ""
+"You have reached the maximum number of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+"Jy het die maksimum getal gestoorde soektogte bereik (50). Om nóg te stoor, "
+"moet jy sekere gestoorde soektogte skrap."
+
+#: resources/assets/scripts/routes/saved-searches.js:35
+msgid "Tags"
+msgstr "Merkers"
+
+#: resources/assets/scripts/routes/saved-searches.js:46
+msgid "Show details"
+msgstr "Wys details"
+
+#: resources/assets/scripts/routes/saved-searches.js:50
+msgid "Search term"
+msgstr "Soekterm"
+
+#: resources/assets/scripts/routes/saved-searches.js:72
+msgid "Confirm remove saved searches"
+msgstr "Bevestig jy wil gestoorde soektogte verwyder"
+
+#: resources/assets/scripts/routes/saved-searches.js:73
+msgid "Are you sure you want to remove all of your saved searches?"
+msgstr "Is jy seker jy wil al jou gestoorde soektogte verwyder?"
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Saved searches removed"
+msgstr "Gestoorde soektogte verwyder"
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Your saved searches have been removed."
+msgstr "Jou gestoorde soektogte is verwyder."
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Saved searches not removed"
+msgstr "Gestoorde soektogte nie verwyder nie"
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Your saved searches could not be removed."
+msgstr "Kon nie jou gestoorde soektogte verwyder nie."
+
+#: resources/assets/scripts/routes/saved-searches.js:91
+msgid "Confirm remove saved search"
+msgstr "Bevestig jy wil gestoorde soektog verwyder"
+
+#: resources/assets/scripts/routes/saved-searches.js:92
+msgid "Are you sure you want to remove this saved search?"
+msgstr "Is jy seker jy wil hierdie gestoorde soektog verwyder?"
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Saved search removed"
+msgstr "Gestoorde soektog verwyder"
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Your saved search has been removed."
+msgstr "Jou gestoorde soektog is verwyder."
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Saved search not removed"
+msgstr "Gestoorde soektog nie verwyder nie"
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Your saved search could not be removed"
+msgstr "Kon nie jou gestoorde soektog verwyder nie."
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "Favorite added"
+msgstr "Gunsteling bygevoeg"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "The resource has been added to your favorites."
+msgstr "Die hulpbron is by jou gunstelinge gevoeg."
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "Favorite not added"
+msgstr "Gunsteling nie bygevoeg nie"
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "The resource could not be added to your favorites."
+msgstr "Kon nie die hulpbron by jou gunstelinge voeg nie."
