@@ -1,0 +1,850 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Co-op Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Miren Soraluze <mirsorr@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Co-op Library\n"
+"Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
+"PO-Revision-Date: 2020-04-01 04:11+0000\n"
+"Last-Translator: Miren Soraluze <mirsorr@gmail.com>, 2020\n"
+"Language-Team: Basque (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/eu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: eu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: resources/functions.php:17
+msgid "Resource Library &rsaquo; Error"
+msgstr "Baliabideen liburutegia & rsaquo; Errorea"
+
+#: resources/functions.php:28
+msgid "You must be using PHP 7.1 or greater."
+msgstr "7.1 PHP edo hortik gorakoa erabili behar duzu."
+
+#: resources/functions.php:29
+msgid "Invalid PHP version"
+msgstr "PHP bertsio baliogabea"
+
+#: resources/functions.php:38
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "WordPress 4.7.0 edo goragokoa erabili behar duzu."
+
+#: resources/functions.php:39
+msgid "Invalid WordPress version"
+msgstr "WordPress-en bertsio baliogabea"
+
+#: resources/functions.php:49
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr "Konpositorea Sage direktoriotik instalatu behar duzu."
+
+#: resources/functions.php:50
+msgid "Autoloader not found."
+msgstr "Ez da autokargatzailea aurkitu."
+
+#: resources/functions.php:66
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "<code>%s</code> eko kokapen-errorea inklusiorako"
+
+#: app/Controllers/App.php:22
+msgid "Settings saved"
+msgstr "Ezarpenak gordeta"
+
+#: app/Controllers/App.php:24
+msgid "Your settings have been saved."
+msgstr "Konfigurazioa gorde da."
+
+#: app/Controllers/App.php:197
+msgid "&laquo; Previous"
+msgstr "&laquo; Aurrekoa"
+
+#: app/Controllers/App.php:198
+msgid "Next &raquo;"
+msgstr "Hurrengoa &raquo;"
+
+#: app/Controllers/App.php:305
+msgid "&hellip;"
+msgstr "&hellip;"
+
+#: app/Controllers/App.php:367
+msgid "previous"
+msgstr "Aurrekoa"
+
+#: app/Controllers/App.php:371
+msgid "next"
+msgstr "Hurrengoa"
+
+#: app/Controllers/App.php:373
+msgid "Resources navigation"
+msgstr "Baliabideen nabegazioa"
+
+#: app/Controllers/App.php:374
+msgid "resources"
+msgstr "Baliabideak"
+
+#: app/Controllers/App.php:448
+msgid ""
+"<span class=\"pc-ff--sans pc-fw--normal\">Platform Co-op</span><br "
+"/>Resource Library"
+msgstr ""
+"<span class=\"pc-ff--sans pc-fw--normal\">Plataforma Kooperatiboa</span><br "
+"/>Baliabideen liburutegia"
+
+#: app/Controllers/App.php:456
+msgid "Latest Posts"
+msgstr "Azken argitalpenak"
+
+#: app/Controllers/App.php:460
+msgid "Search results"
+msgstr "Bilaketaren emaitzak"
+
+#: app/Controllers/App.php:464
+msgid "Browse all"
+msgstr "Aztertu dena"
+
+#: app/Controllers/App.php:468
+msgid "Not Found"
+msgstr "Ez da aurkitu"
+
+#: app/Controllers/App.php:479
+msgid "Home"
+msgstr "Hasiera"
+
+#: app/setup.php:59
+msgid "Global Navigation"
+msgstr "Nabigazio globala"
+
+#: app/setup.php:60
+msgid "Primary Navigation"
+msgstr "Nabigazio nagusia"
+
+#: app/setup.php:126
+msgid "Primary"
+msgstr "Nagusia"
+
+#: app/setup.php:130
+msgid "Footer"
+msgstr "Orri-oina"
+
+#: app/filters.php:32
+msgid "Continued"
+msgstr "Jarraitzen du"
+
+#: resources/views/components/notification.blade.php:4
+#: resources/views/search.blade.php:8
+#: resources/assets/scripts/util/addNotification.js:32
+msgid "Close notification"
+msgstr "Itxieraren jakinarazpena"
+
+#: resources/views/search.blade.php:9
+msgid "No results for search"
+msgstr "Ez dago emaitzik bilaketarako"
+
+#: resources/views/search.blade.php:10 resources/views/index.blade.php:8
+msgid "Sorry, no results were found."
+msgstr "Barkatu, ez da emaitzik aurkitu."
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Sentitzen dut, baina ikusi nahi zenuen orria ez da existitzen."
+
+#: resources/views/404.blade.php:10 resources/views/index.blade.php:10
+#: resources/views/partials/content-front-page.blade.php:2
+msgid "Search resource name, publisher, or topic…"
+msgstr "Bilatu baliabidearen izena, editorea edo gaia..."
+
+#: resources/views/partials/search-form.blade.php:3
+msgid "Search for:"
+msgstr "Bilatu:"
+
+#: resources/views/partials/search-form.blade.php:8
+#: resources/views/partials/header.blade.php:7
+msgid "Search"
+msgstr "Bilatu hemen"
+
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr "Nork"
+
+#: resources/views/partials/language-switcher.blade.php:4
+msgid "Language"
+msgstr "Hizkuntza"
+
+#: resources/views/partials/content-single.blade.php:10
+#: resources/views/partials/content-page.blade.php:2
+msgid "Pages:"
+msgstr "Orriak:"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all"
+msgstr "Ezabatu guztia"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+msgid "Remove all saved searches"
+msgstr "Ezabatu gordetako bilaketa guztiak"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:8
+msgid "You have no saved searches."
+msgstr "Ez duzu bilaketarik gordeta."
+
+#: resources/views/partials/content-page-saved-searches.blade.php:9
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
+msgstr "<a href=\"%s\">Bilatu</a> baliabideak zure bilaketa gordetzeko."
+
+#: resources/views/partials/header.blade.php:29
+msgid "Explore"
+msgstr "Esploratu"
+
+#: resources/views/partials/filters.blade.php:2
+msgid "Filter"
+msgstr "Iragazkia"
+
+#: resources/views/partials/filters.blade.php:10
+msgid "Close"
+msgstr "Itxi"
+
+#: resources/views/partials/filters.blade.php:11
+msgid "Filters"
+msgstr "Iragazkiak"
+
+#: resources/views/partials/filters.blade.php:14
+#: resources/views/partials/content-front-page.blade.php:10
+msgid "Goals"
+msgstr "Helburuak"
+
+#: resources/views/partials/filters.blade.php:15
+#: resources/views/partials/content-front-page.blade.php:9
+msgid "Topics"
+msgstr "Gaiak"
+
+#: resources/views/partials/filters.blade.php:16
+msgid "Co-op Types"
+msgstr "Kooperatiba motak"
+
+#: resources/views/partials/filters.blade.php:17
+#: resources/views/partials/content-front-page.blade.php:11
+msgid "Sectors"
+msgstr "Sektoreak"
+
+#: resources/views/partials/filters.blade.php:18
+msgid "Locations"
+msgstr "Kokalekuak"
+
+#: resources/views/partials/filters.blade.php:19
+#: resources/views/partials/content-front-page.blade.php:12
+msgid "Formats"
+msgstr "Formatuak"
+
+#: resources/views/partials/filters.blade.php:26
+#: resources/views/partials/filters.blade.php:68
+msgid "Deselect all"
+msgstr "Dena deshautatu"
+
+#: resources/views/partials/filters.blade.php:26
+#, python-format
+msgid "Deselect all %s"
+msgstr "Dena deshautatu %s"
+
+#: resources/views/partials/filters.blade.php:40
+#, python-format
+msgid "and %d subtopics"
+msgstr "Eta %dazpigaiak"
+
+#: resources/views/partials/filters.blade.php:41
+msgid "show %1$d subtopics for \"%2$s\""
+msgstr "Erakutsi %1$dazpigaiak %2$s-entzat"
+
+#: resources/views/partials/filters.blade.php:65
+msgid "Languages"
+msgstr "Hizkuntzak"
+
+#: resources/views/partials/filters.blade.php:68
+msgid "languages"
+msgstr "Hizkuntzak"
+
+#: resources/views/partials/filters.blade.php:82
+msgid "Apply Filters"
+msgstr "Aplikatu iragazkiak"
+
+#: resources/views/partials/content-page-settings.blade.php:2
+msgid "Allow the Resource Library to track what resources you’ve viewed."
+msgstr "Utzi Baliabideen Liburutegiari ikusi dituen baliabideak arakatzen."
+
+#: resources/views/partials/content-page-settings.blade.php:3
+msgid "How resource tracking changes what you see"
+msgstr "Baliabideen jarraipenak nola aldatzen duen ikusten duzuna"
+
+#: resources/views/partials/content-page-settings.blade.php:5
+msgid ""
+"By choosing ‘Allow’, the Resource Library will be able to track the "
+"resources you view, letting you:"
+msgstr ""
+"\"Baimendu\" aukeratzean, Baliabideen Liburutegiak ikusten dituen "
+"baliabideak arakatu ahal izango ditu, eta honako aukera hauek emango dizkio:"
+
+#: resources/views/partials/content-page-settings.blade.php:7
+msgid "see a list of your recently viewed resources on the home page,"
+msgstr "Ikusi zure baliabideen zerrenda bat hasierako orrian."
+
+#: resources/views/partials/content-page-settings.blade.php:8
+msgid "see related resources, and"
+msgstr "Ikusi lotutako baliabideak, eta"
+
+#: resources/views/partials/content-page-settings.blade.php:9
+msgid "contribute to the most viewed articles seen on the home page."
+msgstr "Orri nagusian gehien ikusten diren artikuluei laguntzea."
+
+#: resources/views/partials/content-page-settings.blade.php:11
+msgid ""
+"The Resource Library will only use this information for these features, and "
+"does not collect any personally identifiable information."
+msgstr ""
+"Baliabideen Liburutegiak ezaugarri horietarako baino ez du erabiliko "
+"informazio hori, eta ez du informazio pertsonal identifikagarririk jasotzen."
+
+#: resources/views/partials/content-page-settings.blade.php:12
+msgid ""
+"By choosing ‘Don’t allow’, you will be able to continue to use the Resource "
+"Library fully, with the exception of the features mentioned previously."
+msgstr ""
+"\"Ez uztea\" aukeratzean, Baliabideen Liburutegi osoa erabiltzen jarraitu "
+"ahal izango duzu, lehen aipatutako ezaugarriak izan ezik."
+
+#: resources/views/partials/content-page-settings.blade.php:17
+msgid "Allow"
+msgstr "Baimendu"
+
+#: resources/views/partials/content-page-settings.blade.php:21
+msgid "Don&rsquo;t allow"
+msgstr "Ezin duzu"
+
+#: resources/views/partials/content-page-settings.blade.php:25
+#: resources/assets/scripts/routes/archive.js:127
+msgid "Save"
+msgstr "Gorde"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/content-lc_resource.blade.php:5
+msgid "Subscription required"
+msgstr "Harpidetza behar da"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/content-lc_resource.blade.php:5
+msgid "Subscription required to access this resource"
+msgstr "Harpidetza bat behar da baliabide hori eskuratzeko"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:8
+#: resources/views/partials/content-lc_resource.blade.php:10
+#, python-format
+msgid "By %s"
+msgstr "%s-ren eskutik"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:12
+#: resources/views/partials/content-lc_resource.blade.php:16
+msgid "resource format"
+msgstr "Baliabideen formatua"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:13
+#, python-format
+msgid "Published by %s"
+msgstr "%s-k argitaratua"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:18
+#: resources/views/partials/content-lc_resource.blade.php:23
+msgid "location of relevance"
+msgstr "Garrantzizko lekua"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:25
+#: resources/views/partials/content-lc_resource.blade.php:30
+msgid "language"
+msgstr "Hizkuntza"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:31
+#: resources/views/partials/content-lc_resource.blade.php:36
+msgid "date published"
+msgstr "Argitalpen-data"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:38
+msgid "Summary"
+msgstr "Laburpena"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:45
+msgid "Topic"
+msgstr "Gaia"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:50
+msgid "Suggest edits"
+msgstr "Edizioak iradokitu"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource (subscription required)"
+msgstr "Bisitatu baliabide osoa (harpidetza eskatzen da)"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource"
+msgstr "Bisitatu baliabide osoa"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:60
+msgid "Add to Favorites"
+msgstr "Gehitu \"gogokoak\"etara"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:62
+msgid "Remove from Favorites"
+msgstr "Ezabatu \"gogokoak\"etatik"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:67
+msgid "Share"
+msgstr "Partekatu"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:80
+#: resources/views/partials/footer.blade.php:17
+msgid "Email"
+msgstr "Posta elektronikoa"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:86
+msgid "Report broken link"
+msgstr "Jakinarazi apurtutako esteka"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:90
+msgid "View alternate links"
+msgstr "Ikusi esteka alternatiboak"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:95
+msgid "View on Perma.cc (%1$d of %2$d)"
+msgstr "Perma.cc-ko (%1$d%2$d) ikuspegia "
+
+#: resources/views/partials/content-single-lc_resource.blade.php:97
+msgid "View on Perma.cc"
+msgstr "Perma.cc-en ikusi"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:104
+msgid "View on the Internet Archive (%1$d of %2$d)"
+msgstr "Ikus Interneteko artxiboan (%1$d%2$d)"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:106
+msgid "View on the Internet Archive"
+msgstr "Ikus Interneteko artxiboan"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:115
+#: resources/views/partials/content-lc_resource.blade.php:52
+#, python-format
+msgid "Added %s"
+msgstr "%s gehituta"
+
+#: resources/views/partials/save-search.blade.php:3
+msgid "Save my search"
+msgstr "Gorde nire bilaketa"
+
+#: resources/views/partials/content-lc_resource.blade.php:17
+msgid "publisher"
+msgstr "Argitaratzailea"
+
+#: resources/views/partials/content-lc_resource.blade.php:47
+#, python-format
+msgid "+%d more"
+msgstr "+%d gehiago"
+
+#: resources/views/partials/content-lc_resource.blade.php:56
+msgid "Favorited"
+msgstr "Gogokoa"
+
+#: resources/views/partials/content-front-page.blade.php:6
+msgid "Browse by…"
+msgstr ".....-k nabigatuta"
+
+#: resources/views/partials/content-front-page.blade.php:17
+msgid "Browse all resources"
+msgstr "Nabigatu baliabide guztietan"
+
+#: resources/views/partials/content-front-page.blade.php:20
+msgid "My feed"
+msgstr "Nire aurrerapena"
+
+#: resources/views/partials/content-front-page.blade.php:21
+#: resources/views/partials/sort.blade.php:8
+msgid "Most viewed"
+msgstr "Gehien ikusten dena"
+
+#: resources/views/partials/content-front-page.blade.php:34
+msgid "Recently published"
+msgstr "Berriki argitaratua"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; Iruzkin zaharrak"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "Iruzkin berriagoak &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "Iruzkinak itxita daude."
+
+#: resources/views/partials/current-filters.blade.php:3
+msgid "%1$s of %2$s resources matched"
+msgstr "%1$s%2$sbaliabide parekatuak"
+
+#: resources/views/partials/current-filters.blade.php:5
+msgid "Your search term:"
+msgstr "Bilaketa-terminoa:"
+
+#: resources/views/partials/current-filters.blade.php:9
+msgid "Your filters:"
+msgstr "Iragazkiak"
+
+#: resources/views/partials/current-filters.blade.php:14
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"<span class=\"screen-reader-text\">Kendu</span>%s<span class=\"screen-"
+"reader-text\"> egungo iragazkietatik</span>"
+
+#: resources/views/partials/current-filters.blade.php:20
+msgid "The resources shown match at least one of these filters."
+msgstr ""
+"Erakutsitako baliabideak bat datoz gutxienez iragazki horietako batekin."
+
+#: resources/views/partials/current-filters.blade.php:22
+msgid "Clear all"
+msgstr "Garbitu dena"
+
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all favorites"
+msgstr "Ezabatu \"gogoko\" guztiak"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "Kendu"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#, python-format
+msgid "\"%s\" from my favorites"
+msgstr "\"%s\" nire \"gogokoak\"-etatik"
+
+#: resources/views/partials/content-page-favorites.blade.php:15
+msgid "You have no favorites."
+msgstr "Ez duzu \"gogokorik\""
+
+#: resources/views/partials/content-page-favorites.blade.php:16
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
+msgstr "Bilatu <a href=\"%s\">edo nabigatu</a> baliabideetan, haiek hobesteko."
+
+#: resources/views/partials/content-term-list.blade.php:27
+#, python-format
+msgid "No %s found."
+msgstr "%s ez da aurkitu"
+
+#: resources/views/partials/footer.blade.php:7
+msgid "Platform Cooperativism Consortium"
+msgstr "Kooperatibismo-partzuergoaren plataforma"
+
+#: resources/views/partials/footer.blade.php:10
+msgid "Our open access and privacy policy"
+msgstr "Sarbide irekiko eta pribatutasuneko gure politika"
+
+#: resources/views/partials/footer.blade.php:11
+msgid "Our commitment to diversity and inclusion"
+msgstr "Aniztasunarekin eta inklusioarekin dugun konpromisoa"
+
+#: resources/views/partials/sort.blade.php:4
+msgid "Sort by"
+msgstr "Honela ordenatu:"
+
+#: resources/views/partials/sort.blade.php:6
+msgid "Date added"
+msgstr "Gehitze-data"
+
+#: resources/views/partials/sort.blade.php:7
+msgid "Date published"
+msgstr "Argitalpen-data"
+
+#: resources/views/partials/sort.blade.php:9
+msgid "Most favorited"
+msgstr "Gustukoenak"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid "Favorites not supported"
+msgstr "Ez dira faboritoak onartzen"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid ""
+"Your favorites are stored in your browser's cookies. To add favorites, "
+"please enable cookies for this website."
+msgstr ""
+"Zure gogokoenak zure nabigatzailearen cookie-etan gordetzen dira. Gogokoak "
+"gehitzeko, gaitu webgune honetako cookie-ak, mesedez."
+
+#: resources/assets/scripts/routes/favorites.js:18
+msgid "Remove favorites?"
+msgstr "Gogokoak kendu?"
+
+#: resources/assets/scripts/routes/favorites.js:19
+msgid "Are you sure you want to remove all resources from your favorites?"
+msgstr "Ziur zaude zure gogokoen baliabide guztiak kendu nahi dituzula?"
+
+#: resources/assets/scripts/routes/favorites.js:20
+#: resources/assets/scripts/routes/favorites.js:50
+#: resources/assets/scripts/routes/saved-searches.js:74
+#: resources/assets/scripts/routes/saved-searches.js:93
+msgid "Yes, remove"
+msgstr "Bai, ezabatu"
+
+#: resources/assets/scripts/routes/favorites.js:21
+#: resources/assets/scripts/routes/favorites.js:51
+#: resources/assets/scripts/routes/saved-searches.js:75
+#: resources/assets/scripts/routes/saved-searches.js:94
+msgid "No, don&rsquo;t remove"
+msgstr "Ez, ez ezabatu"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "Favorites removed"
+msgstr "Gogokoak ezabatuta"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "The resources have been removed from your favorites."
+msgstr "Baliabideak  gogokoetatik kenduta"
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "Favorites not removed"
+msgstr "Gogokoak ez dira ezabatu"
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "The resources could not be removed from your favorites."
+msgstr "Baliabideak ezin ziren bere gogokoenetatik ezabatu."
+
+#: resources/assets/scripts/routes/favorites.js:48
+msgid "Remove resource?"
+msgstr "Errekurtsoa kendu?"
+
+#: resources/assets/scripts/routes/favorites.js:49
+msgid "Are you sure you want to remove this resource from your favorites?"
+msgstr "Ziur zaude baliabide hau zure gogokoei kendu nahi diezula?"
+
+#: resources/assets/scripts/routes/favorites.js:69
+#: resources/assets/scripts/routes/single.js:40
+msgid "Favorite removed"
+msgstr "Gogokoa ezabatuta"
+
+#: resources/assets/scripts/routes/favorites.js:69
+#: resources/assets/scripts/routes/single.js:40
+msgid "The resource has been removed from your favorites."
+msgstr "Baliabideak gogokoetatik ezabatuta"
+
+#: resources/assets/scripts/routes/favorites.js:72
+#: resources/assets/scripts/routes/single.js:47
+msgid "Favorite not removed"
+msgstr "Gogokoa ez da ezabatu"
+
+#: resources/assets/scripts/routes/favorites.js:72
+#: resources/assets/scripts/routes/single.js:47
+msgid "The resource could not be removed from your favorites."
+msgstr "Errekurtsoa ezin zen bere gogokoenetatik ezabatu."
+
+#: resources/assets/scripts/routes/archive.js:18
+#, python-format
+msgid "%s filter applied. Resource list updated."
+msgid_plural "%s filters applied. Resource list updated."
+msgstr[0] "%s iragazkiak. Baliabideen zerrenda eguneratua."
+msgstr[1] "%s iragazkiak aplikatuta. Baliabideen zerrenda eguneratua."
+
+#: resources/assets/scripts/routes/archive.js:20
+#, python-format
+msgid "%s filter applied. No resources found."
+msgid_plural "%s filters applied. No resources found."
+msgstr[0] "%siragazkiak aplikatuta. Ez da baliabiderik aurkitu."
+msgstr[1] "%siragazkiak aplikatuta. Ez da baliabiderik aurkitu."
+
+#: resources/assets/scripts/routes/archive.js:40
+#, python-format
+msgid "All %s have been deselected"
+msgstr "%s guztiak hautatuak izan dira"
+
+#: resources/assets/scripts/routes/archive.js:116
+#: resources/assets/scripts/routes/saved-searches.js:15
+msgid "Maximum number of saved searches reached"
+msgstr "Gordetako bilaketen gehieneko kopurua"
+
+#: resources/assets/scripts/routes/archive.js:117
+#, python-format
+msgid ""
+"You have reached the maximum amount of saved searches (50). To save more, "
+"you must <a href=\"%s\">delete some saved searches</a>."
+msgstr ""
+"Gordetako bilaketen gehieneko kopurua lortu du (50). Gehiago gordetzeko, <a "
+"href=\"%s\">gordetako bilaketa batzuk ezabatu </a>behar dituzu."
+
+#: resources/assets/scripts/routes/archive.js:123
+msgid "Save search"
+msgstr "Gorde bilaketa"
+
+#: resources/assets/scripts/routes/archive.js:124
+msgid ""
+"To save your search, please give it a name so you can identify it later."
+msgstr ""
+"Zure bilaketa gordetzeko, mesedez, eman izen bat geroago identifikatu ahal "
+"izateko."
+
+#: resources/assets/scripts/routes/archive.js:126
+msgid "Name of saved search:"
+msgstr "Gordetako bilaketaren izena"
+
+#: resources/assets/scripts/routes/archive.js:128
+msgid "Don&rsquo;t save"
+msgstr "&rsquo; ez gorde"
+
+#: resources/assets/scripts/routes/archive.js:136
+#: resources/assets/scripts/routes/archive.js:186
+msgid "Search not saved"
+msgstr "Bilaketa ez da gorde"
+
+#: resources/assets/scripts/routes/archive.js:137
+msgid ""
+"You have reached the maximum amount of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+"Gordetako bilaketen gehieneko kopurua lortu du (50). Gehiago gordetzeko, "
+"gordetako bilaketa batzuk ezabatu behar dituzu"
+
+#: resources/assets/scripts/routes/archive.js:144
+#, python-format
+msgid "Saved search for “%s”"
+msgstr "\"%s\" bilaketa gordeta"
+
+#: resources/assets/scripts/routes/archive.js:156
+#: resources/assets/scripts/routes/archive.js:166
+#: resources/assets/scripts/routes/archive.js:176
+msgid "Search saved"
+msgstr "Bilaketa gordeta"
+
+#: resources/assets/scripts/routes/archive.js:158
+msgid ""
+"You have successfully saved this search. You can save <strong>%1$d</strong> "
+"more. You can see this search on your <a href=\"%2$s\">saved searches "
+"page</a>."
+msgstr ""
+"Arrakastaz salbatu duzu bilaketa hau. <strong>%1$d</strong> gehiago gorde "
+"dezakezu. Bilaketa hori zure <a href=\"%2$s\">gordetako bilaketa-orrian</a> "
+"ikus dezakezu."
+
+#: resources/assets/scripts/routes/archive.js:168
+msgid ""
+"You have successfully saved this search. <strong>You can only save %1$d "
+"more.</strong> You can see this search and manage saved searches on your <a "
+"href=\"%2$s\">saved searches page</a>."
+msgstr ""
+"Arrakastaz salbatu duzu bilaketa hau. <strong>%1$d gehiago gorde "
+"dezakezu.</strong> Bilaketa hori ikus dezakezu eta zure <a href=\"%2$s"
+"\">bilaketa-orrian gordetako bilaketak </a>administratu."
+
+#: resources/assets/scripts/routes/archive.js:178
+msgid ""
+"You have successfully saved this search. <strong>You have reached the "
+"maximum number of saved searches (50).</strong> You can see this search and "
+"manage saved searches on your <a href=\"%2$s\">saved searches page</a>."
+msgstr ""
+"Arrakastaz salbatu duzu bilaketa hau. <strong>Gordetako bilaketen gehieneko "
+"kopurua lortu du (50). </strong>Bilaketa hori ikus dezakezu eta <a "
+"href=\"%2$s\">gordetako bilaketen orrian </a>gordetako bilaketak kudeatu."
+
+#: resources/assets/scripts/routes/archive.js:186
+msgid "Your search could not be saved."
+msgstr "Zure bilaketa ezin izan zen salbatu."
+
+#: resources/assets/scripts/routes/saved-searches.js:16
+msgid ""
+"You have reached the maximum number of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+"Gordetako bilaketa kopuru handiena lortu du (50). Gehiago gordetzeko, "
+"gordetako bilaketa batzuk ezabatu behar dituzu."
+
+#: resources/assets/scripts/routes/saved-searches.js:35
+msgid "Tags"
+msgstr "Etiketak"
+
+#: resources/assets/scripts/routes/saved-searches.js:46
+msgid "Show details"
+msgstr "Erakutsi xehetasunak"
+
+#: resources/assets/scripts/routes/saved-searches.js:50
+msgid "Search term"
+msgstr "Bilatu terminoa"
+
+#: resources/assets/scripts/routes/saved-searches.js:72
+msgid "Confirm remove saved searches"
+msgstr "Gordetako bilaketak ezabatu direla baieztatu"
+
+#: resources/assets/scripts/routes/saved-searches.js:73
+msgid "Are you sure you want to remove all of your saved searches?"
+msgstr "Ziur zaude gordetako bilaketa guztiak ezabatu nahi dituzula?"
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Saved searches removed"
+msgstr "Gordetako bilaketak ezabatuta"
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Your saved searches have been removed."
+msgstr "Gordetako bilaketak ezabatu egin dira."
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Saved searches not removed"
+msgstr "Gordetako bilaketak ez dira ezabatu"
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Your saved searches could not be removed."
+msgstr "Gordetako bilaketak ezin izan dira ezabatu."
+
+#: resources/assets/scripts/routes/saved-searches.js:91
+msgid "Confirm remove saved search"
+msgstr "Gordetako bilaketa ezabatu dela baieztatzea"
+
+#: resources/assets/scripts/routes/saved-searches.js:92
+msgid "Are you sure you want to remove this saved search?"
+msgstr "Ziur zaude gordetako bilaketa hau ezabatu nahi duzula?"
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Saved search removed"
+msgstr "Gordetako bilaketa ezabatu da"
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Your saved search has been removed."
+msgstr "Gordetako bilaketa ezabatu egin da."
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Saved search not removed"
+msgstr "Gordetako bilaketa ez da ezabatu"
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Your saved search could not be removed"
+msgstr "Gordetako bilaketa ezin izan zen ezabatu"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "Favorite added"
+msgstr "Gogoko bat gehitu da"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "The resource has been added to your favorites."
+msgstr "Baliabide gogokoei gehitu zaie."
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "Favorite not added"
+msgstr "Ez da gogokoa gehitu"
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "The resource could not be added to your favorites."
+msgstr "Errekurtsoa ezin zitzaien gehitu bere gogokoei."
