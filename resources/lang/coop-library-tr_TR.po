@@ -1,0 +1,859 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Co-op Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Arel Lodos International Concultancy Services <arel.lodos.34@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Co-op Library\n"
+"Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
+"PO-Revision-Date: 2020-04-01 04:11+0000\n"
+"Last-Translator: Arel Lodos International Concultancy Services <arel.lodos.34@gmail.com>, 2020\n"
+"Language-Team: Turkish (Turkey) (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/tr_TR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: resources/functions.php:17
+msgid "Resource Library &rsaquo; Error"
+msgstr "Kaynak Kitaplığı &rsaquo; Hata"
+
+#: resources/functions.php:28
+msgid "You must be using PHP 7.1 or greater."
+msgstr "PHP 7.1 veya daha üst versiyonunu kullanmak zorundasınız. "
+
+#: resources/functions.php:29
+msgid "Invalid PHP version"
+msgstr "Geçersiz PHP versiyonu"
+
+#: resources/functions.php:38
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr " WordPress 4.7.0 veya daha üst versiyonunu kullanmak zorundasınız. "
+
+#: resources/functions.php:39
+msgid "Invalid WordPress version"
+msgstr "Geçersiz WordPress versiyonu "
+
+#: resources/functions.php:49
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+"Sage dizininden run <code> composer install</code> yapmak zorundasınız. "
+
+#: resources/functions.php:50
+msgid "Autoloader not found."
+msgstr "Autoloder bulunamadı."
+
+#: resources/functions.php:66
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "Bu kapsam için bulma <code>%s</code> hatası "
+
+#: app/Controllers/App.php:22
+msgid "Settings saved"
+msgstr "Ayarlar kaydedildi."
+
+#: app/Controllers/App.php:24
+msgid "Your settings have been saved."
+msgstr "Ayarlarınız kaydedildi."
+
+#: app/Controllers/App.php:197
+msgid "&laquo; Previous"
+msgstr "&laquo; Önceki"
+
+#: app/Controllers/App.php:198
+msgid "Next &raquo;"
+msgstr "Sonraki &raquo;"
+
+#: app/Controllers/App.php:305
+msgid "&hellip;"
+msgstr "&hellip;"
+
+#: app/Controllers/App.php:367
+msgid "previous"
+msgstr "Önceki"
+
+#: app/Controllers/App.php:371
+msgid "next"
+msgstr "Sonraki"
+
+#: app/Controllers/App.php:373
+msgid "Resources navigation"
+msgstr "Kaynaklar navigasyonu"
+
+#: app/Controllers/App.php:374
+msgid "resources"
+msgstr "Kaynaklar"
+
+#: app/Controllers/App.php:448
+msgid ""
+"<span class=\"pc-ff--sans pc-fw--normal\">Platform Co-op</span><br "
+"/>Resource Library"
+msgstr ""
+"<span class=\"pc-ff--sans pc-fw--normal\">Platform Kooperatifleri</span><br "
+"/>  Kaynak Kitaplığı"
+
+#: app/Controllers/App.php:456
+msgid "Latest Posts"
+msgstr "Son Gönderiler"
+
+#: app/Controllers/App.php:460
+msgid "Search results"
+msgstr "Arama Sonuçları"
+
+#: app/Controllers/App.php:464
+msgid "Browse all"
+msgstr "Tümüne göz at"
+
+#: app/Controllers/App.php:468
+msgid "Not Found"
+msgstr "Bulunamadı"
+
+#: app/Controllers/App.php:479
+msgid "Home"
+msgstr "Ev"
+
+#: app/setup.php:59
+msgid "Global Navigation"
+msgstr "Global Navigasyon"
+
+#: app/setup.php:60
+msgid "Primary Navigation"
+msgstr "Birincil Navigasyon"
+
+#: app/setup.php:126
+msgid "Primary"
+msgstr "Birincil"
+
+#: app/setup.php:130
+msgid "Footer"
+msgstr "Alt bilgi"
+
+#: app/filters.php:32
+msgid "Continued"
+msgstr "Devam eden"
+
+#: resources/views/components/notification.blade.php:4
+#: resources/views/search.blade.php:8
+#: resources/assets/scripts/util/addNotification.js:32
+msgid "Close notification"
+msgstr "Bildirimleri kapat"
+
+#: resources/views/search.blade.php:9
+msgid "No results for search"
+msgstr "Bu arama için bir sonuç yok"
+
+#: resources/views/search.blade.php:10 resources/views/index.blade.php:8
+msgid "Sorry, no results were found."
+msgstr "Üzgünüz, sonuç bulunamadı."
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "Üzgünüz, görüntülemeye çalıştığınız sayfa mevcut değil. "
+
+#: resources/views/404.blade.php:10 resources/views/index.blade.php:10
+#: resources/views/partials/content-front-page.blade.php:2
+msgid "Search resource name, publisher, or topic…"
+msgstr "Kaynak, yayıncı veya konu ismi ara"
+
+#: resources/views/partials/search-form.blade.php:3
+msgid "Search for:"
+msgstr ": ara"
+
+#: resources/views/partials/search-form.blade.php:8
+#: resources/views/partials/header.blade.php:7
+msgid "Search"
+msgstr "Ara"
+
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr "Tarafından"
+
+#: resources/views/partials/language-switcher.blade.php:4
+msgid "Language"
+msgstr "Dil"
+
+#: resources/views/partials/content-single.blade.php:10
+#: resources/views/partials/content-page.blade.php:2
+msgid "Pages:"
+msgstr "Sayfalar"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all"
+msgstr "Tümünü kaldır"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+msgid "Remove all saved searches"
+msgstr "Tüm kayıtlı aramaları kaldır"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:8
+msgid "You have no saved searches."
+msgstr "Kaydedilmiş aramanız yok "
+
+#: resources/views/partials/content-page-saved-searches.blade.php:9
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
+msgstr ""
+"Aramanı kaydetmek için kaynakları araştır <a href=\"%s\"> veya göz at </a>"
+
+#: resources/views/partials/header.blade.php:29
+msgid "Explore"
+msgstr "Keşfet"
+
+#: resources/views/partials/filters.blade.php:2
+msgid "Filter"
+msgstr "Filtrele"
+
+#: resources/views/partials/filters.blade.php:10
+msgid "Close"
+msgstr "Kapat"
+
+#: resources/views/partials/filters.blade.php:11
+msgid "Filters"
+msgstr "Filtreler"
+
+#: resources/views/partials/filters.blade.php:14
+#: resources/views/partials/content-front-page.blade.php:10
+msgid "Goals"
+msgstr "Hedefler"
+
+#: resources/views/partials/filters.blade.php:15
+#: resources/views/partials/content-front-page.blade.php:9
+msgid "Topics"
+msgstr "Konular"
+
+#: resources/views/partials/filters.blade.php:16
+msgid "Co-op Types"
+msgstr "Kooperatif tipleri"
+
+#: resources/views/partials/filters.blade.php:17
+#: resources/views/partials/content-front-page.blade.php:11
+msgid "Sectors"
+msgstr "Sektörler"
+
+#: resources/views/partials/filters.blade.php:18
+msgid "Locations"
+msgstr "Konumlar"
+
+#: resources/views/partials/filters.blade.php:19
+#: resources/views/partials/content-front-page.blade.php:12
+msgid "Formats"
+msgstr "Formatlar"
+
+#: resources/views/partials/filters.blade.php:26
+#: resources/views/partials/filters.blade.php:68
+msgid "Deselect all"
+msgstr "Tüm seçimleri kaldır"
+
+#: resources/views/partials/filters.blade.php:26
+#, python-format
+msgid "Deselect all %s"
+msgstr "Tüm seçimleri kaldır%s"
+
+#: resources/views/partials/filters.blade.php:40
+#, python-format
+msgid "and %d subtopics"
+msgstr "ve alt konuları kaldır%d"
+
+#: resources/views/partials/filters.blade.php:41
+msgid "show %1$d subtopics for \"%2$s\""
+msgstr "%2$siçin alt konuları göster%1$d"
+
+#: resources/views/partials/filters.blade.php:65
+msgid "Languages"
+msgstr "Diller"
+
+#: resources/views/partials/filters.blade.php:68
+msgid "languages"
+msgstr "diller"
+
+#: resources/views/partials/filters.blade.php:82
+msgid "Apply Filters"
+msgstr "Filtre uygula"
+
+#: resources/views/partials/content-page-settings.blade.php:2
+msgid "Allow the Resource Library to track what resources you’ve viewed."
+msgstr ""
+"Kaynak Kütüphanesinin hangi kaynakları görüntülediğizi izlemesine izin "
+"verin. "
+
+#: resources/views/partials/content-page-settings.blade.php:3
+msgid "How resource tracking changes what you see"
+msgstr "Kaynak izlemesi gördüğünüzü nasıl değiştirir"
+
+#: resources/views/partials/content-page-settings.blade.php:5
+msgid ""
+"By choosing ‘Allow’, the Resource Library will be able to track the "
+"resources you view, letting you:"
+msgstr ""
+"\"İzin Ver\" i seçtiğinizde, Kaynak Kütüphanesi, görüntülediğiniz kaynakları"
+" izleyerek şunları yapmanıza olanak tanır:"
+
+#: resources/views/partials/content-page-settings.blade.php:7
+msgid "see a list of your recently viewed resources on the home page,"
+msgstr "Ana sayfada son görüntülenen kaynakların listesini görmek"
+
+#: resources/views/partials/content-page-settings.blade.php:8
+msgid "see related resources, and"
+msgstr "İlgili kaynakları görmek, ve "
+
+#: resources/views/partials/content-page-settings.blade.php:9
+msgid "contribute to the most viewed articles seen on the home page."
+msgstr "Ana sayfada en çok görüntülenen makalelere katkıda bulunmak. "
+
+#: resources/views/partials/content-page-settings.blade.php:11
+msgid ""
+"The Resource Library will only use this information for these features, and "
+"does not collect any personally identifiable information."
+msgstr ""
+"Kaynak Kütüphanesi, bu bilgileri sadece bu özellikler için kullanacak ve "
+"kişisel olarak teşhis edilebilir hiç bir bilgi toplamayacaktır."
+
+#: resources/views/partials/content-page-settings.blade.php:12
+msgid ""
+"By choosing ‘Don’t allow’, you will be able to continue to use the Resource "
+"Library fully, with the exception of the features mentioned previously."
+msgstr ""
+"\"İzin verme\"yi seçtiğinizde, daha önce belirtilen özellikler hariç olmak "
+"üzere, Kaynak Kütüphanesini tam olarak kullanmaya devam edebilirsiniz."
+
+#: resources/views/partials/content-page-settings.blade.php:17
+msgid "Allow"
+msgstr "İzin ver"
+
+#: resources/views/partials/content-page-settings.blade.php:21
+msgid "Don&rsquo;t allow"
+msgstr "İzin verme &rsquo;"
+
+#: resources/views/partials/content-page-settings.blade.php:25
+#: resources/assets/scripts/routes/archive.js:127
+msgid "Save"
+msgstr "Kaydet"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/content-lc_resource.blade.php:5
+msgid "Subscription required"
+msgstr "Abonelik gerekiyor"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/content-lc_resource.blade.php:5
+msgid "Subscription required to access this resource"
+msgstr "Bu kaynağa erişim için abonelik gerekiyor"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:8
+#: resources/views/partials/content-lc_resource.blade.php:10
+#, python-format
+msgid "By %s"
+msgstr "%starafından"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:12
+#: resources/views/partials/content-lc_resource.blade.php:16
+msgid "resource format"
+msgstr "Kaynak formatı"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:13
+#, python-format
+msgid "Published by %s"
+msgstr "%starafından yayınlandı"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:18
+#: resources/views/partials/content-lc_resource.blade.php:23
+msgid "location of relevance"
+msgstr "Uygunluk konumu"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:25
+#: resources/views/partials/content-lc_resource.blade.php:30
+msgid "language"
+msgstr "Dil"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:31
+#: resources/views/partials/content-lc_resource.blade.php:36
+msgid "date published"
+msgstr "Yayın tarihi"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:38
+msgid "Summary"
+msgstr "Özet"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:45
+msgid "Topic"
+msgstr "Konu"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:50
+msgid "Suggest edits"
+msgstr "Düzenleme öner"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource (subscription required)"
+msgstr "Tam kaynağı ziyaret et (abonelik gerekli) "
+
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource"
+msgstr "Tam kaynağı ziyaret et"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:60
+msgid "Add to Favorites"
+msgstr "Favorilere ekle"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:62
+msgid "Remove from Favorites"
+msgstr "Favorilerden kaldır"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:67
+msgid "Share"
+msgstr "Paylaş"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:80
+#: resources/views/partials/footer.blade.php:17
+msgid "Email"
+msgstr "Email"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:86
+msgid "Report broken link"
+msgstr "Bozuk bağlantı bildir"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:90
+msgid "View alternate links"
+msgstr "Alternatif bağlantıları görüntüle"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:95
+msgid "View on Perma.cc (%1$d of %2$d)"
+msgstr "(%2$d'nin %1$d'inden ) Perma.cc üzerinden görüntüle "
+
+#: resources/views/partials/content-single-lc_resource.blade.php:97
+msgid "View on Perma.cc"
+msgstr "Perma.cc üzerinden görüntüle "
+
+#: resources/views/partials/content-single-lc_resource.blade.php:104
+msgid "View on the Internet Archive (%1$d of %2$d)"
+msgstr "(%2$d'nin %1$d'inden) İnternet Arşivini görüntüle"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:106
+msgid "View on the Internet Archive"
+msgstr " İnternet Arşivini görüntüle"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:115
+#: resources/views/partials/content-lc_resource.blade.php:52
+#, python-format
+msgid "Added %s"
+msgstr "%sEklendi"
+
+#: resources/views/partials/save-search.blade.php:3
+msgid "Save my search"
+msgstr "Aramamı kaydet"
+
+#: resources/views/partials/content-lc_resource.blade.php:17
+msgid "publisher"
+msgstr "yayıncı"
+
+#: resources/views/partials/content-lc_resource.blade.php:47
+#, python-format
+msgid "+%d more"
+msgstr "+%ddaha fazla"
+
+#: resources/views/partials/content-lc_resource.blade.php:56
+msgid "Favorited"
+msgstr "Favori yapıldı"
+
+#: resources/views/partials/content-front-page.blade.php:6
+msgid "Browse by…"
+msgstr "... tarafından gözden geçirildi"
+
+#: resources/views/partials/content-front-page.blade.php:17
+msgid "Browse all resources"
+msgstr "Tüm kaynakları gözden geçir"
+
+#: resources/views/partials/content-front-page.blade.php:20
+msgid "My feed"
+msgstr "Benim yayınım"
+
+#: resources/views/partials/content-front-page.blade.php:21
+#: resources/views/partials/sort.blade.php:8
+msgid "Most viewed"
+msgstr "En çok görüntülenenler"
+
+#: resources/views/partials/content-front-page.blade.php:34
+msgid "Recently published"
+msgstr "Son zamanlarda yayınlananlar"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; Eski yorumlar"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "Daha yeni yorumlar &larr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "Yorumlar kapatıldı"
+
+#: resources/views/partials/current-filters.blade.php:3
+msgid "%1$s of %2$s resources matched"
+msgstr "%2$s'nin %1$skaynak eşleşti"
+
+#: resources/views/partials/current-filters.blade.php:5
+msgid "Your search term:"
+msgstr "Arama teriminiz: "
+
+#: resources/views/partials/current-filters.blade.php:9
+msgid "Your filters:"
+msgstr "Filtreleriniz:"
+
+#: resources/views/partials/current-filters.blade.php:14
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"Mevcut filtrelerden <span class=\"screen-reader-"
+"text\"></span>%s</span>kaldır"
+
+#: resources/views/partials/current-filters.blade.php:20
+msgid "The resources shown match at least one of these filters."
+msgstr ""
+"Gösterilen kaynaklar, bu filtrelerden en az birisi ile eşleşmektedir. "
+
+#: resources/views/partials/current-filters.blade.php:22
+msgid "Clear all"
+msgstr "Tümünü temizle"
+
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all favorites"
+msgstr "Tüm favorileri kaldır"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "Kaldır"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#, python-format
+msgid "\"%s\" from my favorites"
+msgstr "Favorilerimden \"%s\""
+
+#: resources/views/partials/content-page-favorites.blade.php:15
+msgid "You have no favorites."
+msgstr "Hiç favoriniz yok"
+
+#: resources/views/partials/content-page-favorites.blade.php:16
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
+msgstr ""
+"Kaynakları favori yapmak için araştırın <a href=\"%s\"> veya gözden geçirin "
+"</a>"
+
+#: resources/views/partials/content-term-list.blade.php:27
+#, python-format
+msgid "No %s found."
+msgstr "%sbulunamadı. "
+
+#: resources/views/partials/footer.blade.php:7
+msgid "Platform Cooperativism Consortium"
+msgstr "Platform Kooperatifçiliği Konsorsiyumu "
+
+#: resources/views/partials/footer.blade.php:10
+msgid "Our open access and privacy policy"
+msgstr "Açık erişim ve gizlilik politikamız"
+
+#: resources/views/partials/footer.blade.php:11
+msgid "Our commitment to diversity and inclusion"
+msgstr "Çeşitlilik ve kapsama taahhüdümüz"
+
+#: resources/views/partials/sort.blade.php:4
+msgid "Sort by"
+msgstr "Göre sırla"
+
+#: resources/views/partials/sort.blade.php:6
+msgid "Date added"
+msgstr "Ekleme tarihi"
+
+#: resources/views/partials/sort.blade.php:7
+msgid "Date published"
+msgstr "Yayın tarihi"
+
+#: resources/views/partials/sort.blade.php:9
+msgid "Most favorited"
+msgstr "En çok favori edilen "
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid "Favorites not supported"
+msgstr "Favoriler desteklenmiyor"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid ""
+"Your favorites are stored in your browser's cookies. To add favorites, "
+"please enable cookies for this website."
+msgstr ""
+"Favorileriniz, internet tarayıcınızın çerezlerinde saklanır.  Favori eklemek"
+" için, lütfen bu web sitesi için çerezleri etkinleştirin."
+
+#: resources/assets/scripts/routes/favorites.js:18
+msgid "Remove favorites?"
+msgstr "Favorileri kaldır?"
+
+#: resources/assets/scripts/routes/favorites.js:19
+msgid "Are you sure you want to remove all resources from your favorites?"
+msgstr ""
+"Tüm kaynakları favorilerinizden kaldırmak istediğinizden emin misiniz?"
+
+#: resources/assets/scripts/routes/favorites.js:20
+#: resources/assets/scripts/routes/favorites.js:50
+#: resources/assets/scripts/routes/saved-searches.js:74
+#: resources/assets/scripts/routes/saved-searches.js:93
+msgid "Yes, remove"
+msgstr "Evet, kaldır"
+
+#: resources/assets/scripts/routes/favorites.js:21
+#: resources/assets/scripts/routes/favorites.js:51
+#: resources/assets/scripts/routes/saved-searches.js:75
+#: resources/assets/scripts/routes/saved-searches.js:94
+msgid "No, don&rsquo;t remove"
+msgstr "Hayır, kaldırma &rsquo;"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "Favorites removed"
+msgstr "Favoriler kaldırıldı"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "The resources have been removed from your favorites."
+msgstr "Kaynaklar favorilerinizden kaldırıldı."
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "Favorites not removed"
+msgstr "Favoriler kaldırılmadı."
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "The resources could not be removed from your favorites."
+msgstr "Kaynaklar favorilerinizden kaldırılamadı."
+
+#: resources/assets/scripts/routes/favorites.js:48
+msgid "Remove resource?"
+msgstr "Kaynağı kaldır?"
+
+#: resources/assets/scripts/routes/favorites.js:49
+msgid "Are you sure you want to remove this resource from your favorites?"
+msgstr "Bu kaynağı favorilerinizden kaldırmak istediğinize emin misiniz? "
+
+#: resources/assets/scripts/routes/favorites.js:69
+#: resources/assets/scripts/routes/single.js:40
+msgid "Favorite removed"
+msgstr "Favori kaldırıldı"
+
+#: resources/assets/scripts/routes/favorites.js:69
+#: resources/assets/scripts/routes/single.js:40
+msgid "The resource has been removed from your favorites."
+msgstr "Kaynak favorilerinizden kaldırıldı. "
+
+#: resources/assets/scripts/routes/favorites.js:72
+#: resources/assets/scripts/routes/single.js:47
+msgid "Favorite not removed"
+msgstr "Favori kaldırılmadı"
+
+#: resources/assets/scripts/routes/favorites.js:72
+#: resources/assets/scripts/routes/single.js:47
+msgid "The resource could not be removed from your favorites."
+msgstr "Bu kaynak favorilerinizden kaldırılamadı."
+
+#: resources/assets/scripts/routes/archive.js:18
+#, python-format
+msgid "%s filter applied. Resource list updated."
+msgid_plural "%s filters applied. Resource list updated."
+msgstr[0] "%sfiltresi uygulandı. Kaynak listesi güncellendi."
+msgstr[1] "%sfiltresi uygulandı. Kaynak listesi güncellendi."
+
+#: resources/assets/scripts/routes/archive.js:20
+#, python-format
+msgid "%s filter applied. No resources found."
+msgid_plural "%s filters applied. No resources found."
+msgstr[0] "%sfiltresi uygulandı. Kaynak bulunamadı. "
+msgstr[1] "%s filtresi uygulandı. Kaynak bulunamadı. "
+
+#: resources/assets/scripts/routes/archive.js:40
+#, python-format
+msgid "All %s have been deselected"
+msgstr "Tüm %s seçimleri kaldırıldı."
+
+#: resources/assets/scripts/routes/archive.js:116
+#: resources/assets/scripts/routes/saved-searches.js:15
+msgid "Maximum number of saved searches reached"
+msgstr "Kaydedilmiş aramaların maksimum sayısına ulaşıldı. "
+
+#: resources/assets/scripts/routes/archive.js:117
+#, python-format
+msgid ""
+"You have reached the maximum amount of saved searches (50). To save more, "
+"you must <a href=\"%s\">delete some saved searches</a>."
+msgstr ""
+"Kaydedilmiş aramaların maksimum sayısına ulaştınız (50).  Daha fazla kayıt "
+"etmek için, kaydedilmiş bazı aramaları<a href=\"%s\"> silmeniz "
+"gerekmektedir</a>."
+
+#: resources/assets/scripts/routes/archive.js:123
+msgid "Save search"
+msgstr "Aramayı kaydet"
+
+#: resources/assets/scripts/routes/archive.js:124
+msgid ""
+"To save your search, please give it a name so you can identify it later."
+msgstr ""
+"Aramanızı kaydederken, daha sonra bu aramayı tanımlayabilmeniz için lütfen "
+"bir isim verin."
+
+#: resources/assets/scripts/routes/archive.js:126
+msgid "Name of saved search:"
+msgstr "Kaydedilmiş aramanın ismi: "
+
+#: resources/assets/scripts/routes/archive.js:128
+msgid "Don&rsquo;t save"
+msgstr "Kaydetme &rsquo;"
+
+#: resources/assets/scripts/routes/archive.js:136
+#: resources/assets/scripts/routes/archive.js:186
+msgid "Search not saved"
+msgstr "Arama kaydedilmedi"
+
+#: resources/assets/scripts/routes/archive.js:137
+msgid ""
+"You have reached the maximum amount of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+"Kaydedilmiş maksimum arama sayısına ulaştınız (50). Daha fazla kayıt etmek "
+"için, kaydedilmiş bazı aramaları silmeniz gerekmektedir."
+
+#: resources/assets/scripts/routes/archive.js:144
+#, python-format
+msgid "Saved search for “%s”"
+msgstr "%s için aramayı kaydet. "
+
+#: resources/assets/scripts/routes/archive.js:156
+#: resources/assets/scripts/routes/archive.js:166
+#: resources/assets/scripts/routes/archive.js:176
+msgid "Search saved"
+msgstr "Arama kaydedildi"
+
+#: resources/assets/scripts/routes/archive.js:158
+msgid ""
+"You have successfully saved this search. You can save <strong>%1$d</strong> "
+"more. You can see this search on your <a href=\"%2$s\">saved searches "
+"page</a>."
+msgstr ""
+"Bu aramayı başarılı bir şekilde kaydettiniz. Daha fazla "
+"<strong>%1$d</strong> kaydedebilirsiniz. Bu aramayı, <a href=\"%2$s\"> "
+"kayıtlı aramalar sayfanızdan </a> görebilirsiniz.  "
+
+#: resources/assets/scripts/routes/archive.js:168
+msgid ""
+"You have successfully saved this search. <strong>You can only save %1$d "
+"more.</strong> You can see this search and manage saved searches on your <a "
+"href=\"%2$s\">saved searches page</a>."
+msgstr ""
+"Bu aramayı başarılı bir şekilde kaydettiniz. Sadece %1$d daha fazla "
+"kaydedebilirsiniz. Bu aramayı, kayıtlı aramalar sayfanızdan <a "
+"href=\"%2$s\">görebilir ve yönetebilirsiniz</a>. "
+
+#: resources/assets/scripts/routes/archive.js:178
+msgid ""
+"You have successfully saved this search. <strong>You have reached the "
+"maximum number of saved searches (50).</strong> You can see this search and "
+"manage saved searches on your <a href=\"%2$s\">saved searches page</a>."
+msgstr ""
+"Bu aramayı başarılı bir şekilde kaydettiniz. <strong>kayıtlı aramaların "
+"maksimum sayısına ulaştınız (50). Bu aramayı, kaydedilmiş aramalar "
+"sayfanızdan <a href=\"%2$s\"> görebilir ve kaydedilmiş aramaları "
+"yönetebilirsiniz</a>."
+
+#: resources/assets/scripts/routes/archive.js:186
+msgid "Your search could not be saved."
+msgstr "Aramanız kaydedilemedi."
+
+#: resources/assets/scripts/routes/saved-searches.js:16
+msgid ""
+"You have reached the maximum number of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+"Kayıtlı aramaların maksimum sayısına ulaştınız (50).  Daha fazla kayıt etmek"
+" için, kaydedilmiş bazı aramaları silmeniz gerekmektedir."
+
+#: resources/assets/scripts/routes/saved-searches.js:35
+msgid "Tags"
+msgstr "Etiketler"
+
+#: resources/assets/scripts/routes/saved-searches.js:46
+msgid "Show details"
+msgstr "Detayları göster"
+
+#: resources/assets/scripts/routes/saved-searches.js:50
+msgid "Search term"
+msgstr "Terim ara"
+
+#: resources/assets/scripts/routes/saved-searches.js:72
+msgid "Confirm remove saved searches"
+msgstr "Kayıtlı aramaları kaldırmayı onayla"
+
+#: resources/assets/scripts/routes/saved-searches.js:73
+msgid "Are you sure you want to remove all of your saved searches?"
+msgstr "Kayıtlı aramalarınızın tümünü kaldırmak istediğinizden emin misiniz?"
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Saved searches removed"
+msgstr "Kayıtlı aramalar kaldırıldı"
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Your saved searches have been removed."
+msgstr "Kayıtlı aramalarınız kaldırıldı."
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Saved searches not removed"
+msgstr "Kayıtlı aramalar kaldırılmadı"
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Your saved searches could not be removed."
+msgstr "Kayıtlı aramalarınız kaldırılamadı."
+
+#: resources/assets/scripts/routes/saved-searches.js:91
+msgid "Confirm remove saved search"
+msgstr "Kayıtlı aramayı kaldırmayı onayla"
+
+#: resources/assets/scripts/routes/saved-searches.js:92
+msgid "Are you sure you want to remove this saved search?"
+msgstr "Bu kayıtlı aramayı kaldırmak istediğinizden emin misiniz?"
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Saved search removed"
+msgstr "Kayıtlı arama kaldırıldı"
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Your saved search has been removed."
+msgstr "Kayıtlı aramanız kaldırıldı."
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Saved search not removed"
+msgstr "Kayıtlı arama kaldırılmadı"
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Your saved search could not be removed"
+msgstr "Kayıtlı aramanız kaldırılamadı"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "Favorite added"
+msgstr "Favori eklendi"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "The resource has been added to your favorites."
+msgstr "Bu kaynak favorilerinize eklendi"
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "Favorite not added"
+msgstr "Favori eklenmedi"
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "The resource could not be added to your favorites."
+msgstr "Bu kaynak favorilerinize eklenemedi"
