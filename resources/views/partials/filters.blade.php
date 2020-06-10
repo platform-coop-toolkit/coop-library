@@ -1,6 +1,6 @@
 <div class="filter-wrapper">
   <button type="button" class="button button--borderless" id="show-filters">@svg('filter', 'icon--filter', ['focusable' => 'false', 'aria-hidden' => 'true']) {{ __('Filter', 'coop-library' ) }}</button>
-  <form name="filters" class="filters" action="{{ (isset($_GET['s'])) ? home_url('/') : get_post_type_archive_link('lc_resource') }}">
+  <form name="filters" class="form filters" action="{{ (isset($_GET['s'])) ? home_url('/') : get_post_type_archive_link('lc_resource') }}">
       <input type="hidden" name="filtered" value="1" />
       @if(isset($_GET['s']))
       <input type="hidden" name="s" value="{{ $_GET['s'] }}" />
@@ -29,7 +29,7 @@
               @foreach(get_terms(['taxonomy' => $tax, 'orderby' => 'order']) as $term)
                 @if(!$term->parent)
                 <li>
-                  <input id="{{ $tax }}-{{ $term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $term->slug }}" {{
+                  <input class="input--parent" id="{{ $tax }}-{{ $term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $term->slug }}" {{
                   checked(
                     (in_array($term->slug, array_keys($queried_resource_terms[$tax]), true)) ? $term->slug : false,
                     $term->slug,
