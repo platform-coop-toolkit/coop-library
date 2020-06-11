@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Co-op Library package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Priya Ponmalai <priiyap@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Co-op Library\n"
+"Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
+"PO-Revision-Date: 2020-04-01 04:11+0000\n"
+"Last-Translator: Priya Ponmalai <priiyap@gmail.com>, 2020\n"
+"Language-Team: Malayalam (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/ml/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ml\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: resources/functions.php:17
+msgid "Resource Library &rsaquo; Error"
+msgstr "റിസോഴ്സ് ലൈബ്രറി &rsaquo; പിശക്"
+
+#: resources/functions.php:28
+msgid "You must be using PHP 7.1 or greater."
+msgstr "നിങ്ങൾ PHP 7.1 അല്ലെങ്കിൽ അതിൽ ഉയർന്നത് ഉപയോഗിക്കണം."
+
+#: resources/functions.php:29
+msgid "Invalid PHP version"
+msgstr "അസാധുവായ PHP പതിപ്പ്"
+
+#: resources/functions.php:38
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "നിങ്ങൾ  WordPress 4.7.0 അല്ലെങ്കിൽ അതിൽ ഉയർന്നത് ഉപയോഗിക്കണം."
+
+#: resources/functions.php:39
+msgid "Invalid WordPress version"
+msgstr "അസാധുവായ WordPress പതിപ്പ്"
+
+#: resources/functions.php:49
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+"നിങ്ങൾ സേജ് ഡയറക്ടറിയിൽ നിന്ന്  <code>കംപോസർ ഇൻസ്റ്റാൾ </code> "
+"പ്രവർത്തിപ്പിക്കണം."
+
+#: resources/functions.php:50
+msgid "Autoloader not found."
+msgstr "ഓട്ടോലോഡർ‌ കണ്ടെത്തിയില്ല."
+
+#: resources/functions.php:66
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "ഉൾപ്പെടുത്താനായി പിശക് <code>%s</code> ലൊക്കേറ്റ് ചെയ്യുന്നു."
+
+#: app/Controllers/App.php:22
+msgid "Settings saved"
+msgstr "ക്രമീകരണങ്ങൾ സംരക്ഷിച്ചു"
+
+#: app/Controllers/App.php:24
+msgid "Your settings have been saved."
+msgstr "നിങ്ങളുടെ ക്രമീകരണങ്ങൾ സംരക്ഷിച്ചു."
+
+#: app/Controllers/App.php:197
+msgid "&laquo; Previous"
+msgstr "&laquo; മുമ്പത്തേത്"
+
+#: app/Controllers/App.php:198
+msgid "Next &raquo;"
+msgstr "അടുത്തത് &raquo;"
+
+#: app/Controllers/App.php:305
+msgid "&hellip;"
+msgstr "&hellip;"
+
+#: app/Controllers/App.php:367
+msgid "previous"
+msgstr "മുമ്പത്തേത്"
+
+#: app/Controllers/App.php:371
+msgid "next"
+msgstr "അടുത്തത്"
+
+#: app/Controllers/App.php:373
+msgid "Resources navigation"
+msgstr "റിസോഴ്സുകളുടെ നാവിഗേഷൻ"
+
+#: app/Controllers/App.php:374
+msgid "resources"
+msgstr "റിസോഴ്സുകൾ"
+
+#: app/Controllers/App.php:448
+msgid ""
+"<span class=\"pc-ff--sans pc-fw--normal\">Platform Co-op</span><br "
+"/>Resource Library"
+msgstr ""
+"<span class=\"pc-ff--sans pc-fw--normal\">പ്ലാറ്റ്ഫോം കോ-ഓപ്പ്</span><br "
+"/>റിസോഴ്സ് ലൈബ്രറി"
+
+#: app/Controllers/App.php:456
+msgid "Latest Posts"
+msgstr "ഏറ്റവും പുതിയ പോസ്റ്റുകൾ"
+
+#: app/Controllers/App.php:460
+msgid "Search results"
+msgstr "തിരച്ചിൽ ഫലങ്ങൾ"
+
+#: app/Controllers/App.php:464
+msgid "Browse all"
+msgstr "എല്ലാം തിരയുക"
+
+#: app/Controllers/App.php:468
+msgid "Not Found"
+msgstr "കണ്ടെത്തിയില്ല"
+
+#: app/Controllers/App.php:479
+msgid "Home"
+msgstr "ഹോം"
+
+#: app/setup.php:59
+msgid "Global Navigation"
+msgstr "ഗ്ലോബൽ നാവിഗേഷൻ"
+
+#: app/setup.php:60
+msgid "Primary Navigation"
+msgstr "പ്രാഥമിക നാവിഗേഷൻ"
+
+#: app/setup.php:126
+msgid "Primary"
+msgstr "പ്രാഥമികം"
+
+#: app/setup.php:130
+msgid "Footer"
+msgstr "ഫൂട്ടർ"
+
+#: app/filters.php:32
+msgid "Continued"
+msgstr "തുടരുന്നു"
+
+#: resources/views/components/notification.blade.php:4
+#: resources/views/search.blade.php:8
+#: resources/assets/scripts/util/addNotification.js:32
+msgid "Close notification"
+msgstr "അറിയിപ്പ് അടയ്ക്കുക"
+
+#: resources/views/search.blade.php:9
+msgid "No results for search"
+msgstr "തിരച്ചിലിന് ഫലങ്ങളൊന്നുമില്ല"
+
+#: resources/views/search.blade.php:10 resources/views/index.blade.php:8
+msgid "Sorry, no results were found."
+msgstr "ക്ഷമിക്കണം, ഒരു ഫലങ്ങളും കണ്ടെത്തിയില്ല."
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "ക്ഷമിക്കണം, നിങ്ങൾ കാണാൻ ശ്രമിക്കുന്ന പേജ് നിലവിലില്ല."
+
+#: resources/views/404.blade.php:10 resources/views/index.blade.php:10
+#: resources/views/partials/content-front-page.blade.php:2
+msgid "Search resource name, publisher, or topic…"
+msgstr "റിസോഴ്സിന്റെ പേര്, പ്രസാധകൻ, അല്ലെങ്കിൽ വിഷയം തിരയുക…"
+
+#: resources/views/partials/search-form.blade.php:3
+msgid "Search for:"
+msgstr "ഇതിന് വേണ്ടി തിരയുക:"
+
+#: resources/views/partials/search-form.blade.php:8
+#: resources/views/partials/header.blade.php:7
+msgid "Search"
+msgstr "തിരയുക"
+
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr "പ്രകാരം"
+
+#: resources/views/partials/language-switcher.blade.php:4
+msgid "Language"
+msgstr "ഭാഷ"
+
+#: resources/views/partials/content-single.blade.php:10
+#: resources/views/partials/content-page.blade.php:2
+msgid "Pages:"
+msgstr "പേജുകൾ:"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all"
+msgstr "എല്ലാം നീക്കം ചെയ്യുക"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+msgid "Remove all saved searches"
+msgstr "സംരക്ഷിച്ച എല്ലാ തിരച്ചിലുകളും സംരക്ഷിക്കുക"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:8
+msgid "You have no saved searches."
+msgstr "നിങ്ങൾക്ക് സംരക്ഷിച്ച തിരയലുകളില്ല."
+
+#: resources/views/partials/content-page-saved-searches.blade.php:9
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
+msgstr ""
+"നിങ്ങളുടെ തിരച്ചിൽ സംരക്ഷിക്കുന്നതിന് തിരയുക അല്ലെങ്കിൽ <a href=\"%s\"></a> "
+"ബ്രൗസ് ചെയ്യുക."
+
+#: resources/views/partials/header.blade.php:29
+msgid "Explore"
+msgstr "പര്യവേഷണം ചെയ്യുക"
+
+#: resources/views/partials/filters.blade.php:2
+msgid "Filter"
+msgstr "ഫിൽറ്റർ"
+
+#: resources/views/partials/filters.blade.php:10
+msgid "Close"
+msgstr "അടയ്ക്കുക"
+
+#: resources/views/partials/filters.blade.php:11
+msgid "Filters"
+msgstr "ഫിൽറ്ററുകൾ"
+
+#: resources/views/partials/filters.blade.php:14
+#: resources/views/partials/content-front-page.blade.php:10
+msgid "Goals"
+msgstr "ലക്ഷ്യങ്ങൾ"
+
+#: resources/views/partials/filters.blade.php:15
+#: resources/views/partials/content-front-page.blade.php:9
+msgid "Topics"
+msgstr "വിഷയങ്ങൾ"
+
+#: resources/views/partials/filters.blade.php:16
+msgid "Co-op Types"
+msgstr "കോ-ഓപ്പ് തരങ്ങൾ"
+
+#: resources/views/partials/filters.blade.php:17
+#: resources/views/partials/content-front-page.blade.php:11
+msgid "Sectors"
+msgstr "മേഖലകൾ"
+
+#: resources/views/partials/filters.blade.php:18
+msgid "Locations"
+msgstr "ലൊക്കേഷനുകൾ"
+
+#: resources/views/partials/filters.blade.php:19
+#: resources/views/partials/content-front-page.blade.php:12
+msgid "Formats"
+msgstr "ഫോർമാറ്റുകൾ"
+
+#: resources/views/partials/filters.blade.php:26
+#: resources/views/partials/filters.blade.php:68
+msgid "Deselect all"
+msgstr "തിരഞ്ഞെടുത്തതെല്ലാം ഒഴിവാക്കുക"
+
+#: resources/views/partials/filters.blade.php:26
+#, python-format
+msgid "Deselect all %s"
+msgstr "തിരഞ്ഞെടുത്തതെല്ലാം ഒഴിവാക്കുക %s"
+
+#: resources/views/partials/filters.blade.php:40
+#, python-format
+msgid "and %d subtopics"
+msgstr "കൂടാതെ %d ഉപ വിഷയങ്ങൾ"
+
+#: resources/views/partials/filters.blade.php:41
+msgid "show %1$d subtopics for \"%2$s\""
+msgstr "\"%2$s\"-ന് %1$d ഉപവിഷയങ്ങൾ കാണിക്കുക"
+
+#: resources/views/partials/filters.blade.php:65
+msgid "Languages"
+msgstr "ഭാഷകൾ"
+
+#: resources/views/partials/filters.blade.php:68
+msgid "languages"
+msgstr "ഭാഷകൾ"
+
+#: resources/views/partials/filters.blade.php:82
+msgid "Apply Filters"
+msgstr "ഫിൽറ്ററുകൾ പ്രയോഗിക്കുക"
+
+#: resources/views/partials/content-page-settings.blade.php:2
+msgid "Allow the Resource Library to track what resources you’ve viewed."
+msgstr ""
+"നിങ്ങൾ ഏത് റിസോഴ്സുകളാണ് കണ്ടത് എന്ന് ട്രാക്ക് ചെയ്യാൻ റിസോഴ്സ് ലൈബ്രറിയെ "
+"അനുവദിക്കുക."
+
+#: resources/views/partials/content-page-settings.blade.php:3
+msgid "How resource tracking changes what you see"
+msgstr "എങ്ങനെയാണ് റിസോഴ്സ് ട്രാക്കിംഗ് നിങ്ങൾ കാണുന്നതിൽ മാറ്റം വരുത്തുന്നത്"
+
+#: resources/views/partials/content-page-settings.blade.php:5
+msgid ""
+"By choosing ‘Allow’, the Resource Library will be able to track the "
+"resources you view, letting you:"
+msgstr ""
+"‘അനുവദിക്കുക’ എന്നത് തിരഞ്ഞെടുക്കുന്നത് വഴി റിസോഴ്സ് ലൈബ്രറിക്ക് നിങ്ങൾ "
+"കാണുന്ന റിസോഴ്സുകൾ ട്രാക്ക് ചെയ്യാനാവും, നിങ്ങളെ അനുവദിക്കുന്നു:"
+
+#: resources/views/partials/content-page-settings.blade.php:7
+msgid "see a list of your recently viewed resources on the home page,"
+msgstr ""
+"നിങ്ങൾ ഹോം പേജിൽ നിങ്ങൾ സമീപകാലത്ത് കണ്ട റിസോഴ്സുകളുടെ ഒരു ലിസ്റ്റ് കാണുക,"
+
+#: resources/views/partials/content-page-settings.blade.php:8
+msgid "see related resources, and"
+msgstr "ബന്ധപ്പെട്ട റിസോഴ്സുകൾ കാണുകയും, കൂടാതെ"
+
+#: resources/views/partials/content-page-settings.blade.php:9
+msgid "contribute to the most viewed articles seen on the home page."
+msgstr "ഹോം പേജിൽ കണ്ട ഏറ്റവും കൂടുതൽ കണ്ട ലേഖനങ്ങളിലേക്ക് സംഭാവന ചെയ്യുക."
+
+#: resources/views/partials/content-page-settings.blade.php:11
+msgid ""
+"The Resource Library will only use this information for these features, and "
+"does not collect any personally identifiable information."
+msgstr ""
+"ഈ ഫീച്ചറുകൾക്കായി റിസോഴ്സ് ലൈബ്രറി ഈ വിവരങ്ങൾ മാത്രമേ ഉപയോഗിക്കു, കൂടാതെ "
+"വ്യക്തിപരമായി തിരിച്ചറിയാവുന്ന വിവരങ്ങളൊന്നും ശേഖരിക്കുന്നില്ല."
+
+#: resources/views/partials/content-page-settings.blade.php:12
+msgid ""
+"By choosing ‘Don’t allow’, you will be able to continue to use the Resource "
+"Library fully, with the exception of the features mentioned previously."
+msgstr ""
+"'അനുവദിക്കരുത്' എന്ന് തിരഞ്ഞെടുക്കുന്നത് വഴി, മുമ്പ് സൂചിപ്പിച്ച സവിശേഷതകൾ "
+"ഒഴിവാക്കിക്കൊണ്ട് നിങ്ങൾക്ക് റിസോഴ്സ് ലൈബ്രറി പൂർണ്ണമായി ഉപയോഗിക്കുന്നത് "
+"തുടരാൻ സാധിക്കും."
+
+#: resources/views/partials/content-page-settings.blade.php:17
+msgid "Allow"
+msgstr "അനുവദിക്കുക"
+
+#: resources/views/partials/content-page-settings.blade.php:21
+msgid "Don&rsquo;t allow"
+msgstr "അനുവദിക്കരുത്"
+
+#: resources/views/partials/content-page-settings.blade.php:25
+#: resources/assets/scripts/routes/archive.js:127
+msgid "Save"
+msgstr "സംരക്ഷിക്കുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/content-lc_resource.blade.php:5
+msgid "Subscription required"
+msgstr "സബ്സ്ക്രിപ്ഷൻ ആവശ്യമാണ്"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/content-lc_resource.blade.php:5
+msgid "Subscription required to access this resource"
+msgstr "ഈ റിസോഴ്സ് സ്വീകരിക്കാൻ സബ്സ്ക്രിപ്ഷൻ ആവശ്യമാണ്"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:8
+#: resources/views/partials/content-lc_resource.blade.php:10
+#, python-format
+msgid "By %s"
+msgstr "%s പ്രകാരം"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:12
+#: resources/views/partials/content-lc_resource.blade.php:16
+msgid "resource format"
+msgstr "റിസോഴ്സ് ഫോർമാറ്റ്"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:13
+#, python-format
+msgid "Published by %s"
+msgstr "%s പ്രസിദ്ധീകരിച്ചത്"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:18
+#: resources/views/partials/content-lc_resource.blade.php:23
+msgid "location of relevance"
+msgstr "പ്രസക്തിയുടെ ലൊക്കേഷൻ"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:25
+#: resources/views/partials/content-lc_resource.blade.php:30
+msgid "language"
+msgstr "ഭാഷ"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:31
+#: resources/views/partials/content-lc_resource.blade.php:36
+msgid "date published"
+msgstr "പ്രസിദ്ധീകരിച്ച തീയതി"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:38
+msgid "Summary"
+msgstr "സംഗ്രഹം"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:45
+msgid "Topic"
+msgstr "വിഷയം"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:50
+msgid "Suggest edits"
+msgstr "തിരുത്തുകൾ നിർദ്ദേശിക്കുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource (subscription required)"
+msgstr "പൂർണ്ണമായ റിസോഴ്സുകൾ കാണുക (സബ്സ്ക്രിപ്ഷൻ ആവശ്യമാണ്)"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:55
+msgid "Visit full resource"
+msgstr "പൂർ‌ണ്ണമായ റിസോഴ്സ് സന്ദർശിക്കുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:60
+msgid "Add to Favorites"
+msgstr "പ്രിയപ്പെട്ടവയിലേക്ക് ചേർക്കുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:62
+msgid "Remove from Favorites"
+msgstr "പ്രിയപ്പെട്ടവയിൽ നിന്ന് നീക്കം ചെയ്യുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:67
+msgid "Share"
+msgstr "ഷെയർ ചെയ്യുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:80
+#: resources/views/partials/footer.blade.php:17
+msgid "Email"
+msgstr "ഇമെയിൽ"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:86
+msgid "Report broken link"
+msgstr "തകർന്ന ലിങ്ക് റിപ്പോർട്ട് ചെയ്യുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:90
+msgid "View alternate links"
+msgstr "ഇതര ലിങ്കുകൾ കാണുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:95
+msgid "View on Perma.cc (%1$d of %2$d)"
+msgstr "Perma.cc-ൽ കാണുക (%1$d of %2$d)"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:97
+msgid "View on Perma.cc"
+msgstr "Perma.cc-ൽ കാണുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:104
+msgid "View on the Internet Archive (%1$d of %2$d)"
+msgstr "ഇന്റർനെറ്റ് ആർക്കൈവിൽ കാണുക (%1$d of %2$d)"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:106
+msgid "View on the Internet Archive"
+msgstr "ഇന്റർനെറ്റ് ആർക്കൈവിൽ കാണുക"
+
+#: resources/views/partials/content-single-lc_resource.blade.php:115
+#: resources/views/partials/content-lc_resource.blade.php:52
+#, python-format
+msgid "Added %s"
+msgstr "%s ചേർത്തു"
+
+#: resources/views/partials/save-search.blade.php:3
+msgid "Save my search"
+msgstr "എന്റെ തിരച്ചിൽ സംരക്ഷിക്കുക"
+
+#: resources/views/partials/content-lc_resource.blade.php:17
+msgid "publisher"
+msgstr "പ്രസാധകൻ"
+
+#: resources/views/partials/content-lc_resource.blade.php:47
+#, python-format
+msgid "+%d more"
+msgstr "+%d കൂടുതൽ"
+
+#: resources/views/partials/content-lc_resource.blade.php:56
+msgid "Favorited"
+msgstr "പ്രിയപ്പെട്ടവയാക്കിയവ"
+
+#: resources/views/partials/content-front-page.blade.php:6
+msgid "Browse by…"
+msgstr "പ്രകാരം തിരയുക"
+
+#: resources/views/partials/content-front-page.blade.php:17
+msgid "Browse all resources"
+msgstr "എല്ലാ റിസോഴ്സുകളും തിരയുക"
+
+#: resources/views/partials/content-front-page.blade.php:20
+msgid "My feed"
+msgstr "എന്റെ ഫീഡ്"
+
+#: resources/views/partials/content-front-page.blade.php:21
+#: resources/views/partials/sort.blade.php:8
+msgid "Most viewed"
+msgstr "ഏറ്റവും കൂടുതൽ കണ്ടവ"
+
+#: resources/views/partials/content-front-page.blade.php:34
+msgid "Recently published"
+msgstr "സമീപകാലത്ത് പ്രസിദ്ധീകരിച്ചത്"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; പഴയ അഭിപ്രായങ്ങൾ"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "പുതിയ അഭിപ്രായങ്ങൾ &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "അഭിപ്രായങ്ങൾ അടച്ചു."
+
+#: resources/views/partials/current-filters.blade.php:3
+msgid "%1$s of %2$s resources matched"
+msgstr "%1$s of %2$s റിസോഴ്സുകൾ പൊരുത്തപ്പെടുത്തി"
+
+#: resources/views/partials/current-filters.blade.php:5
+msgid "Your search term:"
+msgstr "നിങ്ങളുടെ തിരച്ചിൽ പ്രയോഗം:"
+
+#: resources/views/partials/current-filters.blade.php:9
+msgid "Your filters:"
+msgstr "നിങ്ങളുടെ ഫിൽറ്ററുകൾ:"
+
+#: resources/views/partials/current-filters.blade.php:14
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"<span class=\"screen-reader-text\">നീക്കം ചെയ്യുക </span>%s<span class"
+"=\"screen-reader-text\">നിലവിലുള്ള ഫിൽറ്ററുകളിൽ നിന്ന്</span>"
+
+#: resources/views/partials/current-filters.blade.php:20
+msgid "The resources shown match at least one of these filters."
+msgstr "ഈ ഫിൽറ്ററുകളിൽ ഒരെണ്ണത്തിലെങ്കിലും റിസോഴ്സുകൾ പൊരുത്തം കാണിക്കും."
+
+#: resources/views/partials/current-filters.blade.php:22
+msgid "Clear all"
+msgstr "എല്ലാം നീക്കം ചെയ്യുക"
+
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all favorites"
+msgstr "പ്രിയപ്പെട്ടവ എല്ലാം നീക്കം ചെയ്യുക"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#, python-format
+msgid "\"%s\" from my favorites"
+msgstr "എന്റെ പ്രിയപ്പെട്ടവയിൽ നിന്നുള്ള \" %s\""
+
+#: resources/views/partials/content-page-favorites.blade.php:15
+msgid "You have no favorites."
+msgstr "നിങ്ങൾക്ക് പ്രിയപ്പെട്ടവയൊന്നുമില്ല."
+
+#: resources/views/partials/content-page-favorites.blade.php:16
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
+msgstr ""
+"തിരയുക, അല്ലെങ്കിൽ <a href=\"%s\"> പ്രിയപ്പെട്ടവയാക്കുന്നതിനുള്ള "
+"റിസോഴ്സുകൾക്കായി </a> ബ്രൗസ് ചെയ്യുക."
+
+#: resources/views/partials/content-term-list.blade.php:27
+#, python-format
+msgid "No %s found."
+msgstr "%s കണ്ടെത്തിയില്ല."
+
+#: resources/views/partials/footer.blade.php:7
+msgid "Platform Cooperativism Consortium"
+msgstr "പ്ലാറ്റ്ഫോം കോപ്പറേറ്റിവിസം കൺസോർഷ്യം"
+
+#: resources/views/partials/footer.blade.php:10
+msgid "Our open access and privacy policy"
+msgstr "ഞങ്ങളുടെ ഓപ്പൺ ആക്സസും സ്വകാര്യതാ നയവും"
+
+#: resources/views/partials/footer.blade.php:11
+msgid "Our commitment to diversity and inclusion"
+msgstr "വൈവിധ്യത്തിനും ഉൾപ്പെടുത്തലിനമുള്ള ഉള്ള ഞങ്ങളുടെ പ്രതിബദ്ധത"
+
+#: resources/views/partials/sort.blade.php:4
+msgid "Sort by"
+msgstr "പ്രകാരം ക്രമീകരിക്കുക"
+
+#: resources/views/partials/sort.blade.php:6
+msgid "Date added"
+msgstr "തീയതി ചേർത്തു"
+
+#: resources/views/partials/sort.blade.php:7
+msgid "Date published"
+msgstr "പ്രസിദ്ധീകരിച്ച തീയതി"
+
+#: resources/views/partials/sort.blade.php:9
+msgid "Most favorited"
+msgstr "ഏറ്റവും കൂടുതൽ പ്രിയപ്പെട്ടവയാക്കിയവ"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid "Favorites not supported"
+msgstr "പ്രിയപ്പെട്ടവയെ പിന്തുണയ്ക്കുന്നില്ല"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid ""
+"Your favorites are stored in your browser's cookies. To add favorites, "
+"please enable cookies for this website."
+msgstr ""
+"നിങ്ങളുടെ പ്രിയപ്പെട്ടവ നിങ്ങളുടെ ബ്രൗസർ കുക്കികളിൽ സംഭരിക്കും. "
+"പ്രിയപ്പെട്ടവ ചേർക്കുന്നതിന് ഈ വെബ്സൈറ്റിന് വേണ്ടി കുക്കികൾ എനേബിൾ ചെയ്യുക."
+
+#: resources/assets/scripts/routes/favorites.js:18
+msgid "Remove favorites?"
+msgstr "പ്രിയപ്പെട്ടവ നീക്കം ചെയ്യണോ?"
+
+#: resources/assets/scripts/routes/favorites.js:19
+msgid "Are you sure you want to remove all resources from your favorites?"
+msgstr ""
+"നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിൽ നിന്ന് എല്ലാം നീക്കം ചെയ്യണമെന്ന് തീർച്ചയാണോ?"
+
+#: resources/assets/scripts/routes/favorites.js:20
+#: resources/assets/scripts/routes/favorites.js:50
+#: resources/assets/scripts/routes/saved-searches.js:74
+#: resources/assets/scripts/routes/saved-searches.js:93
+msgid "Yes, remove"
+msgstr "അതെ, നീക്കം ചെയ്യുക"
+
+#: resources/assets/scripts/routes/favorites.js:21
+#: resources/assets/scripts/routes/favorites.js:51
+#: resources/assets/scripts/routes/saved-searches.js:75
+#: resources/assets/scripts/routes/saved-searches.js:94
+msgid "No, don&rsquo;t remove"
+msgstr "ഇല്ല, നീക്കം ചെയ്യരുത്"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "Favorites removed"
+msgstr "പ്രിയപ്പെട്ടവ നീക്കം ചെയ്തു"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "The resources have been removed from your favorites."
+msgstr "റിസോഴ്സുകൾ നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിൽ നിന്ന് നീക്കം ചെയ്തു."
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "Favorites not removed"
+msgstr "പ്രിയപ്പെട്ടവ നീക്കം ചെയ്തില്ല"
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "The resources could not be removed from your favorites."
+msgstr "റിസോഴ്സുകൾ നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിൽ നിന്ന് നീക്കം ചെയ്യാനാവില്ല."
+
+#: resources/assets/scripts/routes/favorites.js:48
+msgid "Remove resource?"
+msgstr "റിസോഴ്സ് നീക്കം ചെയ്യണോ?"
+
+#: resources/assets/scripts/routes/favorites.js:49
+msgid "Are you sure you want to remove this resource from your favorites?"
+msgstr ""
+"നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിൽ നിന്ന് റിസോഴ്സ് നീക്കം ചെയ്യണമെന്ന് തീർച്ചയാണോ?"
+
+#: resources/assets/scripts/routes/favorites.js:69
+#: resources/assets/scripts/routes/single.js:40
+msgid "Favorite removed"
+msgstr "പ്രിയപ്പെട്ടത് നീക്കം ചെയ്തു"
+
+#: resources/assets/scripts/routes/favorites.js:69
+#: resources/assets/scripts/routes/single.js:40
+msgid "The resource has been removed from your favorites."
+msgstr "റിസോഴ്സുകൾ നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിൽ നിന്ന് നീക്കം ചെയ്തു."
+
+#: resources/assets/scripts/routes/favorites.js:72
+#: resources/assets/scripts/routes/single.js:47
+msgid "Favorite not removed"
+msgstr "പ്രിയപ്പെട്ടവ നീക്കം ചെയ്തില്ല"
+
+#: resources/assets/scripts/routes/favorites.js:72
+#: resources/assets/scripts/routes/single.js:47
+msgid "The resource could not be removed from your favorites."
+msgstr "റിസോഴ്സുകൾ നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിൽ നിന്ന് നീക്കം ചെയ്യാനാവില്ല."
+
+#: resources/assets/scripts/routes/archive.js:18
+#, python-format
+msgid "%s filter applied. Resource list updated."
+msgid_plural "%s filters applied. Resource list updated."
+msgstr[0] "%s ഫിൽട്ടർ പ്രയോഗിച്ചു, റിസോഴ്സ് ലിസ്റ്റ് ലിസ്റ്റ് നവീകരിച്ചു."
+msgstr[1] "%s ഫിൽട്ടറുകൾ പ്രയോഗിച്ചു, റിസോഴ്സ് ലിസ്റ്റ് ലിസ്റ്റ് നവീകരിച്ചു."
+
+#: resources/assets/scripts/routes/archive.js:20
+#, python-format
+msgid "%s filter applied. No resources found."
+msgid_plural "%s filters applied. No resources found."
+msgstr[0] "%s ഫിൽട്ടർ പ്രയോഗിച്ചു, റിസോഴ്സുകളൊന്നും കണ്ടെത്തിയില്ല."
+msgstr[1] "%s ഫിൽട്ടറുകൾ പ്രയോഗിച്ചു, റിസോഴ്സുകളൊന്നും കണ്ടെത്തിയില്ല."
+
+#: resources/assets/scripts/routes/archive.js:40
+#, python-format
+msgid "All %s have been deselected"
+msgstr "എല്ലാ %s തിരഞ്ഞെടുത്തതും ഒഴിവാക്കി"
+
+#: resources/assets/scripts/routes/archive.js:116
+#: resources/assets/scripts/routes/saved-searches.js:15
+msgid "Maximum number of saved searches reached"
+msgstr "സംരക്ഷിച്ച തിരച്ചിലുകളുടെ പരമാവധി എണ്ണമെത്തി"
+
+#: resources/assets/scripts/routes/archive.js:117
+#, python-format
+msgid ""
+"You have reached the maximum amount of saved searches (50). To save more, "
+"you must <a href=\"%s\">delete some saved searches</a>."
+msgstr ""
+"നിങ്ങൾ സംരക്ഷിച്ച തിരയലുകളുടെ പരമാധി എണ്ണത്തിലെത്തി (50). കൂടുതൽ "
+"സംരക്ഷിക്കുന്നതിന് നിങ്ങൾ<a href=\"%s\">ഏതാനും സംരക്ഷിച്ച തിരയലുകൾ "
+"ഇല്ലാതാക്കണം</a>."
+
+#: resources/assets/scripts/routes/archive.js:123
+msgid "Save search"
+msgstr "തിരച്ചിൽ സംരക്ഷിക്കുക"
+
+#: resources/assets/scripts/routes/archive.js:124
+msgid ""
+"To save your search, please give it a name so you can identify it later."
+msgstr ""
+"നിങ്ങളുടെ തിരച്ചിൽ സംരക്ഷിക്കുന്നതിന് അതിന് ഒരു പേര് നൽകുക, അതുവഴി "
+"നിങ്ങൾക്ക് പിന്നീട് അത് തിരിച്ചറിയാനാവും."
+
+#: resources/assets/scripts/routes/archive.js:126
+msgid "Name of saved search:"
+msgstr "സംരക്ഷിച്ച തിരച്ചിലിന്റെ പേര്:"
+
+#: resources/assets/scripts/routes/archive.js:128
+msgid "Don&rsquo;t save"
+msgstr "സംരക്ഷിക്കരുത്"
+
+#: resources/assets/scripts/routes/archive.js:136
+#: resources/assets/scripts/routes/archive.js:186
+msgid "Search not saved"
+msgstr "തിരച്ചിൽ സംരക്ഷിച്ചില്ല"
+
+#: resources/assets/scripts/routes/archive.js:137
+msgid ""
+"You have reached the maximum amount of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+"നിങ്ങൾ സംരക്ഷിച്ച തിരച്ചിലുകളുടെ പരമാധി എണ്ണത്തിലെത്തി (50). കൂടുതൽ "
+"സംരക്ഷിക്കുന്നതിന് നിങ്ങൾ<a href=\"%s\">ഏതാനും സംരക്ഷിച്ച തിരയലുകൾ "
+"ഇല്ലാതാക്കണം</a>."
+
+#: resources/assets/scripts/routes/archive.js:144
+#, python-format
+msgid "Saved search for “%s”"
+msgstr "“%s”-ന് വേണ്ടി സംരക്ഷിച്ച തിരച്ചിൽ"
+
+#: resources/assets/scripts/routes/archive.js:156
+#: resources/assets/scripts/routes/archive.js:166
+#: resources/assets/scripts/routes/archive.js:176
+msgid "Search saved"
+msgstr "തിരച്ചിൽ സംരക്ഷിച്ചു"
+
+#: resources/assets/scripts/routes/archive.js:158
+msgid ""
+"You have successfully saved this search. You can save <strong>%1$d</strong> "
+"more. You can see this search on your <a href=\"%2$s\">saved searches "
+"page</a>."
+msgstr ""
+"നിങ്ങൾ ഈ തിരച്ചിൽ വിജയകരമായി സംരക്ഷിച്ചു. നിങ്ങൾക്ക് <strong>%1$d</strong> "
+"കൂടുതൽ സംരക്ഷിക്കാനാവും. നിങ്ങൾക്ക് ഈ തിരച്ചിൽ നിങ്ങളുടെ <a "
+"href=\"%2$s\">സംരക്ഷിച്ച തിരച്ചിൽ പേജിൽ</a> കാണാനാവും."
+
+#: resources/assets/scripts/routes/archive.js:168
+msgid ""
+"You have successfully saved this search. <strong>You can only save %1$d "
+"more.</strong> You can see this search and manage saved searches on your <a "
+"href=\"%2$s\">saved searches page</a>."
+msgstr ""
+"നിങ്ങൾ ഈ തിരച്ചിൽ വിജയകരമായി സംരക്ഷിച്ചു. <strong> നിങ്ങൾക്ക് %1$d കൂടുതൽ "
+"സംരക്ഷിക്കാനാവും</strong>. നിങ്ങൾക്ക് ഈ തിരച്ചിൽ കാണുകയും സംരക്ഷിച്ച "
+"തിരച്ചിലുകൾ നിങ്ങളുടെ <a href=\"%2$s\">സംരക്ഷിച്ച തിരച്ചിൽ "
+"പേജിൽ</a>നിയന്ത്രിക്കുകയും ചെയ്യാനാവും."
+
+#: resources/assets/scripts/routes/archive.js:178
+msgid ""
+"You have successfully saved this search. <strong>You have reached the "
+"maximum number of saved searches (50).</strong> You can see this search and "
+"manage saved searches on your <a href=\"%2$s\">saved searches page</a>."
+msgstr ""
+"നിങ്ങൾ ഈ തിരച്ചിൽ വിജയകരമായി സംരക്ഷിച്ചു. <strong>നിങ്ങൾ സംരക്ഷിച്ച "
+"തിരച്ചിലുകളുടെ പരമാവധി എണ്ണത്തിലെത്തി (50).</strong> നിങ്ങൾക്ക് ഈ തിരച്ചിൽ "
+"കാണുകയും സംരക്ഷിച്ച തിരച്ചിലുകൾ നിങ്ങളുടെ <a href=\"%2$s\">സംരക്ഷിച്ച "
+"തിരച്ചിൽ പേജിൽ</a> കാണാനുമാവും."
+
+#: resources/assets/scripts/routes/archive.js:186
+msgid "Your search could not be saved."
+msgstr "നിങ്ങളുടെ തിരച്ചിൽ സംരക്ഷിക്കാനാവില്ല."
+
+#: resources/assets/scripts/routes/saved-searches.js:16
+msgid ""
+"You have reached the maximum number of saved searches (50). To save more, "
+"you must delete some saved searches."
+msgstr ""
+"നിങ്ങൾ സംരക്ഷിച്ച തിരച്ചിലുകളുടെ പരമാവധി എണ്ണത്തിലെത്തി (50). കൂടുതൽ "
+"സംരക്ഷിക്കുന്നതിന് നിങ്ങൾ  സംരക്ഷിച്ച ഏതാനും തിരയലുകൾ ഇല്ലാതാക്കണം."
+
+#: resources/assets/scripts/routes/saved-searches.js:35
+msgid "Tags"
+msgstr "ടാഗുകൾ"
+
+#: resources/assets/scripts/routes/saved-searches.js:46
+msgid "Show details"
+msgstr "വിശദാംശങ്ങൾ കാണിക്കുക"
+
+#: resources/assets/scripts/routes/saved-searches.js:50
+msgid "Search term"
+msgstr "തിരച്ചിൽ പ്രയോഗം"
+
+#: resources/assets/scripts/routes/saved-searches.js:72
+msgid "Confirm remove saved searches"
+msgstr "സംരക്ഷിച്ച എല്ലാ തിരച്ചിലുകളും സ്ഥിരീകരിക്കുക"
+
+#: resources/assets/scripts/routes/saved-searches.js:73
+msgid "Are you sure you want to remove all of your saved searches?"
+msgstr ""
+"നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിൽ നിന്ന് എല്ലാം നീക്കം ചെയ്യണമെന്ന് തീർച്ചയാണോ?"
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Saved searches removed"
+msgstr "സംരക്ഷിച്ച തിരച്ചിലുകൾ നീക്കം ചെയ്തു"
+
+#: resources/assets/scripts/routes/saved-searches.js:81
+msgid "Your saved searches have been removed."
+msgstr "സംരക്ഷിച്ച തിരച്ചിലുകൾ നീക്കം ചെയ്തിട്ടുണ്ട്."
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Saved searches not removed"
+msgstr "സംരക്ഷിച്ച തിരച്ചിലുകൾ നീക്കം ചെയ്തില്ല"
+
+#: resources/assets/scripts/routes/saved-searches.js:83
+msgid "Your saved searches could not be removed."
+msgstr "നിങ്ങളുടെ സംരക്ഷിച്ച തിരച്ചിലുകൾ നീക്കം ചെയ്യാനാവില്ല."
+
+#: resources/assets/scripts/routes/saved-searches.js:91
+msgid "Confirm remove saved search"
+msgstr "സംരക്ഷിച്ച തിരച്ചിലുകൾ നീക്കം ചെയ്യുന്നത് സ്ഥിരീകരിക്കുക"
+
+#: resources/assets/scripts/routes/saved-searches.js:92
+msgid "Are you sure you want to remove this saved search?"
+msgstr "ഈ സംരക്ഷിച്ച തിരച്ചിൽ നീക്കം ചെയ്യണമെന്ന് നിങ്ങൾക്ക് തീർച്ചയാണോ?"
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Saved search removed"
+msgstr "സംരക്ഷിച്ച തിരച്ചിൽ നീക്കം ചെയ്തു"
+
+#: resources/assets/scripts/routes/saved-searches.js:107
+msgid "Your saved search has been removed."
+msgstr "നിങ്ങളുടെ സംരക്ഷിച്ച തിരച്ചിൽ നീക്കം ചെയ്തിട്ടുണ്ട്."
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Saved search not removed"
+msgstr "സംരക്ഷിച്ച തിരച്ചിൽ നീക്കം ചെയ്തില്ല"
+
+#: resources/assets/scripts/routes/saved-searches.js:109
+msgid "Your saved search could not be removed"
+msgstr "നിങ്ങളുടെ സംരക്ഷിച്ച തിരച്ചിൽ നീക്കം ചെയ്യാനാവില്ല"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "Favorite added"
+msgstr "പ്രിയപ്പെട്ടവ ചേർത്തു"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "The resource has been added to your favorites."
+msgstr "റിസോഴ്സ് നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിലേക്ക് ചേർത്തു."
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "Favorite not added"
+msgstr "പ്രിയപ്പെട്ടവ ചേർത്തില്ല"
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "The resource could not be added to your favorites."
+msgstr "റിസോഴ്സുകൾ നിങ്ങളുടെ പ്രിയപ്പെട്ടവയിലേക്ക് ചേർക്കാനാവില്ല."
