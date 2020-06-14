@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Hanjing Gu <ghj1988@gmail.com>, 2020
+# William Zhang <807035147@qq.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-05-19 14:54+0000\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
 "PO-Revision-Date: 2020-04-01 04:11+0000\n"
-"Last-Translator: Hanjing Gu <ghj1988@gmail.com>, 2020\n"
+"Last-Translator: William Zhang <807035147@qq.com>, 2020\n"
 "Language-Team: Chinese (Hong Kong) (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/zh_HK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,7 +135,7 @@ msgstr "頁腳"
 
 #: app/filters.php:32
 msgid "Continued"
-msgstr "續"
+msgstr "繼續"
 
 #: resources/views/components/notification.blade.php:4
 #: resources/views/search.blade.php:8
@@ -496,14 +497,13 @@ msgid "Your filters:"
 msgstr "您的篩選器："
 
 #: resources/views/partials/current-filters.blade.php:14
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr "刪除"
-
-#: resources/views/partials/current-filters.blade.php:14
-msgid "from current filters"
-msgstr "從當前篩選器"
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"<span class=\"screen-reader-text\">從當前過濾器中 </span>%s<span class=\"screen-"
+"reader-text\"> 刪除</span>"
 
 #: resources/views/partials/current-filters.blade.php:20
 msgid "The resources shown match at least one of these filters."
@@ -516,6 +516,11 @@ msgstr "清除所有"
 #: resources/views/partials/content-page-favorites.blade.php:2
 msgid "Remove all favorites"
 msgstr "刪除所有收藏夾"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "刪除"
 
 #: resources/views/partials/content-page-favorites.blade.php:8
 #, python-format
