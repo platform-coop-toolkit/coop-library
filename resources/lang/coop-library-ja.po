@@ -4,6 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# AYUSHI MARWAH <marwah.ayushi@gmail.com>, 2020
 # Kanako Fujiwara <kftranslation@madameroses.com>, 2020
 # 
 #, fuzzy
@@ -11,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-05-19 14:54+0000\n"
+"POT-Creation-Date: 2020-06-05 22:09+0000\n"
 "PO-Revision-Date: 2020-04-01 04:11+0000\n"
 "Last-Translator: Kanako Fujiwara <kftranslation@madameroses.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/ja/)\n"
@@ -31,7 +32,7 @@ msgstr "PHP 7.1 以降のバーションを使ってください。"
 
 #: resources/functions.php:29
 msgid "Invalid PHP version"
-msgstr "無効な PHP バージョン"
+msgstr "PHP バージョンが無効です"
 
 #: resources/functions.php:38
 msgid "You must be using WordPress 4.7.0 or greater."
@@ -39,20 +40,20 @@ msgstr "WordPress 4.7.0 以降のバージョンを使ってください。"
 
 #: resources/functions.php:39
 msgid "Invalid WordPress version"
-msgstr "無効な WordPress バージョン"
+msgstr "WordPress バージョンが無効です"
 
 #: resources/functions.php:49
 msgid "You must run <code>composer install</code> from the Sage directory."
-msgstr "<code>コンポーザーインストール</code>を Sage ヂレクトリから動作させなければなりません。"
+msgstr "<code>コンポーザーインストール</code>を Sage ディレクトリから作動させなければなりません。"
 
 #: resources/functions.php:50
 msgid "Autoloader not found."
-msgstr "オートローダが見つかりません。"
+msgstr "オートローダが見つかりませんでした。"
 
 #: resources/functions.php:66
 #, php-format
 msgid "Error locating <code>%s</code> for inclusion."
-msgstr "<code>%s</code>の包含を探している際にエラーが起こりました。"
+msgstr "<code>%s</code>が含まれているものを探している際にエラーが発生しました。"
 
 #: app/Controllers/App.php:22
 msgid "Settings saved"
@@ -64,11 +65,11 @@ msgstr "設定が保存されました。"
 
 #: app/Controllers/App.php:197
 msgid "&laquo; Previous"
-msgstr "&laquo; 前の"
+msgstr "&laquo; 前"
 
 #: app/Controllers/App.php:198
 msgid "Next &raquo;"
-msgstr "次の &raquo;"
+msgstr "次&raquo;"
 
 #: app/Controllers/App.php:305
 msgid "&hellip;"
@@ -76,11 +77,11 @@ msgstr "&hellip;"
 
 #: app/Controllers/App.php:367
 msgid "previous"
-msgstr "前の"
+msgstr "前"
 
 #: app/Controllers/App.php:371
 msgid "next"
-msgstr "次の"
+msgstr "次"
 
 #: app/Controllers/App.php:373
 msgid "Resources navigation"
@@ -135,7 +136,7 @@ msgstr "フッター"
 
 #: app/filters.php:32
 msgid "Continued"
-msgstr "続き"
+msgstr "続く"
 
 #: resources/views/components/notification.blade.php:4
 #: resources/views/search.blade.php:8
@@ -149,11 +150,11 @@ msgstr "検索の結果がありません"
 
 #: resources/views/search.blade.php:10 resources/views/index.blade.php:8
 msgid "Sorry, no results were found."
-msgstr "申し訳ありません、結果は見つかりませんでした。"
+msgstr "申し訳ありませんが、結果は見つかりませんでした。"
 
 #: resources/views/404.blade.php:8
 msgid "Sorry, but the page you were trying to view does not exist."
-msgstr "申し訳ありませんが閲覧しようとしていたページは存在しません。"
+msgstr "申し訳ありませんが、閲覧しようとしていたページは存在しません。"
 
 #: resources/views/404.blade.php:10 resources/views/index.blade.php:10
 #: resources/views/partials/content-front-page.blade.php:2
@@ -202,7 +203,7 @@ msgstr "リソースを検索または<a href=\"%s\">ブラウズ</a>して検�
 
 #: resources/views/partials/header.blade.php:29
 msgid "Explore"
-msgstr "探索する"
+msgstr "調べる"
 
 #: resources/views/partials/filters.blade.php:2
 msgid "Filter"
@@ -247,12 +248,12 @@ msgstr "フォーマット"
 #: resources/views/partials/filters.blade.php:26
 #: resources/views/partials/filters.blade.php:68
 msgid "Deselect all"
-msgstr "すべて選択を解除する"
+msgstr "すべての選択を解除する"
 
 #: resources/views/partials/filters.blade.php:26
 #, python-format
 msgid "Deselect all %s"
-msgstr "すべて選択を解除する%s"
+msgstr "%sのすべての選択を解除する"
 
 #: resources/views/partials/filters.blade.php:40
 #, python-format
@@ -261,7 +262,7 @@ msgstr "と %d サブトピック"
 
 #: resources/views/partials/filters.blade.php:41
 msgid "show %1$d subtopics for \"%2$s\""
-msgstr "%1$d の \"%2$s\"のサブトピック"
+msgstr "%1$d の「%2$s」のサブトピック"
 
 #: resources/views/partials/filters.blade.php:65
 msgid "Languages"
@@ -273,7 +274,7 @@ msgstr "言語"
 
 #: resources/views/partials/filters.blade.php:82
 msgid "Apply Filters"
-msgstr "絞り込み検索を実行する"
+msgstr "フィルタを適用する"
 
 #: resources/views/partials/content-page-settings.blade.php:2
 msgid "Allow the Resource Library to track what resources you’ve viewed."
@@ -281,25 +282,25 @@ msgstr "リソースライブラリが、表示したリソースを追跡でき
 
 #: resources/views/partials/content-page-settings.blade.php:3
 msgid "How resource tracking changes what you see"
-msgstr "変更履歴が目に見える画面をどのように変えるか"
+msgstr "変更履歴がご覧の画面をどのように変えるか"
 
 #: resources/views/partials/content-page-settings.blade.php:5
 msgid ""
 "By choosing ‘Allow’, the Resource Library will be able to track the "
 "resources you view, letting you:"
-msgstr "[許可]を選択すると、リソースライブラリは表示したリソースを追跡できるようになり、次のことができるようになります。"
+msgstr "[許可する]を選択すると、リソースライブラリは表示したリソースを追跡できるようになり、次のことができるようになります。"
 
 #: resources/views/partials/content-page-settings.blade.php:7
 msgid "see a list of your recently viewed resources on the home page,"
-msgstr "ホームページで最近表示したリソースのリストを表示する。"
+msgstr "ホームページで最近表示したリソースのリストを表示すること、"
 
 #: resources/views/partials/content-page-settings.blade.php:8
 msgid "see related resources, and"
-msgstr "関連リソースを表示し、また"
+msgstr "関連リソースを表示すること、また"
 
 #: resources/views/partials/content-page-settings.blade.php:9
 msgid "contribute to the most viewed articles seen on the home page."
-msgstr "ホームページで最も閲覧数が多かった記事に寄稿する。"
+msgstr "ホームページで最も閲覧数が多かった記事に寄稿すること。"
 
 #: resources/views/partials/content-page-settings.blade.php:11
 msgid ""
@@ -329,12 +330,12 @@ msgstr "保存する"
 #: resources/views/partials/content-single-lc_resource.blade.php:5
 #: resources/views/partials/content-lc_resource.blade.php:5
 msgid "Subscription required"
-msgstr "サブスクリプションが必要"
+msgstr "サブスクリプションが必要です"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:5
 #: resources/views/partials/content-lc_resource.blade.php:5
 msgid "Subscription required to access this resource"
-msgstr "このリソースにアクセスするには、サブスクリプションが必要"
+msgstr "このリソースにアクセスするには、サブスクリプションが必要です"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:8
 #: resources/views/partials/content-lc_resource.blade.php:10
@@ -406,7 +407,7 @@ msgstr "電子メール"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:86
 msgid "Report broken link"
-msgstr "リンクの不良を報告する"
+msgstr "リンクの不具合を報告する"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:90
 msgid "View alternate links"
@@ -445,7 +446,7 @@ msgstr "公開者"
 #: resources/views/partials/content-lc_resource.blade.php:47
 #, python-format
 msgid "+%d more"
-msgstr "+%d 多く"
+msgstr "+%d"
 
 #: resources/views/partials/content-lc_resource.blade.php:56
 msgid "Favorited"
@@ -461,7 +462,7 @@ msgstr "すべてのリソースを閲覧する"
 
 #: resources/views/partials/content-front-page.blade.php:20
 msgid "My feed"
-msgstr "私のフィード"
+msgstr "マイフィード"
 
 #: resources/views/partials/content-front-page.blade.php:21
 #: resources/views/partials/sort.blade.php:8
@@ -474,11 +475,11 @@ msgstr "最近公開されたもの"
 
 #: resources/views/partials/comments.blade.php:21
 msgid "&larr; Older comments"
-msgstr "&larr; 古いコメント"
+msgstr "&larr; コメントが古い"
 
 #: resources/views/partials/comments.blade.php:24
 msgid "Newer comments &rarr;"
-msgstr "新しいコメント &rarr;"
+msgstr "コメントが新しい &rarr;"
 
 #: resources/views/partials/comments.blade.php:33
 msgid "Comments are closed."
@@ -497,14 +498,13 @@ msgid "Your filters:"
 msgstr "あなたの絞り込み条件："
 
 #: resources/views/partials/current-filters.blade.php:14
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr "消去する"
-
-#: resources/views/partials/current-filters.blade.php:14
-msgid "from current filters"
-msgstr "現在のフィルタから"
+#, python-format
+msgid ""
+"<span class=\"screen-reader-text\">Remove </span>%s<span class=\"screen-"
+"reader-text\"> from current filters</span>"
+msgstr ""
+"<span class=\"screen-reader-text\">削除する</span>、%s<span class=\"screen-"
+"reader-text\"> を現在のフィルタから</span>"
 
 #: resources/views/partials/current-filters.blade.php:20
 msgid "The resources shown match at least one of these filters."
@@ -512,16 +512,21 @@ msgstr "表示されるリソースは、これらのフィルタの少なくと
 
 #: resources/views/partials/current-filters.blade.php:22
 msgid "Clear all"
-msgstr "すべてを消去する"
+msgstr "すべてをクリアする"
 
 #: resources/views/partials/content-page-favorites.blade.php:2
 msgid "Remove all favorites"
 msgstr "すべてのお気に入りを消去する"
 
 #: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "消去する"
+
+#: resources/views/partials/content-page-favorites.blade.php:8
 #, python-format
 msgid "\"%s\" from my favorites"
-msgstr "私のお気に入りから\"%s\" "
+msgstr "私のお気に入りから「%s」"
 
 #: resources/views/partials/content-page-favorites.blade.php:15
 msgid "You have no favorites."
@@ -563,7 +568,7 @@ msgstr "公開日"
 
 #: resources/views/partials/sort.blade.php:9
 msgid "Most favorited"
-msgstr "もっともお気に入りの"
+msgstr "もっともお気に入りの多い"
 
 #: resources/assets/scripts/routes/favorites.js:12
 msgid "Favorites not supported"
@@ -607,11 +612,11 @@ msgstr "リソースがお気に入りから削除されました。"
 
 #: resources/assets/scripts/routes/favorites.js:38
 msgid "Favorites not removed"
-msgstr "お気に入りは削除されていません"
+msgstr "お気に入りは削除されませんでした"
 
 #: resources/assets/scripts/routes/favorites.js:38
 msgid "The resources could not be removed from your favorites."
-msgstr "リソースをお気に入りから削除できませんでした。"
+msgstr "リソースをお気に入りから削除することができませんでした。"
 
 #: resources/assets/scripts/routes/favorites.js:48
 msgid "Remove resource?"
@@ -634,12 +639,12 @@ msgstr "リソースがお気に入りから削除されました。"
 #: resources/assets/scripts/routes/favorites.js:72
 #: resources/assets/scripts/routes/single.js:47
 msgid "Favorite not removed"
-msgstr "お気に入りは削除されていません"
+msgstr "お気に入りは削除されませんでした"
 
 #: resources/assets/scripts/routes/favorites.js:72
 #: resources/assets/scripts/routes/single.js:47
 msgid "The resource could not be removed from your favorites."
-msgstr "リソースをお気に入りから削除できませんでした。"
+msgstr "リソースをお気に入りから削除することができませんでした。"
 
 #: resources/assets/scripts/routes/archive.js:18
 #, python-format
@@ -656,7 +661,7 @@ msgstr[0] "%sフィルタが適用されました。リソースは見つかり�
 #: resources/assets/scripts/routes/archive.js:40
 #, python-format
 msgid "All %s have been deselected"
-msgstr "すべての%sが選択解除されました。"
+msgstr "すべての%sの選択が解除されました。"
 
 #: resources/assets/scripts/routes/archive.js:116
 #: resources/assets/scripts/routes/saved-searches.js:15
@@ -702,7 +707,7 @@ msgstr "保存された検索の最大数（50）に達しました。検索を�
 #: resources/assets/scripts/routes/archive.js:144
 #, python-format
 msgid "Saved search for “%s”"
-msgstr "“%s”の保存された検索"
+msgstr "「%s」の保存された検索"
 
 #: resources/assets/scripts/routes/archive.js:156
 #: resources/assets/scripts/routes/archive.js:166
@@ -716,7 +721,7 @@ msgid ""
 "more. You can see this search on your <a href=\"%2$s\">saved searches "
 "page</a>."
 msgstr ""
-"この検索を正常に保存しました。さらに<strong>%1$d</strong>保存できます。この検索は、<a "
+"この検索を正常に保存しました。さらに<strong>%1$d</strong>保存することができます。この検索は、<a "
 "href=\"%2$s\">保存済みの検索ページ</a>で見ることができます。"
 
 #: resources/assets/scripts/routes/archive.js:168
@@ -725,8 +730,8 @@ msgid ""
 "more.</strong> You can see this search and manage saved searches on your <a "
 "href=\"%2$s\">saved searches page</a>."
 msgstr ""
-"この検索を正常に保存しました。<strong>さらには%1$dのみ保存できます。</strong> この検索を見て保存された検索を管理するのは、<a "
-"href=\"%2$s\">保存された検索のページ</a>で行うことができます。"
+"この検索を正常に保存しました。<strong>さらに%1$dのみ保存することができます。</strong> "
+"この検索を見て保存された検索を管理するには、<a href=\"%2$s\">保存された検索のページ</a>で行うことができます。"
 
 #: resources/assets/scripts/routes/archive.js:178
 msgid ""
@@ -735,18 +740,18 @@ msgid ""
 "manage saved searches on your <a href=\"%2$s\">saved searches page</a>."
 msgstr ""
 "この検索を正常に保存しました。<strong>保存される検索の最大数 "
-"(50)に達しました。</strong>この検索を見て保存された検索を管理することは、<a "
+"(50)に達しました。</strong>この検索を見て保存された検索を管理するには、<a "
 "href=\"%2$s\">頬損された検索のページ</a>で行うことができます。"
 
 #: resources/assets/scripts/routes/archive.js:186
 msgid "Your search could not be saved."
-msgstr "検索を保存することができません。"
+msgstr "検索を保存することができませんでした。"
 
 #: resources/assets/scripts/routes/saved-searches.js:16
 msgid ""
 "You have reached the maximum number of saved searches (50). To save more, "
 "you must delete some saved searches."
-msgstr "保存された検索の最大数（50）に達しました。さらに保存するには、保存した検索をいくつか削除しなければなりません。"
+msgstr "保存された検索の最大数（50）に達しました。さらに保存するには、保存した検索をいくつか削除する必要があります。"
 
 #: resources/assets/scripts/routes/saved-searches.js:35
 msgid "Tags"
@@ -822,4 +827,4 @@ msgstr "お気に入りが追加されませんでした"
 
 #: resources/assets/scripts/routes/single.js:49
 msgid "The resource could not be added to your favorites."
-msgstr "リソースをお気に入りに追加できませんでした。"
+msgstr "リソースをお気に入りに追加することができませんでした。"
