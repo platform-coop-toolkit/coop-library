@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Pallavi Mehta <priya09.mehta@gmail.com>, 2020
+# Ned Zimmerman <ned@bight.dev>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-06-05 22:09+0000\n"
+"POT-Creation-Date: 2020-07-29 19:59+0000\n"
 "PO-Revision-Date: 2020-04-01 04:11+0000\n"
-"Last-Translator: Pallavi Mehta <priya09.mehta@gmail.com>, 2020\n"
+"Last-Translator: Ned Zimmerman <ned@bight.dev>, 2020\n"
 "Language-Team: Gujarati (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/gu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,6 +56,10 @@ msgstr "ઓટોલોડર મળ્યું નથી."
 #, php-format
 msgid "Error locating <code>%s</code> for inclusion."
 msgstr "સમાવેશ માટે <code>%s</code> સ્થાન શોધવામાં ભૂલ."
+
+#: app/filters.php:32
+msgid "Continued"
+msgstr "ચાલુ રાખેલ"
 
 #: app/Controllers/App.php:22
 msgid "Settings saved"
@@ -136,149 +141,92 @@ msgstr "પ્રાથમિક"
 msgid "Footer"
 msgstr "ફૂટર"
 
-#: app/filters.php:32
-msgid "Continued"
-msgstr "ચાલુ રાખેલ"
-
-#: resources/views/components/notification.blade.php:4
-#: resources/views/search.blade.php:8
-#: resources/assets/scripts/util/addNotification.js:32
-msgid "Close notification"
-msgstr "સૂચના બંધ કરો"
-
-#: resources/views/search.blade.php:9
-msgid "No results for search"
-msgstr "શોધ માટે કોઈ પરિણામ નથી"
-
-#: resources/views/search.blade.php:10 resources/views/index.blade.php:8
-msgid "Sorry, no results were found."
-msgstr "માફ કરશો, કોઈ પરિણામ મળ્યાં નથી."
-
-#: resources/views/404.blade.php:8
-msgid "Sorry, but the page you were trying to view does not exist."
-msgstr ""
-"માફ કરશો, પરંતુ તમે જે પૃષ્ઠને જોવાનો પ્રયત્ન કરી રહ્યાં હતાં તે અસ્તિત્વમાં"
-" નથી."
-
-#: resources/views/404.blade.php:10 resources/views/index.blade.php:10
-#: resources/views/partials/content-front-page.blade.php:2
-msgid "Search resource name, publisher, or topic…"
-msgstr "સંસાધનનું નામ, પ્રકાશક અથવા વિષય… શોધો"
-
-#: resources/views/partials/search-form.blade.php:3
-msgid "Search for:"
-msgstr "માટે શોધો:"
-
-#: resources/views/partials/search-form.blade.php:8
-#: resources/views/partials/header.blade.php:7
-msgid "Search"
-msgstr "શોધ"
-
-#: resources/views/partials/entry-meta.blade.php:3
-msgid "By"
-msgstr "દ્વારા"
-
-#: resources/views/partials/language-switcher.blade.php:4
-msgid "Language"
-msgstr "ભાષા"
-
 #: resources/views/partials/content-single.blade.php:10
 #: resources/views/partials/content-page.blade.php:2
 msgid "Pages:"
 msgstr "પૃષ્ઠ:"
 
-#: resources/views/partials/content-page-saved-searches.blade.php:3
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr "દ્વારા"
+
 #: resources/views/partials/content-page-favorites.blade.php:2
+#: resources/views/partials/content-page-saved-searches.blade.php:3
 msgid "Remove all"
 msgstr "તમામ કાઢી નાંખો"
 
-#: resources/views/partials/content-page-saved-searches.blade.php:3
-msgid "Remove all saved searches"
-msgstr "સાચવેલ તમામ શોધ કાઢી નાંખો"
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all favorites"
+msgstr "તમામ મનપસંદ કાઢી નાંખો"
 
-#: resources/views/partials/content-page-saved-searches.blade.php:8
-msgid "You have no saved searches."
-msgstr "તમારી પાસે કોઈ સાચવેલ શોધ નથી"
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "કાઢી નાંખો"
 
-#: resources/views/partials/content-page-saved-searches.blade.php:9
+#: resources/views/partials/content-page-favorites.blade.php:8
 #, python-format
-msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
-msgstr "તમારી શોધ સાચવવા માટે સંસાધનો શોધો અથવા <a href=\"%s\">બ્રાઉઝ</a> કરો."
+msgid "\"%s\" from my favorites"
+msgstr "\"%s\" મારાં મનપસંદમાંથી"
 
-#: resources/views/partials/header.blade.php:29
-msgid "Explore"
-msgstr "અન્વેષણ કરો"
+#: resources/views/partials/content-page-favorites.blade.php:15
+msgid "You have no favorites."
+msgstr "તમારી પાસે કોઈ મનપસંદ નથી."
 
-#: resources/views/partials/filters.blade.php:2
-msgid "Filter"
-msgstr "ફિલ્ટર કરો"
+#: resources/views/partials/content-page-favorites.blade.php:16
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
+msgstr "સંસાધનોને મનપસંદ કરવા માટે તેમને શોધો અથવા <a href=\"%s\">બ્રાઉઝ</a> કરો."
 
-#: resources/views/partials/filters.blade.php:10
-msgid "Close"
-msgstr "બંધ કરો"
+#: resources/views/partials/content-front-page.blade.php:2
+#: resources/views/index.blade.php:10 resources/views/404.blade.php:10
+msgid "Search resource name, publisher, or topic…"
+msgstr "સંસાધનનું નામ, પ્રકાશક અથવા વિષય… શોધો"
 
-#: resources/views/partials/filters.blade.php:11
-msgid "Filters"
-msgstr "ફિલ્ટર"
+#: resources/views/partials/content-front-page.blade.php:6
+msgid "Browse by…"
+msgstr "… દ્વારા બ્રાઉઝ કરો"
 
-#: resources/views/partials/filters.blade.php:14
-#: resources/views/partials/content-front-page.blade.php:10
-msgid "Goals"
-msgstr "લક્ષ્ય"
-
-#: resources/views/partials/filters.blade.php:15
 #: resources/views/partials/content-front-page.blade.php:9
+#: resources/views/partials/filters.blade.php:15
 msgid "Topics"
 msgstr "વિષય"
 
-#: resources/views/partials/filters.blade.php:16
-msgid "Co-op Types"
-msgstr "કો-ઓપ પ્રકાર"
+#: resources/views/partials/content-front-page.blade.php:10
+#: resources/views/partials/filters.blade.php:14
+msgid "Goals"
+msgstr "લક્ષ્ય"
 
-#: resources/views/partials/filters.blade.php:17
 #: resources/views/partials/content-front-page.blade.php:11
+#: resources/views/partials/filters.blade.php:17
 msgid "Sectors"
 msgstr "ક્ષેત્ર"
 
-#: resources/views/partials/filters.blade.php:18
-msgid "Locations"
-msgstr "સ્થાન"
-
-#: resources/views/partials/filters.blade.php:19
 #: resources/views/partials/content-front-page.blade.php:12
+#: resources/views/partials/filters.blade.php:19
 msgid "Formats"
 msgstr "બંધારણ"
 
-#: resources/views/partials/filters.blade.php:26
-#: resources/views/partials/filters.blade.php:68
-msgid "Deselect all"
-msgstr "તમામ નાપસંદ કરો"
+#: resources/views/partials/content-front-page.blade.php:17
+msgid "Browse all resources"
+msgstr "તમામ સંસાધન બ્રાઉઝ કરો"
 
-#: resources/views/partials/filters.blade.php:26
-#, python-format
-msgid "Deselect all %s"
-msgstr "તમામ %s નાપસંદ કરો"
+#: resources/views/partials/content-front-page.blade.php:20
+msgid "My feed"
+msgstr "મારી ફીડ"
 
-#: resources/views/partials/filters.blade.php:40
-#, python-format
-msgid "and %d subtopics"
-msgstr "અને %d પેટાવિષય"
+#: resources/views/partials/content-front-page.blade.php:21
+#: resources/views/partials/sort.blade.php:8
+msgid "Most viewed"
+msgstr "સૌથી વધું વખત જોવાયેલ"
 
-#: resources/views/partials/filters.blade.php:41
-msgid "show %1$d subtopics for \"%2$s\""
-msgstr "\"%2$s\" માટે %1$d પેટાવિષય બતાવો"
+#: resources/views/partials/content-front-page.blade.php:34
+msgid "Recently published"
+msgstr "તાજેતરમાં પ્રકાશિત થયેલ"
 
-#: resources/views/partials/filters.blade.php:65
-msgid "Languages"
-msgstr "ભાષાઓ"
-
-#: resources/views/partials/filters.blade.php:68
-msgid "languages"
-msgstr "ભાષાઓ"
-
-#: resources/views/partials/filters.blade.php:82
-msgid "Apply Filters"
-msgstr "ફિલ્ટર લાગુ કરો"
+#: resources/views/partials/save-search.blade.php:3
+msgid "Save my search"
+msgstr "મારી શોધ સાચવો"
 
 #: resources/views/partials/content-page-settings.blade.php:2
 msgid "Allow the Resource Library to track what resources you’ve viewed."
@@ -338,46 +286,77 @@ msgstr "પરવાનગી આપશો&rsquo; નહીં"
 msgid "Save"
 msgstr "સાચવો"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; જૂની ટિપ્પણીઓ"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "નવી ટિપ્પણીઓ &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "ટિપ્પણીઓ બંધ કરેલ છે."
+
 #: resources/views/partials/content-lc_resource.blade.php:5
+#: resources/views/partials/content-single-lc_resource.blade.php:5
 msgid "Subscription required"
 msgstr "સબ્સ્ક્રિપ્શન જરૂરી છે"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:5
 #: resources/views/partials/content-lc_resource.blade.php:5
+#: resources/views/partials/content-single-lc_resource.blade.php:5
 msgid "Subscription required to access this resource"
 msgstr "આ સંસાધનને એક્સેસ કરવા માટે સબ્સ્ક્રિપ્શન જરૂરી છે"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:8
 #: resources/views/partials/content-lc_resource.blade.php:10
+#: resources/views/partials/content-single-lc_resource.blade.php:8
 #, python-format
 msgid "By %s"
 msgstr "દ્વારા %s"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:12
 #: resources/views/partials/content-lc_resource.blade.php:16
+#: resources/views/partials/content-single-lc_resource.blade.php:12
 msgid "resource format"
 msgstr "સંસાધન બંધારણ"
+
+#: resources/views/partials/content-lc_resource.blade.php:17
+msgid "publisher"
+msgstr "પ્રકાશક"
+
+#: resources/views/partials/content-lc_resource.blade.php:23
+#: resources/views/partials/content-single-lc_resource.blade.php:18
+msgid "location of relevance"
+msgstr "સુસંગતતા સ્થાન"
+
+#: resources/views/partials/content-lc_resource.blade.php:30
+#: resources/views/partials/content-single-lc_resource.blade.php:25
+msgid "language"
+msgstr "ભાષા"
+
+#: resources/views/partials/content-lc_resource.blade.php:36
+#: resources/views/partials/content-single-lc_resource.blade.php:31
+msgid "date published"
+msgstr "પ્રકાશન તારીખ"
+
+#: resources/views/partials/content-lc_resource.blade.php:47
+#, python-format
+msgid "+%d more"
+msgstr "+%d વધુ"
+
+#: resources/views/partials/content-lc_resource.blade.php:52
+#: resources/views/partials/content-single-lc_resource.blade.php:115
+#, python-format
+msgid "Added %s"
+msgstr "%s ઉમેરેલ"
+
+#: resources/views/partials/content-lc_resource.blade.php:56
+msgid "Favorited"
+msgstr "મનપસંદ કરેલ"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:13
 #, python-format
 msgid "Published by %s"
 msgstr "%s દ્વારા પ્રકાશિત"
-
-#: resources/views/partials/content-single-lc_resource.blade.php:18
-#: resources/views/partials/content-lc_resource.blade.php:23
-msgid "location of relevance"
-msgstr "સુસંગતતા સ્થાન"
-
-#: resources/views/partials/content-single-lc_resource.blade.php:25
-#: resources/views/partials/content-lc_resource.blade.php:30
-msgid "language"
-msgstr "ભાષા"
-
-#: resources/views/partials/content-single-lc_resource.blade.php:31
-#: resources/views/partials/content-lc_resource.blade.php:36
-msgid "date published"
-msgstr "પ્રકાશન તારીખ"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:38
 msgid "Summary"
@@ -440,61 +419,34 @@ msgstr "ઇન્ટરનેટ આર્કાઇવ પર જુઓ (%1$d, �
 msgid "View on the Internet Archive"
 msgstr "ઇન્ટરનેટ આર્કાઇવ પર જુઓ"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:115
-#: resources/views/partials/content-lc_resource.blade.php:52
-#, python-format
-msgid "Added %s"
-msgstr "%s ઉમેરેલ"
+#: resources/views/partials/header.blade.php:7
+#: resources/views/partials/search-form.blade.php:8
+msgid "Search"
+msgstr "શોધ"
 
-#: resources/views/partials/save-search.blade.php:3
-msgid "Save my search"
-msgstr "મારી શોધ સાચવો"
+#: resources/views/partials/header.blade.php:29
+msgid "Explore"
+msgstr "અન્વેષણ કરો"
 
-#: resources/views/partials/content-lc_resource.blade.php:17
-msgid "publisher"
-msgstr "પ્રકાશક"
+#: resources/views/partials/footer.blade.php:7
+msgid "Platform Cooperativism Consortium"
+msgstr "પ્લેટફોર્મ કોઓપરેટિવિઝમ કન્સોર્ટિયમ"
 
-#: resources/views/partials/content-lc_resource.blade.php:47
-#, python-format
-msgid "+%d more"
-msgstr "+%d વધુ"
+#: resources/views/partials/footer.blade.php:10
+msgid "Our open access and privacy policy"
+msgstr "અમારો ઓપન એક્સેસ અને ગોપનીયતા નીતિ"
 
-#: resources/views/partials/content-lc_resource.blade.php:56
-msgid "Favorited"
-msgstr "મનપસંદ કરેલ"
+#: resources/views/partials/footer.blade.php:11
+msgid "Our commitment to diversity and inclusion"
+msgstr "વિવિધતા અને સમાવેશ માટે અમારી પ્રતિબદ્ધતા"
 
-#: resources/views/partials/content-front-page.blade.php:6
-msgid "Browse by…"
-msgstr "… દ્વારા બ્રાઉઝ કરો"
+#: resources/views/partials/footer.blade.php:15
+msgid "Contact us"
+msgstr "અમારો સંપર્ક કરો"
 
-#: resources/views/partials/content-front-page.blade.php:17
-msgid "Browse all resources"
-msgstr "તમામ સંસાધન બ્રાઉઝ કરો"
-
-#: resources/views/partials/content-front-page.blade.php:20
-msgid "My feed"
-msgstr "મારી ફીડ"
-
-#: resources/views/partials/content-front-page.blade.php:21
-#: resources/views/partials/sort.blade.php:8
-msgid "Most viewed"
-msgstr "સૌથી વધું વખત જોવાયેલ"
-
-#: resources/views/partials/content-front-page.blade.php:34
-msgid "Recently published"
-msgstr "તાજેતરમાં પ્રકાશિત થયેલ"
-
-#: resources/views/partials/comments.blade.php:21
-msgid "&larr; Older comments"
-msgstr "&larr; જૂની ટિપ્પણીઓ"
-
-#: resources/views/partials/comments.blade.php:24
-msgid "Newer comments &rarr;"
-msgstr "નવી ટિપ્પણીઓ &rarr;"
-
-#: resources/views/partials/comments.blade.php:33
-msgid "Comments are closed."
-msgstr "ટિપ્પણીઓ બંધ કરેલ છે."
+#: resources/views/partials/search-form.blade.php:3
+msgid "Search for:"
+msgstr "માટે શોધો:"
 
 #: resources/views/partials/current-filters.blade.php:3
 msgid "%1$s of %2$s resources matched"
@@ -525,45 +477,60 @@ msgstr "બતાવેલ સંસાધનો આમાંથી ઓછામ
 msgid "Clear all"
 msgstr "તમામ સાફ કરો"
 
-#: resources/views/partials/content-page-favorites.blade.php:2
-msgid "Remove all favorites"
-msgstr "તમામ મનપસંદ કાઢી નાંખો"
+#: resources/views/partials/filters.blade.php:2
+msgid "Filter"
+msgstr "ફિલ્ટર કરો"
 
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr "કાઢી નાંખો"
+#: resources/views/partials/filters.blade.php:10
+msgid "Close"
+msgstr "બંધ કરો"
 
-#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/views/partials/filters.blade.php:11
+msgid "Filters"
+msgstr "ફિલ્ટર"
+
+#: resources/views/partials/filters.blade.php:16
+msgid "Co-op Types"
+msgstr "કો-ઓપ પ્રકાર"
+
+#: resources/views/partials/filters.blade.php:18
+msgid "Locations"
+msgstr "સ્થાન"
+
+#: resources/views/partials/filters.blade.php:26
+#: resources/views/partials/filters.blade.php:68
+msgid "Deselect all"
+msgstr "તમામ નાપસંદ કરો"
+
+#: resources/views/partials/filters.blade.php:26
 #, python-format
-msgid "\"%s\" from my favorites"
-msgstr "\"%s\" મારાં મનપસંદમાંથી"
+msgid "Deselect all %s"
+msgstr "તમામ %s નાપસંદ કરો"
 
-#: resources/views/partials/content-page-favorites.blade.php:15
-msgid "You have no favorites."
-msgstr "તમારી પાસે કોઈ મનપસંદ નથી."
-
-#: resources/views/partials/content-page-favorites.blade.php:16
+#: resources/views/partials/filters.blade.php:40
 #, python-format
-msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
-msgstr "સંસાધનોને મનપસંદ કરવા માટે તેમને શોધો અથવા <a href=\"%s\">બ્રાઉઝ</a> કરો."
+msgid "and %d subtopics"
+msgstr "અને %d પેટાવિષય"
 
-#: resources/views/partials/content-term-list.blade.php:27
-#, python-format
-msgid "No %s found."
-msgstr "કોઈ %s મળ્યું નથી"
+#: resources/views/partials/filters.blade.php:41
+msgid "show %1$d subtopics for \"%2$s\""
+msgstr "\"%2$s\" માટે %1$d પેટાવિષય બતાવો"
 
-#: resources/views/partials/footer.blade.php:7
-msgid "Platform Cooperativism Consortium"
-msgstr "પ્લેટફોર્મ કોઓપરેટિવિઝમ કન્સોર્ટિયમ"
+#: resources/views/partials/filters.blade.php:65
+msgid "Languages"
+msgstr "ભાષાઓ"
 
-#: resources/views/partials/footer.blade.php:10
-msgid "Our open access and privacy policy"
-msgstr "અમારો ઓપન એક્સેસ અને ગોપનીયતા નીતિ"
+#: resources/views/partials/filters.blade.php:68
+msgid "languages"
+msgstr "ભાષાઓ"
 
-#: resources/views/partials/footer.blade.php:11
-msgid "Our commitment to diversity and inclusion"
-msgstr "વિવિધતા અને સમાવેશ માટે અમારી પ્રતિબદ્ધતા"
+#: resources/views/partials/filters.blade.php:82
+msgid "Apply Filters"
+msgstr "ફિલ્ટર લાગુ કરો"
+
+#: resources/views/partials/language-switcher.blade.php:4
+msgid "Language"
+msgstr "ભાષા"
 
 #: resources/views/partials/sort.blade.php:4
 msgid "Sort by"
@@ -581,83 +548,43 @@ msgstr "પ્રકાશન તારીખ"
 msgid "Most favorited"
 msgstr "સૌથી વધું મનપસંદ કરેલ "
 
-#: resources/assets/scripts/routes/favorites.js:12
-msgid "Favorites not supported"
-msgstr "મનપસંદ કરેલ સમર્થિત નથી"
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+msgid "Remove all saved searches"
+msgstr "સાચવેલ તમામ શોધ કાઢી નાંખો"
 
-#: resources/assets/scripts/routes/favorites.js:12
-msgid ""
-"Your favorites are stored in your browser's cookies. To add favorites, "
-"please enable cookies for this website."
+#: resources/views/partials/content-page-saved-searches.blade.php:8
+msgid "You have no saved searches."
+msgstr "તમારી પાસે કોઈ સાચવેલ શોધ નથી"
+
+#: resources/views/partials/content-page-saved-searches.blade.php:9
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
+msgstr "તમારી શોધ સાચવવા માટે સંસાધનો શોધો અથવા <a href=\"%s\">બ્રાઉઝ</a> કરો."
+
+#: resources/views/partials/content-term-list.blade.php:27
+#, python-format
+msgid "No %s found."
+msgstr "કોઈ %s મળ્યું નથી"
+
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:10
+msgid "Sorry, no results were found."
+msgstr "માફ કરશો, કોઈ પરિણામ મળ્યાં નથી."
+
+#: resources/views/components/notification.blade.php:4
+#: resources/views/search.blade.php:8
+#: resources/assets/scripts/util/addNotification.js:32
+msgid "Close notification"
+msgstr "સૂચના બંધ કરો"
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
 msgstr ""
-"તમારા મનપસંદ તમારા બ્રાઉઝરની કૂકીઝમાં સંગ્રહિત છે. મનપસંદ ઉમેરવા માટે, કૃપા "
-"કરીને આ વેબસાઇટ માટે કૂકીઝ સક્ષમ કરો."
+"માફ કરશો, પરંતુ તમે જે પૃષ્ઠને જોવાનો પ્રયત્ન કરી રહ્યાં હતાં તે અસ્તિત્વમાં"
+" નથી."
 
-#: resources/assets/scripts/routes/favorites.js:18
-msgid "Remove favorites?"
-msgstr "મનપસંદ કાઢી નાંખો?"
-
-#: resources/assets/scripts/routes/favorites.js:19
-msgid "Are you sure you want to remove all resources from your favorites?"
-msgstr "તમે ખરેખર તમારાં મનપસંદમાંથી તમામ સંસાધનોને કાઢી નાખવાં માંગો છો?"
-
-#: resources/assets/scripts/routes/favorites.js:20
-#: resources/assets/scripts/routes/favorites.js:50
-#: resources/assets/scripts/routes/saved-searches.js:74
-#: resources/assets/scripts/routes/saved-searches.js:93
-msgid "Yes, remove"
-msgstr "હા, કાઢી નાંખો"
-
-#: resources/assets/scripts/routes/favorites.js:21
-#: resources/assets/scripts/routes/favorites.js:51
-#: resources/assets/scripts/routes/saved-searches.js:75
-#: resources/assets/scripts/routes/saved-searches.js:94
-msgid "No, don&rsquo;t remove"
-msgstr "ના, કાઢશો&rsquo; નહીં"
-
-#: resources/assets/scripts/routes/favorites.js:35
-msgid "Favorites removed"
-msgstr "મનપસંદ કાઢી નાંખવામાં આવ્યાં છે"
-
-#: resources/assets/scripts/routes/favorites.js:35
-msgid "The resources have been removed from your favorites."
-msgstr "સંસાધનો તમારા મનપસંદમાંથી કાઢી નાખવામાં આવ્યા છે."
-
-#: resources/assets/scripts/routes/favorites.js:38
-msgid "Favorites not removed"
-msgstr "મનપસંદ કાઢી નાંખવામાં આવ્યાં નથી"
-
-#: resources/assets/scripts/routes/favorites.js:38
-msgid "The resources could not be removed from your favorites."
-msgstr "સંસાધનો તમારા મનપસંદમાંથી કાઢી શક્યાં નથી."
-
-#: resources/assets/scripts/routes/favorites.js:48
-msgid "Remove resource?"
-msgstr "સંસાધન કાઢી નાંખો?"
-
-#: resources/assets/scripts/routes/favorites.js:49
-msgid "Are you sure you want to remove this resource from your favorites?"
-msgstr "તમે ખરેખર તમારાં મનપસંદમાંથી આ સંસાધનને કાઢી નાખવાં માંગો છો?"
-
-#: resources/assets/scripts/routes/favorites.js:69
-#: resources/assets/scripts/routes/single.js:40
-msgid "Favorite removed"
-msgstr "મનપસંદ કાઢી નાંખવામાં આવ્યું છે"
-
-#: resources/assets/scripts/routes/favorites.js:69
-#: resources/assets/scripts/routes/single.js:40
-msgid "The resource has been removed from your favorites."
-msgstr "સંસાધન તમારા મનપસંદમાંથી કાઢી નાખવામાં આવ્યું છે."
-
-#: resources/assets/scripts/routes/favorites.js:72
-#: resources/assets/scripts/routes/single.js:47
-msgid "Favorite not removed"
-msgstr "મનપસંદ કાઢી નાંખવામાં આવ્યું નથી"
-
-#: resources/assets/scripts/routes/favorites.js:72
-#: resources/assets/scripts/routes/single.js:47
-msgid "The resource could not be removed from your favorites."
-msgstr "સંસાધન તમારા મનપસંદમાંથી કાઢી શકાયું નથી."
+#: resources/views/search.blade.php:9
+msgid "No results for search"
+msgstr "શોધ માટે કોઈ પરિણામ નથી"
 
 #: resources/assets/scripts/routes/archive.js:18
 #, python-format
@@ -768,6 +695,100 @@ msgstr ""
 msgid "Your search could not be saved."
 msgstr "તમારી શોધ સાચવી શકાઈ નથી"
 
+#: resources/assets/scripts/routes/single.js:40
+#: resources/assets/scripts/routes/favorites.js:69
+msgid "Favorite removed"
+msgstr "મનપસંદ કાઢી નાંખવામાં આવ્યું છે"
+
+#: resources/assets/scripts/routes/single.js:40
+#: resources/assets/scripts/routes/favorites.js:69
+msgid "The resource has been removed from your favorites."
+msgstr "સંસાધન તમારા મનપસંદમાંથી કાઢી નાખવામાં આવ્યું છે."
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "Favorite added"
+msgstr "મનપસંદ ઉમેર્યું"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "The resource has been added to your favorites."
+msgstr "સંસાધન તમારા મનપસંદમાં ઉમેરવામાં આવ્યું છે."
+
+#: resources/assets/scripts/routes/single.js:47
+#: resources/assets/scripts/routes/favorites.js:72
+msgid "Favorite not removed"
+msgstr "મનપસંદ કાઢી નાંખવામાં આવ્યું નથી"
+
+#: resources/assets/scripts/routes/single.js:47
+#: resources/assets/scripts/routes/favorites.js:72
+msgid "The resource could not be removed from your favorites."
+msgstr "સંસાધન તમારા મનપસંદમાંથી કાઢી શકાયું નથી."
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "Favorite not added"
+msgstr "મનપસંદ ઉમેરેલ નથી"
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "The resource could not be added to your favorites."
+msgstr "સંસાધન તમારા મનપસંદમાં ઉમેરી શકાયું નથી."
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid "Favorites not supported"
+msgstr "મનપસંદ કરેલ સમર્થિત નથી"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid ""
+"Your favorites are stored in your browser's cookies. To add favorites, "
+"please enable cookies for this website."
+msgstr ""
+"તમારા મનપસંદ તમારા બ્રાઉઝરની કૂકીઝમાં સંગ્રહિત છે. મનપસંદ ઉમેરવા માટે, કૃપા "
+"કરીને આ વેબસાઇટ માટે કૂકીઝ સક્ષમ કરો."
+
+#: resources/assets/scripts/routes/favorites.js:18
+msgid "Remove favorites?"
+msgstr "મનપસંદ કાઢી નાંખો?"
+
+#: resources/assets/scripts/routes/favorites.js:19
+msgid "Are you sure you want to remove all resources from your favorites?"
+msgstr "તમે ખરેખર તમારાં મનપસંદમાંથી તમામ સંસાધનોને કાઢી નાખવાં માંગો છો?"
+
+#: resources/assets/scripts/routes/favorites.js:20
+#: resources/assets/scripts/routes/favorites.js:50
+#: resources/assets/scripts/routes/saved-searches.js:74
+#: resources/assets/scripts/routes/saved-searches.js:93
+msgid "Yes, remove"
+msgstr "હા, કાઢી નાંખો"
+
+#: resources/assets/scripts/routes/favorites.js:21
+#: resources/assets/scripts/routes/favorites.js:51
+#: resources/assets/scripts/routes/saved-searches.js:75
+#: resources/assets/scripts/routes/saved-searches.js:94
+msgid "No, don&rsquo;t remove"
+msgstr "ના, કાઢશો&rsquo; નહીં"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "Favorites removed"
+msgstr "મનપસંદ કાઢી નાંખવામાં આવ્યાં છે"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "The resources have been removed from your favorites."
+msgstr "સંસાધનો તમારા મનપસંદમાંથી કાઢી નાખવામાં આવ્યા છે."
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "Favorites not removed"
+msgstr "મનપસંદ કાઢી નાંખવામાં આવ્યાં નથી"
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "The resources could not be removed from your favorites."
+msgstr "સંસાધનો તમારા મનપસંદમાંથી કાઢી શક્યાં નથી."
+
+#: resources/assets/scripts/routes/favorites.js:48
+msgid "Remove resource?"
+msgstr "સંસાધન કાઢી નાંખો?"
+
+#: resources/assets/scripts/routes/favorites.js:49
+msgid "Are you sure you want to remove this resource from your favorites?"
+msgstr "તમે ખરેખર તમારાં મનપસંદમાંથી આ સંસાધનને કાઢી નાખવાં માંગો છો?"
+
 #: resources/assets/scripts/routes/saved-searches.js:16
 msgid ""
 "You have reached the maximum number of saved searches (50). To save more, "
@@ -835,19 +856,3 @@ msgstr "સાચવેલ શોધ કાઢી નાંખવામાં �
 #: resources/assets/scripts/routes/saved-searches.js:109
 msgid "Your saved search could not be removed"
 msgstr "તમારી સાચવેલ શોધ કાઢી શકાઈ નથી"
-
-#: resources/assets/scripts/routes/single.js:42
-msgid "Favorite added"
-msgstr "મનપસંદ ઉમેર્યું"
-
-#: resources/assets/scripts/routes/single.js:42
-msgid "The resource has been added to your favorites."
-msgstr "સંસાધન તમારા મનપસંદમાં ઉમેરવામાં આવ્યું છે."
-
-#: resources/assets/scripts/routes/single.js:49
-msgid "Favorite not added"
-msgstr "મનપસંદ ઉમેરેલ નથી"
-
-#: resources/assets/scripts/routes/single.js:49
-msgid "The resource could not be added to your favorites."
-msgstr "સંસાધન તમારા મનપસંદમાં ઉમેરી શકાયું નથી."
