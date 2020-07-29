@@ -6,15 +6,16 @@
 # Translators:
 # Hanjing Gu <ghj1988@gmail.com>, 2020
 # William Zhang <807035147@qq.com>, 2020
+# Ned Zimmerman <ned@bight.dev>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-06-05 22:09+0000\n"
+"POT-Creation-Date: 2020-07-29 19:59+0000\n"
 "PO-Revision-Date: 2020-04-01 04:11+0000\n"
-"Last-Translator: William Zhang <807035147@qq.com>, 2020\n"
+"Last-Translator: Ned Zimmerman <ned@bight.dev>, 2020\n"
 "Language-Team: Chinese (Hong Kong) (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/zh_HK/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,6 +55,10 @@ msgstr "未找到自動加載器。"
 #, php-format
 msgid "Error locating <code>%s</code> for inclusion."
 msgstr "查找要包含的<code>%s</code>時出錯。"
+
+#: app/filters.php:32
+msgid "Continued"
+msgstr "繼續"
 
 #: app/Controllers/App.php:22
 msgid "Settings saved"
@@ -133,147 +138,92 @@ msgstr "主要"
 msgid "Footer"
 msgstr "頁腳"
 
-#: app/filters.php:32
-msgid "Continued"
-msgstr "繼續"
-
-#: resources/views/components/notification.blade.php:4
-#: resources/views/search.blade.php:8
-#: resources/assets/scripts/util/addNotification.js:32
-msgid "Close notification"
-msgstr "關閉通知"
-
-#: resources/views/search.blade.php:9
-msgid "No results for search"
-msgstr "搜索無結果"
-
-#: resources/views/search.blade.php:10 resources/views/index.blade.php:8
-msgid "Sorry, no results were found."
-msgstr "抱歉，未找到任何結果。"
-
-#: resources/views/404.blade.php:8
-msgid "Sorry, but the page you were trying to view does not exist."
-msgstr "抱歉，您嘗試查看的頁面不存在。"
-
-#: resources/views/404.blade.php:10 resources/views/index.blade.php:10
-#: resources/views/partials/content-front-page.blade.php:2
-msgid "Search resource name, publisher, or topic…"
-msgstr "搜索資源名稱、發布者或主題……"
-
-#: resources/views/partials/search-form.blade.php:3
-msgid "Search for:"
-msgstr "搜索："
-
-#: resources/views/partials/search-form.blade.php:8
-#: resources/views/partials/header.blade.php:7
-msgid "Search"
-msgstr "搜索"
-
-#: resources/views/partials/entry-meta.blade.php:3
-msgid "By"
-msgstr "由"
-
-#: resources/views/partials/language-switcher.blade.php:4
-msgid "Language"
-msgstr "語言"
-
 #: resources/views/partials/content-single.blade.php:10
 #: resources/views/partials/content-page.blade.php:2
 msgid "Pages:"
 msgstr "頁面："
 
-#: resources/views/partials/content-page-saved-searches.blade.php:3
+#: resources/views/partials/entry-meta.blade.php:3
+msgid "By"
+msgstr "由"
+
 #: resources/views/partials/content-page-favorites.blade.php:2
+#: resources/views/partials/content-page-saved-searches.blade.php:3
 msgid "Remove all"
 msgstr "刪除所有"
 
-#: resources/views/partials/content-page-saved-searches.blade.php:3
-msgid "Remove all saved searches"
-msgstr "刪除所有保存的搜索"
+#: resources/views/partials/content-page-favorites.blade.php:2
+msgid "Remove all favorites"
+msgstr "刪除所有收藏夾"
 
-#: resources/views/partials/content-page-saved-searches.blade.php:8
-msgid "You have no saved searches."
-msgstr "您沒有保存的搜索。"
+#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/assets/scripts/routes/saved-searches.js:55
+msgid "Remove"
+msgstr "刪除"
 
-#: resources/views/partials/content-page-saved-searches.blade.php:9
+#: resources/views/partials/content-page-favorites.blade.php:8
 #, python-format
-msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
-msgstr "搜索或<a href=\"%s\">瀏覽</a>資源以保存搜索。"
+msgid "\"%s\" from my favorites"
+msgstr "來自我的收藏夾的「%s」"
 
-#: resources/views/partials/header.blade.php:29
-msgid "Explore"
-msgstr "探索"
+#: resources/views/partials/content-page-favorites.blade.php:15
+msgid "You have no favorites."
+msgstr "您沒有收藏夾。"
 
-#: resources/views/partials/filters.blade.php:2
-msgid "Filter"
-msgstr "篩選"
+#: resources/views/partials/content-page-favorites.blade.php:16
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
+msgstr "搜索或<a href=\"%s\">瀏覽</a>資源以將其添加到收藏夾。"
 
-#: resources/views/partials/filters.blade.php:10
-msgid "Close"
-msgstr "關閉"
+#: resources/views/partials/content-front-page.blade.php:2
+#: resources/views/index.blade.php:10 resources/views/404.blade.php:10
+msgid "Search resource name, publisher, or topic…"
+msgstr "搜索資源名稱、發布者或主題……"
 
-#: resources/views/partials/filters.blade.php:11
-msgid "Filters"
-msgstr "篩選器"
+#: resources/views/partials/content-front-page.blade.php:6
+msgid "Browse by…"
+msgstr "按……瀏覽"
 
-#: resources/views/partials/filters.blade.php:14
-#: resources/views/partials/content-front-page.blade.php:10
-msgid "Goals"
-msgstr "目標"
-
-#: resources/views/partials/filters.blade.php:15
 #: resources/views/partials/content-front-page.blade.php:9
+#: resources/views/partials/filters.blade.php:15
 msgid "Topics"
 msgstr "主題"
 
-#: resources/views/partials/filters.blade.php:16
-msgid "Co-op Types"
-msgstr "合作社類型"
+#: resources/views/partials/content-front-page.blade.php:10
+#: resources/views/partials/filters.blade.php:14
+msgid "Goals"
+msgstr "目標"
 
-#: resources/views/partials/filters.blade.php:17
 #: resources/views/partials/content-front-page.blade.php:11
+#: resources/views/partials/filters.blade.php:17
 msgid "Sectors"
 msgstr "市場部門"
 
-#: resources/views/partials/filters.blade.php:18
-msgid "Locations"
-msgstr "位置"
-
-#: resources/views/partials/filters.blade.php:19
 #: resources/views/partials/content-front-page.blade.php:12
+#: resources/views/partials/filters.blade.php:19
 msgid "Formats"
 msgstr "格式"
 
-#: resources/views/partials/filters.blade.php:26
-#: resources/views/partials/filters.blade.php:68
-msgid "Deselect all"
-msgstr "取消選擇所有"
+#: resources/views/partials/content-front-page.blade.php:17
+msgid "Browse all resources"
+msgstr "瀏覽所有資源"
 
-#: resources/views/partials/filters.blade.php:26
-#, python-format
-msgid "Deselect all %s"
-msgstr "取消選擇所有%s"
+#: resources/views/partials/content-front-page.blade.php:20
+msgid "My feed"
+msgstr "我的提要"
 
-#: resources/views/partials/filters.blade.php:40
-#, python-format
-msgid "and %d subtopics"
-msgstr "和 %d 個子主題"
+#: resources/views/partials/content-front-page.blade.php:21
+#: resources/views/partials/sort.blade.php:8
+msgid "Most viewed"
+msgstr "查看最多"
 
-#: resources/views/partials/filters.blade.php:41
-msgid "show %1$d subtopics for \"%2$s\""
-msgstr "為「%2$s」顯示 %1$d 個子主題"
+#: resources/views/partials/content-front-page.blade.php:34
+msgid "Recently published"
+msgstr "最近發布"
 
-#: resources/views/partials/filters.blade.php:65
-msgid "Languages"
-msgstr "語言"
-
-#: resources/views/partials/filters.blade.php:68
-msgid "languages"
-msgstr "語言"
-
-#: resources/views/partials/filters.blade.php:82
-msgid "Apply Filters"
-msgstr "應用篩選器"
+#: resources/views/partials/save-search.blade.php:3
+msgid "Save my search"
+msgstr "保存我的搜索"
 
 #: resources/views/partials/content-page-settings.blade.php:2
 msgid "Allow the Resource Library to track what resources you’ve viewed."
@@ -326,46 +276,77 @@ msgstr "不允許"
 msgid "Save"
 msgstr "保存"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:5
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; 較舊評論"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "較新評論 &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "評論已關閉。"
+
 #: resources/views/partials/content-lc_resource.blade.php:5
+#: resources/views/partials/content-single-lc_resource.blade.php:5
 msgid "Subscription required"
 msgstr "需要訂閱"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:5
 #: resources/views/partials/content-lc_resource.blade.php:5
+#: resources/views/partials/content-single-lc_resource.blade.php:5
 msgid "Subscription required to access this resource"
 msgstr "需要訂閱以訪問此資源"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:8
 #: resources/views/partials/content-lc_resource.blade.php:10
+#: resources/views/partials/content-single-lc_resource.blade.php:8
 #, python-format
 msgid "By %s"
 msgstr "由 %s"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:12
 #: resources/views/partials/content-lc_resource.blade.php:16
+#: resources/views/partials/content-single-lc_resource.blade.php:12
 msgid "resource format"
 msgstr "資源格式"
+
+#: resources/views/partials/content-lc_resource.blade.php:17
+msgid "publisher"
+msgstr "發布者"
+
+#: resources/views/partials/content-lc_resource.blade.php:23
+#: resources/views/partials/content-single-lc_resource.blade.php:18
+msgid "location of relevance"
+msgstr "相關位置"
+
+#: resources/views/partials/content-lc_resource.blade.php:30
+#: resources/views/partials/content-single-lc_resource.blade.php:25
+msgid "language"
+msgstr "語言"
+
+#: resources/views/partials/content-lc_resource.blade.php:36
+#: resources/views/partials/content-single-lc_resource.blade.php:31
+msgid "date published"
+msgstr "發布日期"
+
+#: resources/views/partials/content-lc_resource.blade.php:47
+#, python-format
+msgid "+%d more"
+msgstr "+ %d 個"
+
+#: resources/views/partials/content-lc_resource.blade.php:52
+#: resources/views/partials/content-single-lc_resource.blade.php:115
+#, python-format
+msgid "Added %s"
+msgstr "已添加 %s"
+
+#: resources/views/partials/content-lc_resource.blade.php:56
+msgid "Favorited"
+msgstr "已收藏"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:13
 #, python-format
 msgid "Published by %s"
 msgstr "由 %s 發布"
-
-#: resources/views/partials/content-single-lc_resource.blade.php:18
-#: resources/views/partials/content-lc_resource.blade.php:23
-msgid "location of relevance"
-msgstr "相關位置"
-
-#: resources/views/partials/content-single-lc_resource.blade.php:25
-#: resources/views/partials/content-lc_resource.blade.php:30
-msgid "language"
-msgstr "語言"
-
-#: resources/views/partials/content-single-lc_resource.blade.php:31
-#: resources/views/partials/content-lc_resource.blade.php:36
-msgid "date published"
-msgstr "發布日期"
 
 #: resources/views/partials/content-single-lc_resource.blade.php:38
 msgid "Summary"
@@ -428,61 +409,34 @@ msgstr "在 Internet Archive 上查看（第 %1$d 頁，共 %2$d 頁）"
 msgid "View on the Internet Archive"
 msgstr "在 Internet Archive 上查看"
 
-#: resources/views/partials/content-single-lc_resource.blade.php:115
-#: resources/views/partials/content-lc_resource.blade.php:52
-#, python-format
-msgid "Added %s"
-msgstr "已添加 %s"
+#: resources/views/partials/header.blade.php:7
+#: resources/views/partials/search-form.blade.php:8
+msgid "Search"
+msgstr "搜索"
 
-#: resources/views/partials/save-search.blade.php:3
-msgid "Save my search"
-msgstr "保存我的搜索"
+#: resources/views/partials/header.blade.php:29
+msgid "Explore"
+msgstr "探索"
 
-#: resources/views/partials/content-lc_resource.blade.php:17
-msgid "publisher"
-msgstr "發布者"
+#: resources/views/partials/footer.blade.php:7
+msgid "Platform Cooperativism Consortium"
+msgstr "平台合作主義聯盟"
 
-#: resources/views/partials/content-lc_resource.blade.php:47
-#, python-format
-msgid "+%d more"
-msgstr "+ %d 個"
+#: resources/views/partials/footer.blade.php:10
+msgid "Our open access and privacy policy"
+msgstr "我們的開放獲取和隱私政策"
 
-#: resources/views/partials/content-lc_resource.blade.php:56
-msgid "Favorited"
-msgstr "已收藏"
+#: resources/views/partials/footer.blade.php:11
+msgid "Our commitment to diversity and inclusion"
+msgstr "我們對多樣性和包容性的承諾"
 
-#: resources/views/partials/content-front-page.blade.php:6
-msgid "Browse by…"
-msgstr "按……瀏覽"
+#: resources/views/partials/footer.blade.php:15
+msgid "Contact us"
+msgstr "聯繫我們"
 
-#: resources/views/partials/content-front-page.blade.php:17
-msgid "Browse all resources"
-msgstr "瀏覽所有資源"
-
-#: resources/views/partials/content-front-page.blade.php:20
-msgid "My feed"
-msgstr "我的提要"
-
-#: resources/views/partials/content-front-page.blade.php:21
-#: resources/views/partials/sort.blade.php:8
-msgid "Most viewed"
-msgstr "查看最多"
-
-#: resources/views/partials/content-front-page.blade.php:34
-msgid "Recently published"
-msgstr "最近發布"
-
-#: resources/views/partials/comments.blade.php:21
-msgid "&larr; Older comments"
-msgstr "&larr; 較舊評論"
-
-#: resources/views/partials/comments.blade.php:24
-msgid "Newer comments &rarr;"
-msgstr "較新評論 &rarr;"
-
-#: resources/views/partials/comments.blade.php:33
-msgid "Comments are closed."
-msgstr "評論已關閉。"
+#: resources/views/partials/search-form.blade.php:3
+msgid "Search for:"
+msgstr "搜索："
 
 #: resources/views/partials/current-filters.blade.php:3
 msgid "%1$s of %2$s resources matched"
@@ -513,45 +467,60 @@ msgstr "顯示的資源至少與這些篩選器之一匹配。"
 msgid "Clear all"
 msgstr "清除所有"
 
-#: resources/views/partials/content-page-favorites.blade.php:2
-msgid "Remove all favorites"
-msgstr "刪除所有收藏夾"
+#: resources/views/partials/filters.blade.php:2
+msgid "Filter"
+msgstr "篩選"
 
-#: resources/views/partials/content-page-favorites.blade.php:8
-#: resources/assets/scripts/routes/saved-searches.js:55
-msgid "Remove"
-msgstr "刪除"
+#: resources/views/partials/filters.blade.php:10
+msgid "Close"
+msgstr "關閉"
 
-#: resources/views/partials/content-page-favorites.blade.php:8
+#: resources/views/partials/filters.blade.php:11
+msgid "Filters"
+msgstr "篩選器"
+
+#: resources/views/partials/filters.blade.php:16
+msgid "Co-op Types"
+msgstr "合作社類型"
+
+#: resources/views/partials/filters.blade.php:18
+msgid "Locations"
+msgstr "位置"
+
+#: resources/views/partials/filters.blade.php:26
+#: resources/views/partials/filters.blade.php:68
+msgid "Deselect all"
+msgstr "取消選擇所有"
+
+#: resources/views/partials/filters.blade.php:26
 #, python-format
-msgid "\"%s\" from my favorites"
-msgstr "來自我的收藏夾的「%s」"
+msgid "Deselect all %s"
+msgstr "取消選擇所有%s"
 
-#: resources/views/partials/content-page-favorites.blade.php:15
-msgid "You have no favorites."
-msgstr "您沒有收藏夾。"
-
-#: resources/views/partials/content-page-favorites.blade.php:16
+#: resources/views/partials/filters.blade.php:40
 #, python-format
-msgid "Search or <a href=\"%s\">browse</a> for resources to favorite them."
-msgstr "搜索或<a href=\"%s\">瀏覽</a>資源以將其添加到收藏夾。"
+msgid "and %d subtopics"
+msgstr "和 %d 個子主題"
 
-#: resources/views/partials/content-term-list.blade.php:27
-#, python-format
-msgid "No %s found."
-msgstr "未找到 %s。"
+#: resources/views/partials/filters.blade.php:41
+msgid "show %1$d subtopics for \"%2$s\""
+msgstr "為「%2$s」顯示 %1$d 個子主題"
 
-#: resources/views/partials/footer.blade.php:7
-msgid "Platform Cooperativism Consortium"
-msgstr "平台合作主義聯盟"
+#: resources/views/partials/filters.blade.php:65
+msgid "Languages"
+msgstr "語言"
 
-#: resources/views/partials/footer.blade.php:10
-msgid "Our open access and privacy policy"
-msgstr "我們的開放獲取和隱私政策"
+#: resources/views/partials/filters.blade.php:68
+msgid "languages"
+msgstr "語言"
 
-#: resources/views/partials/footer.blade.php:11
-msgid "Our commitment to diversity and inclusion"
-msgstr "我們對多樣性和包容性的承諾"
+#: resources/views/partials/filters.blade.php:82
+msgid "Apply Filters"
+msgstr "應用篩選器"
+
+#: resources/views/partials/language-switcher.blade.php:4
+msgid "Language"
+msgstr "語言"
 
 #: resources/views/partials/sort.blade.php:4
 msgid "Sort by"
@@ -569,81 +538,41 @@ msgstr "發布日期"
 msgid "Most favorited"
 msgstr "收藏最多"
 
-#: resources/assets/scripts/routes/favorites.js:12
-msgid "Favorites not supported"
-msgstr "不支持收藏夾"
+#: resources/views/partials/content-page-saved-searches.blade.php:3
+msgid "Remove all saved searches"
+msgstr "刪除所有保存的搜索"
 
-#: resources/assets/scripts/routes/favorites.js:12
-msgid ""
-"Your favorites are stored in your browser's cookies. To add favorites, "
-"please enable cookies for this website."
-msgstr "您的收藏夾存儲在瀏覽器的 cookie 中。要添加至收藏夾，請啟用該網站的 cookie。"
+#: resources/views/partials/content-page-saved-searches.blade.php:8
+msgid "You have no saved searches."
+msgstr "您沒有保存的搜索。"
 
-#: resources/assets/scripts/routes/favorites.js:18
-msgid "Remove favorites?"
-msgstr "刪除收藏夾？"
+#: resources/views/partials/content-page-saved-searches.blade.php:9
+#, python-format
+msgid "Search or <a href=\"%s\">browse</a> for resources to save your search."
+msgstr "搜索或<a href=\"%s\">瀏覽</a>資源以保存搜索。"
 
-#: resources/assets/scripts/routes/favorites.js:19
-msgid "Are you sure you want to remove all resources from your favorites?"
-msgstr "您確定要刪除收藏夾中的所有資源嗎？"
+#: resources/views/partials/content-term-list.blade.php:27
+#, python-format
+msgid "No %s found."
+msgstr "未找到 %s。"
 
-#: resources/assets/scripts/routes/favorites.js:20
-#: resources/assets/scripts/routes/favorites.js:50
-#: resources/assets/scripts/routes/saved-searches.js:74
-#: resources/assets/scripts/routes/saved-searches.js:93
-msgid "Yes, remove"
-msgstr "是的，刪除"
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:10
+msgid "Sorry, no results were found."
+msgstr "抱歉，未找到任何結果。"
 
-#: resources/assets/scripts/routes/favorites.js:21
-#: resources/assets/scripts/routes/favorites.js:51
-#: resources/assets/scripts/routes/saved-searches.js:75
-#: resources/assets/scripts/routes/saved-searches.js:94
-msgid "No, don&rsquo;t remove"
-msgstr "不，請勿刪除"
+#: resources/views/components/notification.blade.php:4
+#: resources/views/search.blade.php:8
+#: resources/assets/scripts/util/addNotification.js:32
+msgid "Close notification"
+msgstr "關閉通知"
 
-#: resources/assets/scripts/routes/favorites.js:35
-msgid "Favorites removed"
-msgstr "收藏夾已刪除"
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "抱歉，您嘗試查看的頁面不存在。"
 
-#: resources/assets/scripts/routes/favorites.js:35
-msgid "The resources have been removed from your favorites."
-msgstr "資源已從您的收藏夾中刪除。"
-
-#: resources/assets/scripts/routes/favorites.js:38
-msgid "Favorites not removed"
-msgstr "收藏夾未刪除"
-
-#: resources/assets/scripts/routes/favorites.js:38
-msgid "The resources could not be removed from your favorites."
-msgstr "無法從您的收藏夾中刪除資源。"
-
-#: resources/assets/scripts/routes/favorites.js:48
-msgid "Remove resource?"
-msgstr "刪除資源？"
-
-#: resources/assets/scripts/routes/favorites.js:49
-msgid "Are you sure you want to remove this resource from your favorites?"
-msgstr "您確定要從收藏夾中刪除此資源嗎？"
-
-#: resources/assets/scripts/routes/favorites.js:69
-#: resources/assets/scripts/routes/single.js:40
-msgid "Favorite removed"
-msgstr "收藏夾已刪除"
-
-#: resources/assets/scripts/routes/favorites.js:69
-#: resources/assets/scripts/routes/single.js:40
-msgid "The resource has been removed from your favorites."
-msgstr "資源已從您的收藏夾中刪除。"
-
-#: resources/assets/scripts/routes/favorites.js:72
-#: resources/assets/scripts/routes/single.js:47
-msgid "Favorite not removed"
-msgstr "收藏夾未刪除"
-
-#: resources/assets/scripts/routes/favorites.js:72
-#: resources/assets/scripts/routes/single.js:47
-msgid "The resource could not be removed from your favorites."
-msgstr "無法從您的收藏夾中刪除資源。"
+#: resources/views/search.blade.php:9
+msgid "No results for search"
+msgstr "搜索無結果"
 
 #: resources/assets/scripts/routes/archive.js:18
 #, python-format
@@ -744,6 +673,98 @@ msgstr ""
 msgid "Your search could not be saved."
 msgstr "您的搜索無法保存。"
 
+#: resources/assets/scripts/routes/single.js:40
+#: resources/assets/scripts/routes/favorites.js:69
+msgid "Favorite removed"
+msgstr "收藏夾已刪除"
+
+#: resources/assets/scripts/routes/single.js:40
+#: resources/assets/scripts/routes/favorites.js:69
+msgid "The resource has been removed from your favorites."
+msgstr "資源已從您的收藏夾中刪除。"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "Favorite added"
+msgstr "已添加至收藏夾"
+
+#: resources/assets/scripts/routes/single.js:42
+msgid "The resource has been added to your favorites."
+msgstr "資源已添加到您的收藏夾。"
+
+#: resources/assets/scripts/routes/single.js:47
+#: resources/assets/scripts/routes/favorites.js:72
+msgid "Favorite not removed"
+msgstr "收藏夾未刪除"
+
+#: resources/assets/scripts/routes/single.js:47
+#: resources/assets/scripts/routes/favorites.js:72
+msgid "The resource could not be removed from your favorites."
+msgstr "無法從您的收藏夾中刪除資源。"
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "Favorite not added"
+msgstr "未添加至收藏夾"
+
+#: resources/assets/scripts/routes/single.js:49
+msgid "The resource could not be added to your favorites."
+msgstr "資源無法添加到您的收藏夾。"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid "Favorites not supported"
+msgstr "不支持收藏夾"
+
+#: resources/assets/scripts/routes/favorites.js:12
+msgid ""
+"Your favorites are stored in your browser's cookies. To add favorites, "
+"please enable cookies for this website."
+msgstr "您的收藏夾存儲在瀏覽器的 cookie 中。要添加至收藏夾，請啟用該網站的 cookie。"
+
+#: resources/assets/scripts/routes/favorites.js:18
+msgid "Remove favorites?"
+msgstr "刪除收藏夾？"
+
+#: resources/assets/scripts/routes/favorites.js:19
+msgid "Are you sure you want to remove all resources from your favorites?"
+msgstr "您確定要刪除收藏夾中的所有資源嗎？"
+
+#: resources/assets/scripts/routes/favorites.js:20
+#: resources/assets/scripts/routes/favorites.js:50
+#: resources/assets/scripts/routes/saved-searches.js:74
+#: resources/assets/scripts/routes/saved-searches.js:93
+msgid "Yes, remove"
+msgstr "是的，刪除"
+
+#: resources/assets/scripts/routes/favorites.js:21
+#: resources/assets/scripts/routes/favorites.js:51
+#: resources/assets/scripts/routes/saved-searches.js:75
+#: resources/assets/scripts/routes/saved-searches.js:94
+msgid "No, don&rsquo;t remove"
+msgstr "不，請勿刪除"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "Favorites removed"
+msgstr "收藏夾已刪除"
+
+#: resources/assets/scripts/routes/favorites.js:35
+msgid "The resources have been removed from your favorites."
+msgstr "資源已從您的收藏夾中刪除。"
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "Favorites not removed"
+msgstr "收藏夾未刪除"
+
+#: resources/assets/scripts/routes/favorites.js:38
+msgid "The resources could not be removed from your favorites."
+msgstr "無法從您的收藏夾中刪除資源。"
+
+#: resources/assets/scripts/routes/favorites.js:48
+msgid "Remove resource?"
+msgstr "刪除資源？"
+
+#: resources/assets/scripts/routes/favorites.js:49
+msgid "Are you sure you want to remove this resource from your favorites?"
+msgstr "您確定要從收藏夾中刪除此資源嗎？"
+
 #: resources/assets/scripts/routes/saved-searches.js:16
 msgid ""
 "You have reached the maximum number of saved searches (50). To save more, "
@@ -809,19 +830,3 @@ msgstr "保存的搜索未刪除"
 #: resources/assets/scripts/routes/saved-searches.js:109
 msgid "Your saved search could not be removed"
 msgstr "您保存的搜索無法刪除"
-
-#: resources/assets/scripts/routes/single.js:42
-msgid "Favorite added"
-msgstr "已添加至收藏夾"
-
-#: resources/assets/scripts/routes/single.js:42
-msgid "The resource has been added to your favorites."
-msgstr "資源已添加到您的收藏夾。"
-
-#: resources/assets/scripts/routes/single.js:49
-msgid "Favorite not added"
-msgstr "未添加至收藏夾"
-
-#: resources/assets/scripts/routes/single.js:49
-msgid "The resource could not be added to your favorites."
-msgstr "資源無法添加到您的收藏夾。"
