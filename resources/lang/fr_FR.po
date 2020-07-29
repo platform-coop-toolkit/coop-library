@@ -2,11 +2,11 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Co-op Library package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Ned Zimmerman <ned@bight.dev>, 2020
 # Andrej Pezelj <andrejpezelj@yahoo.com>, 2020
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -450,7 +450,7 @@ msgstr "Afficher sur les Archives Internet"
 #: resources/views/partials/content-lc_resource.blade.php:52
 #, python-format
 msgid "Added %s"
-msgstr "Ajouté%s"
+msgstr "Ajouté %s"
 
 #: resources/views/partials/save-search.blade.php:3
 msgid "Save my search"
