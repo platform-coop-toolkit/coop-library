@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="column">
-        <div class="h4"><a rel="external" class="link--inverse" href="https://platform.coop/contact-us/">Contact us</a></div>
+        <div class="h4"><a rel="external" class="link--inverse" href="https://platform.coop/contact-us/">{{ __('Contact us', 'coop-library') }}</a></div>
 		    <div>
           <strong>{{ __('Email', 'coop-library') }}</strong><br />
 			    <a class="link--inverse" href="mailto:{!! antispambot('pcc@newschool.edu') !!}" rel="external">{!! antispambot('pcc@newschool.edu') !!}</a>

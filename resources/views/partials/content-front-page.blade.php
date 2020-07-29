@@ -1,5 +1,5 @@
 <section class="home__search">
-  @include('partials.search-form', ['modifier' => 'inverse', 'placeholder' => __('Search resource name, publisher, or topic…')])
+  @include('partials.search-form', ['modifier' => 'inverse', 'placeholder' => __('Search resource name, publisher, or topic…', 'coop-library')])
   {{-- TODO: Add saved searches --}}
 </section>
 <section class="home__browse">
