@@ -184,3 +184,7 @@ add_filter('koko_analytics_load_tracking_script', function () {
     }
     return false;
 });
+
+add_action('admin_head', function () {
+    echo template('partials.favicon');
+});
