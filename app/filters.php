@@ -135,20 +135,13 @@ add_filter('pre_get_posts', function ($query) {
                         break;
                 }
             }
-            if (isset($_GET['resource_language'])) {
-                $meta_query = [
-                    'relation' => 'OR'
-                ];
-                foreach ($_GET['resource_language'] as $lang) {
-                    $meta_query[] = [
-                        'key' => 'language',
-                        'value' => $lang,
-                    ];
-                }
-                $query->set('meta_query', $meta_query);
-            }
             $query->set('posts_per_page', 12);
             $query->set('order', 'desc');
+            if (isset($_GET['lang'])) {
+                $query->set('lang', implode(',', $_GET['lang']));
+            } else {
+                $query->set('lang', '');
+            }
         }
     }
 });

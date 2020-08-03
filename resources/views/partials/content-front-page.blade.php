@@ -27,6 +27,8 @@
           <li class="card__wrapper">@include('partials.content-'.get_post_type())</li>
         @endwhile
       </ul>
+      @else
+      <p>{{ sprintf(__('No %s found', 'coop-library'), __('resources', 'coop-library')) }}</p>
       @endif
     </div>
     {{-- TODO: Add info cards --}}
@@ -39,6 +41,8 @@
         @include('partials.content-'.get_post_type())
       @endwhile
     </ul>
+    @else
+    <p>{{ sprintf(__('No %s found', 'coop-library'), __('resources', 'coop-library')) }}</p>
     @endif
   </div>
 </section>

@@ -68,9 +68,9 @@
               <span class="button__label">{{ __('Deselect all', 'coop-library') }}<span class="screen-reader-text"> {{ __('languages', 'coop-library') }}</span></span>
             </button>
             <ul id="language" class="input-group input-group__parent language">
-              @foreach(App::getMetaValues('language', 'lc_resource') as $language)
+              @foreach($languages_with_resources as $language)
               <li>
-                <input id="language-{{ $language }}" name="resource_language[]" type="checkbox" value="{{ $language }}" {{ checked(in_array($language, array_keys($queried_resource_terms['resource_language']))) }} />
+                <input id="language-{{ $language }}" name="lang[]" type="checkbox" value="{{ $language }}" {{ checked(in_array($language, array_keys($queried_resource_terms['language']))) }} />
                 <label for="language-{{ $language }}">{!! $languages[$language] !!}</label>
               </li>
               @endforeach
