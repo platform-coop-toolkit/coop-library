@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-07-30 20:09+0000\n"
+"POT-Creation-Date: 2020-08-04 14:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgstr ""
 msgid "Error locating <code>%s</code> for inclusion."
 msgstr ""
 
-#: app/filters.php:32
+#: app/filters.php:34
 msgid "Continued"
 msgstr ""
 
@@ -63,73 +63,75 @@ msgstr ""
 msgid "Your settings have been saved."
 msgstr ""
 
-#: app/Controllers/App.php:197
+#: app/Controllers/App.php:255
 msgid "&laquo; Previous"
 msgstr ""
 
-#: app/Controllers/App.php:198
+#: app/Controllers/App.php:256
 msgid "Next &raquo;"
 msgstr ""
 
-#: app/Controllers/App.php:305
+#: app/Controllers/App.php:363
 msgid "&hellip;"
 msgstr ""
 
-#: app/Controllers/App.php:367
+#: app/Controllers/App.php:425
 msgid "previous"
 msgstr ""
 
-#: app/Controllers/App.php:371
+#: app/Controllers/App.php:429
 msgid "next"
 msgstr ""
 
-#: app/Controllers/App.php:373
+#: app/Controllers/App.php:431
 msgid "Resources navigation"
 msgstr ""
 
-#: app/Controllers/App.php:374
+#: app/Controllers/App.php:432
+#: resources/views/partials/content-front-page.blade.php:31
+#: resources/views/partials/content-front-page.blade.php:45
 msgid "resources"
 msgstr ""
 
-#: app/Controllers/App.php:448
+#: app/Controllers/App.php:507
 msgid ""
 "<span class=\"pc-ff--sans pc-fw--normal\">Platform Co-op</span><br /"
 ">Resource Library"
 msgstr ""
 
-#: app/Controllers/App.php:456
+#: app/Controllers/App.php:515
 msgid "Latest Posts"
 msgstr ""
 
-#: app/Controllers/App.php:460
+#: app/Controllers/App.php:519
 msgid "Search results"
 msgstr ""
 
-#: app/Controllers/App.php:464
+#: app/Controllers/App.php:523
 msgid "Browse all"
 msgstr ""
 
-#: app/Controllers/App.php:468
+#: app/Controllers/App.php:527
 msgid "Not Found"
 msgstr ""
 
-#: app/Controllers/App.php:479
+#: app/Controllers/App.php:538
 msgid "Home"
 msgstr ""
 
-#: app/setup.php:59
+#: app/setup.php:61
 msgid "Global Navigation"
 msgstr ""
 
-#: app/setup.php:60
+#: app/setup.php:62
 msgid "Primary Navigation"
 msgstr ""
 
-#: app/setup.php:126
+#: app/setup.php:128
 msgid "Primary"
 msgstr ""
 
-#: app/setup.php:130
+#: app/setup.php:132
 msgid "Footer"
 msgstr ""
 
@@ -404,7 +406,13 @@ msgstr ""
 msgid "My feed"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:34
+#: resources/views/partials/content-front-page.blade.php:31
+#: resources/views/partials/content-front-page.blade.php:45
+#, python-format
+msgid "No %s found"
+msgstr ""
+
+#: resources/views/partials/content-front-page.blade.php:36
 msgid "Recently published"
 msgstr ""
 
