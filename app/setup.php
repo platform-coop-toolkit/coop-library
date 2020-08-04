@@ -18,11 +18,13 @@ add_action('wp_enqueue_scripts', function () {
         file_get_contents(dirname(__FILE__) . '/../dist/scripts/manifest.js'),
         'before'
     );
-    wp_localize_script('coop-library/main.js', 'CoopLibrary', [
-        'ajaxurl' => admin_url('admin-ajax.php'),
-        'coop_library_nonce' => wp_create_nonce('coop-library-framework-nonce'),
-        'savedSearchesLink' => get_permalink(pll_get_post(get_page_by_path('my-resources/saved-searches')->ID))
-    ]);
+    if (function_exists('pll_get_post')) {
+        wp_localize_script('coop-library/main.js', 'CoopLibrary', [
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'coop_library_nonce' => wp_create_nonce('coop-library-framework-nonce'),
+            'savedSearchesLink' => get_permalink(pll_get_post(get_page_by_path('my-resources/saved-searches')->ID))
+        ]);
+    }
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');

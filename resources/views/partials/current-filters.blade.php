@@ -1,6 +1,6 @@
-@if(isset($_GET['s']) || $found_posts < App::totalPosts('lc_resource', $current_language))
+@if(isset($_GET['s']) || $filtered)
 <div class="current-filters">
-  <p class="h3">{{ sprintf(__('%1$s of %2$s resources matched', 'coop-library'), $found_posts, App::totalPosts('lc_resource', $current_language)) }}</p>
+  <p class="h3">{{ sprintf(__('%1$s of %2$s resources matched', 'coop-library'), $found_posts, App::totalPosts('lc_resource')) }}</p>
   @if(isset($_GET['s']))
   <h2 class="h4">{{ __('Your search term:', 'coop-library') }}</h2>
   <p>&ldquo;{{ $_GET['s'] }}&rdquo;</p>
@@ -11,7 +11,7 @@
       @foreach($queried_resource_terms as $taxonomy => $terms)
         @foreach($terms as $term => $name)
         <li class="tag">
-          <button class="button button--tag-button" data-checkbox="{{ $taxonomy }}-{{ $term }}">{!! sprintf(__('<span class="screen-reader-text">Remove </span>%s<span class="screen-reader-text"> from current filters</span>', 'coop-library'), $name) !!} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
+          <button class="button button--tag-button" data-checkbox="{{ $taxonomy }}-{{ $term }}">{!! sprintf(__('<span class="screen-reader-text">Remove </span>%s<span class="screen-reader-text"> from current filters</span>', 'coop-library'), ($taxonomy === 'language') ? $languages[$term] : $name) !!} @svg('close', 'icon--close', ['focusable' => 'false', 'aria-hidden' => 'true'])</button>
         </li>
         @endforeach
       @endforeach
