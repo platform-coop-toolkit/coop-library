@@ -100,7 +100,7 @@ add_filter('query_vars', function ($vars) {
  */
 add_filter('pre_get_posts', function ($query) {
     if (!is_admin()) {
-        if ((is_post_type_archive('lc_resource') || is_tax()) && $query->is_main_query() || is_search() && $query->is_main_query()) {
+        if ((is_post_type_archive('lc_resource') || is_tax()) && $query->is_main_query() || is_search() && $query->is_main_query()) { // @codingStandardsIgnoreLine
             if (isset($_GET['order_by'])) {
                 switch ($_GET['order_by']) {
                     case 'published':
