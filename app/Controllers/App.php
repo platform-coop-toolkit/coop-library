@@ -53,27 +53,82 @@ class App extends Controller
         }
     }
 
+    public function filtered()
+    {
+        foreach (['language', 'topic', 'goal', 'coop_type', 'sector', 'region', 'format'] as $taxonomy) {
+            if (get_query_var($taxonomy)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public function queriedResourceTerms()
     {
-        $langs = get_language_list(pll_current_language('locale'));
         $terms = [
             'language' => [],
             'lc_format' => [],
             'lc_goal' => [],
             'lc_region' => [],
-            'lc_topic' => [],
             'lc_coop_type' => [],
             'lc_sector' => [],
+            'lc_topic' => []
         ];
         global $wp_query;
         if ($wp_query->tax_query) {
-            foreach ($wp_query->tax_query->queries as $value) {
-                foreach ($value['terms'] as $t) {
-                    $terms[$value['taxonomy']][$t] = get_term_by('slug', $t, $value['taxonomy'])->name;
+            foreach ($wp_query->tax_query->queries as $key => $value) {
+                if ($key !== 'relation' && $value['taxonomy'] !== 'language') {
+                    foreach ($value['terms'] as $key => $term_id) {
+                        if (pll_get_term_language($term_id) !== pll_current_language()) {
+                            unset($value['terms'][$key]);
+                        }
+                    }
+                    $terms[$value['taxonomy']] = get_terms([
+                        'taxonomy' => $value['taxonomy'],
+                        'fields' => 'id=>name',
+                        'hide_empty' => false,
+                        'include' => $value['terms'],
+                        'lang' => ''
+                    ]);
                 }
             }
         }
+        if (isset($wp_query->query['language'])) {
+            $langs = $wp_query->query['language'];
+            if (!is_array($langs)) {
+                $langs = [$langs];
+            }
+            foreach ($langs as $lang) {
+                $terms['language'][$lang] = $lang;
+            }
+        }
         return $terms;
+    }
+
+    public static function activeTerms($args = [])
+    {
+        $unique = [];
+
+        $args = wp_parse_args($args, ['taxonomy' => false, 'lang' => 'en']);
+
+        if ($args['taxonomy']) {
+            $terms = get_terms($args);
+            foreach ($terms as $key => $term) {
+                if (pll_get_term_language($term->term_id) !== pll_current_language()) {
+                    $translation = get_term(pll_get_term($term->term_id));
+                    if (!isset($unique[$translation->term_id])) {
+                        $unique[$translation->term_id] = $translation;
+                    }
+                } else {
+                    if (!isset($unique[$term->term_id])) {
+                        $unique[$term->term_id] = $term;
+                    }
+                }
+            }
+        }
+
+        return $unique;
     }
 
     public function filterCount()
@@ -81,9 +136,11 @@ class App extends Controller
         $count = 0;
         global $wp_query;
         if ($wp_query->tax_query) {
-            foreach ($wp_query->tax_query->queries as $value) {
-                foreach ($value['terms'] as $t) {
-                    $count++;
+            foreach ($wp_query->tax_query->queries as $key => $value) {
+                if ($key !== 'relation') {
+                    foreach ($value['terms'] as $t) {
+                        $count++;
+                    }
                 }
             }
         }
@@ -382,7 +439,7 @@ class App extends Controller
             }
 
             // Set up paginated links.
-            $links = App::paginateLinks($current, $total, $args);
+            $links = App::paginateLinks(false, false, $args);
             if ($links) {
                 $navigation = _navigation_markup(
                     $links,
@@ -403,7 +460,8 @@ class App extends Controller
                 'post_type' => $post_type,
                 'post_status' => 'publish',
                 'lang' => $lang,
-                'fields' => 'ids'
+                'fields' => 'ids',
+                's' => false
             ]);
             return $q->found_posts;
         }

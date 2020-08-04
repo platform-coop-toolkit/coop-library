@@ -1,4 +1,4 @@
-@if(isset($_GET['s']) || $found_posts < App::totalPosts('lc_resource'))
+@if(isset($_GET['s']) || $filtered)
 <div class="current-filters">
   <p class="h3">{{ sprintf(__('%1$s of %2$s resources matched', 'coop-library'), $found_posts, App::totalPosts('lc_resource')) }}</p>
   @if(isset($_GET['s']))

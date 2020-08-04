@@ -24,5 +24,5 @@
     @endif
   @endforeach
 @else
-  <p>{{ sprintf(__('No %s found.'), strtolower(get_the_title())) }}</p>
+  <p>{{ sprintf(__('No %s found.', 'coop-library'), strtolower(get_the_title())) }}</p>
 @endif

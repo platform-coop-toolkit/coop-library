@@ -18,7 +18,7 @@
           'lc_region' => __('Locations', 'coop-library'),
           'lc_format' => __('Formats', 'coop-library'),
         ] as $tax => $label)
-        @if(get_terms(['taxonomy' => $tax]))
+        @if(App::activeTerms(['taxonomy' => $tax, 'lang' => '']))
         <div class="accordion__pane @if(isset($_COOKIE['filters-expanded']) && $_COOKIE['filters-expanded'] === "accordion-$tax"){{ ' accordion__pane--expanded' }}@endif" id="accordion-{{ $tax }}">
           <p class="accordion__heading">{{ $label }}</p>
           <div class="accordion__content">
@@ -26,29 +26,29 @@
               <span class="button__label"><span aria-hidden="true">{{ __('Deselect all', 'coop-library') }}</span><span class="screen-reader-text">{{ sprintf(__('Deselect all %s', 'coop-library'), $label) }}</span></span>
             </button>
             <ul id="{{ $tax }}" class="input-group input-group__parent {{ $tax }}">
-              @foreach(get_terms(['taxonomy' => $tax, 'orderby' => 'order']) as $term)
+              @foreach(App::activeTerms(['taxonomy' => $tax, 'orderby' => 'order', 'lang' => '']) as $term)
                 @if(!$term->parent)
                 <li>
-                  <input id="{{ $tax }}-{{ $term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $term->slug }}" {{
+                  <input id="{{ $tax }}-{{ $term->term_id }}" name="{{ str_replace('lc_', '', $tax) }}[]" type="checkbox" value="{{ $term->term_id }}" {{
                   checked(
-                    (in_array($term->slug, array_keys($queried_resource_terms[$tax]), true)) ? $term->slug : false,
-                    $term->slug,
+                    (in_array($term->name, $queried_resource_terms[$tax], true)) ? $term->term_id : false,
+                    $term->term_id,
                     false
                   ) }} />
-                  <label for="{{ $tax }}-{{ $term->slug }}">{!! $term->name !!}</label>
+                  <label for="{{ $tax }}-{{ $term->term_id }}">{!! $term->name !!}</label>
                   @if(get_term_children($term->term_id, $tax))
                     <span class="supplementary-label" hidden> ({{ sprintf(__('and %d subtopics', 'coop-library'), count(get_term_children($term->term_id, $tax))) }})</span>
                     <span class="filter-disclosure-label" hidden>{{ sprintf(__('show %1$d subtopics for "%2$s"', 'coop-library'), count(get_term_children($term->term_id, $tax)), $term->name) }}</span>
                     <ul class="input-group input-group__descendant">
-                      @foreach(get_terms(['taxonomy' => $tax, 'parent' => $term->term_id]) as $child_term)
+                      @foreach(App::activeTerms(['taxonomy' => $tax, 'parent' => $term->term_id, 'hide_empty' => false, 'lang' => '']) as $child_term)
                       <li>
-                        <input id="{{ $tax }}-{{ $child_term->slug }}" name="{{ $tax }}[]" type="checkbox" value="{{ $child_term->slug }}" {{
+                        <input id="{{ $tax }}-{{ $child_term->term_id }}" name="{{ str_replace('lc_', '', $tax) }}[]" type="checkbox" value="{{ $child_term->term_id }}" {{
                         checked(
-                          (in_array($child_term->slug, array_keys($queried_resource_terms[$tax]), true)) ? $child_term->slug : false,
-                          $child_term->slug,
+                          (in_array($child_term->name, $queried_resource_terms[$tax], true)) ? $child_term->term_id : false,
+                          $child_term->term_id,
                           false
                         ) }} />
-                        <label for="{{ $tax }}-{{ $child_term->slug }}">{!! $child_term->name !!}</label>
+                        <label for="{{ $tax }}-{{ $child_term->term_id }}">{!! $child_term->name !!}</label>
                       </li>
                       @endforeach
                     </ul>
@@ -70,7 +70,7 @@
             <ul id="language" class="input-group input-group__parent language">
               @foreach($languages_with_resources as $language)
               <li>
-                <input id="language-{{ $language }}" name="lang[]" type="checkbox" value="{{ $language }}" {{ checked(in_array($language, array_keys($queried_resource_terms['language']))) }} />
+                <input id="language-{{ $language }}" name="language[]" type="checkbox" value="{{ $language }}" {{ checked(in_array($language, $queried_resource_terms['language'])) }} />
                 <label for="language-{{ $language }}">{!! $languages[$language] !!}</label>
               </li>
               @endforeach

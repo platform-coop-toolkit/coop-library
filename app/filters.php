@@ -13,8 +13,10 @@ add_filter('body_class', function (array $classes) {
         }
     }
 
-    if (isset($_GET['filtered']) && $_GET['filtered'] === '1') {
-        $classes[] = 'filtered';
+    foreach (['language', 'topic', 'goal', 'coop_type', 'sector', 'region', 'format'] as $taxonomy) {
+        if (get_query_var($taxonomy)) {
+            $classes[] = 'filtered';
+        }
     }
 
     /** Clean up class names for custom templates */
@@ -89,12 +91,16 @@ add_filter('comments_template', function ($comments_template) {
     return $comments_template;
 }, 100);
 
+add_filter('query_vars', function ($vars) {
+    return ['topic', 'goal', 'coop_type', 'sector', 'region', 'format', 'language'] + $vars;
+});
+
 /**
  * Show twenty resources per page.
  */
 add_filter('pre_get_posts', function ($query) {
     if (!is_admin()) {
-        if ((is_post_type_archive('lc_resource') || is_tax()) && $query->is_main_query()) {
+        if ((is_post_type_archive('lc_resource') || is_tax()) && $query->is_main_query() || is_search() && $query->is_main_query()) {
             if (isset($_GET['order_by'])) {
                 switch ($_GET['order_by']) {
                     case 'published':
@@ -135,13 +141,45 @@ add_filter('pre_get_posts', function ($query) {
                         break;
                 }
             }
-            $query->set('posts_per_page', 12);
-            $query->set('order', 'desc');
-            if (isset($_GET['lang'])) {
-                $query->set('lang', implode(',', $_GET['lang']));
+            $lang = get_query_var('language', '');
+            if ($lang) {
+                if (!is_array($lang)) {
+                    $lang = [$lang];
+                }
+                $query->set('lang', implode(',', $lang));
             } else {
                 $query->set('lang', '');
             }
+            $tax_queries = [
+                'relation' => 'OR'
+            ];
+            foreach (['topic', 'goal', 'coop_type', 'sector', 'region', 'format'] as $taxonomy) {
+                $terms = get_query_var($taxonomy);
+                if (!is_array($terms)) {
+                    $terms = [$terms];
+                }
+                if (!empty(array_filter($terms))) {
+                    // Include terms of all languages.
+                    $translations = [];
+                    foreach ($terms as $term) {
+                        foreach (pll_get_term_translations($term) as $t) {
+                            $translations[] = $t;
+                        }
+                    }
+                    if (count($translations)) {
+                        $terms = array_values($translations);
+                    }
+                    $tax_queries[] = [
+                        'relation' => 'OR',
+                        'taxonomy' => "lc_$taxonomy",
+                        'field'    => 'term_id',
+                        'terms'    => $terms,
+                    ];
+                }
+            }
+            $query->set('tax_query', $tax_queries);
+            $query->set('posts_per_page', 12);
+            $query->set('order', 'desc');
         }
     }
 });

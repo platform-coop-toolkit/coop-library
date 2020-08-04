@@ -225,17 +225,30 @@ trait Resource
 
     public static function getRegion()
     {
+        $results = false;
+
         global $post;
 
         if ($post->post_type == 'lc_resource') {
             $regions = wp_get_object_terms($post->ID, 'lc_region', ['order' => 'DESC', 'orderby' => 'count']);
             if ($regions) {
-                $region = maybe_swap_term($regions[0]);
-                return $region->name;
+                $results = [];
+                foreach ($regions as $region) {
+                    if (get_query_var('region') === $region->term_id) {
+                        $results = maybe_swap_term($region)->name;
+                    } elseif (get_term_children($region->$term_id, 'lc_region')) {
+                        $results = maybe_swap_term($region)->name;
+                    } else {
+                        $results[] = maybe_swap_term($region)->name;
+                    }
+                }
+            }
+            if (is_array($results)) {
+                $results = natural_language_join($results);
             }
         }
 
-        return false;
+        return $results;
     }
 
     public static function getGoals($limit = 0)
