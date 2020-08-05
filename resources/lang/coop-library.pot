@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-08-04 14:43+0000\n"
+"POT-Creation-Date: 2020-08-05 17:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -133,6 +133,32 @@ msgstr ""
 
 #: app/setup.php:132
 msgid "Footer"
+msgstr ""
+
+#: app/setup.php:216
+msgid "You are currently editing the front page."
+msgstr ""
+
+#: app/setup.php:222
+msgid "You are currently editing the page that displays a user’s favorites."
+msgstr ""
+
+#: app/setup.php:228
+msgid ""
+"You are currently editing the page that displays a user’s saved resources."
+msgstr ""
+
+#: app/setup.php:234
+msgid ""
+"You are currently editing the page that displays a user’s saved searches."
+msgstr ""
+
+#: app/setup.php:240
+msgid "You are currently editing the settings page."
+msgstr ""
+
+#: app/setup.php:246
+msgid "You are currently editing a page that displays a list of filter terms."
 msgstr ""
 
 #: resources/views/partials/filters.blade.php:2
