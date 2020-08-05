@@ -250,3 +250,10 @@ add_action('edit_form_after_title', function () {
             break;
     }
 });
+
+if (function_exists('\Sober\Intervention\intervention')) {
+    \Sober\Intervention\intervention('remove-customizer-items', 'custom-css');
+    \Sober\Intervention\intervention('remove-dashboard-items', ['news', 'welcome']);
+    \Sober\Intervention\intervention('remove-emoji');
+    \Sober\Intervention\intervention('remove-howdy');
+}
