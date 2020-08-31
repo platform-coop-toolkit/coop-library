@@ -219,6 +219,14 @@ class App extends Controller
         return $wp_query->query_vars['paged'] > 1 ? intval($wp_query->query_vars['paged']) : 1;
     }
 
+    public static function filteredLink($term = false)
+    {
+        if ($term) {
+            $tax = str_replace('lc_', '', $term->taxonomy);
+            return get_post_type_archive_link('lc_resource') . '?filtered=1&' . $tax . '[]=' . $term->term_id;
+        }
+    }
+
     public static function paginateLinks($current = false, $total = false, $args = [])
     {
         global $wp_query, $wp_rewrite;
