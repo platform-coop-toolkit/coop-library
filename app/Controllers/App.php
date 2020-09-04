@@ -15,7 +15,7 @@ class App extends Controller
 
     public function notifications()
     {
-        if (isset($_POST['track_viewed_resources'])) {
+        if (isset($_POST['do_not_track_viewed_resources'])) {
             return [
                 [
                     'title' => __('Settings saved'),
