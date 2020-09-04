@@ -6,6 +6,14 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
+    public function savedSearches()
+    {
+        if (function_exists('pll_get_post')) {
+            return get_permalink(pll_get_post(get_page_by_title('Saved searches')->ID));
+        }
+        return get_permalink(get_page_by_title('Saved searches'));
+    }
+
     public function mostViewed()
     {
         global $wpdb;

@@ -1,6 +1,7 @@
 <section class="home__search">
   @include('partials.search-form', ['modifier' => 'inverse', 'placeholder' => __('Search resource name, publisher, or topic…', 'coop-library')])
-  {{-- Future home of saved searches. --}}
+  <p><a class="link link--inverse" href="{{ $saved_searches }}">{{ __('Saved searches') }}</a></p>
+  <div class="spacer"></div>
 </section>
 <section class="home__browse">
   <h2>{{ __('Browse by…', 'coop-library') }}</h2>
