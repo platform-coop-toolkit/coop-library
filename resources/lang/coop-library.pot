@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-09-04 13:12+0000\n"
+"POT-Creation-Date: 2020-09-04 13:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,8 +84,8 @@ msgid "Resources navigation"
 msgstr ""
 
 #: app/Controllers/App.php:448
-#: resources/views/partials/content-front-page.blade.php:31
-#: resources/views/partials/content-front-page.blade.php:45
+#: resources/views/partials/content-front-page.blade.php:32
+#: resources/views/partials/content-front-page.blade.php:46
 msgid "resources"
 msgstr ""
 
@@ -227,50 +227,54 @@ msgstr ""
 msgid "Search resource name, publisher, or topic…"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:6
+#: resources/views/partials/content-front-page.blade.php:3
+msgid "Saved searches"
+msgstr ""
+
+#: resources/views/partials/content-front-page.blade.php:7
 msgid "Browse by…"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:9
+#: resources/views/partials/content-front-page.blade.php:10
 #: resources/views/partials/filters.blade.php:15
 msgid "Topics"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:10
+#: resources/views/partials/content-front-page.blade.php:11
 #: resources/views/partials/filters.blade.php:14
 msgid "Goals"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:11
+#: resources/views/partials/content-front-page.blade.php:12
 #: resources/views/partials/filters.blade.php:17
 msgid "Sectors"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:12
+#: resources/views/partials/content-front-page.blade.php:13
 #: resources/views/partials/filters.blade.php:19
 msgid "Formats"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:17
+#: resources/views/partials/content-front-page.blade.php:18
 msgid "Browse all resources"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:20
+#: resources/views/partials/content-front-page.blade.php:21
 msgid "My feed"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:21
+#: resources/views/partials/content-front-page.blade.php:22
 #: resources/views/partials/sort.blade.php:8
 msgid "Most viewed"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:31
-#: resources/views/partials/content-front-page.blade.php:45
+#: resources/views/partials/content-front-page.blade.php:32
+#: resources/views/partials/content-front-page.blade.php:46
 #, python-format
 msgid "No %s found"
 msgstr ""
 
-#: resources/views/partials/content-front-page.blade.php:36
+#: resources/views/partials/content-front-page.blade.php:37
 msgid "Recently published"
 msgstr ""
 
