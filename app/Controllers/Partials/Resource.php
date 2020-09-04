@@ -82,7 +82,7 @@ trait Resource
             if ($date !== '–') {
                 $parts = explode('-', $date);
                 if (count($parts) === 3) {
-                    return date_i18n($format, strtotime($date)); // TODO: Fix this
+                    return date_i18n($format, strtotime($date));
                 }
                 if (count($parts) === 2) {
                     return date_i18n('F Y', strtotime($date));
