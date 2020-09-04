@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-09-04 12:53+0000\n"
+"POT-Creation-Date: 2020-09-04 13:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,67 +51,67 @@ msgstr ""
 msgid "Error locating <code>%s</code> for inclusion."
 msgstr ""
 
-#: app/Controllers/App.php:22
+#: app/Controllers/App.php:21
 msgid "Settings saved"
 msgstr ""
 
-#: app/Controllers/App.php:24
+#: app/Controllers/App.php:23
 msgid "Your settings have been saved."
 msgstr ""
 
-#: app/Controllers/App.php:272
+#: app/Controllers/App.php:271
 msgid "&laquo; Previous"
 msgstr ""
 
-#: app/Controllers/App.php:273
+#: app/Controllers/App.php:272
 msgid "Next &raquo;"
 msgstr ""
 
-#: app/Controllers/App.php:380
+#: app/Controllers/App.php:379
 msgid "&hellip;"
 msgstr ""
 
-#: app/Controllers/App.php:442
+#: app/Controllers/App.php:441
 msgid "previous"
 msgstr ""
 
-#: app/Controllers/App.php:446
+#: app/Controllers/App.php:445
 msgid "next"
 msgstr ""
 
-#: app/Controllers/App.php:448
+#: app/Controllers/App.php:447
 msgid "Resources navigation"
 msgstr ""
 
-#: app/Controllers/App.php:449
+#: app/Controllers/App.php:448
 #: resources/views/partials/content-front-page.blade.php:31
 #: resources/views/partials/content-front-page.blade.php:45
 msgid "resources"
 msgstr ""
 
-#: app/Controllers/App.php:524
+#: app/Controllers/App.php:523
 msgid ""
 "<span class=\"pc-ff--sans pc-fw--normal\">Platform Co-op</span><br /"
 ">Resource Library"
 msgstr ""
 
-#: app/Controllers/App.php:532
+#: app/Controllers/App.php:531
 msgid "Latest Posts"
 msgstr ""
 
-#: app/Controllers/App.php:536
+#: app/Controllers/App.php:535
 msgid "Search results"
 msgstr ""
 
-#: app/Controllers/App.php:540
+#: app/Controllers/App.php:539
 msgid "Browse all"
 msgstr ""
 
-#: app/Controllers/App.php:544
+#: app/Controllers/App.php:543
 msgid "Not Found"
 msgstr ""
 
-#: app/Controllers/App.php:555
+#: app/Controllers/App.php:554
 msgid "Home"
 msgstr ""
 
