@@ -27,14 +27,14 @@ class App extends Controller
         }
     }
 
-    public function trackViewedResources()
+    public function doNotTrackViewedResources()
     {
-        if (isset($_POST['track_viewed_resources']) && $_POST['track_viewed_resources'] === 'on') {
+        if (isset($_POST['do_not_track_viewed_resources']) && $_POST['do_not_track_viewed_resources'] === 'on') {
             return 'on';
-        } elseif (isset($_POST['track_viewed_resources']) && $_POST['track_viewed_resources'] === '') {
+        } elseif (isset($_POST['do_not_track_viewed_resources']) && $_POST['do_not_track_viewed_resources'] === '') {
             return false;
         }
-        if (isset($_COOKIE['track_viewed_resources']) && $_COOKIE['track_viewed_resources'] === 'on') {
+        if (isset($_COOKIE['do_not_track_viewed_resources']) && $_COOKIE['do_not_track_viewed_resources'] === 'on') {
             return 'on';
         }
         return false;

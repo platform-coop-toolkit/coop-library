@@ -210,8 +210,8 @@ add_filter('wp_nav_menu_items', function ($items, $args) {
 }, 10, 2);
 
 add_filter('koko_analytics_load_tracking_script', function () {
-    if (isset($_COOKIE['track_viewed_resources']) && $_COOKIE['track_viewed_resources'] === 'on') {
-        return true;
+    if (isset($_COOKIE['do_not_track_viewed_resources']) && $_COOKIE['do_not_track_viewed_resources'] === 'on') {
+        return false;
     }
-    return false;
+    return true;
 });
