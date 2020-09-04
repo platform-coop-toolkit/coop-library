@@ -1,6 +1,6 @@
 <section class="home__search">
   @include('partials.search-form', ['modifier' => 'inverse', 'placeholder' => __('Search resource name, publisher, or topic…', 'coop-library')])
-  {{-- TODO: Add saved searches --}}
+  {{-- Future home of saved searches. --}}
 </section>
 <section class="home__browse">
   <h2>{{ __('Browse by…', 'coop-library') }}</h2>
@@ -31,7 +31,7 @@
       <p>{{ sprintf(__('No %s found', 'coop-library'), __('resources', 'coop-library')) }}</p>
       @endif
     </div>
-    {{-- TODO: Add info cards --}}
+    {{-- Future home of onboarding info cards. --}}
   </div>
   <h3><a href="{{ get_post_type_archive_link('lc_resource') }}?order_by=published">{{ __('Recently published', 'coop-library') }}</a></h3>
   <div class="card-wrapper">
