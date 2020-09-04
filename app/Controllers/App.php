@@ -131,6 +131,15 @@ class App extends Controller
         return $unique;
     }
 
+    public function homeUrl()
+    {
+        if (function_exists('pll_home_url')) {
+            return pll_home_url();
+        }
+
+        return home_url();
+    }
+
     public function filterCount()
     {
         $count = 0;
