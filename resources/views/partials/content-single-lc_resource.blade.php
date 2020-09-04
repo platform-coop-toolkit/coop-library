@@ -48,7 +48,7 @@
     {{-- <button id="suggest-edits" type="button" class="button">
       @svg('edit', 'icon--edit', ['focusable' => 'false', 'aria-hidden' => 'true'])
       <span class="button__label">{{ __('Suggest edits', 'coop-library') }}</span>
-    </button> TODO: Implement edit suggestions. --}}
+    </button> --}}
   </div>
   @endif
   <div class="resource__cta">
@@ -84,7 +84,7 @@
     </div>
     {{-- <button id="report-broken-link" type="button" class="button">
       <span class="button__label">{{ __('Report broken link', 'coop-library') }}</span>
-    </button> TODO: Implement broken link reporting. --}}
+    </button> --}}
     @if(Single::getPermaCcLinks() || Single::getWaybackMachineLinks())
     <div class="alternate-links menu-button">
       <h2 class="h3 menu-button__label">{{ __('View alternate links', 'coop-library') }}</h2>
