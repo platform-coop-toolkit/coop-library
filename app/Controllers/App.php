@@ -15,7 +15,6 @@ class App extends Controller
 
     public function notifications()
     {
-        // TODO: This could be more elegant.
         if (isset($_POST['track_viewed_resources'])) {
             return [
                 [
