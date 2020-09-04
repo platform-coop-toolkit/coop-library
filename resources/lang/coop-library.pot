@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Co-op Library \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-09-04 12:45+0000\n"
+"POT-Creation-Date: 2020-09-04 12:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,59 +59,59 @@ msgstr ""
 msgid "Your settings have been saved."
 msgstr ""
 
-#: app/Controllers/App.php:263
+#: app/Controllers/App.php:272
 msgid "&laquo; Previous"
 msgstr ""
 
-#: app/Controllers/App.php:264
+#: app/Controllers/App.php:273
 msgid "Next &raquo;"
 msgstr ""
 
-#: app/Controllers/App.php:371
+#: app/Controllers/App.php:380
 msgid "&hellip;"
 msgstr ""
 
-#: app/Controllers/App.php:433
+#: app/Controllers/App.php:442
 msgid "previous"
 msgstr ""
 
-#: app/Controllers/App.php:437
+#: app/Controllers/App.php:446
 msgid "next"
 msgstr ""
 
-#: app/Controllers/App.php:439
+#: app/Controllers/App.php:448
 msgid "Resources navigation"
 msgstr ""
 
-#: app/Controllers/App.php:440
+#: app/Controllers/App.php:449
 #: resources/views/partials/content-front-page.blade.php:31
 #: resources/views/partials/content-front-page.blade.php:45
 msgid "resources"
 msgstr ""
 
-#: app/Controllers/App.php:515
+#: app/Controllers/App.php:524
 msgid ""
 "<span class=\"pc-ff--sans pc-fw--normal\">Platform Co-op</span><br /"
 ">Resource Library"
 msgstr ""
 
-#: app/Controllers/App.php:523
+#: app/Controllers/App.php:532
 msgid "Latest Posts"
 msgstr ""
 
-#: app/Controllers/App.php:527
+#: app/Controllers/App.php:536
 msgid "Search results"
 msgstr ""
 
-#: app/Controllers/App.php:531
+#: app/Controllers/App.php:540
 msgid "Browse all"
 msgstr ""
 
-#: app/Controllers/App.php:535
+#: app/Controllers/App.php:544
 msgid "Not Found"
 msgstr ""
 
-#: app/Controllers/App.php:546
+#: app/Controllers/App.php:555
 msgid "Home"
 msgstr ""
 
