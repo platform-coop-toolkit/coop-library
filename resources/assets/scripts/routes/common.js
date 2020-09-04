@@ -16,7 +16,7 @@ export default {
 
     if ( cards ) {
       Array.prototype.forEach.call( cards, card => {
-        new Pinecone.Card( card, { cardLinkSelector: '.card__link' } ); // TODO: Remove the cardLinkSelector confuration.
+        new Pinecone.Card( card );
       } );
     }
 
@@ -30,14 +30,13 @@ export default {
 
     new Pinecone.Notification();
 
-    /* TODO: Resolve icon issues
-    const icons = document.querySelectorAll( 'svg' );
+    const icons = [...document.querySelectorAll( 'svg' )];
 
     if ( icons.length > 0 ) {
       Array.prototype.forEach.call( icons, icon => {
         new Pinecone.Icon( icon );
       } );
-    } */
+    }
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
