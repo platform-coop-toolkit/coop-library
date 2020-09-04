@@ -13,11 +13,11 @@
   </div>
   <ul class="input-group">
     <li>
-      <input id="allow" type="radio" name="track_viewed_resources" value="on" {{ checked('on', $track_viewed_resources) }}>
+      <input id="allow" type="radio" name="do_not_track_viewed_resources" value="" {{ checked(false, $do_not_track_viewed_resources) }}>
       <label for="allow">{!! __('Allow', 'coop-library') !!}</label>
     </li>
     <li>
-      <input id="disallow" type="radio" name="track_viewed_resources" value="" {{ checked(false, $track_viewed_resources) }}>
+      <input id="disallow" type="radio" name="do_not_track_viewed_resources" value="on" {{ checked('on', $do_not_track_viewed_resources) }}>
       <label for="disallow">{!! __('Don&rsquo;t allow', 'coop-library') !!}</label>
     </li>
   </ul>
