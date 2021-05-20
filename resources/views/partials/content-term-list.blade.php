@@ -12,7 +12,7 @@
           </li>
           @foreach(App::activeTerms(['taxonomy' => $taxonomy, 'parent' => $term->term_id, 'hide_empty' => false, 'lang' => '']) as $child_term)
           <li class="link-list__item">
-            <a href="{{ App::filteredLink($childterm) }}">{!! $child_term->name !!}</a>
+            <a href="{{ App::filteredLink($child_term) }}">{!! $child_term->name !!}</a>
           </li>
           @endforeach
         </ul>
